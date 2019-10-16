@@ -21,7 +21,8 @@ body {
 .header {
     background-color: #fcc;
     border-bottom: 5px solid #999;
-    background: url(img/photo-1466978913421-dad2ebd01d17.jpg) no-repeat center center scroll;
+    background: url(img/photo-1490457843367-34b21b6ccd85.jpg);
+    background-size: cover;
     height: 400px;
 }
 .navbar {
@@ -57,26 +58,45 @@ ul.navbar-items li {
 
 .search-container {
     margin: 60px auto 0 auto;
-    padding-top: 70px;
-    width: 80%;
+    padding-top: 50px;
+    width: 90%;
     font-weight: 300;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .search-container h2 {
     font-size: 30px;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
 }
 .search-form-wrapper{
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
 }
-input {
+form.search input {
     display: block;
+    width: 100%;
+    height: 50px;
+    color: #333;
+    line-height: 50px;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-style: none;
+    border-radius: 5px;
 }
-button {
+form.search button {
     display: block;
+    width: 100%;
+    background-color: #009a9a;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 5px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-style: none;
+    border-radius: 5px;
 }
 
 .app-sections {
