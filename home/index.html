@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Expresso</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
@@ -17,7 +19,6 @@
             <nav class="navbar">
                 <div class="navbar-logo">
                     <h2>Expresso</h2>
-                    <!-- <img src="./img/logo-92-26.png" alt="Logo"> -->
                 </div>
                 <div class="nav-container">
                     <ul class="navbar-items">
@@ -47,16 +48,24 @@
         </header>
         <div class="app-sections">
             <div class="categories-section">
-                <h2>Categories Section</h2>
+                <h2>Looking for somthing else?</h2>
                 <div class="categoris-container">
-                    <ul class="categories-items">
-                        <li>Restaurants</li>
-                        <li>Flowers</li>
-                        <li>Cosmetics</li>
-                        <li>Groceries</li>
-                        <li>Supplements</li>
-                        <li>Electronics</li>
+                    <button class="arrow-left"><i class="fa fa-chevron-left"></i></button>
+                    <ul class="categories-list">
+                        <li class="category-card active-category">
+                            <div class="category-icon"><i class="material-icons">fastfood</i></div>
+                            <div class="category-name"><h4>Restaurants</h4></div>
+                        </li>
+                        <li class="category-card">
+                            <div class="category-icon"><i class="fa fa-shopping-basket"></i></div>
+                            <div class="category-name"><h4>Groceries</h4></div>
+                        </li>
+                        <!-- <li class="category-card">Flowers</li>
+                        <li class="category-card">Cosmetics</li>
+                        <li class="category-card">Supplements</li>
+                        <li class="category-card">Electronics</li> -->
                     </ul>
+                    <button class="arrow-right"><i class="fa fa-chevron-right"></i></button>
                 </div>
             </div>
             <div class="showcase-section">
@@ -64,16 +73,22 @@
                 <p>More than 1000 retaurant </p>
                 <div class="showcase-container">
                     <div class="showcase-row">
-                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant"></article>
-                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant"></article>
+                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant">
+                        </article>
+                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant">
+                        </article>
                     </div>
                     <div class="showcase-row">
-                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant"></article>
-                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant"></article>
+                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant">
+                        </article>
+                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant">
+                        </article>
                     </div>
                     <div class="showcase-row">
-                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant"></article>
-                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant"></article>
+                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant">
+                        </article>
+                        <article class="showcase-col"><img src="./img/pexels-photo-262978.jpeg" alt="restaurant">
+                        </article>
                     </div>
                     <div class="showcase-row">
                         <button class="show-btn">Show All Restaurants</button>
@@ -86,7 +101,8 @@
             </div>
             <div class="app-section">
                 <h2>App Section</h2>
-                <p>More than 1000 restaurants, and our simple and easy to use app. food ordering is just a click away.</p>
+                <p>More than 1000 restaurants, and our simple and easy to use app. food ordering is just a click away.
+                </p>
                 <div class="app-download-links">
                     <button>Android App</button>
                     <button>IOS App</button>
