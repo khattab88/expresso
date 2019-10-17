@@ -52,7 +52,9 @@ h1 { margin: 0; }
 .navbar-logo {
     color: #fff;
 }
-
+.navbar-logo h2 {
+    letter-spacing: 1px;
+}
 .navbar-collapse {
     display: inline-block;
 }
@@ -121,6 +123,7 @@ form.search button {
 .categories-section {
     display: flex;
     flex-direction: column;
+    background-color: #f9f9f9;
 }
 .categories-section h2 {
     text-align: center;
@@ -131,6 +134,7 @@ form.search button {
 }
 .categoris-container {
     height: 150px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -192,23 +196,58 @@ form.search button {
     border-color: #fff;
 }
 
+
 .showcase-section {
-    background-color: #f99;
+    padding-top: 20px;
+}
+.showcase-section h2 {
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--font-color);
+}
+.showcase-section p {
+    line-height: 28px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    color: var(--font-color);
 }
 .showcase-container {
-    border: 1px solid #ccc;
+    margin: 30px 0;
 }
 .showcase-row {
     display: flex;
     justify-content: center;
 }
 .showcase-col {
-    margin: 10px;
+    margin: 5px;
 }
-.showcase-container img {
-    width: 200px;
-    height: 200px;
+.restaurant-card {
+    min-height: 190px;
+    min-width: 178px;
+    background-image: url(./img/photo-1540265556701-ae209ac395cd.jpg);
+    background-size: cover;
+    border-radius: 10px;
 }
+
+.restaurant-name {
+
+}
+.restaurant-desc {
+
+}
+.show-all-btn {
+    width: 92%;
+    border-style: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: #fff;
+    margin-top: 5px;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
 
 .info-section {
     background-color: #99f;
@@ -231,25 +270,27 @@ form.search button {
 
 /* footer */
 .footer {
-    background-color: #ccc;
-    /* height: 20vh; */
+    background-color: var(--font-color);
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.footer-logo-wrapper {
-    background-color: #ada;
+.footer-logo {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 36px;
+    letter-spacing: 1.5px;
 }
 .footer-container {
     background-color: #6d6;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .footer-links {
-    background-color: #c5c;
+    display: flex;
+    flex-direction: column;
 }
 .footer-links li {
     list-style: none;
