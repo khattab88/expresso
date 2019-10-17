@@ -270,6 +270,7 @@ form.search button {
 
 /* footer */
 .footer {
+    padding: 0 20px;
     background-color: var(--font-color);
     color: #fff;
     display: flex;
@@ -283,7 +284,6 @@ form.search button {
     letter-spacing: 1.5px;
 }
 .footer-container {
-    background-color: #6d6;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -296,18 +296,30 @@ form.search button {
     list-style: none;
     display: inline-block;
     margin: 0 5px;
+    font-size: 16px;
+    line-height: 44px;
+}
+.social-links-wrapper {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 .social-links {
-    background-color: #77f;
+    display: flex;
+    justify-content: center;
 }
 .social-links li {
     list-style: none;
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 10px;
+}
+
+.social-links li i {
+    font-size: 24px;
 }
 
 .sub-footer {
-    background-color: #d7d;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
     width: 100%;
     display: flex;
     justify-content: space-between;
