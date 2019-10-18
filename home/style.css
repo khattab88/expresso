@@ -479,6 +479,18 @@ form.search button {
     }
 
     /* header */
+    .search-container {
+        padding: 100px;
+    }
+    .search-container h2 {
+        font-size: 36px;
+    }
+    form.search button:hover {
+        cursor: pointer;
+        background-color: var(--font-color);
+    }
+
+
 
     /* categories section */
 
