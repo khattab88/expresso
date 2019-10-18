@@ -27,7 +27,7 @@ h1 { margin: 0; }
 /* Mobile-first*/
 
 .wrapper{
-   background-color: #fff;
+   /* background-color:#f9f9f9;; */
 }
 
 /*navbar */
@@ -121,9 +121,9 @@ form.search button {
 
 /* categories section */
 .categories-section {
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
 }
 .categories-section h2 {
     text-align: center;
@@ -142,27 +142,27 @@ form.search button {
     border-style: none;
     background-color: var(--main-color);
     color: #fff;
-    width: 30px;
+    min-width: 20px;
     font-size: 18px;
     font-weight: 300;
 }
 .categories-list {
-    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
 .category-card {
+    min-width: 110px;
     color: var(--font-color);
     list-style: none;
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 10px;
     border-radius: 10px;
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    border: 2px solid var(--main-color);
 }
 .category-card:hover {
     background-color: var(--font-color);
@@ -173,7 +173,7 @@ form.search button {
     height: 80px;
     border-radius: 50%;
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     border-color: var(--font-color);
     display: flex;
     justify-content: center;
@@ -245,13 +245,13 @@ form.search button {
     line-height: 18px;
 }
 .show-all-btn {
-    width: 92%;
+    width: 100%;
     border-style: none;
     border: 0;
     border-radius: 5px;
     background-color: var(--main-color);
     color: #fff;
-    margin-top: 5px;
+    margin: 5px auto;
     font-size: 20px;
     padding: 10px 0;
 }
@@ -399,9 +399,7 @@ form.search button {
         background-position: center center;
         padding: 0 0 20px 20px;
     }
-    .show-all-btn {
-        width: 98%;
-    }
+    .show-all-btn {}
 
     /* info section */
 
@@ -490,17 +488,51 @@ form.search button {
         background-color: var(--font-color);
     }
 
-
+    /* main sections */
+    .main-sections {
+        padding: 0 100px;
+    }
 
     /* categories section */
+    .categories-list {
+        width: 100%;
+        justify-content: space-between;
+    }
+    [class*="arrow-"] {
+        min-width: 30px;
+    }
+    .category-card {
+        min-width: 180px;
+    }
 
     /* showcase section */
+    .showcase-container {}
+    .showcase-row {}
+
+    .restaurant-name,
+    .restaurant-desc {
+        text-align: center;
+    }
+    .restaurant-name {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .restaurant-desc {
+        font-size: 30px;
+    }
+    .show-all-btn {
+        width: 50%;
+        text-align: center;
+    }
 
     /* info section */
 
     /* app section */
 
     /* footer */
-
+    .footer {
+        padding: 0 100px;
+    }
 }
 
