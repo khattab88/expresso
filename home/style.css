@@ -479,6 +479,10 @@ form.search button {
     /* header */
     .search-container {
         padding: 100px;
+        margin: 0;
+        margin-top: 40px;
+        margin-left: 20px;
+        width: 40%;
     }
     .search-container h2 {
         font-size: 36px;
