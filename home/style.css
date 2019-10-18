@@ -30,14 +30,6 @@ h1 { margin: 0; }
    background-color: #fff;
 }
 
-
-/* header */
-.header {
-    background: url(img/photo-1490457843367-34b21b6ccd85.jpg);
-    background-size: cover;
-    height: 400px;
-}
-
 /*navbar */
 .navbar {
     background-color: var(--main-color);
@@ -71,6 +63,13 @@ ul.navbar-items li {
     margin-right: 5px;
 }
 
+
+/* header */
+.header {
+    background: url(img/photo-1490457843367-34b21b6ccd85.jpg);
+    background-size: cover;
+    height: 400px;
+}
 .search-container {
     margin: 45px auto 0 auto;
     padding-top: 60px;
@@ -133,7 +132,7 @@ form.search button {
     font-weight: 400;
 }
 .categoris-container {
-    height: 150px;
+    height: 180px;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -227,14 +226,23 @@ form.search button {
     min-width: 178px;
     background-image: url(./img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
+    color: #fff;
+    border: 2px solid var(--font-color);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
 }
 
 .restaurant-name {
-
+    font-size: 18px;
+    letter-spacing: 0.5px;
 }
 .restaurant-desc {
-
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
 }
 .show-all-btn {
     width: 92%;
