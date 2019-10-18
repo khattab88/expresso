@@ -73,7 +73,7 @@ ul.navbar-items li {
 .search-container {
     margin: 45px auto 0 auto;
     padding-top: 60px;
-    width: 90%;
+    width: 94%;
     font-weight: 300;
     display: flex;
     flex-direction: column;
@@ -114,11 +114,13 @@ form.search button {
     border-radius: 5px;
 }
 
-/* main */
-.app-sections {
+/* main sections */
+.main-sections {
     width: 96%;
     margin: 0 auto;
 }
+
+/* categories section */
 .categories-section {
     display: flex;
     flex-direction: column;
@@ -195,7 +197,7 @@ form.search button {
     border-color: #fff;
 }
 
-
+/* showcase section */
 .showcase-section {
     padding-top: 20px;
 }
@@ -234,7 +236,6 @@ form.search button {
     justify-content: flex-end;
     padding: 0 0 20px 10px;
 }
-
 .restaurant-name {
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -256,7 +257,7 @@ form.search button {
     padding: 10px 0;
 }
 
-
+/* info section */
 .info-section {
     background-color: #99f;
     display: flex;
@@ -264,6 +265,8 @@ form.search button {
     justify-content: center;
     align-items: center;
 }
+
+/* app section */
 .app-section {
     background-color: #9ff;
     display: flex;
@@ -370,15 +373,47 @@ form.search button {
 }
 
 
-/* Mobile Landscape Screen Sizes */
+/* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
+
+    /* navbar */
     .navbar {
-        background-color: yellow;
+        /* background-color: yellow; */
     }
+
+    /* header */
+    .search-container {
+        width: 96%;
+    }
+    
+    /* main sections */
+
+    /* categories section */
+
+    /* showcase section */
+    .showcase-col {
+        width: 50%;
+    }
+    .restaurant-card {
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 0 0 20px 20px;
+    }
+    .show-all-btn {
+        width: 98%;
+    }
+
+    /* info section */
+
+    /* app section */
+
+    /* footer */
 }
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
+
+    /* navbar */
     .navbar {
         background-color: red;
     }
@@ -388,5 +423,18 @@ form.search button {
     .navbar-collapse {
         display: none;
     }
+
+    /* header */
+
+    /* categories section */
+
+    /* showcase section */
+
+    /* info section */
+
+    /* app section */
+
+    /* footer */
+
 }
 
