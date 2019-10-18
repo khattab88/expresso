@@ -534,5 +534,26 @@ form.search button {
     .footer {
         padding: 0 100px;
     }
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .footer-links {
+        flex-direction: row;
+    }
+    .footer-links li {
+        margin: 0 30px;
+    }
+    .social-links-wrapper {
+        margin-top: 10px;
+    }
+    .sub-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-app-downloads {
+        margin-top: 0;
+    }
 }
 
