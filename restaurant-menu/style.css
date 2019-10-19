@@ -240,16 +240,22 @@ ul.navbar-items li {
 }
 .menu-item {
     min-height: 400px;
+    margin-bottom: 10px;
 }
 .menu-item-cover {
     min-width: 350px;
     min-height: 245px;
     background-image: url(./img/photo-1549611016-3a70d82b5040.jpg);
     background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .menu-item-info {
-    padding: 0 15px 25px 15px;
-    min-height: 135px;
+    background-color: #fcfcfc;
+    padding: 0 15px 20px 15px;
+    min-height: 120px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .menu-item-info>div {
     display: flex;
