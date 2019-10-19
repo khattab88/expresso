@@ -63,7 +63,20 @@ ul.navbar-items li {
     display: inline-block;
     margin-right: 5px;
 }
-
+.nav-category {
+    position: relative;
+}
+.nav-category:hover {
+    color: var(--font-color-lite);
+}
+.nav-category i {
+    font-size: 26px;
+    position: absolute;
+    bottom: -8px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    padding: 3px;
+}
 
 /* header */
 .header {
@@ -417,7 +430,7 @@ form.search button {
         margin: 0;
         margin-top: 40px;
         margin-left: 20px;
-        width: 40%;
+        width: 80%;
     }
     .search-container h2 {
         font-size: 36px;
