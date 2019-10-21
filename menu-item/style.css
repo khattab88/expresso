@@ -314,6 +314,7 @@ ul.navbar-items li {
     border-radius: 4px;
     padding: 10px 20px 20px;
     border-radius: 4px;
+    border: 1px solid var(--font-color-lite);
 }
 .modal-container {
     position: relative;
@@ -673,6 +674,16 @@ ul.navbar-items li {
     }
 
     
+    /* menu item modal */
+    .menu-item-detail {}
+    .modal-content {
+        width: 40%;
+        margin: 20px auto;
+        top: 100px;
+    }
+    .modal-head {
+        top: -100px;
+    }
 
 
 
