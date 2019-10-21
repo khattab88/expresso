@@ -130,10 +130,92 @@
                             <img src="./img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
                         </div>
                         <div class="modal-body">
-                            <h2>body</h2>
+                            <section class="dish-info">
+                                <div class="dish-info-row">
+                                    <h3>Big Tasty Burger</h3>
+                                    <p>70 EGP</p>
+                                </div>
+                                <p>2 organic beef patties, 2 slices of real cheddar cheese.</p>
+                            </section>
+                            <section class="dish-options" style="display: none;">
+                                <div class="dish-info-row">
+                                    <h4>Choice of bun or lettuce wrap</h4>
+                                    <span><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="required-info">Required, choose at least one.</p>
+                                <ul>
+                                    <li>
+                                        <div class="option">
+                                            <input type="radio" checked name="option-1" id="option-1">
+                                            <label for="option-1">Potato Bun</label>
+                                        </div>
+                                        <p class="option-price">0.75 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="radio" name="option-1" id="option-1">
+                                            <label for="option-1">Lettuce Wrap</label>
+                                        </div>
+                                        <p class="option-price">0.50 EGP</p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="dish-options">
+                                <div class="dish-info-row">
+                                    <h4>Choice of cheese</h4>
+                                    <span><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="required-info optional">Optional, choose multiple.</p>
+                                <ul>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" name="option-1" id="option-1">
+                                            <label for="option-1">No Cheese</label>
+                                        </div>
+                                        <p class="option-price">0.00 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" name="option-1" id="option-1">
+                                            <label for="option-1">Regular</label>
+                                        </div>
+                                        <p class="option-price">0.50 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" checked name="option-1" id="option-1">
+                                            <label for="option-1">Cheddar</label>
+                                        </div>
+                                        <p class="option-price">0.75 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" name="option-1" id="option-1">
+                                            <label for="option-1">Spicy</label>
+                                        </div>
+                                        <p class="option-price">0.50 EGP</p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="dish-options">
+                                <div class="dish-info-row">
+                                    <h4>Add Special Instructions</h4>
+                                    <span><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="required-info optional"></p>
+                                <textarea name="notes" id="notes" cols="40" rows="6"
+                                    placeholder="Add a note (food allergies, extra sauce, no onions, etc.). Please be clear and concise so we can get your order perfect."></textarea>
+                            </section>
                         </div>
                         <div class="modal-footer">
-                            <h2>footer</h2>
+                            <div class="add-remove-wrapper">
+                                <span class="btn-cart">-</span>
+                                <p class="cart-item-count">1</p>
+                                <span class="btn-cart">+</span>
+                            </div>
+                            <div class="add-order-wrapper">
+                                <button>Add to order</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,7 +276,7 @@
                 return;
             });
 
-            document.querySelector(".close-modal-btn").addEventListener("click", function(e){
+            document.querySelector(".close-modal-btn").addEventListener("click", function (e) {
                 const modal = document.querySelector(".menu-item-detail");
                 modal.classList.remove("modal-open");
                 modal.classList.add("modal-close");
