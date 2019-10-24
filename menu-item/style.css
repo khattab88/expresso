@@ -741,6 +741,7 @@ ul.navbar-items li {
     
     /* main */
 
+    /* cart modal */
     .cart-view-modal .modal-content {
         margin-top: 10px;
     }
@@ -871,6 +872,11 @@ ul.navbar-items li {
         top: -100px;
     }
 
+
+    /* cart modal */
+    .cart-view-modal .modal-content {
+        width: 60%;
+    }
 
 
     /* footer */
