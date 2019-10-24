@@ -464,12 +464,16 @@ ul.navbar-items li {
     outline: 0;
 
     opacity: 1;
-
-    display: block;
 }
-.cart-view-modal .modal-open {
+.cart-view-modal {
     overflow-x: hidden;
     overflow-y: auto;
+}
+.modal-open {
+    display: block;
+}
+.modal-close {
+    display: none;
 }
  .vertical-alignment-helper {
     display: table;

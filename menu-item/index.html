@@ -222,7 +222,7 @@
             </div>
 
             <!-- cart view modal -->
-            <div class="cart-view-modal">
+            <div class="cart-view-modal modal-close">
                 <div class="vertical-alignment-helper">
                     <div class="modal-dailog">
                         <div class="modal-content">
@@ -309,6 +309,7 @@
         (function () {
             console.log("document loaded !");
 
+            // menu item detail
             document.querySelector(".menu-items-list").addEventListener("click", function (e) {
                 const item = e.target.closest(".menu-item");
                 console.log(item.id);
@@ -321,6 +322,22 @@
 
             document.querySelector(".close-modal-btn").addEventListener("click", function (e) {
                 const modal = document.querySelector(".menu-item-detail");
+                modal.classList.remove("modal-open");
+                modal.classList.add("modal-close");
+                return;
+            });
+
+
+            // item cart
+            document.querySelector(".cart-wrapper").addEventListener("click", function(e){
+                const modal = document.querySelector(".cart-view-modal");
+                modal.classList.remove("modal-close");
+                modal.classList.add("modal-open");
+                return;
+            });
+
+            document.querySelector(".cart-view-modal .cart-header .close").addEventListener("click", function(e){
+                const modal = document.querySelector(".cart-view-modal");
                 modal.classList.remove("modal-open");
                 modal.classList.add("modal-close");
                 return;
