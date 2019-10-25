@@ -122,6 +122,7 @@ ul.navbar-items li {
 .restaurant-info {}
 .restaurant-info h2 {
     line-height: 36px;
+    font-size: 28px;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
 }
 .restaurant-info p {
@@ -135,10 +136,137 @@ ul.navbar-items li {
 
 /* main */
 .main {
-    width: 94%;
-    margin: 0 auto;
-    height: 50vh;
+    width: 100%;
 }
+
+.checkout-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.checkout-info-box {
+    padding: 30px 40px;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid var(--font-color-lite);
+    border-radius: 5px;
+}
+.checkout-info-wrapper {
+}
+.customer-info {
+    background-color: #fff;
+    border-top: 7px solid var(--main-color);
+}
+.customer-info h3 {
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 24px;
+}
+.customer-info p {
+    line-height: 22px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.customer-form {
+    margin-top: 30px;
+}
+.form-group {
+    display: block;
+    margin: 10px 0 20px 0;
+    border: 0;
+    border-bottom: 1px solid var(--font-color-lite);
+}
+.form-group input {
+    width: 100%;
+    min-height: 35px;
+    box-sizing: content-box;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    font-size: 18px;
+    padding: 3px 5px;
+}
+.form-group label {
+    transform: translateY(-50%);
+    font-size: 18px;
+    line-height: 18px;
+}
+.delivery-info h4 {
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 24px;
+}
+.delivery-address {
+    display: flex;
+    flex-direction: column;
+}
+.delivery-address button {
+    border: 1px solid var(--main-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 300;
+    color: var(--main-color);
+    background-color: #fff;
+    width: 60%;
+    margin: 30px 0;
+}
+.delivery-address span {
+    font-size: 14px;
+}
+.delivery-address span i {
+    font-size: 14px;
+}
+.delivery-time {
+    margin-top: 30px;
+}
+.delivery-time h5 {
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    color: var(--font-color);
+}
+.delivery-time div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--font-color-lite);
+    border-radius: 3px;
+    height: 40px;
+    padding: 0 10px;
+}
+.delivery-time div i {
+    color: var(--main-color);
+}
+.payment-info {}
+.payment-info h4 {
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 24px;
+}
+.payment-options {
+    list-style: none;
+    margin-top: 25px;
+}
+.payment-options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.payment-options li input {
+    margin-right: 10px;
+}
+.payment-options li h5 {
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 16px;
+}
+
 
 
 
