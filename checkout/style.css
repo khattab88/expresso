@@ -575,12 +575,31 @@ ul.navbar-items li {
     /* main */
     .main {
         padding: 0 5px;
-        display: flex;
+        /* display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-between; */
     }
 
-    
+   
+    .checkout-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0 130px;
+    }
+    .checkout-info-wrapper {
+        width: 60%;
+    }
+    .order-info-wrapper {
+        width: 40%;
+        height: 430px;
+    }
+    .delivery-time {
+        width: 60%;
+    }
+
+
+
 
     /* footer */
     .footer {
