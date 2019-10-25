@@ -92,13 +92,14 @@ ul.navbar-items li {
     margin-left: auto;
 }
 .login-wrapper {
+    margin-top: 100px;
     border-radius: 4px 4px 0 0;
     height: 700px;
     display: block;
     width: 100%;
 
     overflow: hidden;
-    background: url(./img/photo-1490457843367-34b21b6ccd85.jpg) no-repeat center center transparent;
+    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     position: relative;
     border-radius: 5px;
 }
@@ -112,7 +113,6 @@ ul.navbar-items li {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 
-    margin-top: 100px;
     color: #fff;
 }
 .login-form h3 {
@@ -332,7 +332,9 @@ input[type="checkbox"] {
     
     
     /* main */
-
+    .login-wrapper {
+        background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+    }
    
     /* footer */
 }
