@@ -332,9 +332,8 @@ input[type="checkbox"] {
     
     
     /* main */
-    .login-wrapper {
-        background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
-    }
+
+
    
     /* footer */
 }
@@ -414,6 +413,34 @@ input[type="checkbox"] {
     }
 
    
+    .container {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 50px;
+        margin-bottom: 150px;
+
+        padding-right: 250px;
+        padding-left: 250px;
+    }
+    .login-wrapper {
+        background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+
+        margin-top: 0;
+        top: 100px;
+
+        height: 500px;
+        width: 200vw;
+    }
+    .sign-up {
+        bottom: 0;
+        top: 100px;
+        height: 500px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
 
     /* footer */
