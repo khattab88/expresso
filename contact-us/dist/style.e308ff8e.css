@@ -384,7 +384,9 @@ textarea.form-control {
     }
 
     /* header */
-    
+    header {
+        height: 65vh;
+    }
     
     /* main */
 
