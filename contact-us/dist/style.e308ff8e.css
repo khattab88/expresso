@@ -464,6 +464,30 @@ textarea.form-control {
     }
 
     
+    /* header */
+    header {
+        background-size: cover;
+        height: 60vh;
+    }
+    .breadcrumb {
+        padding-top: 28px;
+        margin-left: 85px;
+    }
+    .header-wrapper {
+        margin-left: 130px;
+        margin-top: 100px;
+    }
+    .contact-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top: -120px;
+        background-color: #fff;
+        border: 1px solid var(--font-color-lite);
+        border-radius: 5px;
+    }
+
+
     /* main */
     .main {
         padding: 0 5px;
