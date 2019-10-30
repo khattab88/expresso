@@ -1,0 +1,128 @@
+/* Mobile-first*/
+
+.footer {
+    padding: 0 20px;
+    background-color: var(--font-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+}
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+.footer-links li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 16px;
+    line-height: 44px;
+}
+.social-links-wrapper {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+.social-links li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links li i {
+    font-size: 24px;
+}
+
+.sub-footer {
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    width: 100%;
+    padding: 20px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.change-country-wrapper {
+    border: 1px solid #444;
+    padding: 7px 40px;
+    border-radius: 5px;
+}
+.change-country-wrapper img {
+    vertical-align: middle;
+}
+.change-country-btn {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+}
+.country-flag {
+    margin-right: 12px;
+}
+.change-country-btn i{
+    margin-left: 20px;
+}
+
+.footer-app-downloads {
+    margin-top: 20px;
+}
+.footer-app-downloads img {
+    height: 36px;
+}
+.copyright {
+    padding: 40px 0 50px 0;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+
+
+/* Mobile Landscape or Tablet Screen Sizes */
+@media only screen and (min-width: 480px)  {}
+
+
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+    .footer {
+        padding: 0 100px;
+    }
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .footer-links {
+        flex-direction: row;
+    }
+    .footer-links li {
+        margin: 0 30px;
+    }
+    .social-links-wrapper {
+        margin-top: 10px;
+    }
+    .sub-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-app-downloads {
+        margin-top: 0;
+    }
+}

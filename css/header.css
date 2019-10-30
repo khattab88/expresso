@@ -1,0 +1,18 @@
+/* Mobile-first*/
+
+.header {
+    background: url(img/photo-1490457843367-34b21b6ccd85.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+
+
+/* Mobile Landscape or Tablet Screen Sizes */
+@media only screen and (min-width: 480px)  {}
+
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+    
+}
