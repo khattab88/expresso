@@ -6,11 +6,12 @@
     height: 400px;
 }
 
-
+/*------------------------------------------------------------*/
 
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {}
 
+/*------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
