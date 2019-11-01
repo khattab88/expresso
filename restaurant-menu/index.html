@@ -119,6 +119,152 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- menu item modal -->
+            <div class="menu-item-detail modal-close">
+                <div class="modal-content">
+                    <div class="modal-container">
+                        <div class="modal-head">
+                            <p class="close-modal-btn"><i class="fa fa-times"></i></p>
+                            <img src="./img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
+                        </div>
+                        <div class="modal-body">
+                            <section class="dish-info">
+                                <div class="dish-info-row">
+                                    <h3>Big Tasty Burger</h3>
+                                    <p>70 EGP</p>
+                                </div>
+                                <p>2 organic beef patties, 2 slices of real cheddar cheese.</p>
+                            </section>
+                            <section class="dish-options" style="display: none;">
+                                <div class="dish-info-row">
+                                    <h4>Choice of bun or lettuce wrap</h4>
+                                    <span><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="required-info">Required, choose at least one.</p>
+                                <ul>
+                                    <li>
+                                        <div class="option">
+                                            <input type="radio" checked name="option-1" id="option-1">
+                                            <label for="option-1">Potato Bun</label>
+                                        </div>
+                                        <p class="option-price">0.75 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="radio" name="option-1" id="option-1">
+                                            <label for="option-1">Lettuce Wrap</label>
+                                        </div>
+                                        <p class="option-price">0.50 EGP</p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="dish-options">
+                                <div class="dish-info-row">
+                                    <h4>Choice of cheese</h4>
+                                    <span><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="required-info optional">Optional, choose multiple.</p>
+                                <ul>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" checked name="option-1" id="option-1">
+                                            <label for="option-1">No Cheese</label>
+                                        </div>
+                                        <p class="option-price">0.00 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" name="option-1" id="option-1">
+                                            <label for="option-1">Regular</label>
+                                        </div>
+                                        <p class="option-price">0.50 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" name="option-1" id="option-1">
+                                            <label for="option-1">Cheddar</label>
+                                        </div>
+                                        <p class="option-price">0.75 EGP</p>
+                                    </li>
+                                    <li>
+                                        <div class="option">
+                                            <input type="checkbox" name="option-1" id="option-1">
+                                            <label for="option-1">Spicy</label>
+                                        </div>
+                                        <p class="option-price">0.50 EGP</p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="dish-options">
+                                <div class="dish-info-row">
+                                    <h4>Add Special Instructions</h4>
+                                    <span><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="required-info optional"></p>
+                                <textarea name="notes" id="notes" cols="40" rows="6"
+                                    placeholder="Add a note (food allergies, extra sauce, no onions, etc.). Please be clear and concise so we can get your order perfect."></textarea>
+                            </section>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="add-remove-wrapper">
+                                <span class="btn-cart">-</span>
+                                <p class="cart-item-count">1</p>
+                                <span class="btn-cart">+</span>
+                            </div>
+                            <div class="add-order-wrapper">
+                                <button>Add to order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cart view modal -->
+            <div class="cart-view-modal modal-close">
+                <div class="vertical-alignment-helper">
+                    <div class="modal-dailog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="cart-header">
+                                    <div>
+                                        <i class="material-icons">shopping_cart</i>
+                                        <h3>Your Oredr</h3>
+                                    </div>
+                                    <p class="close"><i class="fa fa-times"></i></p>
+                                </div>
+                                <div class="cart-items">
+                                    <div class="item-info">
+                                        <p class="item-name">Double Cheese Burger</p>
+                                        <p class="item-price">75.00 EGP</p>
+                                    </div>
+                                    <div class="item-count-price">
+                                        <div class="btn-cart">-</div>
+                                        <p class="btn-cart">1</p>
+                                        <div class="btn-cart">+</div>
+                                    </div>
+                                </div>
+                                <div class="cart-pricing">
+                                    <p>subtotal</p>
+                                    <p>75.00 EGP</p>
+                                </div>
+                                <div class="cart-pricing">
+                                    <p>delivery fee</p>
+                                    <p>5.00 EGP</p>
+                                </div>
+                                <div class="cart-pricing cart-total">
+                                    <p>Total</p>
+                                    <p>80.00 EGP</p>
+                                </div>
+                                <div class="checkout-btn-wrapper">
+                                    <button>Checkout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="footer">
             <h2 class="footer-logo">Expresso</h2>
@@ -157,6 +303,48 @@
             <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
         </footer>
     </div>
+
+
+    <script>
+        (function () {
+            console.log("document loaded !");
+
+            // menu item detail
+            document.querySelector(".menu-items-list").addEventListener("click", function (e) {
+                const item = e.target.closest(".menu-item");
+                console.log(item.id);
+
+                const modal = document.querySelector(".menu-item-detail");
+                modal.classList.remove("modal-close");
+                modal.classList.add("modal-open");
+                return;
+            });
+
+            document.querySelector(".close-modal-btn").addEventListener("click", function (e) {
+                const modal = document.querySelector(".menu-item-detail");
+                modal.classList.remove("modal-open");
+                modal.classList.add("modal-close");
+                return;
+            });
+
+
+            // item cart
+            document.querySelector(".cart-wrapper").addEventListener("click", function(e){
+                const modal = document.querySelector(".cart-view-modal");
+                modal.classList.remove("modal-close");
+                modal.classList.add("modal-open");
+                return;
+            });
+
+            document.querySelector(".cart-view-modal .cart-header .close").addEventListener("click", function(e){
+                const modal = document.querySelector(".cart-view-modal");
+                modal.classList.remove("modal-open");
+                modal.classList.add("modal-close");
+                return;
+            });
+
+        })();       
+    </script>
 </body>
 
 </html>
