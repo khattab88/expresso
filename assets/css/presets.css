@@ -22,4 +22,5 @@ h1 { margin: 0; }
 :root {
     --main-color: #009a9a;
     --font-color: #323232;
+    --font-color-lite: #e8e8e8;
 }

@@ -1,7 +1,7 @@
 /* Mobile-first*/
 
 .header {
-    background: url(img/photo-1490457843367-34b21b6ccd85.jpg);
+    background: url(../img/photo-1490457843367-34b21b6ccd85.jpg);
     background-size: cover;
     height: 400px;
 }
@@ -14,6 +14,4 @@
 /*------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
-    
-}
+@media only screen and (min-width: 768px) {}

@@ -1,10 +1,12 @@
 /* Mobile-first*/
 
 .navbar {
+    z-index: 2;
     background-color: var(--main-color);
     padding: 10px 20px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -30,16 +32,27 @@ ul.navbar-items li {
     display: inline-block;
     margin-right: 5px;
 }
+.nav-category {
+    position: relative;
+}
+.nav-category:hover {
+    color: var(--font-color-lite);
+}
+.nav-category i {
+    font-size: 26px;
+    position: absolute;
+    bottom: -8px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    padding: 3px;
+}
+
 
 /*------------------------------------------------------------*/
 
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
-
-    /* navbar */
-    .navbar {
-        /* background-color: yellow; */
-    }
+    .navbar {}
 }
 
 /*------------------------------------------------------------*/
@@ -47,9 +60,7 @@ ul.navbar-items li {
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
 
-    /* navbar */
     .navbar {
-        /* background-color: red; */
         height: 70px;
         padding: 0 100px;
     }
