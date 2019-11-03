@@ -1,9 +1,9 @@
 /* Mobile-first*/
 
 .header {
-    background: url(../img/photo-1490457843367-34b21b6ccd85.jpg);
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) ,url(../img/photo-1490457843367-34b21b6ccd85.jpg);
     background-size: cover;
-    height: 400px;
+    height: 450px;
 }
 
 /*------------------------------------------------------------*/
@@ -14,4 +14,10 @@
 /*------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .header {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                    url(../img/photo-1466978913421-dad2ebd01d17.jpg);
+
+    }
+}

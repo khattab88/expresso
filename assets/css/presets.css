@@ -1,26 +1,35 @@
-html,body
-{
-    box-sizing: border-box;
-    font-family: Oswald, Arial, Helvetica, sans-serif;
-
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html{
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    width: 100%;
+    height: 100%;
 }
 
 h1 { margin: 0; }
+
 :root {
     --main-color: #009a9a;
     --font-color: #323232;
     --font-color-lite: #e8e8e8;
+}
+
+.container {
+    margin: 0 auto;
 }

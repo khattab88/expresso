@@ -1,24 +1,23 @@
 /* Mobile-first*/
 
-.container{}
-
-
 /* header */
 .search-container {
     margin: 45px auto 0 auto;
-    padding-top: 60px;
+    padding-top: 15%;
     width: 94%;
     font-weight: 300;
     display: flex;
     flex-direction: column;
 }
 .search-container h2 {
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 200%;
     color: #fff;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    line-height: 125%;
 }
 .search-form-wrapper{
-    padding-top: 20px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -27,11 +26,11 @@ form.search input {
     width: 100%;
     height: 50px;
     color: #333;
-    line-height: 50px;
-    font-size: 18px;
+    font-size: 100%;
     padding: 5px 15px;
     border-style: none;
     border-radius: 5px;
+    letter-spacing: .5px;
 }
 form.search button {
     display: block;
@@ -46,6 +45,7 @@ form.search button {
     padding: 5px 10px;
     border-style: none;
     border-radius: 5px;
+    letter-spacing: .5px;
 }
 
 
@@ -64,13 +64,13 @@ form.search button {
 }
 .categories-section h2 {
     text-align: center;
-    padding: 35px 0 20px 0;
+    padding: 40px 0 0 0;
     color: var(--font-color);
     font-size: 28px;
     font-weight: 400;
 }
 .categoris-container {
-    height: 180px;
+    overflow-x: hidden;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -79,21 +79,26 @@ form.search button {
     border-style: none;
     background-color: var(--main-color);
     color: #fff;
-    min-width: 20px;
+    min-width: 25px;
     font-size: 18px;
     font-weight: 300;
+    margin-right: 5px;
 }
+[class*="arrow-"]>i {
+    margin-left: -3px;
+ }
 .categories-list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
 .category-card {
-    min-width: 110px;
+    width: 125px;
+    height: 165px;
     color: var(--font-color);
     list-style: none;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -120,10 +125,12 @@ form.search button {
     font-size: 40px;
 }
 .category-name {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 100%;
     line-height: 22px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
+}
+.category-name h4 {
+    font-weight: 400;
 }
 .active-category {
     background-color: var(--main-color);
@@ -160,10 +167,11 @@ form.search button {
     margin: 5px;
 }
 .restaurant-card {
-    min-height: 190px;
-    min-width: 178px;
-    background-image: url(./img/photo-1540265556701-ae209ac395cd.jpg);
+    min-height: 200px;
+    min-width: 190px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.5)) ,url(./img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
+    background-position: center;
     color: #fff;
     border: 2px solid var(--font-color);
     border-radius: 10px;
@@ -181,14 +189,28 @@ form.search button {
     letter-spacing: 0.5px;
     line-height: 18px;
 }
+.big-card {
+    width: 390px;
+    height: 350px;
+}
+.big-card .restaurant-name {
+    font-size: 180%;
+    letter-spacing: 0.5px;
+}
+.big-card .restaurant-desc {
+    font-size: 120%;
+    letter-spacing: 0.5px;
+    line-height: 150%;
+}
 .show-all-btn {
-    width: 100%;
+    width: 98%;
     border-style: none;
     border: 0;
     border-radius: 5px;
     background-color: var(--main-color);
     color: #fff;
     margin: 5px auto;
+    margin-left: 1%;
     font-size: 20px;
     padding: 10px 0;
 }
@@ -264,6 +286,7 @@ form.search button {
     form.search button:hover {
         cursor: pointer;
         background-color: var(--font-color);
+        transition: background-color 0.2s;
     }
 
     /* main sections */
@@ -287,6 +310,11 @@ form.search button {
     .showcase-container {}
     .showcase-row {}
 
+    .restaurant-card:hover {
+        background-image: url(./img/photo-1540265556701-ae209ac395cd.jpg);
+        transform: scale(1.01);
+        transition: transform 0.3s, opacity 0.3s;
+    }
     .restaurant-name,
     .restaurant-desc {
         text-align: center;

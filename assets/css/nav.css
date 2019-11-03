@@ -3,7 +3,7 @@
 .navbar {
     z-index: 2;
     background-color: var(--main-color);
-    padding: 10px 20px;
+    padding: 10px 15px;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,16 +12,17 @@
     justify-content: space-between;
     align-items: center;
 }
-.navbar-logo {
+.navbar-logo a {
+    text-decoration: none;
     color: #fff;
 }
 .navbar-logo h2 {
     letter-spacing: 1px;
 }
-.navbar-collapse {
+.navbar-toggle {
     display: inline-block;
 }
-.navbar-collapse span {
+.navbar-toggle span {
     font-size: 25px;
     color: #fff;
 }
@@ -31,6 +32,10 @@
 ul.navbar-items li {
     display: inline-block;
     margin-right: 5px;
+}
+ul.navbar-items li a {
+    text-decoration: none;
+    color: #fff;
 }
 .nav-category {
     position: relative;
@@ -48,14 +53,14 @@ ul.navbar-items li {
 }
 
 
-/*------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
     .navbar {}
 }
 
-/*------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -77,7 +82,7 @@ ul.navbar-items li {
     .navbar-items li {
         margin: 0 15px 0 15px;
     }
-    .navbar-items li:hover {
+    .navbar-items li a:hover {
         color: var(--font-color);
         cursor: pointer;
     }
@@ -117,7 +122,7 @@ ul.navbar-items li {
     .nav-cart img {
         vertical-align: middle;
     }
-    .navbar-collapse {
+    .navbar-toggle {
         display: none;
     }
 }
