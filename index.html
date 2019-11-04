@@ -21,39 +21,7 @@
 <body>
     <div class="container">
 
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <a href="./index.html">
-                    <h2>Expresso</h2>
-                </a>
-            </div>
-            <div class="nav-container">
-                <ul class="navbar-items">
-                    <li><a href="./login/index.html">Login</a></li>
-                    <li><a href="./sign-up/index.html">Sign Up</a></li>
-                    <li><a href="./contact-us/index.html">Contact Us</a></li>
-                    <li class="nav-language"><a href="#">العربية</a></li>
-                    <li class="nav-country">
-                        <a href="#">
-                            <img class="country-flag" src="./home/img/egypt-flag-icon-32.png" alt="egypt" height="20"
-                                width="30">
-                            <i class="fa fa-caret-down"></i>
-                        </a>
-                    </li>
-                    <li class="nav-cart">
-                        <a href="./checkout/index.html">
-                            <img alt="Cart" height="27"
-                                src="./home/img/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
-                                title="Cart" width="30">
-                            <em>1</em>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-toggle collapsed">
-                <span class="fa fa-align-justify"></span>
-            </div>
-        </nav>
+        <nav class="navbar"></nav>
 
         <header class="header">
             <div class="search-container">
@@ -187,48 +155,16 @@
             </div> -->
         </div>
 
-        <footer class="footer">
-            <h2 class="footer-logo">Expresso</h2>
-            <section class="footer-container">
-                <div class="footer-links-warpper">
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="./restaurant-list//index.html">Restaurants</a></li>
-                        <li><a href="./contact-us/index.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="social-links-wrapper">
-                    <ul class="social-links">
-                        <li><i class="fa fa-facebook-square"></i></li>
-                        <li><i class="fa fa-twitter"></i></li>
-                        <li><i class="fa fa-instagram"></i></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="sub-footer">
-                <div class="change-country-wrapper">
-                    <button class="change-country-btn">
-                        <img class="country-flag" src="./home/img/egypt-flag-icon-32.png" alt="egypt" height="20"
-                            width="30">
-                        Egypt
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                </div>
-                <div class="footer-app-downloads">
-                    <img alt="Download App from Google Playstore"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
-                    <img alt="Download App from Apple App Store"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
-                </div>
-            </section>
-            <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
-        </footer>
-
+        <footer class="footer"></footer>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
-        
+        $(document).ready(function () {
+            $(".navbar").load("./assets/templates/nav.html");
+            $(".footer").load("./assets/templates/footer.html");
+        });
     </script>
 </body>
 

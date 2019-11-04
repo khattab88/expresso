@@ -19,38 +19,7 @@
 
 <body>
     <div class="container">
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <h2>Expresso</h2>
-            </div>
-            <div class="nav-container">
-                <ul class="navbar-items">
-                    <li>Login</li>
-                    <li>Sign Up</li>
-                    <li>Contact Us</li>
-                    <li class="nav-language">العربية</li>
-                    <li class="nav-country">
-                        <img class="country-flag" src="./img/egypt-flag-icon-32.png" alt="egypt" height="20" width="30">
-                        <i class="fa fa-caret-down"></i>
-                    </li>
-                    <li class="nav-cart">
-                        <img alt="Cart" height="27"
-                            src="./img/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg" title="Cart"
-                            width="30">
-                        <em>1</em>
-                    </li>
-                    <li class="nav-category">
-                        <i class="material-icons">restaurant_menu</i>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-collapse">
-                <a>
-                    <span class="fa fa-align-justify"></span>
-                </a>
-            </div>
-        </nav>
-
+        <nav class="navbar"></nav>
 
         <div class="main">
             <div class="sign-up-wrapper">
@@ -73,44 +42,17 @@
             </div>
         </div>
 
-
-        <footer class="footer">
-            <h2 class="footer-logo">Expresso</h2>
-            <section class="footer-container">
-                <div class="footer-links-warpper">
-                    <ul class="footer-links">
-                        <li>About Us</li>
-                        <li>How it works</li>
-                        <li>Restaurants</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </div>
-                <div class="social-links-wrapper">
-                    <ul class="social-links">
-                        <li><i class="fa fa-facebook-square"></i></li>
-                        <li><i class="fa fa-twitter"></i></li>
-                        <li><i class="fa fa-instagram"></i></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="sub-footer">
-                <div class="change-country-wrapper">
-                    <button class="change-country-btn">
-                        <img class="country-flag" src="./img/egypt-flag-icon-32.png" alt="egypt" height="20" width="30">
-                        Egypt
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                </div>
-                <div class="footer-app-downloads">
-                    <img alt="Download App from Google Playstore"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
-                    <img alt="Download App from Apple App Store"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
-                </div>
-            </section>
-            <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
-        </footer>
+        <footer class="footer"></footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".navbar").load("../../assets/templates/nav.html");
+            $(".footer").load("../../assets/templates/footer.html");
+        });
+    </script>
 </body>
 
 </html>
