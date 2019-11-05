@@ -10,10 +10,10 @@
     background-size: cover;
     background-position: center center;
     height: 250px;
-    position: relative;
+    
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
 
 }
 
@@ -25,6 +25,7 @@
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
+    margin-top: 150px;
 }
 .restaurant-info {}
 .restaurant-info h2 {
@@ -286,20 +287,28 @@
 
 /* footer */
 
+/*----------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
 
     /* navbar */
 
-    /* header */    
+    /* header */ 
+    
+    .header-breadcrumb-wrapper {
+        padding-left: 40px;
+    }
+    .restaurant-info-wrapper {
+        padding-left: 40px;
+    }
     
     /* main */
 
     /* footer */
 }
 
-
+/*----------------------------------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -309,14 +318,17 @@
     /* header */
     
     /* breadcrumb */
-
-    .restaurant-info-wrapper {
-        padding: 30px 130px;
+    .header-breadcrumb-wrapper {
+        padding-left: 170px;
+        padding-top: -1px;
     }
-
+    .restaurant-info-wrapper {
+        padding-left: 170px;
+    }
     
     /* main */
     .main {
+        width: 98%;
         padding: 0 5px;
     }
 
