@@ -186,6 +186,7 @@
 
 /* footer */
 
+/*-----------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
@@ -203,7 +204,7 @@
     /* footer */
 }
 
-
+/*-----------------------------------------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -211,13 +212,20 @@
     /* navbar */
 
     /* header */
+    .header {
+        position: static;
+        justify-content: space-around;
+        background-position: center;
+    }
     .restaurant-info-wrapper {
-        padding: 30px 130px;
+        padding: 30px 200px;
+        margin-top: 200px;
+        width: 75%;
     }
 
     /* main */
     .main {
-        padding: 0 5px;
+        padding: 0 120px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -230,6 +238,11 @@
         display: block;
     }
    
+    .menu-items-category {
+        width: 94%;
+        margin-left: 3%;
+    }
+
     .menu-items-wrapper {
         min-width: 65%;
         margin-right: 10px;

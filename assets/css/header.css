@@ -18,6 +18,7 @@
     .header {
         background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                     url(../img/photo-1466978913421-dad2ebd01d17.jpg);
-
+        background-size: cover;
+        background-position: center;
     }
 }

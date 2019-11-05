@@ -31,8 +31,9 @@
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-    .header-breadcrub-wrapper {
-        padding-left: 100px;
-        padding-top: 18px;
+    .header-breadcrumb-wrapper {
+        padding-left: 170px;
+        padding-top: 30px;
+        color: #fff;
     }
 }
