@@ -3,8 +3,6 @@
 .container {
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 /*navbar */
@@ -166,15 +164,14 @@ input[type="checkbox"] {
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
 
-    .container {
+    .wrapper {
         display: flex;
         justify-content: center;
 
         margin-top: 50px;
         margin-bottom: 150px;
 
-        padding-right: 250px;
-        padding-left: 250px;
+        padding: 0 200px;
     }
 
     /* navbar */
@@ -207,5 +204,4 @@ input[type="checkbox"] {
     /* footer */
 }
 
-/* checkpoint #2 */
 
