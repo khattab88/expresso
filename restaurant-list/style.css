@@ -3,38 +3,6 @@
 .container{}
 
 /*navbar */
-.navbar {
-    z-index: 2;
-    background-color: var(--main-color);
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navbar-logo {
-    color: #fff;
-}
-.navbar-logo h2 {
-    letter-spacing: 1px;
-}
-.navbar-collapse {
-    display: inline-block;
-}
-.navbar-collapse span {
-    font-size: 25px;
-    color: #fff;
-}
-.nav-container {
-    display: none;
-}
-ul.navbar-items li {
-    display: inline-block;
-    margin-right: 5px;
-}
-
 
 /* header */
 .search-container {
@@ -203,7 +171,6 @@ form.search button {
 @media only screen and (min-width: 480px)  {
 
     /* navbar */
-    .navbar {}
 
     /* header */
     .search-container {
@@ -227,11 +194,23 @@ form.search button {
         padding: 100px;
         margin: 0;
         margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 70px;
         width: 80%;
     }
     .search-container h2 {
         font-size: 36px;
+        font-weight: 300;
+    }
+    .search-form-wrapper form {
+        display: flex;
+    }
+    form.search input {
+        margin-right: 10px;
+    }
+    form.search button {
+        height: 50px;
+        width: 50%;
+        margin-top: 0;
     }
     form.search button:hover {
         cursor: pointer;
@@ -243,6 +222,15 @@ form.search button {
         padding: 0 100px;
     }
 
+    .item-row {
+        flex-direction: row;
+    }
+    .item-card {
+        width: 33%;
+        margin-right: 1%;
+        border: 1px solid var(--main-color);
+        border-radius: 5px;
+    }
    
     /* footer */
     
