@@ -252,6 +252,7 @@ form.search button {
 
 /* footer */
 
+/*-----------------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
@@ -259,6 +260,7 @@ form.search button {
     /* header */
     .search-container {
         width: 96%;
+        padding-top: 10%;
     }
     
     /* main sections */
@@ -279,7 +281,7 @@ form.search button {
     /* app section */
 }
 
-
+/*-----------------------------------------------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -289,7 +291,7 @@ form.search button {
         padding: 100px;
         margin: 0;
         margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 70px;
         width: 40%;
     }
     .search-container h2 {
@@ -303,7 +305,7 @@ form.search button {
 
     /* main sections */
     .main {
-        padding: 0 100px;
+        padding: 0 150px;
     }
 
     /* categories section */
@@ -339,8 +341,9 @@ form.search button {
         font-size: 30px;
     }
     .show-all-btn {
-        width: 50%;
+        width: 49%;
         text-align: center;
+        margin-left: 0.5%;
     }
 
     /* info section */
