@@ -19,6 +19,7 @@
 .navbar-logo h2 {
     letter-spacing: 1px;
 }
+
 .navbar-toggle {
     display: inline-block;
 }
@@ -26,12 +27,25 @@
     font-size: 25px;
     color: #fff;
 }
+
+.navbar-open {
+    background-color: var(--font-color);
+
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    width: 414px;
+    height: 30vh;
+}
+
 .nav-container {
     display: none;
 }
+ul.navbar-items {
+    list-style: none;
+}
 ul.navbar-items li {
-    display: inline-block;
-    margin-right: 5px;
+    margin: 12px 30px;
 }
 ul.navbar-items li a {
     text-decoration: none;
@@ -58,6 +72,10 @@ ul.navbar-items li a {
 /* Mobile Landscape or Tablet Screen Sizes */
 @media only screen and (min-width: 480px)  {
     .navbar {}
+
+    .nav-container {
+        /* width: 736px; */
+    }
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -81,6 +99,8 @@ ul.navbar-items li a {
     }
     .navbar-items li {
         margin: 0 15px 0 15px;
+        display: inline-block;
+        
     }
     .navbar-items li a:hover {
         color: var(--font-color);
