@@ -283,16 +283,15 @@ form.search button {
 
 /*-----------------------------------------------------------------------------------------------------*/
 
-/* Desktop screen Sizes */
+/* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
     
     /* header */
     .search-container {
         padding: 100px;
-        margin: 0;
+        margin: 0 auto;
         margin-top: 40px;
-        margin-left: 70px;
-        width: 40%;
+        width: 75%;
     }
     .search-container h2 {
         font-size: 36px;
@@ -305,7 +304,7 @@ form.search button {
 
     /* main sections */
     .main {
-        padding: 0 150px;
+        padding: 0;
     }
 
     /* categories section */
@@ -353,3 +352,16 @@ form.search button {
 }
 
 
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* Desktop screen sizes */
+@media only screen and (min-width: 1024px) {
+    .search-container {
+        width: 40%;
+        margin-left: 70px;
+    }
+
+    .main {
+        padding: 0 150px;
+    }
+}

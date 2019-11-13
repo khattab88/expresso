@@ -44,7 +44,7 @@
 ul.navbar-items {
     list-style: none;
 }
-ul.navbar-items li {
+.navbar-items li {
     margin: 12px 30px;
 }
 ul.navbar-items li a {
@@ -80,12 +80,12 @@ ul.navbar-items li a {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
-/* Desktop screen Sizes */
+/* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
 
     .navbar {
         height: 70px;
-        padding: 0 170px;
+        padding: 0 100px;
     }
     .navbar-logo {
         font-size: 22px;
@@ -98,7 +98,7 @@ ul.navbar-items li a {
         color: #fff;
     }
     .navbar-items li {
-        margin: 0 15px 0 15px;
+        margin: 0 5px;
         display: inline-block;
         
     }
@@ -144,5 +144,18 @@ ul.navbar-items li a {
     }
     .navbar-toggle {
         display: none;
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Desktop screen sizes */
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        padding: 0 170px;
+    }
+    .navbar-items li {
+        margin: 0 15px;
     }
 }
