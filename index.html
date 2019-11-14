@@ -23,15 +23,15 @@
 
         <nav class="navbar">
             <div class="navbar-logo">
-                <a href="/index.html">
+                <a href="./index.html">
                     <h2>Expresso</h2>
                 </a>
             </div>
             <div class="nav-container">
                 <ul class="navbar-items">
-                    <li><a href="/login/index.html">Login</a></li>
-                    <li><a href="/sign-up/index.html">Sign Up</a></li>
-                    <li><a href="/contact-us/index.html">Contact Us</a></li>
+                    <li><a href="./login/index.html">Login</a></li>
+                    <li><a href="./sign-up/index.html">Sign Up</a></li>
+                    <li><a href="./contact-us/index.html">Contact Us</a></li>
                     <li class="nav-language"><a href="#">العربية</a></li>
                     <li class="nav-country">
                         <a href="#">
@@ -62,7 +62,7 @@
                 <div class="search-form-wrapper">
                     <form method="GET" action="" class="search">
                         <input type="text" placeholder="Restaurant Name">
-                        <a href="/restaurant-menu/index.html">Find Restaurant</a>
+                        <a href="./restaurant-menu/index.html">Find Restaurant</a>
                     </form>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                     <div class="showcase-row">
                         <article class="showcase-col">
                             <div class="restaurant-card big-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-01.jpg"
                                         alt="rest-01">
                                     <div class="restaurant-name">Wrap It</div>
@@ -133,7 +133,7 @@
                     <div class="showcase-row">
                         <article class="showcase-col">
                             <div class="restaurant-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-02.jpg"
                                         alt="rest-02">
                                     <div class="restaurant-name">Wrap It</div>
@@ -143,7 +143,7 @@
                         </article>
                         <article class="showcase-col">
                             <div class="restaurant-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-03.jpg"
                                         alt="rest-03">
                                     <div class="restaurant-name">Wrap It</div>
@@ -155,7 +155,7 @@
                     <div class="showcase-row">
                         <article class="showcase-col">
                             <div class="restaurant-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-04.jpg"
                                         alt="rest-04">
                                     <div class="restaurant-name">Wrap It</div>
@@ -165,7 +165,7 @@
                         </article>
                         <article class="showcase-col">
                             <div class="restaurant-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-05.jpg"
                                         alt="rest-05">
                                     <div class="restaurant-name">Wrap It</div>
@@ -177,7 +177,7 @@
                     <div class="showcase-row">
                         <article class="showcase-col">
                             <div class="restaurant-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-06.jpg"
                                         alt="rest-06">
                                     <div class="restaurant-name">Wrap It</div>
@@ -187,7 +187,7 @@
                         </article>
                         <article class="showcase-col">
                             <div class="restaurant-card">
-                                <a href="/restaurant-menu/index.html">
+                                <a href="./restaurant-menu/index.html">
                                     <img class="restaurant-img" src="./assets/img/restaurants/rest-07.jpg"
                                         alt="rest-07">
                                     <div class="restaurant-name">Wrap It</div>
@@ -197,7 +197,7 @@
                         </article>
                     </div>
                     <div>
-                        <button class="show-all-btn"><a href="/restaurant-list/index.html">Show All Restaurants</a></button>
+                        <button class="show-all-btn"><a href="./restaurant-list/index.html">Show All Restaurants</a></button>
                     </div>
                 </div>
             </div>
@@ -223,8 +223,8 @@
                     <ul class="footer-links">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">How it works</a></li>
-                        <li><a href="/restaurant-list/index.html">Restaurants</a></li>
-                        <li><a href="/contact-us/index.html">Contact Us</a></li>
+                        <li><a href="./restaurant-list/index.html">Restaurants</a></li>
+                        <li><a href="./contact-us/index.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="social-links-wrapper">
@@ -269,10 +269,6 @@
                 let nav = $(".nav-container");
                 nav.toggleClass("navbar-open");
                 nav.slideToggle();
-            });
-
-            document.querySelector(".showcase-section .restaurant-card").addEventListener("click", () => {
-                window.open("/restaurant-menu/index.html", "_self");
             });
         });
     </script>
