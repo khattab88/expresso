@@ -289,7 +289,7 @@
 
 /*----------------------------------------------------------------------------------------*/
 
-/* Mobile Landscape or Tablet Screen Sizes */
+/* Mobile Landscape */
 @media only screen and (min-width: 480px)  {
 
     /* navbar */
@@ -310,8 +310,13 @@
 
 /*----------------------------------------------------------------------------------------*/
 
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {}
+
+/*----------------------------------------------------------------------------------------*/
+
 /* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
 
     /* navbar */
 

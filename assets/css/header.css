@@ -8,12 +8,12 @@
 
 /*------------------------------------------------------------*/
 
-/* Mobile Landscape or Tablet Screen Sizes */
+/* Mobile Landscape */
 @media only screen and (min-width: 480px)  {}
 
 /*------------------------------------------------------------*/
 
-/* Desktop screen Sizes */
+/* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
     .header {
         background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -22,3 +22,8 @@
         background-position: center;
     }
 }
+
+/*------------------------------------------------------------*/
+
+/* Desktop screen sizes */
+@media only screen and (min-width: 1024px) {}

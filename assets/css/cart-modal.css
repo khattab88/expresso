@@ -178,17 +178,24 @@
     line-height: 22px;
 }
 
+/*-----------------------------------------------------------------------------------------------*/
 
-/* Mobile Landscape or Tablet Screen Sizes */
+/* Mobile Landscape */
 @media only screen and (min-width: 480px)  {
      .cart-view-modal .modal-content {
         margin-top: 10px;
     }
 }
 
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {}
+
+/*-----------------------------------------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
      .cart-view-modal .modal-content {
         width: 60%;
     }

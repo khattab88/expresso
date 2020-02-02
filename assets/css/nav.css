@@ -69,12 +69,15 @@ ul.navbar-items li a {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
-/* Mobile Landscape or Tablet Screen Sizes */
+/* Mobile Landscape  */
 @media only screen and (min-width: 480px)  {
-    .navbar {}
 
     .nav-container {
-        /* width: 736px; */
+        /* background-color: yellow; */
+    }
+    .navbar-open {
+        left: 320px;
+        height: 55vh;
     }
 }
 
