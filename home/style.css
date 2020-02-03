@@ -170,7 +170,7 @@ form.search a {
 }
 .restaurant-card {
     min-height: 200px;
-    min-width: 190px;
+    min-width: 177px;
     border-radius: 10px;
     background-color: #000;
     color: #fff;
@@ -201,7 +201,7 @@ form.search a {
     left: 10px;
 }
 .big-card {
-    width: 390px;
+    width: 365px;
     height: 350px;
 }
 .big-card .restaurant-name {
@@ -301,7 +301,7 @@ form.search a {
         padding: 100px;
         margin: 0 auto;
         margin-top: 40px;
-        width: 75%;
+        width: 80%;
     }
     .search-container h2 {
         font-size: 36px;
@@ -315,6 +315,7 @@ form.search a {
     /* main sections */
     .main {
         padding: 0;
+        width: 86%;
     }
 
     /* categories section */
@@ -367,11 +368,19 @@ form.search a {
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
     .search-container {
-        width: 40%;
-        margin-left: 70px;
+        width: 50%;
+        margin-left: 10px;
     }
 
     .main {
-        padding: 0 150px;
+        padding: 0 100px;
+    }
+
+    .search-form-wrapper form a:hover {
+        background-color: var(--font-color);
+    }
+
+    .show-all-btn:hover {
+        background-color: var(--font-color);
     }
 }

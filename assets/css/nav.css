@@ -4,6 +4,7 @@
     z-index: 2;
     background-color: var(--main-color);
     padding: 10px 15px;
+    padding-right: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,9 +55,7 @@ ul.navbar-items li a {
 .nav-category {
     position: relative;
 }
-.nav-category:hover {
-    color: var(--font-color-lite);
-}
+
 .nav-category i {
     font-size: 26px;
     position: absolute;
@@ -156,9 +155,17 @@ ul.navbar-items li a {
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
     .navbar {
-        padding: 0 170px;
+        padding: 0 110px;
     }
     .navbar-items li {
         margin: 0 15px;
+    }
+
+    .nav-category:hover {
+        color: var(--font-color-lite);
+    }
+    .nav-cart > a em:hover {
+        background-color: var(--font-color);
+        color: var(--font-color-lite);
     }
 }

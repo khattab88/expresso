@@ -124,12 +124,31 @@
     .footer-links li {
         margin: 0 30px;
     }
+    .footer-links li a:hover {
+        color: var(--main-color);
+    }
     .social-links-wrapper {
         margin-top: 10px;
+    }
+    .social-links li:hover {
+        cursor: pointer;
+    }
+    .social-links>li>i[class*="facebook"]:hover{
+        color: #3b5998;
+    }
+    .social-links>li>i[class*="twitter"]:hover {
+        color: #1DA1F2;
+    }
+    .social-links>li>i[class*="instagram"]:hover {
+        color: #3f729b;
     }
     .sub-footer {
         flex-direction: row;
         justify-content: space-between;
+    }
+    .change-country-btn:hover {
+        color: var(--main-color);
+        cursor: pointer;
     }
     .footer-app-downloads {
         margin-top: 0;
