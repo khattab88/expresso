@@ -146,6 +146,12 @@
         width: 30%;
         justify-content: center;
     }
+    .sign-in button:hover {
+        background-color: var(--font-color);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
     .sign-up {
         width: 70%;
     }
@@ -157,8 +163,13 @@
     .form-group {
         min-width: 48%;
     }
+    .sign-up button:hover {
+        background-color: var(--main-color);
+        color: var(--font-color-lite);
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-   
     /* footer */
     
 }
