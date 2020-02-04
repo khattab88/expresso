@@ -178,6 +178,10 @@ form.search button {
     }
     
     /* main */
+    .filter-control i[class*="fa-angle-down"] {
+        margin-left: 300px;
+    }
+
 
     /* footer */
 }
@@ -226,6 +230,12 @@ form.search button {
     .main {
         padding: 0 100px;
     }
+    .filter-control:hover {
+        cursor: pointer;
+    }
+    .filter-control i[class*="fa-angle-down"] {
+        margin-left: 0;
+    }
 
     .item-row {
         flex-direction: row;
@@ -235,6 +245,9 @@ form.search button {
         margin-right: 1%;
         border: 1px solid var(--main-color);
         border-radius: 5px;
+    }
+    .item-img {
+        min-width: auto;
     }
    
     /* footer */
