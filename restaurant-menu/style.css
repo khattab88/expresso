@@ -207,14 +207,23 @@
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .menu-item-cover {
+        height: auto;
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
-/* Tablet screen Sizes */
+/* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
     /* navbar */
+
+     /* breadcrumb */
+     .header-breadcrumb-wrapper span:nth-child(odd):hover {
+        cursor: pointer;
+    }
 
     /* header */
     .header {
@@ -227,10 +236,13 @@
         margin-top: 200px;
         width: 75%;
     }
+    .restaurant-delivery p span:hover {
+        cursor: pointer;
+    }
 
     /* main */
     .main {
-        padding: 0 120px;
+        padding: 0;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -248,6 +260,12 @@
         margin-left: 3%;
     }
 
+    .cart-wrapper:hover,
+    .menu-categories-head:hover,
+    .menu-item:hover {
+        cursor: pointer;
+    }
+
     .menu-items-wrapper {
         min-width: 65%;
         margin-right: 10px;
@@ -260,18 +278,19 @@
     .menu-item {
         width: 45%;
     }
+  
     .menu-item-cover {
         min-width: 275px;
+    }
+    .menu-item-cover:hover {
+        transform: scale(1.05);
+    }
+   
 
+    .menu-item-price {
+        padding: 10px;
     }
 
     /* footer */
 
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Desktop screen sizes */
-@media only screen and (min-width: 1024px) {
-   
 }
