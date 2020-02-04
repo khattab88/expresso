@@ -302,6 +302,10 @@
     .restaurant-info-wrapper {
         padding-left: 40px;
     }
+
+    .delivery-time div {
+        width: 50%;
+    }
     
     /* main */
 
@@ -351,10 +355,31 @@
         width: 40%;
         height: 430px;
     }
+    .delivery-address button:hover {
+        background-color: var(--main-color);
+        color: var(--font-color-lite);
+        cursor: pointer;
+        transition: 0.3s;
+    }
     .delivery-time {
-        width: 60%;
+        width: 100%;
+    }
+    .delivery-time div {
+        cursor: pointer;
     }
 
+    .item-count-price .btn-cart:nth-child(odd):hover {
+        cursor: pointer;
+        background-color: var(--font-color);
+        color: var(--font-color-lite);
+        transition: 0.2s;
+    }
+
+    .checkout-btn-wrapper button:hover {
+        background-color: var(--font-color);
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
     /* footer */
    
