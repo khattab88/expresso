@@ -275,6 +275,12 @@ textarea.form-control {
         padding-right: 235px;
     }
 
+    .contact-form button:hover {
+        background-color: var(--font-color);
+        cursor: pointer;
+        transition: 0.3s;
+    } 
+
     .phone-wrapper {
         margin-top: 40px;
     }
