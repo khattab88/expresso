@@ -176,7 +176,7 @@ input[type="checkbox"] {
         margin-top: 50px;
         margin-bottom: 150px;
 
-        padding: 0 200px;
+        padding: 0 100px;
     }
 
     /* navbar */
@@ -195,6 +195,11 @@ input[type="checkbox"] {
         height: 500px;
         width: 200vw;
     }
+    .submit-form button:hover {
+        background-color: var(--font-color);
+        cursor: pointer;
+    } 
+
     .sign-up {
         bottom: 0;
         top: 100px;
@@ -203,6 +208,12 @@ input[type="checkbox"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .sign-up button:hover {
+        background-color: var(--font-color);
+        color: var(--font-color-lite);
+        cursor: pointer;
+        transition: 0.3s;
     }
 
 
