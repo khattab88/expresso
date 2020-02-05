@@ -284,6 +284,9 @@
     }
     .menu-item-cover:hover {
         transform: scale(1.05);
+        background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(./img/photo-1549611016-3a70d82b5040.jpg);
+        background-size: cover;
+        transition: 0.2s;
     }
    
 

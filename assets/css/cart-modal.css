@@ -199,4 +199,17 @@
      .cart-view-modal .modal-content {
         width: 60%;
     }
+    .cart-header .close:hover {
+        cursor: pointer;
+    }
+    .item-count-price .btn-cart:hover {
+        cursor: pointer;
+        color: var(--font-color);
+        border: none;
+    }
+    .checkout-btn:hover {
+        cursor: pointer;
+        background-color: var(--font-color);
+        transition: 0.2s;
+    }
 }

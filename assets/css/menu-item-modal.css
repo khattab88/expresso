@@ -185,4 +185,19 @@
         top: -100px;
     }
 
+    .close-modal-btn:hover {
+        cursor: pointer;
+    }
+    .btn-cart:hover {
+        cursor: pointer;
+        border: 1px solid var(--font-color);
+        border-radius: 3px;
+        transition: 0.2s;
+        background-color: var(--font-color);
+        color: var(--font-color-lite);
+    }
+
+    .add-order-wrapper button:hover {
+        cursor: pointer;
+    }
 }
