@@ -370,15 +370,24 @@ form.search a {
     .search-container {
         width: 50%;
         margin-left: 10px;
+        margin-top: 65px;
     }
-
-    .main {
-        padding: 0 100px;
+    .search-container h2 {
+        font-size: 38px;
     }
 
     .search-form-wrapper form a:hover {
         background-color: var(--font-color);
     }
+
+    .main {
+        padding: 0 35px;
+    }
+
+    [class*="arrow-"]:hover {
+        cursor: pointer;
+        background-color: var(--font-color);
+    }    
 
     .show-all-btn:hover {
         background-color: var(--font-color);
