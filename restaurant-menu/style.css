@@ -59,7 +59,7 @@
     background-color: var(--main-color);
     padding: 4px 7px 3px 7px;
     border-radius: 15px;
-
+    transition: all .2s;
 }
 .restaurant-delivery em {
     font-size: 14px;
@@ -238,6 +238,7 @@
     }
     .restaurant-delivery p span:hover {
         cursor: pointer;
+        background-color: var(--font-color);
     }
 
     /* main */
@@ -281,12 +282,13 @@
   
     .menu-item-cover {
         min-width: 275px;
+        transition: all .2s;
     }
     .menu-item-cover:hover {
-        transform: scale(1.05);
+        transform: scale(1.01);
         background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(./img/photo-1549611016-3a70d82b5040.jpg);
         background-size: cover;
-        transition: 0.2s;
+        box-shadow: 10px 10px 20px rgba(0,0,0,.2);
     }
    
 
