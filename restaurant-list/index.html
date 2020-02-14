@@ -245,6 +245,13 @@
         $(document).ready(function () {
             //$(".navbar").load("../../assets/templates/nav.html");
             //$(".footer").load("../../assets/templates/footer.html");
+
+        });
+
+        document.querySelectorAll(".item-card").forEach((e)=>{
+            e.addEventListener("click", ()=>{
+                window.location.assign("../restaurant-menu/index.html");
+            });
         });
     </script>
 </body>
