@@ -354,6 +354,8 @@
     .order-info-wrapper {
         width: 40%;
         height: 430px;
+        transform: translateY(-115px);
+        background-color: #fff;
     }
     .delivery-address button:hover {
         background-color: var(--main-color);
