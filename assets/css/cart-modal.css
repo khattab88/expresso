@@ -10,13 +10,15 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1050;
+    z-index: 1;
     display: none;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     outline: 0;
 
     opacity: 1;
+    background-color: rgba(0,0,0,.5);
+
 }
 .cart-view-modal {
     overflow-x: hidden;
@@ -178,6 +180,10 @@
     color: #fff;
     line-height: 22px;
     transition: all .2s;
+}
+
+.modal-content-animated {
+    animation: moveInDown .65s ease-out;
 }
 
 /*-----------------------------------------------------------------------------------------------*/

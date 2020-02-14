@@ -8,8 +8,8 @@
     right: 0;
     bottom: 0;
     
-    /* opacity: 0.7; */
-    z-index: 100;
+    z-index: 2;
+    background-color: rgba(0,0,0,.5);
 }
 .modal-open {
     display: block;
@@ -32,6 +32,7 @@
     padding: 10px 20px 20px;
     border-radius: 4px;
     border: 1px solid var(--font-color-lite);
+    z-index: 3;
 }
 .modal-container {
     position: relative;
@@ -158,6 +159,10 @@
     border-radius: 4px;
     color: #fff;
     transition: all .2s;
+}
+
+.modal-content-animated {
+    animation: moveInDown .65s ease-out;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
