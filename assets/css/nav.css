@@ -102,7 +102,7 @@ ul.navbar-items li a {
     .navbar-items li {
         margin: 0 5px;
         display: inline-block;
-        
+        transition: all .2s;
     }
     .navbar-items li a:hover {
         color: var(--font-color);
@@ -159,8 +159,14 @@ ul.navbar-items li a {
     }
     .navbar-items li {
         margin: 0 15px;
+        transition: all .2s;
     }
-
+    .navbar-items li a {
+        transition: all .2s;
+    }
+    .nav-category {
+        transition: all .4s;
+    }
     .nav-category:hover {
         color: var(--font-color-lite);
     }

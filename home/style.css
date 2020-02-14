@@ -86,6 +86,7 @@ form.search a {
     font-size: 18px;
     font-weight: 300;
     margin-right: 5px;
+    transition: all .2s;
 }
 [class*="arrow-"]>i {
     margin-left: -3px;
@@ -98,7 +99,7 @@ form.search a {
 .category-card {
     width: 125px;
     height: 165px;
-    color: var(--font-color);
+    color: var(--main-color);
     list-style: none;
     display: inline-block;
     margin: 0 5px;
@@ -108,18 +109,16 @@ form.search a {
     justify-content: space-evenly;
     align-items: center;
     border: 2px solid var(--main-color);
+    transition: all .2s;
 }
-.category-card:hover {
-    background-color: var(--font-color);
-    color: #fff;
-}
+
 .category-icon {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     border-style: solid;
     border-width: 2px;
-    border-color: var(--font-color);
+    border-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,6 +175,7 @@ form.search a {
     background-color: #000;
     color: #fff;
     position: relative;
+    transition: all .2s;
 }
 .restaurant-card > a {
     color: #fff;
@@ -233,6 +233,7 @@ form.search a {
     font-size: 20px;
     padding: 10px 0;
     text-align: center;
+    transition: all .2s;
 }
 .show-all-btn > a {
     color: #fff;
@@ -422,10 +423,22 @@ form.search a {
 
     [class*="arrow-"]:hover {
         cursor: pointer;
-        background-color: var(--font-color);
+        transform: scale(1.05);
+        box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
     }    
 
+    .category-card:hover {
+        cursor: pointer;
+        color: var(--main-color);
+        transform: scale(1.05) translateY(-5px);
+    }
+    .active-category:hover {
+        color: #fff;
+    }
+
     .show-all-btn:hover {
+        cursor: pointer;
         background-color: var(--font-color);
+        transform: translateY(-3px);
     }
 }

@@ -33,6 +33,7 @@
 .footer-links li a {
     text-decoration: none;
     color: #fff;
+    transition: all .2s;
 }
 .social-links-wrapper {
     margin-top: 40px;
@@ -50,6 +51,7 @@
 
 .social-links li i {
     font-size: 24px;
+    transition: all .2s;
 }
 
 .sub-footer {
@@ -74,6 +76,7 @@
     background-color: transparent;
     border: 0;
     color: #fff;
+    transition: all .2s;
 }
 .country-flag {
     margin-right: 12px;
@@ -87,6 +90,7 @@
 }
 .footer-app-downloads img {
     height: 36px;
+    transition: all .2s;
 }
 .copyright {
     padding: 40px 0 50px 0;
@@ -135,12 +139,15 @@
     }
     .social-links>li>i[class*="facebook"]:hover{
         color: #3b5998;
+        transform: translateY(-3px);
     }
     .social-links>li>i[class*="twitter"]:hover {
         color: #1DA1F2;
+        transform: translateY(-3px);
     }
     .social-links>li>i[class*="instagram"]:hover {
         color: #3f729b;
+        transform: translateY(-3px);
     }
     .sub-footer {
         flex-direction: row;
@@ -152,5 +159,8 @@
     }
     .footer-app-downloads {
         margin-top: 0;
+    }
+    .footer-app-downloads img:hover {
+        transform: scale(1.05);
     }
 }
