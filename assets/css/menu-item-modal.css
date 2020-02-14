@@ -54,6 +54,7 @@
     border: 1px solid var(--font-color-lite);
     background-color: var(--main-color);
     color: #fff;
+    transition: all .2s;
 }
 .modal-head img {
     width: 100%;
@@ -136,6 +137,7 @@
     text-align: center;
     vertical-align: middle;
     padding-top: 5px;
+    transition: all .2s;
 }
 .cart-item-count {
     min-width: 50px;
@@ -155,9 +157,7 @@
     border: none;
     border-radius: 4px;
     color: #fff;
-}
-.add-order-wrapper button:hover {
-    color: var(--font-color)
+    transition: all .2s;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -187,17 +187,23 @@
 
     .close-modal-btn:hover {
         cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+        background-color: var(--font-color);
     }
     .btn-cart:hover {
         cursor: pointer;
-        border: 1px solid var(--font-color);
-        border-radius: 3px;
+        /* border: 1px solid var(--font-color);
+        border-radius: 3px; */
         transition: 0.2s;
-        background-color: var(--font-color);
-        color: var(--font-color-lite);
+        /* background-color: var(--font-color);
+        color: var(--font-color-lite); */
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     }
 
     .add-order-wrapper button:hover {
         cursor: pointer;
+        background-color: var(--font-color);
+        transform: translateY(-2px);
+        box-shadow: 5px 5px 10px rgba(0,0,0,.2);
     }
 }
