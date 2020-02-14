@@ -14,7 +14,7 @@
 
 .login-wrapper {
     margin-top: 100px;
-    border-radius: 4px 4px 0 0;
+    border-radius: 5px 0 0 5px;
     height: 700px;
     display: block;
     width: 100%;
@@ -22,7 +22,6 @@
     overflow: hidden;
     background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     position: relative;
-    border-radius: 5px;
 }
 .login-form {
     width: 100%;
@@ -114,7 +113,7 @@ input[type="checkbox"] {
     position: relative;
     bottom: 100px;
 
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 5px 5px 0;
     height: 200px;
     width: 100%;
 
@@ -199,6 +198,10 @@ input[type="checkbox"] {
         background-color: var(--font-color);
         cursor: pointer;
     } 
+    .forget-password:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 
     .sign-up {
         bottom: 0;
@@ -214,6 +217,19 @@ input[type="checkbox"] {
         color: var(--font-color-lite);
         cursor: pointer;
         transition: 0.3s;
+    }
+
+
+    /*--- animation ---*/
+    .submit-form {
+        animation: moveInUp-short .65s ease-out .3s;
+        animation-fill-mode: backwards;
+    }
+    .login-form h3,
+    .form-group,
+    .remember-me {
+        animation: moveInDown-short .65s ease-out .3s;
+        animation-fill-mode: backwards;
     }
 
 
