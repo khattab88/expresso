@@ -143,6 +143,18 @@ input[type="checkbox"] {
     font: 400 16px/22px "Oswald",sans-serif;
 }
 
+/*--- animation ---*/
+.submit-form {
+    animation: moveInUp-short .65s ease-out .2s;
+    animation-fill-mode: backwards;
+}
+.login-form h3,
+.form-group,
+.remember-me {
+    animation: moveInDown-short .65s ease-out .2s;
+    animation-fill-mode: backwards;
+}
+
 /* footer */
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -217,19 +229,6 @@ input[type="checkbox"] {
         color: var(--font-color-lite);
         cursor: pointer;
         transition: 0.3s;
-    }
-
-
-    /*--- animation ---*/
-    .submit-form {
-        animation: moveInUp-short .65s ease-out .3s;
-        animation-fill-mode: backwards;
-    }
-    .login-form h3,
-    .form-group,
-    .remember-me {
-        animation: moveInDown-short .65s ease-out .3s;
-        animation-fill-mode: backwards;
     }
 
 
