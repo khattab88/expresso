@@ -147,6 +147,9 @@ header {
 textarea.form-control {
     padding-top: 10px;
 }
+.g-recaptcha {
+    display: none;
+}
 .contact-form button {
     width: 100%;
     border: 0;
@@ -203,6 +206,7 @@ textarea.form-control {
     font-size: 36px;
     font-weight: 600;
     color: var(--main-color);
+    transition: all .2s;
 }
 
 
@@ -283,6 +287,10 @@ textarea.form-control {
 
     .phone-wrapper {
         margin-top: 40px;
+    }
+
+    .social-wrapper ul li i:hover {
+        transform: translateY(-5px) scale(1.05);
     }
     
     /* footer */
