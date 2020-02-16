@@ -3,18 +3,23 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 *:focus {
     outline: none;
 }
 
+html {
+    font-size: 62.5%; /* (10px/16px)=> root font-size = 10px */
+}
+
 body {
     font-family: Oswald, Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 20px;
     text-rendering: optimizeLegibility;
+
+    box-sizing: border-box;
 }
 
 h1 { margin: 0; }
