@@ -1,8 +1,8 @@
 /* Mobile-first*/
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 /*navbar */
@@ -13,8 +13,8 @@
 }
 
 .login-wrapper {
-    margin-top: 100px;
-    border-radius: 5px 0 0 5px;
+    margin-top: 10rem;
+    border-radius: .5rem 0 0 .5rem;
     height: 700px;
     display: block;
     width: 100%;
@@ -25,8 +25,8 @@
 }
 .login-form {
     width: 100%;
-    top: 100px;
-    padding: 10px 25px;
+    top: 10rem;
+    padding: 1rem 2.5rem;
     position: relative;
     z-index: 19;
     visibility: visible;
@@ -36,50 +36,50 @@
     color: #fff;
 }
 .login-form h3 {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 .form-group {
     margin-bottom: 30px;
 }
 input[type="text"] {
     width: 100%;
-    font-size: 18px;
+    font-size: 1.8rem;
     background: none;
     border: 0;
     border-bottom: 1px solid var(--font-color-lite);
     color: #fff;
     border-radius: 0;
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     transition: all 0.2s ease-in-out;
 }
 .remember-me {
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 input[type="checkbox"] {
     display: inline-block;
     vertical-align: middle;
-    margin: 5px 0;
+    margin: .5rem 0;
     cursor: pointer;
-    margin-top: 17px;
-    margin-right: 10px;
+    margin-top: 1.7rem;
+    margin-right: 1rem;
 }
 .remember-me label {
     font-family: "Source Sans Pro",sans-serif;
     color: #fff;
     font-weight: 300;
-    font-size: 15px;
-    padding-top: 10px;
+    font-size: 1.5rem;
+    padding-top: 1rem;
     display: inline-block;
     vertical-align: middle;
-    margin: 5px 0;
+    margin: .5rem 0;
     cursor: pointer;
-    min-height: 20px;   
+    min-height: 2rem;   
 }
 .submit-form {
     display: flex;
@@ -87,8 +87,8 @@ input[type="checkbox"] {
     align-items: center;
 }
 .submit-form button {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 
@@ -100,46 +100,46 @@ input[type="checkbox"] {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.5px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    border-radius: .4rem;
 
     color: #fff;
 }
 .forget-password {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 .sign-up {
     position: relative;
-    bottom: 100px;
+    bottom: 10rem;
 
-    border-radius: 0 5px 5px 0;
-    height: 200px;
+    border-radius: 0 .5rem .5rem 0;
+    height: 20rem;
     width: 100%;
 
     background-color: var(--main-color);
 }
 .sign-up>div {
-    padding: 40px 25px;
+    padding: 4rem 2.5rem;
 }
 .sign-up h3 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #fff;
 }
 .sign-up button {
     width: 100%;
     background: #fff;
     color: var(--font-color);
-    padding: 10px 10px;
-    font-size: 14px;
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
     border: 1px solid #fff;
     transition: all 0.2s ease-in-out;
-    margin-top: 20px;
-    border-radius: 4px;
+    margin-top: 2rem;
+    border-radius: .4rem;
     font: 400 16px/22px "Oswald",sans-serif;
 }
 
@@ -184,26 +184,26 @@ input[type="checkbox"] {
         display: flex;
         justify-content: center;
 
-        margin-top: 50px;
-        margin-bottom: 150px;
+        margin-top: 5rem;
+        margin-bottom: 15rem;
 
-        padding: 0 100px;
+        padding: 0 10rem;
     }
 
     /* navbar */
     
     /* main */
     .main {
-        padding: 0 5px;
+        padding: 0 .5rem;
     }
 
     .login-wrapper {
         background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
 
         margin-top: 0;
-        top: 100px;
+        top: 10rem;
 
-        height: 500px;
+        height: 50rem;
         width: 200vw;
     }
     .submit-form button:hover {
@@ -217,8 +217,8 @@ input[type="checkbox"] {
 
     .sign-up {
         bottom: 0;
-        top: 100px;
-        height: 500px;
+        top: 10rem;
+        height: 50rem;
 
         display: flex;
         flex-direction: column;

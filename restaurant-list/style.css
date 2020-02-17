@@ -6,34 +6,34 @@
 
 /* header */
 .search-container {
-    margin: 45px auto 0 auto;
-    padding-top: 60px;
+    margin: 4.5rem auto 0 auto;
+    padding-top: 6rem;
     width: 94%;
     font-weight: 300;
     display: flex;
     flex-direction: column;
 }
 .search-container h2 {
-    font-size: 36px;
+    font-size: 3.6rem;
     color: #fff;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
 }
 .search-form-wrapper{
-    padding-top: 20px;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
 }
 form.search input {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 5rem;
     color: #333;
-    line-height: 50px;
-    font-size: 18px;
-    padding: 5px 15px;
+    line-height: 5rem;
+    font-size: 1.8rem;
+    padding: .5rem 1.5rem;
     border-style: none;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
 }
 form.search button {
     display: block;
@@ -41,13 +41,13 @@ form.search button {
     background-color: var(--main-color);
     color: #fff;
     font-weight: 500;
-    margin-top: 5px;
-    height: 40px;
-    line-height: 30px;
-    font-size: 18px;
-    padding: 5px 10px;
+    margin-top: .5rem;
+    height: 4rem;
+    line-height: 3rem;
+    font-size: 1.8rem;
+    padding: .5rem 1rem;
     border-style: none;
-    border-radius: 5px;
+    border-radius: .5rem;
     transition: all .2s;
 }
 
@@ -57,23 +57,24 @@ form.search button {
     margin: 0 auto;
 }
 .breadcrumb-wrapper {
-    padding: 15px;
+    padding: 1.5rem;
     border-bottom: 1px solid var(--font-color-lite);
 }
 .breadcrumb-wrapper span:first-child {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 .breadcrumb-wrapper span:last-child {
     font-weight: 700;
+    font-size: 150%;
 }
 
 /* restaurant list */
 .restaurant-list-header {
     border: 1px solid var(--font-color-lite);
-    margin: 20px 0;
+    margin: 2rem 0;
 }
 .filter-control {
-    padding: 15px 30px;
+    padding: 1.5rem 3rem;
     padding-right: 0;
     margin-right: auto;
     margin-left: auto;
@@ -83,20 +84,21 @@ form.search button {
     border-bottom: 1px solid var(--font-color-lite);
 }
 .filter-control i {
-    font-size: 27px;
-    margin-right: 15px;
+    font-size: 2.7rem;
+    margin-right: 1.5rem;
 }
 .filter-control p {
-    font-size: 22px;
-    margin-right: 110px;
+    font-size: 2.2rem;
+    margin-right: 11rem;
 }
 .filter-options {
-    padding: 15px 30px;
-    padding-left: 35px;
+    padding: 1.5rem 3rem;
+    padding-left: 3.5rem;
     background-color: var(--font-color-lite);
+    font-size: 150%;
 }
 .restaurant-results {
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 .item-row {
     display: flex;
@@ -104,64 +106,64 @@ form.search button {
 }
 .item-card {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 /* .item-card:nth-child(even){
     background-color: var(--font-color-lite);
 } */
 .item-img {
-    min-height: 190px;
-    min-width: 385px;
+    min-height: 19rem;
+    min-width: 38.5rem;
     background-image: url(./img/pexels-photo-262978.jpeg);
     background-size: cover;
-    border-radius: 5px;
+    border-radius: .5rem;
     position: relative;
 }
 .delivery-time {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2rem;
+    right: 2rem;
     color: #fff;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-align: center;
-    line-height: 18px;
+    line-height: 1.8rem;
     letter-spacing: 0.5px;
 }
 .delivery-time p {
     font-weight: 300;
 }
 .delivery-time span {
-    margin-top: 5px;
+    margin-top: .5rem;
     font: 400 15px "Oswald",sans-serif;
 }
 .item-desc {
-    padding: 10px 10px;
-    min-height: 75px;
+    padding: 1rem 1rem;
+    min-height: 7.5rem;
     border-bottom: 1px solid var(--font-color-lite);
     color: var(--font-color)
 }
 .item-desc h3 {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 2.8rem;
     font-weight: 400;
     letter-spacing: .5px;
 }
 .item-desc p {
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
 }
 .item-tags {
-    padding: 10px 10px;
+    padding: 1rem 1rem;
 }
 .item-tags li {
     list-style: none;
     display: inline-block;
-    font-size: 13px;
+    font-size: 1.3rem;
     border: 1px solid #ccc;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     background-color: var(--main-color);
     color: #fff;
-    padding: 4px 8px;
+    padding: .4rem .8rem;
     transition: all .2s;
 }
 
@@ -181,7 +183,7 @@ form.search button {
     
     /* main */
     .filter-control i[class*="fa-angle-down"] {
-        margin-left: 300px;
+        margin-left: 30rem;
     }
 
 
@@ -202,24 +204,24 @@ form.search button {
 
     /* header */
     .search-container {
-        padding: 100px;
+        padding: 10rem;
         margin: 0;
-        margin-top: 40px;
-        margin-left: 70px;
+        margin-top: 4rem;
+        margin-left: 7rem;
         width: 80%;
     }
     .search-container h2 {
-        font-size: 36px;
+        font-size: 3.6rem;
         font-weight: 300;
     }
     .search-form-wrapper form {
         display: flex;
     }
     form.search input {
-        margin-right: 10px;
+        margin-right: 1rem;
     }
     form.search button {
-        height: 50px;
+        height: 5rem;
         width: 50%;
         margin-top: 0;
     }
@@ -231,7 +233,7 @@ form.search button {
 
     /* main */
     .main {
-        padding: 0 100px;
+        padding: 0 10rem;
     }
     .filter-control:hover {
         cursor: pointer;
@@ -247,8 +249,6 @@ form.search button {
         width: 33%;
         margin-right: 2%;
         transition: all .2s;
-        /* border: .5px solid var(--main-color);
-        border-radius: 5px; */
     }
     .item-card:hover {
         cursor: pointer;
@@ -259,7 +259,7 @@ form.search button {
     }
     .item-img:hover {
         transform: scale(1.03);
-        box-shadow: 10px 10px 20px rgba(0,0,0,.2);
+        box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
     }
    
     .item-tags li:hover {

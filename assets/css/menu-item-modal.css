@@ -24,13 +24,13 @@
 }
 .modal-content {
     background-color: #fff;
-    margin: 0 10px;
-    margin-top: 150px;
+    margin: 0 1rem;
+    margin-top: 15rem;
     position: relative;
-    padding: 10px 20px 20px;
-    border-radius: 4px;
-    padding: 10px 20px 20px;
-    border-radius: 4px;
+    padding: 1rem 2rem 2rem;
+    border-radius: .4rem;
+    padding: 1rem 2rem 2rem;
+    border-radius: .4rem;
     border: 1px solid var(--font-color-lite);
     z-index: 3;
 }
@@ -39,37 +39,38 @@
     left: 0;
 }
 .modal-head{
-    max-height: 220px;
+    max-height: 22rem;
     position: absolute;
-    top: -100px;
+    top: -10rem;
 }
 .close-modal-btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 27px;
-    height: 27px;
+    top: 1rem;
+    right: 1.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
     border: 1px solid #000;
     text-align: center;
     border-radius: 50%;
     border: 1px solid var(--font-color-lite);
     background-color: var(--main-color);
     color: #fff;
+    padding-top: .5rem;
     transition: all .2s;
 }
 .modal-head img {
     width: 100%;
-    max-height: 220px;
+    max-height: 22rem;
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.4);
+    border-radius: .8rem;
+    box-shadow: 0px .4rem 1.2rem -1px rgba(0,0,0,0.4);
 }
 .modal-body {
-    padding-top: 150px;
+    padding-top: 15rem;
     color: var(--font-color);
 }
 .dish-info {
-    padding-bottom: 30px;
+    padding-bottom: 3rem;
 }
 .dish-info-row {
     display: flex;
@@ -78,24 +79,24 @@
 .dish-info-row h3 {
     width: 60%;
     display: inline-block;
-    padding-bottom: 8px;
-    font-size: 24px;
+    padding-bottom: .8rem;
+    font-size: 2.4rem;
 }
 .dish-info-row p {
-    font-size: 20px;
+    font-size: 2rem;
 }
 .dish-options {
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
 }
 .dish-options h4 {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 2.8rem;
 }
 .required-info {
     color: #f33;
-    font-size: 15px;
-    line-height: 22px;
-    padding-bottom: 8px;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding-bottom: .8rem;
     border-bottom: 1px solid #f4f4f5;
 }
 .dish-options ul {
@@ -107,56 +108,57 @@
     justify-content: space-between;
 }
 .option label {
-    padding-left: 3px;
+    padding-left: .3rem;
 }
 .option-price {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .optional {
     color: var(--main-color);
 }
 .dish-options textarea {
     width: 100%;
-    border-radius: 3px;
-    padding: 5px;
+    border-radius: .3rem;
+    padding: .5rem;
+    font-size: 1.5rem;
 }
 .modal-footer {
-    margin-top: 15px;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
 }
 .add-remove-wrapper {
     display: flex;
     justify-content: space-evenly;
 }
 .btn-cart {
-    width: 52px;
-    height: 52px;
+    width: 5.2rem;
+    height: 5.2rem;
     font: 300 42px/38px "Source Sans Pro",sans-serif;
     border: 1px solid #f4f4f5;
     text-align: center;
     vertical-align: middle;
-    padding-top: 5px;
+    padding-top: .5rem;
     transition: all .2s;
 }
 .cart-item-count {
-    min-width: 50px;
-    min-height: 52px;
+    min-width: 5rem;
+    min-height: 5.2rem;
     text-align: center;
     font: 400 22px/42px "Oswald",sans-serif;
     letter-spacing: 1px;
-    padding-top: 3px;
+    padding-top: .3rem;
 }
 .add-order-wrapper button {
     background-color: var(--main-color);
     font: 400 16px/22px "Oswald",sans-serif;
     text-transform: uppercase;
-    padding: 10px 10px;
+    padding: 1rem 1rem;
     text-align: center;
     letter-spacing: 0.5px;
     border: none;
-    border-radius: 4px;
+    border-radius: .4rem;
     color: #fff;
     transition: all .2s;
 }
@@ -183,32 +185,28 @@
     
     .modal-content {
         width: 40%;
-        margin: 20px auto;
-        top: 100px;
+        margin: 2rem auto;
+        top: 10rem;
     }
     .modal-head {
-        top: -100px;
+        top: -10rem;
     }
 
     .close-modal-btn:hover {
         cursor: pointer;
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+        box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.2);
         background-color: var(--font-color);
     }
     .btn-cart:hover {
         cursor: pointer;
-        /* border: 1px solid var(--font-color);
-        border-radius: 3px; */
         transition: 0.2s;
-        /* background-color: var(--font-color);
-        color: var(--font-color-lite); */
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+        box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.2);
     }
 
     .add-order-wrapper button:hover {
         cursor: pointer;
         background-color: var(--font-color);
         transform: translateY(-2px);
-        box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+        box-shadow: .5rem .5rem 1rem rgba(0,0,0,.2);
     }
 }
