@@ -3,7 +3,7 @@
 .header {
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(../img/photo-1490457843367-34b21b6ccd85.jpg);
     background-size: cover;
-    height: 450px;
+    height: 45rem;
 }
 
 /*------------------------------------------------------------*/
@@ -28,6 +28,6 @@
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
     .header {
-        height: 550px;
+        height: 55rem;
     }
 }

@@ -8,7 +8,7 @@
 .header {
     background: url(img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
-    height: 450px;
+    height: 45rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -18,51 +18,52 @@
 .restaurant-info-wrapper {
     color: #fff;
     width: 100%;
-    padding: 30px 20px;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
 }
 .restaurant-info {}
 .restaurant-info h2 {
-    line-height: 36px;
+    line-height: 3.6rem;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
 }
 .restaurant-info p {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.5;
 }
 .restaurant-info p span {
     float: right;
 }
 .restaurant-delivery {
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 .restaurant-delivery h5 {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
+    font-size: 1.3rem;
 }
 .restaurant-delivery p {
-    margin-top: 5px;
+    margin-top: .5rem;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: 0.5px;
     border-top: 1px solid rgba(255,255,255,0.2);
     border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding: 5px 0;
+    padding: .5rem 0;
     display: flex;
     justify-content: space-between;
 }
 .restaurant-delivery p span {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 300;
     background-color: var(--main-color);
-    padding: 4px 7px 3px 7px;
-    border-radius: 15px;
+    padding: .4rem .7rem .3rem .7rem;
+    border-radius: 1.5rem;
     transition: all .2s;
 }
 .restaurant-delivery em {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: "Source Sans Pro",sans-serif;
 }
 
@@ -74,114 +75,115 @@
 }
 
 .restaurant-sidebar {
-    margin: 20px 0 20px 0;
+    margin: 2rem 0 2rem 0;
     color: var(--font-color);
 }
 .cart-wrapper {
     border: 1px solid var(--font-color-lite);
-    margin-bottom: 10px;
-    padding: 20px 25px;
+    margin-bottom: 1rem;
+    padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
 }
 .cart-wrapper h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     letter-spacing: 0.5px;
-    font-size: 20px;
+    font-size: 2rem;
 }
 .cart-wrapper i {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .menu-categories-wrapper {
     border: 1px solid var(--font-color-lite);
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 .menu-categories-head {
-    padding: 20px 25px;
+    padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--font-color-lite);
 }
 .menu-categories-head h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     letter-spacing: 0.5px;
-    font-size: 20px;
+    font-size: 2rem;
 }
 .menu-categories-head i {
-    font-size: 30px;
+    font-size: 3rem;
 }
 .menu-categories-body {
     display: none;
 }
 .menu-categories-body ul {
     list-style: none;
-    padding: 15px 35px;
+    padding: 1.5rem 3.5rem;
 }
 .menu-categories-body ul li {
-    font-size: 18px;
-    line-height: 40px;
+    font-size: 1.8rem;
+    line-height: 4rem;
 }
 
 .menu-items-wrapper {
-    padding: 15px 0;
-    margin-bottom: 5px;
+    padding: 1.5rem 0;
+    margin-bottom: .5rem;
 }
 .menu-items-wrapper h2 {
     background-color: var(--font-color-lite);
     text-align: center;
-    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: 1.25px;
-    padding: 15px 0;
-    border-radius: 4px;
+    padding: 1.5rem 0;
+    border-radius: .4rem;
 }
 .menu-items-list {
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 .menu-item-row {
     display: flex;
     flex-direction: column;
 }
 .menu-item {
-    min-height: 400px;
-    margin-bottom: 10px;
+    min-height: 40rem;
+    margin-bottom: 1rem;
 }
 .menu-item-cover {
-    min-width: 350px;
-    min-height: 245px;
+    min-width: 35rem;
+    min-height: 24.5rem;
     background-image: url(./img/photo-1549611016-3a70d82b5040.jpg);
     background-size: cover;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 .menu-item-info {
     background-color: #fcfcfc;
-    padding: 0 15px 20px 15px;
-    min-height: 120px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    padding: 0 1.5rem 2rem 1.5rem;
+    min-height: 12rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
 }
 .menu-item-info>div {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0 0 0;
+    margin: 2rem 0 0 0;
 }
 .menu-item-name {
     max-width: 50%;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
 }
 .menu-item-price {
     color: #fff;
     background-color: var(--main-color);
-    padding: 2px 10px;
-    border-radius: 5px;
+    padding: .2rem 10rem;
+    border-radius: .5rem;
+    font-size: 2rem;
 }
 .menu-item-desc {
-    max-height: 44px;
-    margin: 12px 0 0 0;
-    line-height: 19px;
-    font-size: 16px;
+    max-height: 4.4rem;
+    margin: 1.2rem 0 0 0;
+    line-height: 1.9rem;
+    font-size: 1.6rem;
 }
 
 /* footer */
@@ -232,8 +234,8 @@
         background-position: center;
     }
     .restaurant-info-wrapper {
-        padding: 30px 200px;
-        margin-top: 200px;
+        padding: 3rem 20rem;
+        margin-top: 20rem;
         width: 75%;
     }
     .restaurant-delivery p span:hover {
@@ -269,7 +271,7 @@
 
     .menu-items-wrapper {
         min-width: 65%;
-        margin-right: 10px;
+        margin-right: 1rem;
     }
     
     .menu-item-row {
@@ -281,19 +283,19 @@
     }
   
     .menu-item-cover {
-        min-width: 275px;
+        min-width: 27.5rem;
         transition: all .2s;
     }
     .menu-item-cover:hover {
         transform: scale(1.01);
         background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(./img/photo-1549611016-3a70d82b5040.jpg);
         background-size: cover;
-        box-shadow: 10px 10px 20px rgba(0,0,0,.2);
+        box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
     }
    
 
     .menu-item-price {
-        padding: 10px;
+        padding: 1rem;
     }
 
     /* footer */

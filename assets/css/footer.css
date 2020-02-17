@@ -1,7 +1,7 @@
 /* Mobile-first*/
 
 .footer {
-    padding: 0 20px;
+    padding: 0 2rem;
     background-color: var(--font-color);
     color: #fff;
     display: flex;
@@ -10,8 +10,8 @@
 }
 .footer-logo {
     text-align: center;
-    padding: 40px 0;
-    font-size: 36px;
+    padding: 4rem 0;
+    font-size: 3.6rem;
     letter-spacing: 1.5px;
 }
 .footer-container {
@@ -26,9 +26,9 @@
 .footer-links li {
     list-style: none;
     display: inline-block;
-    margin: 0 5px;
-    font-size: 16px;
-    line-height: 44px;
+    margin: 0 .5rem;
+    font-size: 1.6rem;
+    line-height: 4.4rem;
 }
 .footer-links li a {
     text-decoration: none;
@@ -36,8 +36,8 @@
     transition: all .2s;
 }
 .social-links-wrapper {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 .social-links {
     display: flex;
@@ -46,11 +46,11 @@
 .social-links li {
     list-style: none;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 .social-links li i {
-    font-size: 24px;
+    font-size: 2.4rem;
     transition: all .2s;
 }
 
@@ -58,7 +58,7 @@
     border-top: 1px solid #444;
     border-bottom: 1px solid #444;
     width: 100%;
-    padding: 20px 0 10px 0;
+    padding: 2rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,8 +66,8 @@
 }
 .change-country-wrapper {
     border: 1px solid #444;
-    padding: 7px 40px;
-    border-radius: 5px;
+    padding: .7rem 4rem;
+    border-radius: .5rem;
 }
 .change-country-wrapper img {
     vertical-align: middle;
@@ -77,25 +77,26 @@
     border: 0;
     color: #fff;
     transition: all .2s;
+    font-size: 2rem;
 }
 .country-flag {
-    margin-right: 12px;
+    margin-right: 1.2rem;
 }
 .change-country-btn i{
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 
 .footer-app-downloads {
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 .footer-app-downloads img {
-    height: 36px;
+    height: 3.6rem;
     transition: all .2s;
 }
 .copyright {
-    padding: 40px 0 50px 0;
+    padding: 4rem 0 5rem 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 0.5px;
     line-height: 1.5;
 }
@@ -115,24 +116,24 @@
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
     .footer {
-        padding: 0 150px;
+        padding: 0 15rem;
     }
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
     }
     .footer-links {
         flex-direction: row;
     }
     .footer-links li {
-        margin: 0 30px;
+        margin: 0 3rem;
     }
     .footer-links li a:hover {
         color: var(--main-color);
     }
     .social-links-wrapper {
-        margin-top: 10px;
+        margin-top: 1rem;
     }
     .social-links li:hover {
         cursor: pointer;
