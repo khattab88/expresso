@@ -390,29 +390,6 @@
         box-shadow: 0 .5rem 1rem rgba(0,0,0,0.7);
     }
 
-    @keyframes moveInLeft {
-        0% {
-            transform: translateX(-10rem);
-        }
-        80% {
-            transform: translateX(1rem);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-    @keyframes moveInRight {
-        0% {
-            transform: translateX(10rem);
-        }
-        80% {
-            transform: translateX(-1rem);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-
     .main {
         padding: 0 3.5rem;
     }
