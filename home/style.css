@@ -1,7 +1,7 @@
 /* Mobile-first*/
 
 /* header */
-.search-container {
+.search {
     margin: 4.5rem auto 0 auto;
     padding-top: 15%;
     width: 94%;
@@ -9,19 +9,19 @@
     display: flex;
     flex-direction: column;
 }
-.search-container h2 {
+.search__title {
     font-weight: 300;
     font-size: 200%;
     color: #fff;
     text-shadow: .2rem .2rem .1rem rgba(0,0,0,0.2);
     line-height: 125%;
 }
-.search-form-wrapper{
+.search__box{
     padding-top: 3rem;
     display: flex;
     flex-direction: column;
 }
-form.search input {
+.search__input {
     display: block;
     width: 100%;
     height: 5rem;
@@ -32,7 +32,7 @@ form.search input {
     border-radius: .5rem;
     letter-spacing: .5px;
 }
-form.search a {
+.search__submit {
     display: block;
     width: 100%;
     background-color: var(--main-color);
@@ -50,8 +50,6 @@ form.search a {
     text-align: center;
     transition: all 0.2s;
 }
-
-
 
 /* main sections */
 .main {
@@ -270,7 +268,7 @@ form.search a {
 @media only screen and (min-width: 480px)  {
 
     /* header */
-    .search-container {
+    .search {
         width: 96%;
         padding-top: 10%;
     }
@@ -283,7 +281,7 @@ form.search a {
     .showcase-col {
         width: 100%;
     }
-    .restaurant-card {}
+    
     .big-card {
         width: 100%;
     }
@@ -299,16 +297,16 @@ form.search a {
 @media only screen and (min-width: 768px) {
     
     /* header */
-    .search-container {
+    .search {
         padding: 10rem;
         margin: 0 auto;
         margin-top: 4rem;
         width: 80%;
     }
-    .search-container h2 {
+    .search__title {
         font-size: 3.6rem;
     }
-    form.search button:hover {
+    .search__submit:hover {
         cursor: pointer;
         background-color: var(--font-color);
         transition: background-color 0.2s;
@@ -369,15 +367,27 @@ form.search a {
 
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
-    .search-container {
+    .search {
         width: 40%;
         margin-left: 1rem;
         margin-top: 6.5rem;
     }
-    .search-container h2 {
+    .search__title {
         font-size: 3.8rem;
 
         animation: moveInLeft 1s ease-out;
+    }
+
+    .search__box {
+        animation: moveInRight 1s ease-out;
+    }
+    .search__submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.7);
+    }
+    .search__submit:active {
+        transform: translate(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.7);
     }
 
     @keyframes moveInLeft {
@@ -391,11 +401,6 @@ form.search a {
             transform: translateX(0);
         }
     }
-
-    .search-form-wrapper {
-        animation: moveInRight 1s ease-out;
-    }
-
     @keyframes moveInRight {
         0% {
             transform: translateX(10rem);
@@ -406,15 +411,6 @@ form.search a {
         100% {
             transform: translateX(0);
         }
-    }
-
-    .search-form-wrapper form a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 1rem 2rem rgba(0,0,0,0.7);
-    }
-    .search-form-wrapper form a:active {
-        transform: translate(-1px);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.7);
     }
 
     .main {
