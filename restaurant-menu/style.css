@@ -11,35 +11,38 @@
     justify-content: flex-end;
 }
 
-.restaurant-info-wrapper {
+.restaurant-info-box {
     color: #fff;
     width: 100%;
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
 }
-.restaurant-info {}
-.restaurant-info h2 {
+.restaurant-info__title {
+    font-size: 2.5rem;
     line-height: 3.6rem;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
 }
-.restaurant-info p {
+.restaurant-info__desc {
     font-size: 1.8rem;
     line-height: 1.5;
 }
-.restaurant-info p span {
-    float: right;
-}
+
 .restaurant-delivery {
     margin-top: 3rem;
 }
-.restaurant-delivery h5 {
+.restaurant-delivery__heading {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
     font-size: 1.3rem;
 }
-.restaurant-delivery p {
+
+.change-location {
+    display: flex;
+    justify-content: space-between;
+}
+.change-location__location {
     margin-top: .5rem;
     font-weight: 400;
     font-size: 2rem;
@@ -50,15 +53,19 @@
     display: flex;
     justify-content: space-between;
 }
-.restaurant-delivery p span {
+.change-location__btn {
+    height: 2.5rem;
     font-size: 1.2rem;
     font-weight: 300;
+    color: #fff;
     background-color: var(--main-color);
     padding: .4rem .7rem .3rem .7rem;
+    border: none;
     border-radius: 1.5rem;
     transition: all .2s;
 }
-.restaurant-delivery em {
+
+.restaurant-delivery__footer {
     font-size: 1.4rem;
     font-family: "Source Sans Pro",sans-serif;
 }
@@ -75,6 +82,7 @@
     color: var(--font-color);
 }
 .cart-wrapper {
+    background-color: #fff;
     border: 1px solid var(--font-color-lite);
     margin-bottom: 1rem;
     padding: 2rem 2.5rem;
@@ -91,6 +99,7 @@
 }
 
 .menu-categories-wrapper {
+    background-color: #fff;
     border: 1px solid var(--font-color-lite);
     margin-top: 1rem;
 }
@@ -189,9 +198,6 @@
 /* Mobile Landscape */
 @media only screen and (min-width: 480px)  {
 
-    /* navbar */
-    .navbar {}
-
     /* header */
     .search-container {
         width: 96%;
@@ -219,16 +225,18 @@
         justify-content: space-around;
         background-position: center;
     }
-    .restaurant-info-wrapper {
-        padding: 3rem 20rem;
+
+    .restaurant-info-box {
+        padding: 3rem 12rem;
         margin-top: 20rem;
-        width: 75%;
+        width: 74%;
     }
-    .restaurant-delivery p span:hover {
+    .change-location__btn:hover {
         cursor: pointer;
         background-color: var(--font-color);
     }
 
+    
     /* main */
     .main {
         padding: 0;
@@ -239,6 +247,8 @@
 
     .restaurant-sidebar {
         min-width: 30%;
+        position: relative;
+        top: -20rem;
     }
     .menu-categories-body {
         display: block;

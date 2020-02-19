@@ -66,7 +66,6 @@
         </nav>
 
         <header class="header">
-
             <section class="breadcrumb">
                 <ul class="breadcrumb__list">
                     <li class="breadcrumb__item breadcrumb__item--home">
@@ -87,24 +86,24 @@
                 </ul>
             </section>
 
-            <section class="restaurant-info-wrapper">
+            <section class="restaurant-info-box">
                 <div class="restaurant-info">
-                    <h2>Burger Shop</h2>
-                    <p>Originated in Los Angeles</p>
+                    <h2 class="restaurant-info__title">Burger Shop</h2>
+                    <p class="restaurant-info__desc">Originated in Los Angeles</p>
                 </div>
                 <div class="restaurant-delivery">
-                    <h5>Delivery Location</h5>
-                    <p>Cairo
-                        <span>Change Location</span>
-                    </p>
-                    <em>Average delivery time: 30 mins</em>
+                    <h5 class="restaurant-delivery__heading">Delivery Location</h5>
+                    <div class="change-location">
+                        <p class="change-location__location">Cairo</p>
+                        <button class="change-location__btn">Change Location</button>
+                    </div>
+                    <em class="restaurant-delivery__footer">Average delivery time: 30 mins</em>
                 </div>
             </section>
-
         </header>
 
-        <div class="main">
-            <div class="restaurant-sidebar">
+        <main class="main">
+            <aside class="restaurant-sidebar">
                 <section class="cart-wrapper">
                     <h3>Your Order</h3>
                     <i class="material-icons">shopping_cart</i>
@@ -124,7 +123,8 @@
                         </ul>
                     </div>
                 </section>
-            </div>
+            </aside>
+
             <div class="menu-items-wrapper">
                 <section class="menu-items-category">
                     <h2>Sandwiches</h2>
@@ -326,7 +326,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
