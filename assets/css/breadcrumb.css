@@ -1,6 +1,6 @@
 /* Mobile-first*/
 
-.header-breadcrumb-wrapper {
+.breadcrumb {
     width: 100%;
     height: 6rem;
     background: rgba(255, 255, 255, 0.2);
@@ -32,7 +32,7 @@
 
 /* Tablet Screen Sizes */
 @media only screen and (min-width: 768px) {
-    .header-breadcrumb-wrapper {
+    .breadcrumb {
         padding-left: 10rem;
         padding-top: 2.5rem;
     }
@@ -42,7 +42,7 @@
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-    .header-breadcrumb-wrapper {
+    .breadcrumb {
         padding-left: 11rem;
         padding-top: 3rem;
         color: #fff;

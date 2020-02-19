@@ -62,144 +62,170 @@
         </nav>
 
         <header class="header">
-            <div class="search-container">
-                <h2>Restaurants delivering to your city.</h2>
-                <div class="search-form-wrapper">
-                    <form action="" class="search">
-                        <input type="text" placeholder="City">
-                        <input type="text" placeholder="Restaurant Name">
-                        <button type="submit">Find Food</button>
+            <div class="restaurant-search">
+                <h2 class="restaurant-search__title">Restaurants delivering to your city.</h2>
+                <div class="restaurant-search__box">
+                    <form action="" class="restaurant-search__form">
+                        <input class="restaurant-search__input" type="text" placeholder="City">
+                        <input class="restaurant-search__input" type="text" placeholder="Restaurant Name">
+                        <button class="restaurant-search__submit" type="submit">Find Food</button>
                     </form>
                 </div>
             </div>
         </header>
 
-        <div class="main">
-            <section class="breadcrumb-wrapper">
-                <span>Restaurants</span>
-                <span>/</span>
-                <span>Cairo</span>
+        <main class="main">
+
+            <section class="restaurant-list-breadcrumb">
+                <ul class="restaurant-list-breadcrumb__list">
+                    <li class="restaurant-list-breadcrumb__item">Restaurants</li>
+                    <li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb__separator">/</li>
+                    <li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb--current">Cairo</li>
+                </ul>
             </section>
-            <section class="restaurant-list-header">
-                <div class="filter-control">
-                    <i class="fa fa-filter"></i>
-                    <p>Filter by types of food</p>
-                    <i class="fa fa-angle-down"></i>
+
+            <section class="restaurant-list-filter">
+                <div class="filter-dropdown">
+                    <i class="filter-dropdown__icon fa fa-filter"></i>
+                    <p class="filter-dropdown__title">Filter by types of food</p>
+                    <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
                 </div>
-                <div class="filter-options">
-                    <input type="checkbox" name="special-offers" id="special-offers">
-                    <span>Special Offers</span>
-                </div>
-            </section>
-            <section class="restaurant-results">
-                <div class="item-row">
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-row">
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="filter-checkbox">
+                    <input class="filter-checkbox__input" type="checkbox" name="special-offers" id="special-offers">
+                    <span class="filter-checkbox__title">Special Offers</span>
                 </div>
             </section>
-        </div>
+
+            <section class="restaurant-list">
+                <div class="restaurant-list__row">
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="restaurant-list__row">
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
 
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
