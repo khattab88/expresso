@@ -66,13 +66,27 @@
         </nav>
 
         <header class="header">
-            <section class="header-breadcrumb-wrapper">
-                <span>Home</span>
-                <span>/</span>
-                <span>Restaurants</span>
-                <span>/</span>
-                <span>Burger Shop</span>
+
+            <section class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item breadcrumb__item--home">
+                        <a class="breadcrumb__link" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item">
+                        <a class="breadcrumb__link" href="#">Restaurants</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--current">
+                        <a class="breadcrumb__link" href="#">Burger Shop</a>
+                    </li>
+                </ul>
             </section>
+
             <section class="restaurant-info-wrapper">
                 <div class="restaurant-info">
                     <h2>Burger Shop</h2>
@@ -86,6 +100,7 @@
                     <em>Average delivery time: 30 mins</em>
                 </div>
             </section>
+
         </header>
 
         <div class="main">

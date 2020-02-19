@@ -1,9 +1,5 @@
 /* Mobile-first*/
 
-.container{}
-
-/*navbar */
-
 /* header */
 .header {
     background: url(img/photo-1540265556701-ae209ac395cd.jpg);
@@ -200,10 +196,7 @@
     .search-container {
         width: 96%;
     }
-    
-    /* main */
 
-    /* footer */
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -219,13 +212,6 @@
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-
-    /* navbar */
-
-     /* breadcrumb */
-     .header-breadcrumb-wrapper span:nth-child(odd):hover {
-        cursor: pointer;
-    }
 
     /* header */
     .header {
@@ -293,11 +279,8 @@
         box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
     }
    
-
     .menu-item-price {
         padding: 1rem;
     }
-
-    /* footer */
 
 }
