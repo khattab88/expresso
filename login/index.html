@@ -61,35 +61,33 @@
             </div>
         </nav>
 
-        <div class="main">
+        <main class="main">
             <div class="wrapper">
-                <div class="login-wrapper">
-                    <div class="login-form">
-                        <h3>Login</h3>
-                        <form action="#">
-                            <div class="form-group"><input type="text" name="email" id="email" required
-                                    placeholder="Email"></div>
-                            <div class="form-group"><input type="text" name="password" id="password" required
-                                    placeholder="Password"></div>
-                            <div class="remember-me">
-                                <input type="checkbox" name="remember-me" id="remember-me">
-                                <label for="remember-me">Remember me</label>
+                <div class="login">
+                    <div class="login__box">
+                        <h3 class="login_heading">Login</h3>
+                        <form class="login__form" action="#">
+                            <div class="form-group"><input class="form-group__input-text" type="text" name="email" id="email" required placeholder="Email"></div>
+                            <div class="form-group"><input class="form-group__input-text" type="text" name="password" id="password" required placeholder="Password"></div>
+                            <div class="login__remember-me">
+                                <input class="form-group__input-checkbox" type="checkbox" name="remember-me" id="remember-me">
+                                <label class="login__remember-me-label" for="remember-me">Remember me</label>
                             </div>
-                            <div class="submit-form">
-                                <button>Login</button>
-                                <p class="forget-password">Forgot your password?</p>
+                            <div class="login__submit">
+                                <button class="login__sumbit-btn">Login</button>
+                                <p class="login__forget-password">Forgot your password?</p>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="sign-up">
-                    <div>
-                        <h3>New to Expresso?</h3>
-                        <button>Sign Up</button>
+                    <div class="sign-up__box">
+                        <h3 class="sign-up__heading">New to Expresso?</h3>
+                        <button class="sign-up__btn">Sign Up</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
