@@ -77,58 +77,65 @@
     margin: 0 auto;
 }
 
+/* sidebar */
 .restaurant-sidebar {
     margin: 2rem 0 2rem 0;
     color: var(--font-color);
 }
-.cart-wrapper {
+.restaurant-sidebar__show-cart {
     background-color: #fff;
     border: 1px solid var(--font-color-lite);
+    border-radius: .3rem;
     margin-bottom: 1rem;
     padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .3);
 }
-.cart-wrapper h3 {
+.restaurant-sidebar__show-cart-title {
     font-size: 1.8rem;
     letter-spacing: 0.5px;
     font-size: 2rem;
 }
-.cart-wrapper i {
+.restaurant-sidebar__show-cart-icon {
     font-size: 3rem;
 }
 
-.menu-categories-wrapper {
+/* menu categories */
+.menu-categories {
     background-color: #fff;
     border: 1px solid var(--font-color-lite);
+    border-radius: .3rem;
     margin-top: 1rem;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .3);
 }
-.menu-categories-head {
+.menu-categories__head {
     padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--font-color-lite);
 }
-.menu-categories-head h3 {
+.menu-categories__title {
     font-size: 1.8rem;
     letter-spacing: 0.5px;
     font-size: 2rem;
 }
-.menu-categories-head i {
+.menu-categories__icon--arrow-down {
     font-size: 3rem;
 }
-.menu-categories-body {
+.menu-categories__body {
     display: none;
 }
-.menu-categories-body ul {
+.menu-categories__list {
     list-style: none;
     padding: 1.5rem 3.5rem;
 }
-.menu-categories-body ul li {
+.menu-categories__category-item {
     font-size: 1.8rem;
     line-height: 4rem;
 }
 
+/* menu items */
 .menu-items-wrapper {
     padding: 1.5rem 0;
     margin-bottom: .5rem;
@@ -250,17 +257,22 @@
         position: relative;
         top: -20rem;
     }
-    .menu-categories-body {
+    .restaurant-sidebar__show-cart:hover {
+        cursor: pointer;
+    }
+
+    .menu-categories__head:hover {
+        cursor: pointer;
+    }
+    .menu-categories__body {
         display: block;
     }
    
+
     .menu-items-category {
         width: 94%;
         margin-left: 3%;
     }
-
-    .cart-wrapper:hover,
-    .menu-categories-head:hover,
     .menu-item:hover {
         cursor: pointer;
     }

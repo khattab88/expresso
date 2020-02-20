@@ -103,23 +103,24 @@
         </header>
 
         <main class="main">
+
             <aside class="restaurant-sidebar">
-                <section class="cart-wrapper">
-                    <h3>Your Order</h3>
-                    <i class="material-icons">shopping_cart</i>
+                <section class="restaurant-sidebar__show-cart">
+                    <h3 class="restaurant-sidebar__show-cart-title">Your Order</h3>
+                    <i class="restaurant-sidebar__show-cart-icon material-icons">shopping_cart</i>
                 </section>
-                <section class="menu-categories-wrapper">
-                    <div class="menu-categories-head">
-                        <h3>What's on the Menu</h3>
-                        <i class="material-icons">keyboard_arrow_down</i>
+                <section class="menu-categories">
+                    <div class="menu-categories__head">
+                        <h3 class="menu-categories__title">What's on the Menu</h3>
+                        <i class="menu-categories__icon--arrow-down material-icons">keyboard_arrow_down</i>
                     </div>
-                    <div class="menu-categories-body">
-                        <ul>
-                            <li>Sandwiches</li>
-                            <li>Sides</li>
-                            <li>Beverages</li>
-                            <li>Salads</li>
-                            <li>Specialities</li>
+                    <div class="menu-categories__body">
+                        <ul class="menu-categories__list">
+                            <li class="menu-categories__category-item">Sandwiches</li>
+                            <li class="menu-categories__category-item">Sides</li>
+                            <li class="menu-categories__category-item">Beverages</li>
+                            <li class="menu-categories__category-item">Salads</li>
+                            <li class="menu-categories__category-item">Specialities</li>
                         </ul>
                     </div>
                 </section>
@@ -416,7 +417,7 @@
 
 
             // item cart
-            document.querySelector(".cart-wrapper").addEventListener("click", function(e){
+            document.querySelector(".restaurant-sidebar__show-cart").addEventListener("click", function(e){
                 const modal = document.querySelector(".cart-view-modal");
                 modal.classList.remove("modal-close");
                 modal.classList.add("modal-open");
