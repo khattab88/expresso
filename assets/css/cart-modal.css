@@ -1,5 +1,6 @@
 /*cart view modal */
-.cart-view-modal {
+
+.cart-modal {
     opacity: 0;
     -webkit-transition: opacity .15s linear;
     -o-transition: opacity .15s linear;
@@ -19,15 +20,14 @@
     opacity: 1;
     background-color: rgba(0,0,0,.5);
 
-}
-.cart-view-modal {
     overflow-x: hidden;
     overflow-y: auto;
 }
-.modal-open {
+
+.cart-modal--open {
     display: block;
 }
-.modal-close {
+.cart-modal--close {
     display: none;
 }
  .vertical-alignment-helper {
@@ -37,7 +37,7 @@
     pointer-events: none;
     margin: 0 auto;
  }
- .cart-view-modal  .modal-dialog {
+ .modal-dialog {
     position: relative;
     width: auto;
     margin: 1rem;
@@ -50,7 +50,8 @@
 
     transform: translate(0,0);
 }
-.cart-view-modal .modal-content {
+
+.cart-modal__content {
     position: relative;
     background-color: #fff;
     -webkit-background-clip: padding-box;
@@ -77,61 +78,73 @@
     margin-bottom: 5rem;
     padding-bottom: 0;
 }
-.cart-view-modal .modal-body {
+.cart-modal__content--animated {
+    animation: moveInDown .65s ease-out;
+}
+
+.cart-modal__body {
     position: relative;
     padding: 1.5rem;
-
     padding-top: .5rem;
-
     padding: 2rem 0 2rem 0;
     min-height: 20rem;
 
     display: flex;
     flex-direction: column;
 }
-.cart-header {
+.cart-modal__header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--font-color-lite);
 }
-.cart-header>div {
+.cart-modal__header-row {
     display: flex;
 }
-.cart-header i {
+.cart-modal__icon {
     font-size: 3rem;
 }
-.cart-header h3 {
+.cart-modal__title {
     margin-left: 1rem;
     font-size: 2.4rem;
 }
-.cart-header .close {
+.cart-modal__close {
     color: var(--main-color);
     transition: all .2s;
 }
-.cart-header .close i {
+.cart-modal__close-icon {
     font-size: 2.4rem;
 }
+
+/* cart items */
 .cart-items {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--font-color-lite);
 }
-.cart-items .item-info {
+.cart-item {
+    margin-bottom: 2rem;
+}
+.cart-item__info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
-.cart-items .item-info .item-name,
-.cart-items .item-info .item-price {
+.cart-item__name,
+.cart-item__price {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.2rem;
 }
-.item-count-price {
+
+/* cart controls */
+.cart-controls {
+    width: 30%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.item-count-price .btn-cart {
+.cart-controls__btn {
     padding-bottom: .6rem;
     border-radius: .4rem;
     vertical-align: middle;
@@ -144,12 +157,7 @@
     background-color: #fff;
     margin-right: .5rem;
 }
-.item-count-price .btn-cart:nth-child(odd):hover {
-    background-color: var(--font-color-lite);
-}
-.item-count-price .btn-cart:nth-child(odd) {
-    background-color: var(--font-color-lite);
-}
+
 .cart-pricing {
     font-size: 1.6rem;
     font-weight: 300;
@@ -157,18 +165,18 @@
     display: flex;
     justify-content: space-between;
 }
-.cart-total {
+.cart-pricing--total {
     font-size: 1.8rem;
     margin-top: 1.5rem;
     border-top: 1px solid var(--font-color-lite);
 }
-.checkout-btn-wrapper {
+
+.cart-modal__checkout {
     margin: 4rem auto 2rem auto;
     margin-top: 4rem;
     width: 98%;
     text-align: center;
-}
-.checkout-btn-wrapper button {
+
     font: 400 20px/26px "Oswald",sans-serif;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -180,10 +188,6 @@
     color: #fff;
     line-height: 2.2rem;
     transition: all .2s;
-}
-
-.modal-content-animated {
-    animation: moveInDown .65s ease-out;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -204,20 +208,26 @@
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-     .cart-view-modal .modal-content {
+     .cart-modal__content {
         width: 60%;
     }
-    .cart-header .close:hover {
+    .cart-modal__body {
+        padding: 2rem;
+    }
+    .cart-modal__close:hover {
         cursor: pointer;
         color: var(--font-color);
         box-shadow: .5rem .5rem 1rem rgba(0,0,0,.2);
     }
-    .item-count-price .btn-cart:hover {
+
+    .cart-controls__btn:hover {
         cursor: pointer;
-        color: var(--font-color);
+        background-color: var(--font-color);
+        color: #fff;
         border: none;
     }
-    .checkout-btn:hover {
+
+    .cart-modal__checkout:hover {
         cursor: pointer;
         background-color: var(--font-color);
         transform: translateY(-3px);

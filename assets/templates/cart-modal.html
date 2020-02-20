@@ -1,42 +1,43 @@
 <!-- cart view modal -->
-<div class="cart-view-modal modal-close">
+
+<div class="cart-modal cart-modal--close">
     <div class="vertical-alignment-helper">
         <div class="modal-dailog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="cart-header">
-                        <div>
-                            <i class="material-icons">shopping_cart</i>
-                            <h3>Your Oredr</h3>
+            <div class="cart-modal__content cart-modal__content--animated">
+                <div class="cart-modal__body">
+                    <div class="cart-modal__header">
+                        <div class="cart-modal__header-row">
+                            <i class="cart-modal__icon material-icons">shopping_cart</i>
+                            <h3 class="cart-modal__title">Your Oredr</h3>
                         </div>
-                        <p class="close"><i class="fa fa-times"></i></p>
+                        <p class="cart-modal__close"><i class="cart-modal__close-icon fa fa-times"></i></p>
                     </div>
-                    <div class="cart-items">
-                        <div class="item-info">
-                            <p class="item-name">Double Cheese Burger</p>
-                            <p class="item-price">75.00 EGP</p>
-                        </div>
-                        <div class="item-count-price">
-                            <div class="btn-cart">-</div>
-                            <p class="btn-cart">1</p>
-                            <div class="btn-cart">+</div>
-                        </div>
+                    <section class="cart-items">
+                        <article class="cart-item">
+                            <div class="cart-item__info">
+                                <p class="cart-item__name">Double Cheese Burger</p>
+                                <p class="cart-item__price">75.00 EGP</p>
+                            </div>
+                            <div class="cart-controls">
+                                <div class="cart-controls__btn cart-controls__btn-remove">-</div>
+                                <p class="cart-controls__count">1</p>
+                                <div class="cart-controls__btn cart-controls__btn-add">+</div>
+                            </div>
+                        </article>
+                    </section>
+                    <div class="cart-pricing cart-pricing--subtotal">
+                        <p class="cart-pricing__title">subtotal</p>
+                        <p class="cart-pricing__value">75.00 EGP</p>
                     </div>
-                    <div class="cart-pricing">
-                        <p>subtotal</p>
-                        <p>75.00 EGP</p>
+                    <div class="cart-pricing cart-pricing--delivery">
+                        <p class="cart-pricing__title">delivery fee</p>
+                        <p class="cart-pricing__value">5.00 EGP</p>
                     </div>
-                    <div class="cart-pricing">
-                        <p>delivery fee</p>
-                        <p>5.00 EGP</p>
+                    <div class="cart-pricing cart-pricing--total">
+                        <p class="cart-pricing__title">Total</p>
+                        <p class="cart-pricing__value">80.00 EGP</p>
                     </div>
-                    <div class="cart-pricing cart-total">
-                        <p>Total</p>
-                        <p>80.00 EGP</p>
-                    </div>
-                    <div class="checkout-btn-wrapper">
-                        <button>Checkout</button>
-                    </div>
+                    <button class="cart-modal__checkout">Checkout</button>
                 </div>
             </div>
         </div>
