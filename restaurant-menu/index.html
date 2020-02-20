@@ -189,104 +189,103 @@
 
 
             <!-- menu item modal -->
-            <div class="menu-item-detail modal-close">
-                <div class="modal-content modal-content-animated">
-                    <div class="modal-container">
-                        <div class="modal-head">
-                            <p class="close-modal-btn"><i class="fa fa-times"></i></p>
-                            <img src="./img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
+            <section class="menu-item-modal menu-item-modal--close">
+                <div class="menu-item-modal__content menu-item-modal__content--animated">
+                    <div class="menu-item-modal__container">
+                        <div class="menu-item-modal__head">
+                            <p class="menu-item-modal__close"><i class="fa fa-times"></i></p>
+                            <img class="menu-item-modal__item-img" src="./img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
                         </div>
-                        <div class="modal-body">
+                        <div class="menu-item-modal__body">
                             <section class="dish-info">
-                                <div class="dish-info-row">
-                                    <h3>Big Tasty Burger</h3>
-                                    <p>70 EGP</p>
+                                <div class="dish-info__row">
+                                    <h3 class="dish-info__name">Big Tasty Burger</h3>
+                                    <p class="dish-info__price">70 EGP</p>
                                 </div>
-                                <p>2 organic beef patties, 2 slices of real cheddar cheese.</p>
+                                <p class="dish-info__desc">2 organic beef patties, 2 slices of real cheddar cheese.</p>
                             </section>
-                            <section class="dish-options" style="display: none;">
-                                <div class="dish-info-row">
-                                    <h4>Choice of bun or lettuce wrap</h4>
-                                    <span><i class="fa fa-chevron-up"></i></span>
+
+                            <article class="dish-options" >
+                                <div class="dish-options__head">
+                                    <h4 class="dish-options__title">Choice of bun or lettuce wrap</h4>
+                                    <span class="dish-options__icon--arrow-down"><i class="fa fa-chevron-up"></i></span>
                                 </div>
-                                <p class="required-info">Required, choose at least one.</p>
-                                <ul>
-                                    <li>
-                                        <div class="option">
-                                            <input type="radio" checked name="option-1" id="option-1">
-                                            <label for="option-1">Potato Bun</label>
+                                <p class="validation-info validation-info--required">Required, choose at least one.</p>
+                                <ul class="dish-options__sigle-selection">
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__checkbox" type="radio" checked name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Potato Bun</label>
                                         </div>
-                                        <p class="option-price">0.75 EGP</p>
+                                        <p class="dish-option__price">0.75 EGP</p>
                                     </li>
-                                    <li>
-                                        <div class="option">
-                                            <input type="radio" name="option-1" id="option-1">
-                                            <label for="option-1">Lettuce Wrap</label>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-radio" type="radio" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Lettuce Wrap</label>
                                         </div>
-                                        <p class="option-price">0.50 EGP</p>
+                                        <p class="dish-option__price">0.50 EGP</p>
                                     </li>
                                 </ul>
-                            </section>
-                            <section class="dish-options">
-                                <div class="dish-info-row">
-                                    <h4>Choice of cheese</h4>
-                                    <span><i class="fa fa-chevron-up"></i></span>
+                            </article>
+                            <article class="dish-options">
+                                <div class="dish-options__head">
+                                    <h4 class="dish-options__title">Choice of cheese</h4>
+                                    <span class="dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
                                 </div>
-                                <p class="required-info optional">Optional, choose multiple.</p>
-                                <ul>
-                                    <li>
-                                        <div class="option">
-                                            <input type="checkbox" checked name="option-1" id="option-1">
-                                            <label for="option-1">No Cheese</label>
+                                <p class="validation-info validation-info--optional">Optional, choose multiple.</p>
+                                <ul class="dish-options__multiple-selection">
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" checked name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">No Cheese</label>
                                         </div>
-                                        <p class="option-price">0.00 EGP</p>
+                                        <p class="dish-option__price">0.00 EGP</p>
                                     </li>
-                                    <li>
-                                        <div class="option">
-                                            <input type="checkbox" name="option-1" id="option-1">
-                                            <label for="option-1">Regular</label>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Regular</label>
                                         </div>
-                                        <p class="option-price">0.50 EGP</p>
+                                        <p class="dish-option__price">0.50 EGP</p>
                                     </li>
-                                    <li>
-                                        <div class="option">
-                                            <input type="checkbox" name="option-1" id="option-1">
-                                            <label for="option-1">Cheddar</label>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Cheddar</label>
                                         </div>
-                                        <p class="option-price">0.75 EGP</p>
+                                        <p class="dish-option__price">0.75 EGP</p>
                                     </li>
-                                    <li>
-                                        <div class="option">
-                                            <input type="checkbox" name="option-1" id="option-1">
-                                            <label for="option-1">Spicy</label>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Spicy</label>
                                         </div>
-                                        <p class="option-price">0.50 EGP</p>
+                                        <p class="dish-option__price">0.50 EGP</p>
                                     </li>
                                 </ul>
-                            </section>
-                            <section class="dish-options">
-                                <div class="dish-info-row">
-                                    <h4>Add Special Instructions</h4>
-                                    <span><i class="fa fa-chevron-up"></i></span>
+                            </article>
+                            <article class="dish-options">
+                                <div class="dish-options__head">
+                                    <h4 class="dish-options__title">Add Special Instructions</h4>
+                                    <span class="dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
                                 </div>
-                                <p class="required-info optional"></p>
-                                <textarea name="notes" id="notes" cols="40" rows="6"
+                                <p class="validation-info validation-info--optional"></p>
+                                <textarea class="dish-option__input-textarea" name="notes" id="notes" cols="40" rows="6"
                                     placeholder="Add a note (food allergies, extra sauce, no onions, etc.). Please be clear and concise so we can get your order perfect."></textarea>
-                            </section>
+                            </article>
                         </div>
-                        <div class="modal-footer">
-                            <div class="add-remove-wrapper">
-                                <span class="btn-cart">-</span>
-                                <p class="cart-item-count">1</p>
-                                <span class="btn-cart">+</span>
+                        <div class="menu-item-modal__footer">
+                            <div class="cart-controls">
+                                <span class="cart-controls__btn cart-controls__btn-remove">-</span>
+                                <p class="cart-controls__count">1</p>
+                                <span class="cart-controls__btn cart-controls__btn-add">+</span>
                             </div>
-                            <div class="add-order-wrapper">
-                                <button>Add to order</button>
-                            </div>
+                            <button class="add-order-btn">Add to order</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- cart view modal -->
             <div class="cart-view-modal modal-close">
@@ -403,20 +402,20 @@
         (function () {
 
             // menu item detail
-            document.querySelector(".menu-items-list").addEventListener("click", function (e) {
+            document.querySelector(".menu-items-by-category__menu-items-list").addEventListener("click", function (e) {
                 const item = e.target.closest(".menu-item");
                 console.log(item.id);
 
-                const modal = document.querySelector(".menu-item-detail");
-                modal.classList.remove("modal-close");
-                modal.classList.add("modal-open");
+                const modal = document.querySelector(".menu-item-modal");
+                modal.classList.remove("menu-item-modal--close");
+                modal.classList.add("menu-item-modal--open");
                 return;
             });
 
-            document.querySelector(".close-modal-btn").addEventListener("click", function (e) {
-                const modal = document.querySelector(".menu-item-detail");
-                modal.classList.remove("modal-open");
-                modal.classList.add("modal-close");
+            document.querySelector(".menu-item-modal__close").addEventListener("click", function (e) {
+                const modal = document.querySelector(".menu-item-modal");
+                modal.classList.remove("menu-item-modal--open");
+                modal.classList.add("menu-item-modal--close");
                 return;
             });
 
