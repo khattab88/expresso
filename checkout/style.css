@@ -1,10 +1,5 @@
 /* Mobile-first*/
 
-.container {}
-
-/*navbar */
-
-/* header */
 .header {
     background: url(img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
@@ -17,9 +12,8 @@
 
 }
 
-/* breadcrumb */
 
-.restaurant-info-wrapper {
+.restaurant-info {
     color: #fff;
     width: 100%;
     padding: 3rem 2rem;
@@ -27,65 +21,69 @@
     flex-direction: column;
     margin-top: 15rem;
 }
-.restaurant-info {}
-.restaurant-info h2 {
+.restaurant-info__name {
     line-height: 3.6rem;
     font-size: 2.8rem;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    letter-spacing: .15rem;
 }
-.restaurant-info p {
+.restaurant-info__heading {
     font-size: 1.8rem;
     line-height: 1.5;
 }
-.restaurant-info p span {
-    float: right;
-}
-
 
 /* main */
 .main {
     width: 100%;
 }
 
-.checkout-wrapper {
+.checkout {
     display: flex;
     flex-direction: column;
 }
+
 .checkout-info-box {
     padding: 3rem 4rem;
     width: 90%;
     margin: 20px auto;
     border: 1px solid var(--font-color-lite);
     border-radius: .5rem;
+    box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.1);
 }
-.checkout-info-wrapper {
-}
-.customer-info {
+
+/* user info */
+.user-info {
     background-color: #fff;
     border-top: .7rem solid var(--main-color);
 }
-.customer-info h3 {
+.user-info__heading-primary {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
     font-size: 2.4rem;
 }
-.customer-info p {
+.user-info__heading-secondary {
     line-height: 2.2rem;
     padding: 1rem 0;
     font-size: 1.6rem;
     font-weight: 300;
 }
-.customer-form {
+.user-info__form {
     margin-top: 3rem;
 }
+
 .form-group {
     display: block;
     margin: 1rem 0 2rem 0;
     border: 0;
     border-bottom: 1px solid var(--font-color-lite);
 }
-.form-group input {
+.form-group__label {
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+}
+.form-group__input {
     width: 100%;
     min-height: 3.5rem;
     box-sizing: content-box;
@@ -97,22 +95,19 @@
     font-size: 1.8rem;
     padding: .3rem .5rem;
 }
-.form-group label {
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-}
-.delivery-info h4 {
+
+/* delivery info */
+.delivery-info__heading {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
     font-size: 2.4rem;
 }
-.delivery-address {
+.delivery-info__address {
     display: flex;
     flex-direction: column;
 }
-.delivery-address button {
+.delivery-info__add {
     border: 1px solid var(--main-color);
     padding: .8rem 2rem;
     border-radius: .4rem;
@@ -123,21 +118,21 @@
     margin: 3rem 0;
     font-size: 1.5rem;
 }
-.delivery-address span {
+.delivery-info__locate {
     font-size: 1.4rem;
 }
-.delivery-address span i {
+.delivery-info__locate-icon {
     font-size: 1.4rem;
 }
-.delivery-time {
+.delivery-info__time {
     margin-top: 3rem;
 }
-.delivery-time h5 {
+.delivery-info__time-heading {
     letter-spacing: 0.5px;
     font-size: 1.5rem;
     color: var(--font-color);
 }
-.delivery-time div {
+.expected-delivery-time {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
@@ -147,34 +142,36 @@
     height: 4rem;
     padding: 0 1rem;
     font-size: 1.5rem;
+    transition: all .2s;
 }
-.delivery-time div i {
+.expected-delivery-time__icon {
     color: var(--main-color);
 }
-.payment-info {}
-.payment-info h4 {
+
+/* payment info */
+.payment-info__heading {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
     font-size: 2.4rem;
 }
-.payment-options {
+.payment-info__options {
     list-style: none;
     margin-top: 2.5rem;
 }
-.payment-options li {
+.payment-info__option {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
 }
-.payment-options li input {
+.payment-info__option-input {
     margin-right: 1.5rem;
 }
-.payment-options li label {
+.payment-info__option-label {
     display: flex;
     align-items: center;
 }
-.payment-options li h5 {
+.payment-info__option-name {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
@@ -183,60 +180,66 @@
 }
 
 
-/* order details */
-.cart-body {
-    padding: 1.5rem;
-
-    padding-top: .5rem;
-
-    padding: 2rem 0 2rem 0;
+/* order info */
+.order-info {
+    padding: 3rem 4rem;
     min-height: 20rem;
 
     display: flex;
     flex-direction: column;
 }
-.cart-header {
+.order-info__header {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--font-color-lite);
 }
-.cart-header>div {
-    display: flex;
-}
-.cart-header i {
+.order-info__header-icon {
     font-size: 3rem;
 }
-.cart-header h3 {
+.order-info__header-title {
     margin-left: 1rem;
     font-size: 2.4rem;
 }
-.cart-header .close {
-    color: var(--main-color);
-}
-.cart-header .close i {
-    font-size: 2.4rem;
-}
-.cart-items {
+
+.order-info__items {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--font-color-lite);
 }
-.cart-items .item-info {
+.order-info__item {
+    margin-bottom: 1.5rem;
+}
+.order-info__item-detail {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
-.cart-items .item-info .item-name,
-.cart-items .item-info .item-price {
+.order-info__item-name,
+.order-info__item-price {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.2rem;
 }
-.item-count-price {
+
+.cart-controls {
     display: flex;
 }
-.item-count-price .btn-cart {
+.cart-controls__btn {
+    padding-bottom: .6rem;
+    border-radius: .4rem;
+    vertical-align: middle;
+    width: 3.8rem;
+    height: 3.7rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-right: .5rem;
+    background-color: var(--font-color-lite);
+}
+.cart-controls__count {
     padding-bottom: .6rem;
     border-radius: .4rem;
     vertical-align: middle;
@@ -249,12 +252,7 @@
     background-color: #fff;
     margin-right: .5rem;
 }
-.item-count-price .btn-cart:nth-child(odd):hover {
-    background-color: var(--font-color-lite);
-}
-.item-count-price .btn-cart:nth-child(odd) {
-    background-color: var(--font-color-lite);
-}
+
 .cart-pricing {
     font-size: 1.6rem;
     font-weight: 300;
@@ -262,18 +260,19 @@
     display: flex;
     justify-content: space-between;
 }
-.cart-total {
+.cart-pricing--total {
     font-size: 1.8rem;
     margin-top: 1.5rem;
     border-top: 1px solid var(--font-color-lite);
 }
-.checkout-btn-wrapper {
+
+.checkout__make-order {
     margin: 4rem auto 2rem auto;
     margin-top: 4rem;
     width: 98%;
     text-align: center;
 }
-.checkout-btn-wrapper button {
+.checkout__make-order-btn {
     font: 400 20px/26px "Oswald",sans-serif;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -284,34 +283,25 @@
     background-color: var(--main-color);
     color: #fff;
     line-height: 2.2rem;
+    transition: all 0.3s;
 }
-
-
-/* footer */
 
 /*----------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
 @media only screen and (min-width: 480px)  {
 
-    /* navbar */
-
-    /* header */ 
-    
     .header-breadcrumb-wrapper {
         padding-left: 4rem;
     }
-    .restaurant-info-wrapper {
+
+    .restaurant-info {
         padding-left: 4rem;
     }
 
-    .delivery-time div {
+    .expected-delivery-time {
         width: 50%;
     }
-    
-    /* main */
-
-    /* footer */
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -324,16 +314,7 @@
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
-    /* navbar */
-
-    /* header */
-    
-    /* breadcrumb */
-    .header-breadcrumb-wrapper {
-        padding-left: 17rem;
-        padding-top: -1px;
-    }
-    .restaurant-info-wrapper {
+    .restaurant-info {
         padding-left: 17rem;
     }
     
@@ -343,50 +324,55 @@
         padding: 0 .5rem;
     }
 
-   
-    .checkout-wrapper {
+    .checkout {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         padding: 0 13rem;
     }
-    .checkout-info-wrapper {
-        width: 60%;
+
+    .customer-info {
+        width: 70%;
     }
-    .order-info-wrapper {
-        width: 40%;
-        height: 43rem;
-        transform: translateY(-11.5rem);
-        background-color: #fff;
-    }
-    .delivery-address button:hover {
+
+    /* delivery info */
+    .delivery-info__add:hover {
         background-color: var(--main-color);
-        color: var(--font-color-lite);
+        color: #fff;
         cursor: pointer;
         transition: 0.3s;
     }
-    .delivery-time {
+    .delivery-info__time {
         width: 100%;
     }
-    .delivery-time div {
+    .expected-delivery-time {
+        width: 50%;
+    }
+    .expected-delivery-time:hover {
         cursor: pointer;
+        border-color: var(--main-color);
     }
 
-    .item-count-price .btn-cart:nth-child(odd):hover {
+    /* order info */
+    .order-info {
+        width: 50%;
+        height: 50rem;
+        transform: translateY(-11.5rem);
+        background-color: #fff;
+    }
+
+    .cart-controls__btn:hover {
         cursor: pointer;
         background-color: var(--font-color);
         color: var(--font-color-lite);
         transition: 0.2s;
     }
 
-    .checkout-btn-wrapper button:hover {
+    .checkout__make-order-btn:hover {
         background-color: var(--font-color);
         cursor: pointer;
-        transition: 0.3s;
-    }
-
-    /* footer */
-   
+        transform: scale(1.05) ;
+    }   
 }
 
 

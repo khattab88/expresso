@@ -20,6 +20,11 @@
     font-size: 1.7rem;
     padding: .3rem;
 }
+.breadcrumb__item--back {
+    border: 1px solid var(--font-color-lite);
+    border-radius: .3rem;
+    padding: 0;
+}
 .breadcrumb__link {
     text-decoration: none;
     color: #fff;
@@ -51,6 +56,9 @@
         padding-left: 11rem;
         padding-top: 3rem;
         color: #fff;
+    }
+    .breadcrumb__item:hover {
+        cursor: pointer;
     }
     .breadcrumb__link:hover {
         border-bottom: 2px solid #fff;

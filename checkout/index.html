@@ -33,7 +33,8 @@
                     <li class="navigation__item"><a href="../login/index.html" class="navigation__link">Login</a></li>
                     <li class="navigation__item"><a href="../sign-up/index.html" class="navigation__link">Sign Up</a>
                     </li>
-                    <li class="navigation__item"><a href="../contact-us/index.html" class="navigation__link">Contact Us</a></li>
+                    <li class="navigation__item"><a href="../contact-us/index.html" class="navigation__link">Contact
+                            Us</a></li>
                     <li class="navigation__item nav-language"><a href="#" class="navigation__link">العربية</a></li>
                     <li class="navigation__item">
                         <a href="#" class="navigation__link">
@@ -49,8 +50,8 @@
                         <a href="../checkout/index.html" class="navigation__link">
                             <div class="cart-btn">
                                 <img alt="Cart" height="27" class="cart-btn__img"
-                                src="https://trycarriage.global.ssl.fastly.net/assets/v2/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
-                                title="Cart" width="30">
+                                    src="https://trycarriage.global.ssl.fastly.net/assets/v2/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
+                                    title="Cart" width="30">
                                 <em class="cart-btn__item-count">1</em>
                             </div>
                         </a>
@@ -61,125 +62,154 @@
                 <span class="navbar__toggle-icon fa fa-align-justify"></span>
             </div>
         </nav>
-        
+
         <header class="header">
-            <section class="header-breadcrumb-wrapper">
-                <i class="material-icons">chevron_left</i>
-                <span>/</span>
-                <span>Burger Shop</span>
+            <section class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item breadcrumb__item--back">
+                        <i class="material-icons">chevron_left</i>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--current">
+                        <a class="breadcrumb__link" href="#">Burger Shop</a>
+                    </li>
+                </ul>
             </section>
-            <section class="restaurant-info-wrapper">
-                <div class="restaurant-info">
-                    <p>You are ordering from</p>
-                    <h2>Burger Shop</h2>
-                </div>
+
+            <section class="restaurant-info">
+                <p class="restaurant-info__heading">You are ordering from</p>
+                <h2 class="restaurant-info__name">Burger Shop</h2>
             </section>
         </header>
 
-        <div class="main">
-            <div class="checkout-wrapper">
-                <div class="checkout-info-wrapper">
-                    <div class="checkout-info-box customer-info">
-                        <h3>New to Expresso?</h3>
-                        <p>Please provide your name, email and phone to continue</p>
-                        <div class="customer-form">
+        <main class="main">
+
+            <div class="checkout">
+
+                <div class="customer-info">
+                    <section class="checkout-info-box user-info">
+                        <h3 class="user-info__heading-primary">New to Expresso?</h3>
+                        <p class="user-info__heading-secondary">Please provide your name, email and phone to continue
+                        </p>
+                        <div class="user-info__form">
                             <div class="form-group">
-                                <label for="customer-name">Name</label>
-                                <input type="text" name="customer-name" id="customer-name" size="30" required>
+                                <label class="form-group__label" for="customer-name">Name</label>
+                                <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                    size="30" required>
                             </div>
                             <div class="form-group">
-                                <label for="customer-email">Email</label>
-                                <input type="text" name="customer-email" id="customer-email" size="30" required>
+                                <label class="form-group__label" for="customer-email">Email</label>
+                                <input class="form-group__input" type="text" name="customer-email" id="customer-email"
+                                    size="30" required>
                             </div>
                         </div>
-                    </div>
-                    <div class="checkout-info-box delivery-info">
-                        <h4>Delivery Details</h4>
-                        <div class="delivery-address">
-                            <button>Add New Address</button>
-                            <span>
-                                <i class="material-icons">info</i>
+                    </section>
+
+                    <section class="checkout-info-box delivery-info">
+                        <h4 class="delivery-info__heading">Delivery Details</h4>
+                        <div class="delivery-info__address">
+                            <button class="delivery-info__add">Add New Address</button>
+                            <span class="delivery-info__locate">
+                                <i class="delivery-info__locate-icon material-icons">info</i>
                                 Locate your address on the map
                             </span>
                         </div>
-                        <div class="delivery-time">
-                            <h5>Expected Delivery Time</h5>
-                            <div>
-                                <p>Now</p>
-                                <i class="fa fa-chevron-down"></i>
+                        <div class="delivery-info__time">
+                            <h5 class="delivery-info__time-heading">Expected Delivery Time</h5>
+                            <div class="expected-delivery-time">
+                                <p class="expected-delivery-time__value">Now</p>
+                                <i
+                                    class="expected-delivery-time__icon expected-delivery-time__icon--arrow-down fa fa-chevron-down"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="checkout-info-box payment-info">
-                        <h4>Payment Methods</h4>
-                        <ul class="payment-options">
-                            <li>
-                                <input type="radio" name="card_pay" id="card_pay">
-                                <label for="card_pay">
-                                    <span><i class="material-icons">credit_card</i></span>
-                                    <h5>Credit Card</h5>
+                    </section>
+
+                    <section class="checkout-info-box payment-info">
+                        <h4 class="payment-info__heading">Payment Methods</h4>
+                        <ul class="payment-info__options">
+                            <li class="payment-info__option">
+                                <input class="payment-info__option-input" type="radio" name="card_pay" id="card_pay">
+                                <label class="payment-info__option-label" for="card_pay">
+                                    <i class="payment-info__option-icon material-icons">credit_card</i>
+                                    <h5 class="payment-info__option-name">Credit Card</h5>
                                 </label>
                             </li>
-                            <li>
-                                <input type="radio" name="cash_pay" id="cash_pay">
-                                <label for="cash_pay">
-                                    <span><i class="material-icons">money</i></span>
-                                    <h5>Cash on Delivery</h5>
+                            <li class="payment-info__option">
+                                <input class="payment-info__option-input" type="radio" name="cash_pay" id="cash_pay">
+                                <label class="payment-info__option-label" for="cash_pay">
+                                    <i class="payment-info__option-icon material-icons">money</i>
+                                    <h5 class="payment-info__option-name">Cash on Delivery</h5>
                                 </label>
                             </li>
                         </ul>
-                    </div>
+                    </section>
+
                 </div>
-                <div class="checkout-info-box order-info-wrapper">
-                    <div class="cart-body">
-                        <div class="cart-header">
-                            <div>
-                                <i class="material-icons">shopping_cart</i>
-                                <h3>Your Oredr</h3>
-                            </div>
-                            <p class="close"><i class="fa fa-times"></i></p>
-                        </div>
-                        <div class="cart-items">
-                            <div class="item-info">
-                                <p class="item-name">Double Cheese Burger</p>
-                                <p class="item-price">75.00 EGP</p>
-                            </div>
-                            <div class="item-count-price">
-                                <div class="btn-cart">-</div>
-                                <p class="btn-cart">1</p>
-                                <div class="btn-cart">+</div>
-                            </div>
-                        </div>
-                        <div class="cart-pricing">
-                            <p>subtotal</p>
-                            <p>75.00 EGP</p>
-                        </div>
-                        <div class="cart-pricing">
-                            <p>delivery fee</p>
-                            <p>5.00 EGP</p>
-                        </div>
-                        <div class="cart-pricing cart-total">
-                            <p>Total</p>
-                            <p>80.00 EGP</p>
-                        </div>
-                        <div class="checkout-btn-wrapper">
-                            <button>Place Order</button>
-                        </div>
+                <section class="checkout-info-box order-info">
+                    <div class="order-info__header">
+                        <i class="order-info__header-icon material-icons">shopping_cart</i>
+                        <h3 class="order-info__header-title">Your Oredr</h3>
                     </div>
-                </div>
+                    <div class="order-info__items">
+                        <article class="order-info__item">
+                            <div class="order-info__item-detail">
+                                <p class="order-info__item-name">Double Cheese Burger</p>
+                                <p class="order-info__item-price">75.00 EGP</p>
+                            </div>
+                            <div class="cart-controls">
+                                <div class="cart-controls__btn cart-controls__btn-remove">-</div>
+                                <p class="cart-controls__count">1</p>
+                                <div class="cart-controls__btn cart-controls__btn-add">+</div>
+                            </div>
+                        </article>
+                        <article class="order-info__item">
+                            <div class="order-info__item-detail">
+                                <p class="order-info__item-name">Large Coca Cola</p>
+                                <p class="order-info__item-price">20.00 EGP</p>
+                            </div>
+                            <div class="cart-controls">
+                                <div class="cart-controls__btn cart-controls__btn-remove">-</div>
+                                <p class="cart-controls__count">1</p>
+                                <div class="cart-controls__btn cart-controls__btn-add">+</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="cart-pricing cart-pricing--subtotal">
+                        <p class="cart-pricing__title">subtotal</p>
+                        <p class="cart-pricing__value">95.00 EGP</p>
+                    </div>
+                    <div class="cart-pricing cart-pricing--delivery">
+                        <p class="cart-pricing__title">delivery fee</p>
+                        <p class="cart-pricing__value">10.00 EGP</p>
+                    </div>
+                    <div class="cart-pricing cart-pricing--total">
+                        <p class="cart-pricing__title">Total</p>
+                        <p class="cart-pricing__value">105.00 EGP</p>
+                    </div>
+                    <div class="checkout__make-order">
+                        <button class="checkout__make-order-btn">Place Order</button>
+                    </div>
+                </section>
             </div>
-        </div>
+
+        </main>
 
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
-            
+
             <section class="footer__links">
                 <div class="secondary-navigation">
                     <ul class="secondary-navigation__items">
-                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About Us</a></li>
-                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it works</a></li>
-                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html" class="secondary-navigation__link">Restaurants</a></li>
-                        <li class="secondary-navigation__item"><a href="../contact-us/index.html" class="secondary-navigation__link">Contact Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About
+                                Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it
+                                works</a></li>
+                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html"
+                                class="secondary-navigation__link">Restaurants</a></li>
+                        <li class="secondary-navigation__item"><a href="../contact-us/index.html"
+                                class="secondary-navigation__link">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="social-navigation">
@@ -198,7 +228,7 @@
                     </ul>
                 </div>
             </section>
-        
+
             <section class="sub-footer">
                 <div class="change-country">
                     <button class="change-country__btn">
@@ -220,10 +250,10 @@
                     </a>
                 </div>
             </section>
-            
+
             <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
         </footer>
-        
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
