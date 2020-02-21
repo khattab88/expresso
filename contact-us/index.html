@@ -21,73 +21,77 @@
 
 <body>
     <div class="container">
+
         <nav class="navbar">
-            <div class="navbar-logo">
-                <a href="../index.html">
-                    <h2>Expresso</h2>
+            <div class="logo">
+                <a href="../index.html" class="logo__link">
+                    <h2 class="logo__title">Expresso</h2>
                 </a>
             </div>
-            <div class="nav-container">
-                <ul class="navbar-items">
-                    <li><a href="../login/index.html">Login</a></li>
-                    <li><a href="../sign-up/index.html">Sign Up</a></li>
-                    <li><a href="../contact-us/index.html">Contact Us</a></li>
-                    <li class="nav-language"><a href="#">العربية</a></li>
-                    <li class="nav-country">
-                        <a href="#">
-                            <img class="country-flag"
-                                src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg" alt="egypt"
-                                height="20" width="30">
-                            <i class="fa fa-caret-down"></i>
+            <div class="navigation">
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="../login/index.html" class="navigation__link">Login</a></li>
+                    <li class="navigation__item"><a href="../sign-up/index.html" class="navigation__link">Sign Up</a>
+                    </li>
+                    <li class="navigation__item"><a href="../contact-us/index.html" class="navigation__link">Contact Us</a></li>
+                    <li class="navigation__item nav-language"><a href="#" class="navigation__link">العربية</a></li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            <div class="country-btn">
+                                <img class="country-btn__img"
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                                    alt="egypt" height="20" width="30">
+                                <i class="country-btn__caret--down fa fa-caret-down"></i>
+                            </div>
                         </a>
                     </li>
-                    <li class="nav-cart">
-                        <a href="../checkout/index.html">
-                            <img alt="Cart" height="27"
+                    <li class="navigation__item">
+                        <a href="../checkout/index.html" class="navigation__link">
+                            <div class="cart-btn">
+                                <img alt="Cart" height="27" class="cart-btn__img"
                                 src="https://trycarriage.global.ssl.fastly.net/assets/v2/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
                                 title="Cart" width="30">
-                            <em>1</em>
+                                <em class="cart-btn__item-count">1</em>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="navbar-toggle">
-                <span class="fa fa-align-justify"></span>
+            <div class="navbar__toggle">
+                <span class="navbar__toggle-icon fa fa-align-justify"></span>
             </div>
         </nav>
 
-        <header>
-            <section class="breadcrumb-wrapper">
-                <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contact Us</a></li>
+        <header class="header">
+            <section class="header__breadcrumb">
+                <ul class="header__breadcrumb-list">
+                    <li class="header__breadcrumb-item"><a class="header__breadcrumb-link header__breadcrumb-link--home" href="#">Home</a></li>
+                    <li class="header__breadcrumb-item"><a class="header__breadcrumb-link header__breadcrumb-link--current" href="#">Contact Us</a></li>
                 </ul>
             </section>
-            <div class="header-wrapper">
-                <h1>Questions, suggestions?</h1>
-                <h2>Tell us about it!</h2>
+            <div class="header__msg">
+                <h1 class="header__msg-primary">Questions, suggestions?</h1>
+                <h2 class="header__msg-secondary">Tell us about it!</h2>
             </div>
         </header>
 
-        <div class="main">
-            <section class="contact-wrapper">
-                <div>
-                    <h3>Get in touch with us</h3>
-                    <p>We look forward for improving our applications and providing the best delivery service.</p>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" action="#">
+        <main class="main">
+
+            <section class="contact-us">
+                <section class="contact-us__messaging">
+                    <h3 class="contact-us__messaging-title-primary">Get in touch with us</h3>
+                    <p class="contact-us__messaging-title-secondary">We look forward for improving our applications and providing the best delivery service.</p>
+                    <div class="contact-us__form-box">
+                        <form class="contact-us__form" action="#">
                             <div class="form-group">
                                 <input class="form-control" type="text" name="name" id="name" placeholder="Name">
-                                <!-- <label for="name">Name</label> -->
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" name="email" id="email" placeholder="Email">
-                                <!-- <label for="email">Email</label> -->
                             </div>
                             <div class="form-group">
-                                <textarea name="message" id="" cols="40" rows="5" class="form-control"
+                                <textarea class="form-control form-control-textarea" name="message" id="" cols="40" rows="5"
                                     placeholder="Message"></textarea>
-                                <!-- <label for="message">Message</label> -->
                             </div>
 
                             <div class="g-recaptcha " data-sitekey="6LdCcTsUAAAAADq3quUcPZUzGScfx_BuEYn-dbEj">
@@ -102,77 +106,88 @@
                                         style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
                                 </div>
                             </div>
-
-                            <button>Send</button>
+                            <button class="contact-us__send">Send</button>
                         </form>
                     </div>
-                </div>
-                <section class="contact-info-wrapper">
-                    <div class="social-wrapper">
-                        <h3>We’re social</h3>
-                        <p>Find us on these social networks</p>
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                </section>
+                <section class="contact-us-info">
+                    <div class="contact-us-info__social">
+                        <h3 class="contact-us-info__heading-primary">We’re social</h3>
+                        <p class="contact-us-info__heading-secondary">Find us on these social networks</p>
+                        <ul class="social-networks">
+                            <li class="social-networks__item">
+                                <a class="social-networks__link" href="#"><i class="social-networks__icon fa fa-facebook-f"></i></a>
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link" href="#"><i class="social-networks__icon fa fa-twitter"></i></a>
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link" href="#"><i class="social-networks__icon fa fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="phone-wrapper">
-                        <h3>Talk to us</h3>
-                        <p>Call us <i class="material-icons">phone_iphone</i> 7777777</p>
+                    <div class="contact-us-info__phone">
+                        <h3 class="contact-us-info__heading-primary">Talk to us</h3>
+                        <p class="contact-us-info__heading-secondary">Call us <i class="material-icons">phone_iphone</i> 7777777</p>
                     </div>
                 </section>
             </section>
-        </div>
+        </main>
 
         <footer class="footer">
-            <h2 class="footer-logo">Expresso</h2>
-            <section class="footer-container">
-                <div class="footer-links-warpper">
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="../restaurant-list/index.html">Restaurants</a></li>
-                        <li><a href="../contact-us/index.html">Contact Us</a></li>
+            <h2 class="footer__logo">Expresso</h2>
+            
+            <section class="footer__links">
+                <div class="secondary-navigation">
+                    <ul class="secondary-navigation__items">
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it works</a></li>
+                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html" class="secondary-navigation__link">Restaurants</a></li>
+                        <li class="secondary-navigation__item"><a href="../contact-us/index.html" class="secondary-navigation__link">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="social-links-wrapper">
-                    <ul class="social-links">
-                        <li><i class="fa fa-facebook-square"></i></li>
-                        <li><i class="fa fa-twitter"></i></li>
-                        <li><i class="fa fa-instagram"></i></li>
+                <div class="social-navigation">
+                    <ul class="social-navigation__items">
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link">
+                                <i class="social-link__icon fa fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
             </section>
+        
             <section class="sub-footer">
-                <div class="change-country-wrapper">
-                    <button class="change-country-btn">
-                        <img class="country-flag"
-                            src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg" alt="egypt"
-                            height="20" width="30">
+                <div class="change-country">
+                    <button class="change-country__btn">
+                        <img class="change-country__flag"
+                            src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                            alt="egypt" height="20" width="30">
                         Egypt
-                        <i class="fa fa-caret-down"></i>
+                        <i class="change-country__caret--down fa fa-caret-down"></i>
                     </button>
                 </div>
-                <div class="footer-app-downloads">
-                    <a href="#">
-                        <img alt="Download App from Google Playstore"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
+                <div class="app-download">
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Google Playstore" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
                     </a>
-                    <a href="#">
-                        <img alt="Download App from Apple App Store"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Apple App Store" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
                     </a>
                 </div>
             </section>
+            
             <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
         </footer>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"

@@ -1,56 +1,55 @@
 /* Mobile-first*/
 
-.container {}
-
-/*navbar */
-
-/* header */
-header {
-    margin-top: 4.7rem;
+.header {
+    margin-top: 4.5rem;
     width: 100%;
     height: 50vh;
     color: #fff;
-    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat left top;
-    
+    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat left top;  
 }
 
-.breadcrumb-wrapper {
+.header__breadcrumb {
     width: 100%;
     height: 6rem;
     background: rgba(255,255,255,0.2);
 }
-.breadcrumb {
+.header__breadcrumb-list {
     list-style: none;
     display: flex;
     padding: 2rem;
 }
-.breadcrumb li {
+.header__breadcrumb-item {
     display: inline-block;
     margin: 0;
 }
-.breadcrumb>li+li:before {
+.header__breadcrumb-item::after {
     padding: 0 .5rem;
     color: #ccc;
     content: "/\00a0";
 }
-.breadcrumb li a {
+.header__breadcrumb-link {
     padding: 0px .7rem 1px .7rem;
-    border: 1px solid var(--font-color-lite);
-    border-radius: .3rem;
     text-decoration: none;
     outline: none;
     color: #fff;
     font-size: 1.4rem;
 }
-.breadcrumb li:nth-child(even) a {
-    border: 0;
+.header__breadcrumb-link--home {
+    border: 1px solid var(--font-color-lite);
+    border-radius: .3rem;
+}
+.header__breadcrumb-item:nth-child(2)::after {
+    content: "";
+}
+.header__breadcrumb-link--current {
     padding-left: 0;
 }
-.header-wrapper {
+
+.header__msg {
     margin-top: 5rem;
     padding: 0 3rem;
 }
-.header-wrapper h1 {
+.header__msg-primary {
     line-height: 5rem;
     font-size: 5.5rem;
     margin: 0;
@@ -59,7 +58,7 @@ header {
     font-weight: 400;
     letter-spacing: .5px;
 }
-.header-wrapper h2 {
+.header__msg-secondary {
     padding-top: 1.5rem;
     line-height: 3.5rem;
     margin: 0;
@@ -77,10 +76,10 @@ header {
     color: var(--font-color);   
 }
 
-.contact-wrapper {
+.contact-us {
     padding: 5rem 3rem;
 }
-.contact-wrapper h3 {
+.contact-us__messaging-title-primary {
     font-size: 2.8rem;
     margin: 0;
     text-transform: none;
@@ -88,17 +87,19 @@ header {
     font-weight: 400;
     letter-spacing: .5px;
 }
-.contact-wrapper p {
+.contact-us__messaging-title-secondary {
     padding-top: .5rem;
     font-size: 1.8rem;
     line-height: 1.5;
     margin: 0 0 1rem;
 }
-.contact-form-wrapper {
+
+
+.contact-us__form-box {
     padding: 2rem 0 4rem 0;
     margin: 0;
 }
-.contact-form {
+.contact-us__form {
     font-family: "Source Sans Pro",sans-serif;
     font-weight: 300;
 }
@@ -123,33 +124,14 @@ header {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 }
-.form-group label {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-    color: #333;
-    pointer-events: none;
-    -webkit-transition: all 0.15s ease-out 0s;
-    transition: all 0.15s ease-out 0s;
-    font-weight: 300;
-    max-width: 100%;
-    margin-bottom: .5rem;
-}
-.form-group textarea+label {
-    top: 10%;
-}
-textarea.form-control {
+.form-control-textarea {
     padding-top: 1rem;
 }
+
 .g-recaptcha {
     display: none;
 }
-.contact-form button {
+.contact-us__send {
     width: 100%;
     border: 0;
     background-color: var(--main-color);
@@ -165,16 +147,14 @@ textarea.form-control {
     margin-top: 2rem;
 }
 
-.contact-info-wrapper {
+.contact-us-info {
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
-
-.social-wrapper,
-.phone-wrapper {
+.contact-us-info__social,
+.contact-us-info__phone {
     margin-bottom: 2.5rem;
 }
-.social-wrapper h3,
-.phone-wrapper h3 {
+.contact-us-info__heading-primary {
     font-size: 2.8rem;
     margin: 0;
     text-transform: none;
@@ -182,51 +162,39 @@ textarea.form-control {
     font-weight: 400;
     letter-spacing: .5px;
 }
-.social-wrapper p,
-.phone-wrapper p {
+.contact-us-info__heading-secondary {
     padding-top: .5rem;
     font-size: 1.8rem;
     line-height: 1.5;
     margin: 0 0 1rem;
 }
 
-.social-wrapper ul {
+.social-networks {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-left: 1rem;
 }
-.social-wrapper ul li {
+.social-networks__item {
     display: inline-block;
     text-align: center;
     padding-right: 2.5rem;
 }
-.social-wrapper ul li i {
+.social-networks__icon {
     font-size: 3.6rem;
     font-weight: 600;
     color: var(--main-color);
     transition: all .2s;
 }
 
-
-/* footer */
-
 /*----------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
 @media only screen and (min-width: 480px)  {
 
-    /* navbar */
-    .navbar {}
-
-    /* header */
-    header {
+    .header {
         height: 65vh;
     }
-    
-    /* main */
-   
-    /* footer */
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -238,20 +206,21 @@ textarea.form-control {
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-
-    /* navbar */
     
     /* header */
-    header {
+    .header {
         background-size: cover;
         height: 60vh;
     }
 
-    .breadcrumb {
+    .header__breadcrumb {
+        height: 9rem;
         padding-top: 3rem;
-        margin-left: 15rem;
     }
-    .header-wrapper {
+    .header__breadcrumb-list {
+        padding-left: 11rem;
+    }
+    .header__msg {
         margin-left: 13rem;
         margin-top: 10rem;
     }
@@ -262,7 +231,7 @@ textarea.form-control {
         padding: 0 .5rem;
     }
 
-    .contact-wrapper {
+    .contact-us {
         width: 80%;
         margin: 0 auto;
         position: relative;
@@ -273,25 +242,24 @@ textarea.form-control {
 
         display: flex;
     }
-    .contact-wrapper>div {
+    .contact-us__messaging {
         width: 70%;
         padding-right: 23.5rem;
     }
 
-    .contact-form button:hover {
+    .contact-us__send:hover {
         background-color: var(--font-color);
         cursor: pointer;
         transition: 0.3s;
     } 
 
-    .phone-wrapper {
+    .contact-us-info__phone {
         margin-top: 4rem;
     }
 
-    .social-wrapper ul li i:hover {
+    .social-networks__icon:hover {
         transform: translateY(-.5rem) scale(1.05);
     }
-    
-    /* footer */
+  
 }
 
