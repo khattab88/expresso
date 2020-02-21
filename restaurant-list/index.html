@@ -20,223 +20,267 @@
 
 <body>
     <div class="container">
+
         <nav class="navbar">
-            <div class="navbar-logo">
-                <a href="../index.html">
-                    <h2>Expresso</h2>
+            <div class="logo">
+                <a href="../index.html" class="logo__link">
+                    <h2 class="logo__title">Expresso</h2>
                 </a>
             </div>
-            <div class="nav-container">
-                <ul class="navbar-items">
-                    <li><a href="../login/index.html">Login</a></li>
-                    <li><a href="../sign-up/index.html">Sign Up</a></li>
-                    <li><a href="../contact-us/index.html">Contact Us</a></li>
-                    <li class="nav-language"><a href="#">العربية</a></li>
-                    <li class="nav-country">
-                        <a href="#">
-                            <img class="country-flag"
-                                src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg" alt="egypt"
-                                height="20" width="30">
-                            <i class="fa fa-caret-down"></i>
+            <div class="navigation">
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="../login/index.html" class="navigation__link">Login</a></li>
+                    <li class="navigation__item"><a href="../sign-up/index.html" class="navigation__link">Sign Up</a>
+                    </li>
+                    <li class="navigation__item"><a href="../contact-us/index.html" class="navigation__link">Contact Us</a></li>
+                    <li class="navigation__item nav-language"><a href="#" class="navigation__link">العربية</a></li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            <div class="country-btn">
+                                <img class="country-btn__img"
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                                    alt="egypt" height="20" width="30">
+                                <i class="country-btn__caret--down fa fa-caret-down"></i>
+                            </div>
                         </a>
                     </li>
-                    <li class="nav-cart">
-                        <a href="../checkout/index.html">
-                            <img alt="Cart" height="27"
+                    <li class="navigation__item">
+                        <a href="../checkout/index.html" class="navigation__link">
+                            <div class="cart-btn">
+                                <img alt="Cart" height="27" class="cart-btn__img"
                                 src="https://trycarriage.global.ssl.fastly.net/assets/v2/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
                                 title="Cart" width="30">
-                            <em>1</em>
+                                <em class="cart-btn__item-count">1</em>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="navbar-toggle">
-                <span class="fa fa-align-justify"></span>
+            <div class="navbar__toggle">
+                <span class="navbar__toggle-icon fa fa-align-justify"></span>
             </div>
         </nav>
 
         <header class="header">
-            <div class="search-container">
-                <h2>Restaurants delivering to your city.</h2>
-                <div class="search-form-wrapper">
-                    <form action="" class="search">
-                        <input type="text" placeholder="City">
-                        <input type="text" placeholder="Restaurant Name">
-                        <button type="submit">Find Food</button>
+            <div class="restaurant-search">
+                <h2 class="restaurant-search__title">Restaurants delivering to your city.</h2>
+                <div class="restaurant-search__box">
+                    <form action="" class="restaurant-search__form">
+                        <input class="restaurant-search__input" type="text" placeholder="City">
+                        <input class="restaurant-search__input" type="text" placeholder="Restaurant Name">
+                        <button class="restaurant-search__submit" type="submit">Find Food</button>
                     </form>
                 </div>
             </div>
         </header>
 
-        <div class="main">
-            <section class="breadcrumb-wrapper">
-                <span>Restaurants</span>
-                <span>/</span>
-                <span>Cairo</span>
+        <main class="main">
+
+            <section class="restaurant-list-breadcrumb">
+                <ul class="restaurant-list-breadcrumb__list">
+                    <li class="restaurant-list-breadcrumb__item">Restaurants</li>
+                    <li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb__separator">/</li>
+                    <li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb--current">Cairo</li>
+                </ul>
             </section>
-            <section class="restaurant-list-header">
-                <div class="filter-control">
-                    <i class="fa fa-filter"></i>
-                    <p>Filter by types of food</p>
-                    <i class="fa fa-angle-down"></i>
+
+            <section class="restaurant-list-filter">
+                <div class="filter-dropdown">
+                    <i class="filter-dropdown__icon fa fa-filter"></i>
+                    <p class="filter-dropdown__title">Filter by types of food</p>
+                    <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
                 </div>
-                <div class="filter-options">
-                    <input type="checkbox" name="special-offers" id="special-offers">
-                    <span>Special Offers</span>
-                </div>
-            </section>
-            <section class="restaurant-results">
-                <div class="item-row">
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-row">
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-img">
-                            <div class="delivery-time">
-                                <p>Average delivery time</p>
-                                <span>30 - 40 mins</span>
-                            </div>
-                        </div>
-                        <div class="item-desc">
-                            <h3>Tea Time</h3>
-                            <p>Any time, Tea time</p>
-                        </div>
-                        <div class="item-tags">
-                            <ul>
-                                <li>No tags available</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="filter-checkbox">
+                    <input class="filter-checkbox__input" type="checkbox" name="special-offers" id="special-offers">
+                    <span class="filter-checkbox__title">Special Offers</span>
                 </div>
             </section>
-        </div>
+
+            <section class="restaurant-list">
+                <div class="restaurant-list__row">
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="restaurant-list__row">
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item">CoffeShop</li>
+                                <li class="restaurant-tags__tag-item">Beverages</li>
+                                <li class="restaurant-tags__tag-item">Desserts</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-info">
+                                <p class="delivery-info__title">Average delivery time</p>
+                                <span class="delivery-info__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
 
         <footer class="footer">
-            <h2 class="footer-logo">Expresso</h2>
-            <section class="footer-container">
-                <div class="footer-links-warpper">
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="../restaurant-list/index.html">Restaurants</a></li>
-                        <li><a href="../contact-us/index.html">Contact Us</a></li>
+            <h2 class="footer__logo">Expresso</h2>
+            
+            <section class="footer__links">
+                <div class="secondary-navigation">
+                    <ul class="secondary-navigation__items">
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it works</a></li>
+                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html" class="secondary-navigation__link">Restaurants</a></li>
+                        <li class="secondary-navigation__item"><a href="../contact-us/index.html" class="secondary-navigation__link">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="social-links-wrapper">
-                    <ul class="social-links">
-                        <li><i class="fa fa-facebook-square"></i></li>
-                        <li><i class="fa fa-twitter"></i></li>
-                        <li><i class="fa fa-instagram"></i></li>
+                <div class="social-navigation">
+                    <ul class="social-navigation__items">
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link">
+                                <i class="social-link__icon fa fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
             </section>
+        
             <section class="sub-footer">
-                <div class="change-country-wrapper">
-                    <button class="change-country-btn">
-                        <img class="country-flag"
-                            src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg" alt="egypt"
-                            height="20" width="30">
+                <div class="change-country">
+                    <button class="change-country__btn">
+                        <img class="change-country__flag"
+                            src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                            alt="egypt" height="20" width="30">
                         Egypt
-                        <i class="fa fa-caret-down"></i>
+                        <i class="change-country__caret--down fa fa-caret-down"></i>
                     </button>
                 </div>
-                <div class="footer-app-downloads">
-                    <a href="#">
-                        <img alt="Download App from Google Playstore"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
+                <div class="app-download">
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Google Playstore" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
                     </a>
-                    <a href="#">
-                        <img alt="Download App from Apple App Store"
-                        src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Apple App Store" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
                     </a>
                 </div>
             </section>
+            
             <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
         </footer>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -248,7 +292,7 @@
 
         });
 
-        document.querySelectorAll(".item-card").forEach((e)=>{
+        document.querySelectorAll(".restaurant-info-card").forEach((e)=>{
             e.addEventListener("click", ()=>{
                 window.location.assign("../restaurant-menu/index.html");
             });

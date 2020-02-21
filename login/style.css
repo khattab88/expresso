@@ -1,20 +1,16 @@
 /* Mobile-first*/
 
-.container {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+.wrapper {
+    padding: 1.5rem;
 }
 
-/*navbar */
-
-/* main */
 .main {
     width: 100%;
 }
 
-.login-wrapper {
-    margin-top: 10rem;
-    border-radius: .5rem 0 0 .5rem;
+.login {
+    margin-top: 8rem;
+    border-radius: .5rem .5rem 0 0;
     height: 700px;
     display: block;
     width: 100%;
@@ -23,7 +19,7 @@
     background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     position: relative;
 }
-.login-form {
+.login__box {
     width: 100%;
     top: 10rem;
     padding: 1rem 2.5rem;
@@ -35,7 +31,7 @@
 
     color: #fff;
 }
-.login-form h3 {
+.login_heading {
     font-size: 2.4rem;
     font-family: "Oswald",sans-serif;
     font-weight: 400;
@@ -45,7 +41,7 @@
 .form-group {
     margin-bottom: 30px;
 }
-input[type="text"] {
+.form-group__input-text {
     width: 100%;
     font-size: 1.8rem;
     background: none;
@@ -57,11 +53,11 @@ input[type="text"] {
     padding: 1rem;
     transition: all 0.2s ease-in-out;
 }
-.remember-me {
+.login__remember-me {
     margin-top: 4rem;
     margin-bottom: 3rem;
 }
-input[type="checkbox"] {
+.form-group__input-checkbox {
     display: inline-block;
     vertical-align: middle;
     margin: .5rem 0;
@@ -69,7 +65,7 @@ input[type="checkbox"] {
     margin-top: 1.7rem;
     margin-right: 1rem;
 }
-.remember-me label {
+.login__remember-me-label {
     font-family: "Source Sans Pro",sans-serif;
     color: #fff;
     font-weight: 300;
@@ -81,19 +77,21 @@ input[type="checkbox"] {
     cursor: pointer;
     min-height: 2rem;   
 }
-.submit-form {
+.login__submit {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    animation: moveInUp-short .65s ease-out .2s;
+    animation-fill-mode: backwards;
 }
-.submit-form button {
+.login__sumbit-btn {
     padding: 1rem 2rem;
     font-size: 1.4rem;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 
     width: 50%;
-
     border: 0;
     background-color: var(--main-color);
     font: 400 16px/22px "Oswald",sans-serif;
@@ -103,26 +101,27 @@ input[type="checkbox"] {
     -webkit-border-radius: .4rem;
     -moz-border-radius: .4rem;
     border-radius: .4rem;
-
     color: #fff;
 }
-.forget-password {
+.login__forget-password {
     font-size: 1.6rem;
 }
+
+/* sign up */
 .sign-up {
     position: relative;
     bottom: 10rem;
 
-    border-radius: 0 .5rem .5rem 0;
+    border-radius: 0 0 .5rem .5rem;
     height: 20rem;
     width: 100%;
 
     background-color: var(--main-color);
 }
-.sign-up>div {
+.sign-up__box {
     padding: 4rem 2.5rem;
 }
-.sign-up h3 {
+.sign-up__heading {
     margin-bottom: 1rem;
     font-family: "Oswald",sans-serif;
     font-weight: 400;
@@ -130,7 +129,7 @@ input[type="checkbox"] {
     font-size: 2.4rem;
     color: #fff;
 }
-.sign-up button {
+.sign-up__btn {
     width: 100%;
     background: #fff;
     color: var(--font-color);
@@ -144,32 +143,17 @@ input[type="checkbox"] {
 }
 
 /*--- animation ---*/
-.submit-form {
-    animation: moveInUp-short .65s ease-out .2s;
-    animation-fill-mode: backwards;
-}
-.login-form h3,
+.login_heading,
 .form-group,
-.remember-me {
+.login__remember-me {
     animation: moveInDown-short .65s ease-out .2s;
     animation-fill-mode: backwards;
 }
 
-/* footer */
-
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    /* navbar */
-
-    /* header */
-        
-    /* main */
-   
-    /* footer */
-}
+@media only screen and (min-width: 480px)  {}
 
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -189,28 +173,25 @@ input[type="checkbox"] {
 
         padding: 0 10rem;
     }
-
-    /* navbar */
     
     /* main */
     .main {
         padding: 0 .5rem;
     }
 
-    .login-wrapper {
+    .login {
         background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
-
         margin-top: 0;
         top: 10rem;
-
         height: 50rem;
         width: 200vw;
+        border-radius: .5rem 0 0 .5rem;
     }
-    .submit-form button:hover {
+    .login__sumbit-btn:hover {
         background-color: var(--font-color);
         cursor: pointer;
     } 
-    .forget-password:hover {
+    .login__forget-password:hover {
         cursor: pointer;
         text-decoration: underline;
     }
@@ -223,16 +204,14 @@ input[type="checkbox"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border-radius: 0 .5rem .5rem 0;
     }
-    .sign-up button:hover {
+    .sign-up__btn:hover {
         background-color: var(--font-color);
         color: var(--font-color-lite);
         cursor: pointer;
         transition: 0.3s;
     }
-
-
-    /* footer */
 }
 
 

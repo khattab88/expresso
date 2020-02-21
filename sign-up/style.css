@@ -1,24 +1,20 @@
 /* Mobile-first*/
 
-.container {}
-
-/*navbar */
-
-/* main */
 .main {
     width: 100%;
 }
 
-.sign-up-wrapper {
+.wrapper {
     width: 90%;
     margin: 0 auto;
-    margin-top: 12rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .sign-in,
 .sign-up {
     width: 100%;
@@ -31,29 +27,29 @@
     height: 20rem;
     background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     justify-content: space-between;
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: .5rem .5rem 0 0;
 }
 .sign-up {
     height: 70rem;
     background-color: var(--font-color);
     margin-bottom: 3rem;
-    border-radius: 0 .5rem .5rem 0;
+    border-radius: 0 0 .5rem .5rem;
 }
 
-.sign-in h3,
-.sign-up h3 {
+.sign-in__heading,
+.sign-up__heading {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: .5px;
     font-size: 2.4rem;
     margin-top: 2rem;
 }
-.sign-up h3 {
+.sign-up__heading {
     margin-bottom: 3rem;
 }
 
-.sign-in button,
-.sign-up button {
+.sign-in__btn,
+.sign-up__btn {
     margin-top: 2rem;
     padding: 1rem 2rem;
     font-size: 1.4rem;
@@ -67,8 +63,7 @@
     -moz-border-radius: .4rem;
     border-radius: .4rem;
 }
-
-.sign-in button {
+.sign-in__btn {
     background-color: var(--main-color);
     color: #fff;
 }
@@ -77,7 +72,7 @@
     margin-bottom: 3rem;
     min-height: 1px;
 }
-.form-group input {
+.form-group__input-text {
     background: none;
     color: #fff;
     width: 100%;
@@ -95,31 +90,19 @@
 
 /*--- animation ---*/
 .sign-up h3,
-form {
+.sign-up__form {
     animation: moveInDown-short .65s ease-out .2s;
     animation-fill-mode: backwards;
 }
-.sign-up button {
+.sign-up__btn {
     animation: moveInUp-short .65s ease-out .2s;
     animation-fill-mode: backwards;
 }
 
-/* footer */
-
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    /* navbar */
-    .navbar {}
-
-    /* header */
-    
-    /* main */
-   
-    /* footer */
-}
+@media only screen and (min-width: 480px)  {}
 
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -130,14 +113,11 @@ form {
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
-    /* navbar */
-    
-    /* main */
     .main {
         padding: 0 .5rem;
     }
 
-    .sign-up-wrapper {
+    .wrapper {
         width: 70%;
         flex-direction: row;
         justify-content: center;
@@ -152,8 +132,9 @@ form {
         margin-top: -3rem;
         width: 30%;
         justify-content: center;
+        border-radius: .5rem 0 0 .5rem;
     }
-    .sign-in button:hover {
+    .sign-in__btn:hover {
         background-color: var(--font-color);
         cursor: pointer;
         transition: 0.3s;
@@ -161,8 +142,9 @@ form {
 
     .sign-up {
         width: 70%;
+        border-radius: 0 .5rem .5rem 0;
     }
-    form {
+    .sign-up__form {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -170,14 +152,12 @@ form {
     .form-group {
         min-width: 48%;
     }
-    .sign-up button:hover {
+    .sign-up__btn:hover {
         background-color: var(--font-color);
         color: var(--font-color-lite);
         border: 1px solid var(--font-color-lite);
         cursor: pointer;
         transition: 0.3s;
     }
-
-    /* footer */
     
 }
