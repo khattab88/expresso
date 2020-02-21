@@ -62,38 +62,36 @@
             </div>
         </nav>
 
-        <header>
-            <section class="breadcrumb-wrapper">
-                <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contact Us</a></li>
+        <header class="header">
+            <section class="header__breadcrumb">
+                <ul class="header__breadcrumb-list">
+                    <li class="header__breadcrumb-item"><a class="header__breadcrumb-link header__breadcrumb-link--home" href="#">Home</a></li>
+                    <li class="header__breadcrumb-item"><a class="header__breadcrumb-link header__breadcrumb-link--current" href="#">Contact Us</a></li>
                 </ul>
             </section>
-            <div class="header-wrapper">
-                <h1>Questions, suggestions?</h1>
-                <h2>Tell us about it!</h2>
+            <div class="header__msg">
+                <h1 class="header__msg-primary">Questions, suggestions?</h1>
+                <h2 class="header__msg-secondary">Tell us about it!</h2>
             </div>
         </header>
 
-        <div class="main">
-            <section class="contact-wrapper">
-                <div>
-                    <h3>Get in touch with us</h3>
-                    <p>We look forward for improving our applications and providing the best delivery service.</p>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" action="#">
+        <main class="main">
+
+            <section class="contact-us">
+                <section class="contact-us__messaging">
+                    <h3 class="contact-us__messaging-title-primary">Get in touch with us</h3>
+                    <p class="contact-us__messaging-title-secondary">We look forward for improving our applications and providing the best delivery service.</p>
+                    <div class="contact-us__form-box">
+                        <form class="contact-us__form" action="#">
                             <div class="form-group">
                                 <input class="form-control" type="text" name="name" id="name" placeholder="Name">
-                                <!-- <label for="name">Name</label> -->
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" name="email" id="email" placeholder="Email">
-                                <!-- <label for="email">Email</label> -->
                             </div>
                             <div class="form-group">
-                                <textarea name="message" id="" cols="40" rows="5" class="form-control"
+                                <textarea class="form-control form-control-textarea" name="message" id="" cols="40" rows="5"
                                     placeholder="Message"></textarea>
-                                <!-- <label for="message">Message</label> -->
                             </div>
 
                             <div class="g-recaptcha " data-sitekey="6LdCcTsUAAAAADq3quUcPZUzGScfx_BuEYn-dbEj">
@@ -108,34 +106,33 @@
                                         style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
                                 </div>
                             </div>
-
-                            <button>Send</button>
+                            <button class="contact-us__send">Send</button>
                         </form>
                     </div>
-                </div>
-                <section class="contact-info-wrapper">
-                    <div class="social-wrapper">
-                        <h3>We’re social</h3>
-                        <p>Find us on these social networks</p>
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                </section>
+                <section class="contact-us-info">
+                    <div class="contact-us-info__social">
+                        <h3 class="contact-us-info__heading-primary">We’re social</h3>
+                        <p class="contact-us-info__heading-secondary">Find us on these social networks</p>
+                        <ul class="social-networks">
+                            <li class="social-networks__item">
+                                <a class="social-networks__link" href="#"><i class="social-networks__icon fa fa-facebook-f"></i></a>
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link" href="#"><i class="social-networks__icon fa fa-twitter"></i></a>
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link" href="#"><i class="social-networks__icon fa fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="phone-wrapper">
-                        <h3>Talk to us</h3>
-                        <p>Call us <i class="material-icons">phone_iphone</i> 7777777</p>
+                    <div class="contact-us-info__phone">
+                        <h3 class="contact-us-info__heading-primary">Talk to us</h3>
+                        <p class="contact-us-info__heading-secondary">Call us <i class="material-icons">phone_iphone</i> 7777777</p>
                     </div>
                 </section>
             </section>
-        </div>
+        </main>
 
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
