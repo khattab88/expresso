@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "compile:sass": "node-sass sass/home.scss home/style.css"
+    "compile:sass": "node-sass sass/restaurant-list.scss restaurant-list/style.css"
   },
   "keywords": [],
   "author": "",
