@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "compile:sass": "node-sass sass/animation.scss assets/css/animation.css"
+    "compile:sass": "node-sass sass/menu-item-modal.scss assets/css/menu-item-modal.css"
   },
   "keywords": [],
   "author": "",
