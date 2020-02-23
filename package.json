@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "compile:sass": "node-sass sass/breadcrumb.scss assets/css/breadcrumb.css"
+    "compile:sass": "node-sass sass/header.scss assets/css/header.css"
   },
   "keywords": [],
   "author": "",

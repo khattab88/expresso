@@ -1,0 +1,38 @@
+@import "variables";
+
+/* Mobile-first*/
+
+.header {
+    background: linear-gradient(rgba($color-black, .7), 
+                               rgba($color-black, .7)) 
+                ,url(../img/photo-1490457843367-34b21b6ccd85.jpg);
+    background-size: cover;
+    height: 45rem;
+}
+
+/*------------------------------------------------------------*/
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px)  {}
+
+/*------------------------------------------------------------*/
+
+/* Tablet screen Sizes */
+@media only screen and (min-width: 768px) {
+    .header {
+        background-image: linear-gradient(rgba($color-black, .4), 
+                                          rgba($color-black, .4)),
+                          url(../img/photo-1466978913421-dad2ebd01d17.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/*------------------------------------------------------------*/
+
+/* Desktop screen sizes */
+@media only screen and (min-width: 1024px) {
+    .header {
+        height: 55rem;
+    }
+}
