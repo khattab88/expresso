@@ -1,0 +1,168 @@
+@import "variables";
+
+/* Mobile-first*/
+
+.navbar {
+    z-index: 2;
+    background-color: $color-main;
+    padding: 1rem 1.5rem;
+    padding-right: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__toggle {
+        display: inline-block;
+    }
+    &__toggle-icon {
+        font-size: 2.5rem;
+        color: $color-main;
+    }
+    &__toggle--open {
+        background-color: var(--font-color);
+    
+        position: absolute;
+        top: 5.4rem;
+        left: 0px;
+        width: 4.14rem;
+        height: 30vh;
+    }
+}
+
+.logo {
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+    }
+    &__title {
+        letter-spacing: 1px;
+    }
+}
+
+.navigation {
+    display: none;
+
+    &__items {
+        list-style: none;
+    }
+    &__item {
+        margin: 1.2rem 3rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.country-btn {
+    &__img {
+        margin-right: .3rem;
+        vertical-align: middle;
+    }
+    &__caret--down {
+        font-size: 1.4rem;
+    }
+}
+
+.cart-btn {
+    position: relative;
+
+    &__img {
+        vertical-align: middle;
+    }
+    &__item-count {
+        position: absolute;
+        top: -1.2rem;
+        right: -1.2rem;
+        height: 2rem;
+        width: 2rem;
+        font: 400 12px/22px "Oswald",sans-serif;
+        background-color: $color-main;
+        color: $color-white;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle ;
+        box-sizing: content-box;
+        border: .1rem solid $color-white;
+        padding: .1rem;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        text-transform: uppercase;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Mobile Landscape  */
+@media only screen and (min-width: 480px)  {
+
+    .navbar__toggle--open {
+        left: 3.2rem;
+        height: 55vh;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Tablet screen Sizes */
+@media only screen and (min-width: 768px) {
+
+    .navbar {
+        height: 7rem;
+        padding: 0 10rem;
+
+        &__toggle {
+            display: none;
+        }
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .navigation {
+        display: inline-block;
+
+        &__items {
+            font-size: 1.8rem;
+            color: $color-main;
+        }
+        &__item {
+            margin: 0 .5rem;
+            display: inline-block;
+            transition: all .2s;
+        }
+        &__link:hover {
+            color: $color-font-dark;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Desktop screen sizes */
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        padding: 0 11rem;
+    }
+
+    .navigation__item {
+        margin: 0 1.5rem;
+        transition: all .2s;
+
+        &__link {
+            transition: all .2s;
+        }
+    }
+    
+    .cart-btn__item-count:hover {
+        background-color: $color-font-dark;
+        color: $color-font-light;
+    }
+}

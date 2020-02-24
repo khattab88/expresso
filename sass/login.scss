@@ -1,0 +1,220 @@
+@import "../sass/variables";
+
+/* Mobile-first*/
+
+.wrapper {
+    padding: 1.5rem;
+}
+
+.main {
+    width: 100%;
+}
+
+.login {
+    margin-top: 8rem;
+    border-radius: .5rem .5rem 0 0;
+    height: 700px;
+    display: block;
+    width: 100%;
+
+    overflow: hidden;
+    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+    position: relative;
+
+    &__box {
+        width: 100%;
+        top: 10rem;
+        padding: 1rem 2.5rem;
+        position: relative;
+        z-index: 19;
+        visibility: visible;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        color: $color-white;
+    }
+    &_heading {
+        font-size: 2.4rem;
+        font-family: "Oswald",sans-serif;
+        font-weight: 400;
+        letter-spacing: .5px;
+        margin-bottom: 1rem;
+    }
+    &__remember-me {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    &__remember-me-label {
+        font-family: "Source Sans Pro",sans-serif;
+        color: $color-white;
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin: .5rem 0;
+        cursor: pointer;
+        min-height: 2rem;   
+    }
+    &__submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        animation: moveInUp-short .65s ease-out .2s;
+        animation-fill-mode: backwards;
+    }
+    &__sumbit-btn {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+    
+        width: 50%;
+        border: 0;
+        background-color: $color-main;
+        font: 400 16px/22px "Oswald",sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.5px;
+        -webkit-border-radius: .4rem;
+        -moz-border-radius: .4rem;
+        border-radius: .4rem;
+        color: $color-white;
+    }
+    &__forget-password {
+        font-size: 1.6rem;
+    }
+}
+
+.form-group {
+    margin-bottom: 30px;
+
+    &__input-text {
+        width: 100%;
+        font-size: 1.8rem;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid $color-font-light;
+        color: $color-white;
+        border-radius: 0;
+        width: 100%;
+        padding: 1rem;
+        transition: all 0.2s ease-in-out;
+    }
+    &__input-checkbox {
+        display: inline-block;
+        vertical-align: middle;
+        margin: .5rem 0;
+        cursor: pointer;
+        margin-top: 1.7rem;
+        margin-right: 1rem;
+    }
+}
+
+/* sign up */
+.sign-up {
+    position: relative;
+    bottom: 10rem;
+    border-radius: 0 0 .5rem .5rem;
+    height: 20rem;
+    width: 100%;
+    background-color: $color-main;
+
+    &__box {
+        padding: 4rem 2.5rem;
+    }
+    &__heading {
+        margin-bottom: 1rem;
+        font-family: "Oswald",sans-serif;
+        font-weight: 400;
+        letter-spacing: .5px;
+        font-size: 2.4rem;
+        color: $color-white;
+    }
+    &__btn {
+        width: 100%;
+        background: $color-white;
+        color: $color-font-dark;
+        padding: 1rem 1rem;
+        font-size: 1.4rem;
+        border: 1px solid $color-white;
+        transition: all 0.2s ease-in-out;
+        margin-top: 2rem;
+        border-radius: .4rem;
+        font: 400 16px/22px "Oswald",sans-serif;
+    }
+}
+
+/*--- animation ---*/
+.login_heading,
+.form-group,
+.login__remember-me {
+    animation: moveInDown-short .65s ease-out .2s;
+    animation-fill-mode: backwards;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px)  {}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) {}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 1024px) {
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 5rem;
+        margin-bottom: 15rem;
+
+        padding: 0 10rem;
+    }
+    
+    .main {
+        padding: 0 .5rem;
+    }
+
+    .login {
+        background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+        margin-top: 0;
+        top: 10rem;
+        height: 50rem;
+        width: 200vw;
+        border-radius: .5rem 0 0 .5rem;
+
+        &__sumbit-btn:hover {
+            background-color: $color-font-dark;
+            border: 1px solid $color-font-light;
+            cursor: pointer;
+        } 
+        &__forget-password:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    .sign-up {
+        bottom: 0;
+        top: 10rem;
+        height: 50rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 .5rem .5rem 0;
+
+        &__btn:hover {
+            background-color: $color-font-dark;
+            color: $color-font-light;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
+}
