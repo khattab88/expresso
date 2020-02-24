@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "compile:sass": "node-sass sass/sign-up.scss sign-up/style.css"
+    "compile:sass": "node-sass sass/contact-us.scss contact-us/style.css"
   },
   "keywords": [],
   "author": "",
