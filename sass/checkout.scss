@@ -1,0 +1,391 @@
+@import "../sass/variables";
+
+/* Mobile-first*/
+
+.header {
+    background: url(img/photo-1540265556701-ae209ac395cd.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.restaurant-info {
+    color: $color-white;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+
+    &__name {
+        line-height: 3.6rem;
+        font-size: 2.8rem;
+        text-shadow: 2px 2px 1px rgba($color-black, .2);
+        letter-spacing: .15rem;
+    }
+    &__heading {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+}
+
+.main {
+    width: 100%;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+
+    &-info-box {
+        padding: 3rem 4rem;
+        width: 90%;
+        margin: 20px auto;
+        border: 1px solid $color-font-light;
+        border-radius: .5rem;
+        box-shadow: .5rem .5rem 1rem rgba($color-black, .1);
+    }
+}
+
+/* user info */
+.user-info {
+    background-color: $color-white;
+    border-top: .7rem solid $color-main;
+
+    &__heading-primary {
+        font-family: "Oswald",sans-serif;
+        font-weight: 400;
+        letter-spacing: .5px;
+        font-size: 2.4rem;
+    }
+    &__heading-secondary {
+        line-height: 2.2rem;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+    &__form {
+        margin-top: 3rem;
+    }
+}
+
+.form-group {
+    display: block;
+    margin: 1rem 0 2rem 0;
+    border: 0;
+    border-bottom: 1px solid $color-font-light;
+
+    &__label {
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    &__input {
+        width: 100%;
+        min-height: 3.5rem;
+        box-sizing: content-box;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        font-size: 1.8rem;
+        padding: .3rem .5rem;
+    }
+}
+
+/* delivery info */
+.delivery-info {
+    &__heading {
+        font-family: "Oswald",sans-serif;
+        font-weight: 400;
+        letter-spacing: .5px;
+        font-size: 2.4rem;
+    }
+    &__address {
+        display: flex;
+        flex-direction: column;
+    }
+    &__add {
+        border: 1px solid $color-main;
+        padding: .8rem 2rem;
+        border-radius: .4rem;
+        font-weight: 300;
+        color: $color-main;
+        background-color: $color-white;
+        width: 60%;
+        margin: 3rem 0;
+        font-size: 1.5rem;
+    }
+    &__locate {
+        font-size: 1.4rem;
+    }
+    &__locate-icon {
+        font-size: 1.4rem;
+    }
+    &__time {
+        margin-top: 3rem;
+    }
+    &__time-heading {
+        letter-spacing: 0.5px;
+        font-size: 1.5rem;
+        color: $color-font-dark;
+    }
+
+    .expected-delivery-time {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $color-font-light;
+        border-radius: .3rem;
+        height: 4rem;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+        transition: all .2s;
+
+        &__icon {
+            color: $color-main;
+        }
+    }
+}
+
+/* payment info */
+.payment-info {
+    &__heading {
+        font-family: "Oswald",sans-serif;
+        font-weight: 400;
+        letter-spacing: .5px;
+        font-size: 2.4rem;
+    }
+    &__options {
+        list-style: none;
+        margin-top: 2.5rem;
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        &-input {
+            margin-right: 1.5rem;
+        }
+        &-label {
+            display: flex;
+            align-items: center;
+        }
+        &-name {
+            font-family: "Oswald",sans-serif;
+            font-weight: 400;
+            letter-spacing: .5px;
+            font-size: 1.6rem;
+            margin-left: .5rem;
+        }
+    }    
+}
+
+
+/* order info */
+.order-info {
+    padding: 3rem 4rem;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $color-font-light;
+    }
+    &__header-icon {
+        font-size: 3rem;
+    }
+    &__header-title {
+        margin-left: 1rem;
+        font-size: 2.4rem;
+    }
+    &__items {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $color-font-light;
+    }
+    &__item {
+        margin-bottom: 1.5rem;
+    }
+    &__item-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+    }
+    &__item-name,
+    &__item-price {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+    }
+}
+
+.cart-controls {
+    display: flex;
+
+    &__btn {
+        padding-bottom: .6rem;
+        border-radius: .4rem;
+        vertical-align: middle;
+        width: 3.8rem;
+        height: 3.7rem;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-white;
+        margin-right: .5rem;
+        background-color: $color-font-light;
+    }
+    &__count {
+        padding-bottom: .6rem;
+        border-radius: .4rem;
+        vertical-align: middle;
+        width: 3.8rem;
+        height: 3.7rem;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-white;
+        margin-right: .5rem;
+    }
+}
+
+.cart-pricing {
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &--total {
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+        border-top: 1px solid $color-font-light;
+    }
+}
+
+.checkout__make-order {
+    margin: 4rem auto 2rem auto;
+    margin-top: 4rem;
+    width: 98%;
+    text-align: center;
+
+    &-btn {
+        font: 400 20px/26px "Oswald",sans-serif;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        letter-spacing: 0.5px;
+        border: none;
+        border-radius: .4rem;
+        width: 100%;
+        background-color: $color-main;
+        color: #fff;
+        line-height: 2.2rem;
+        transition: all 0.3s;
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px)  {
+
+    .header-breadcrumb-wrapper {
+        padding-left: 4rem;
+    }
+
+    .restaurant-info {
+        padding-left: 4rem;
+    }
+
+    .expected-delivery-time {
+        width: 50%;
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 1024px) {
+
+    .restaurant-info {
+        padding-left: 17rem;
+    }
+    
+    /* main */
+    .main {
+        width: 98%;
+        padding: 0 .5rem;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0 13rem;
+    }
+
+    .customer-info {
+        width: 70%;
+    }
+
+    /* delivery info */
+    .delivery-info {
+        &__add:hover {
+            background-color: $color-main;
+            color: $color-white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .delivery-info__time {
+            width: 100%;
+        }
+
+        .expected-delivery-time {
+            width: 50%;
+
+            &:hover {
+                cursor: pointer;
+                border-color: $color-main;
+            }
+        }
+    }
+
+    /* order info */
+    .order-info {
+        width: 50%;
+        height: 50rem;
+        transform: translateY(-11.5rem);
+        background-color: $color-white;
+    }
+
+    .cart-controls__btn:hover {
+        cursor: pointer;
+        background-color: $color-font-dark;
+        color: $color-font-light;
+        transition: 0.2s;
+    }
+
+    .checkout__make-order-btn:hover {
+        background-color: $color-font-dark;
+        cursor: pointer;
+        transform: scale(1.05) ;
+    }   
+}
