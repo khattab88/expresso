@@ -51,11 +51,6 @@
     }
 }
 
-.main {
-    width: 94%;
-    margin: 0 auto;
-}
-
 .restaurant-list-breadcrumb {
     padding: 1.5rem;
     border-bottom: 1px solid $color-font-light;
@@ -249,10 +244,6 @@
                 transform: translateY(-3px);
             }
         }
-    }
-    
-    .main {
-        padding: 0 10rem;
     }
 
     .filter-dropdown {

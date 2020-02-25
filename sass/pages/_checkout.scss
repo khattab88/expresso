@@ -34,10 +34,6 @@
     }
 }
 
-.main {
-    width: 100%;
-}
-
 .checkout {
     display: flex;
     flex-direction: column;
@@ -331,12 +327,6 @@
         padding-left: 17rem;
     }
     
-    /* main */
-    .main {
-        width: 98%;
-        padding: 0 .5rem;
-    }
-
     .checkout {
         display: flex;
         flex-direction: row;

@@ -78,12 +78,6 @@
     }
 }
 
-/* main */
-.main {
-    width: 94%;
-    margin: 0 auto;
-}
-
 /* sidebar */
 .restaurant-sidebar {
     margin: 2rem 0 2rem 0;
@@ -255,7 +249,7 @@
     }
  
     /* main */
-    .main {
+    .restaurant-menu-page__main {
         padding: 0;
         display: flex;
         flex-direction: row-reverse;

@@ -5,10 +5,6 @@
 
 /* Mobile-first*/
 
-.main {
-    width: 100%;
-}
-
 .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -105,10 +101,6 @@
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-
-    .main {
-        padding: 0 .5rem;
-    }
 
     .wrapper {
         width: 70%;

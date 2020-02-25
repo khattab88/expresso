@@ -56,11 +56,6 @@
     }
 }
 
-.main {
-    width: 96%;
-    margin: 0 auto;
-}
-
 /* categories section */
 .categories {
     background-color: $color-gray-light;
@@ -300,7 +295,7 @@
 
 /* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
-    
+
     /* header */
     .search {
         padding: 10rem;
@@ -315,11 +310,6 @@
             cursor: pointer;
             background-color: $color-font-dark;
         }
-    }
-
-    .main {
-        padding: 0;
-        width: 86%;
     }
 
     /* categories section */
@@ -365,6 +355,7 @@
 
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
+
     .search {
         width: 40%;
         margin-left: 1rem;
@@ -387,10 +378,6 @@
             transform: translate(-1px);
             box-shadow: 0 .5rem 1rem rgba($color-black, .7);
         }
-    }
-
-    .main {
-        padding: 0 3.5rem;
     }
 
     .arrow-btn:hover {
