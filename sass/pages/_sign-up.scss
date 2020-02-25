@@ -1,33 +1,7 @@
-@import "../sass/variables";
+/* Sign Up */
 
-@mixin box {
-    width: 100%;
-    color: $color-white;
-    padding: 4.5rem 2.5rem;
-    display: flex;
-    flex-direction: column;
-}
-@mixin heading {
-    font-family: "Oswald",sans-serif;
-    font-weight: 400;
-    letter-spacing: .5px;
-    font-size: 2.4rem;
-    margin-top: 2rem;
-}
-@mixin btn {
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
-    border: 0;
-    font: 400 16px/22px "Oswald",sans-serif;
-    text-transform: uppercase;
-    padding: 1rem 1rem;
-    text-align: center;
-    letter-spacing: 0.5px;
-    -webkit-border-radius: .4rem;
-    -moz-border-radius: .4rem;
-    border-radius: .4rem;
-}
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 /* Mobile-first*/
 

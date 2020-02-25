@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "compile:sass": "node-sass sass/checkout.scss checkout/style.css"
+    "compile:sass": "node-sass sass/main.scss home/main.css"
   },
   "keywords": [],
   "author": "",
