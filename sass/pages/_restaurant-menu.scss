@@ -5,11 +5,13 @@
 /* Mobile-first*/
 
 /* header */
-.header {
-    background: url(img/photo-1540265556701-ae209ac395cd.jpg);
+.restaurant-menu-page__header {
+    background: url(../../restaurant-menu/img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
+    background-position: center;
+
     height: 45rem;
-    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -21,17 +23,17 @@
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-}
 
-.restaurant-info {
-    &__title {
-        font-size: 2.5rem;
-        line-height: 3.6rem;
-        text-shadow: 2px 2px 1px rgba($color-black, .2);
-    }
-    &__desc {
-        font-size: 1.8rem;
-        line-height: 1.5;
+    &__head {
+        &-title {
+            font-size: 2.5rem;
+            line-height: 3.6rem;
+            text-shadow: 2px 2px 1px rgba($color-black, .2);
+        }
+        &-desc {
+            font-size: 1.8rem;
+            line-height: 1.5;
+        }
     }
 }
 
@@ -169,14 +171,14 @@
     &__img {
         min-width: 35rem;
         min-height: 24.5rem;
-        background-image: url(./img/photo-1549611016-3a70d82b5040.jpg);
+        background-image:  url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg); //url(./img/photo-1549611016-3a70d82b5040.jpg);
         background-size: cover;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
     }
     &__detail {
         background-color: $color-gray-light;
-        padding: 0 1.5rem 2rem 1.5rem;
+        padding: .5rem 1.5rem 2rem 1.5rem;
         min-height: 12rem;
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
@@ -231,17 +233,13 @@
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
-    /* header */
-    .header {
-        position: static;
+    .restaurant-menu-page__header {
         justify-content: space-around;
-        background-position: center;
     }
 
     .restaurant-info-box {
-        padding: 3rem 12rem;
         margin-top: 20rem;
-        width: 74%;
+        width: 66%;
     }
     .change-location__btn:hover {
         cursor: pointer;
@@ -279,7 +277,6 @@
     /* menu items */
     .menu-items-by-category {
         width: 94%;
-        margin-left: 3%;
 
         &__menu-items-row {
             flex-direction: row-reverse;
@@ -306,8 +303,8 @@
                 transform: scale(1.01);
                 background: linear-gradient(
                                 rgba($color-black, .2), 
-                                rgba($color-black, .2)) , 
-                            url(./img/photo-1549611016-3a70d82b5040.jpg);
+                                rgba($color-black, .2)), 
+                            url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
                 background-size: cover;
                 box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
             }

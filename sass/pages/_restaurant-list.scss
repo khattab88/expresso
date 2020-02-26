@@ -4,6 +4,10 @@
 
 /* Mobile-first*/
 
+.restaurant-list-page__header {
+    height: 45rem;
+}
+
 .restaurant-search {
     margin: 4.5rem auto 0 auto;
     padding-top: 6rem;
@@ -38,7 +42,7 @@
         display: block;
         width: 100%;
         background-color: $color-main;
-        color: $color-main;
+        color: $color-white;
         font-weight: 500;
         margin-top: .5rem;
         height: 4rem;
@@ -122,14 +126,14 @@
     &__head {
         min-width: 38.5rem;
         min-height: 23rem;
-        background-image: url(./img/pexels-photo-262978.jpeg);
+        background-image: url(../../restaurant-list/img/pexels-photo-262978.jpeg); //url(./img/pexels-photo-262978.jpeg);
         background-size: cover;
         border-radius: .35rem;
         position: relative;
     }
 }
 
-.delivery-info {
+.delivery-detail {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
@@ -219,8 +223,8 @@
     .restaurant-search {
         padding: 10rem;
         margin: 0;
-        margin-top: 4rem;
-        margin-left: 7rem;
+        margin-top: 7rem;
+        padding-left: 2rem;
         width: 80%;
 
         &__title {

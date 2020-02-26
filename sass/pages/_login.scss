@@ -4,21 +4,23 @@
 
 /* Mobile-first*/
 
-.wrapper {
+.login-page__wrapper {
     padding: 1.5rem;
 }
 
-.login {
+.login-page__login {
     margin-top: 8rem;
     border-radius: .5rem .5rem 0 0;
     height: 700px;
     display: block;
     width: 100%;
-
     overflow: hidden;
-    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+    background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     position: relative;
+}
 
+.login {
+    
     &__box {
         width: 100%;
         top: 10rem;
@@ -110,13 +112,16 @@
 }
 
 /* sign up */
-.sign-up {
+.login-page__sign-up {
     position: relative;
     bottom: 10rem;
     border-radius: 0 0 .5rem .5rem;
     height: 20rem;
     width: 100%;
     background-color: $color-main;
+}
+
+.sign-up {
 
     &__box {
         padding: 4rem 2.5rem;
@@ -165,23 +170,28 @@
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
-    .wrapper {
+    .login-page__main {
+        padding: 0;
+    }
+
+    .login-page__wrapper {
         display: flex;
         justify-content: center;
 
-        margin-top: 5rem;
+        margin-top: 3rem;
         margin-bottom: 15rem;
-
-        padding: 0 10rem;
     }
     
-    .login {
-        background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+    .login-page__login {
+        background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
         margin-top: 0;
         top: 10rem;
         height: 50rem;
         width: 200vw;
         border-radius: .5rem 0 0 .5rem;
+    }
+
+    .login {
 
         &__sumbit-btn:hover {
             background-color: $color-font-dark;
@@ -194,7 +204,8 @@
         }
     }
 
-    .sign-up {
+    /* sign-up */
+    .login-page__sign-up {
         bottom: 0;
         top: 10rem;
         height: 50rem;
@@ -203,7 +214,10 @@
         flex-direction: column;
         justify-content: center;
         border-radius: 0 .5rem .5rem 0;
+    }
 
+    .sign-up {
+        
         &__btn:hover {
             background-color: $color-font-dark;
             color: $color-font-light;

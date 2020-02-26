@@ -3,13 +3,23 @@
 @import "../abstracts/variables";
 
 /* Mobile-first*/
-
 .header {
     background: linear-gradient(rgba($color-black, .7), 
-                               rgba($color-black, .7)) 
-                ,url(../img/photo-1490457843367-34b21b6ccd85.jpg);
+                                rgba($color-black, .7)),
+                     url(../../assets/img/photo-1490457843367-34b21b6ccd85.jpg);
     background-size: cover;
+    background-position: center;
+
     height: 45rem;
+    width: 100%;
+
+    position: relative;
+
+    color: $color-white;
+
+    margin-top: 0;
+
+    padding: 0 12%;
 }
 
 /*------------------------------------------------------------*/
@@ -22,11 +32,9 @@
 /* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
     .header {
-        background-image: linear-gradient(rgba($color-black, .4), 
-                                          rgba($color-black, .4)),
-                          url(../img/photo-1466978913421-dad2ebd01d17.jpg);
-        background-size: cover;
-        background-position: center;
+        background: linear-gradient(rgba($color-black, .4), 
+                                    rgba($color-black, .4)),
+                          url(../../assets/img/photo-1466978913421-dad2ebd01d17.jpg);
     }
 }
 
@@ -35,6 +43,10 @@
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
     .header {
+        padding: 0 12%;
         height: 55rem;
+
+        background-size: cover;
+        background-position: center;
     }
 }

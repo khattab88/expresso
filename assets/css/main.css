@@ -552,9 +552,15 @@ body {
 /* Header */
 /* Mobile-first*/
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/photo-1490457843367-34b21b6ccd85.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/img/photo-1490457843367-34b21b6ccd85.jpg);
   background-size: cover;
-  height: 45rem; }
+  background-position: center;
+  height: 45rem;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  margin-top: 0;
+  padding: 0 12%; }
 
 /*------------------------------------------------------------*/
 /* Mobile Landscape */
@@ -562,16 +568,16 @@ body {
 /* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
   .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/photo-1466978913421-dad2ebd01d17.jpg);
-    background-size: cover;
-    background-position: center; } }
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../assets/img/photo-1466978913421-dad2ebd01d17.jpg); } }
 
 /*------------------------------------------------------------*/
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
   .header {
     padding: 0 12%;
-    height: 55rem; } }
+    height: 55rem;
+    background-size: cover;
+    background-position: center; } }
 
 /* Main */
 /* mobile-first */
@@ -740,6 +746,7 @@ body {
   color: #fff;
   position: absolute;
   top: 4rem;
+  left: 0;
   padding-top: 1rem;
   padding-left: 1.5rem;
   display: flex;
@@ -774,7 +781,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .breadcrumb {
     height: 8rem;
-    padding-left: 11rem;
+    padding-left: 12%;
     padding-top: 3rem;
     color: #fff; }
     .breadcrumb__item:hover {
@@ -1443,6 +1450,9 @@ body {
 
 /* Restaurant List */
 /* Mobile-first*/
+.restaurant-list-page__header {
+  height: 45rem; }
+
 .restaurant-search {
   margin: 4.5rem auto 0 auto;
   padding-top: 6rem;
@@ -1473,7 +1483,7 @@ body {
     display: block;
     width: 100%;
     background-color: #009a9a;
-    color: #009a9a;
+    color: #fff;
     font-weight: 500;
     margin-top: .5rem;
     height: 4rem;
@@ -1537,12 +1547,12 @@ body {
   .restaurant-info-card__head {
     min-width: 38.5rem;
     min-height: 23rem;
-    background-image: url(./img/pexels-photo-262978.jpeg);
+    background-image: url(../../restaurant-list/img/pexels-photo-262978.jpeg);
     background-size: cover;
     border-radius: .35rem;
     position: relative; }
 
-.delivery-info {
+.delivery-detail {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
@@ -1552,9 +1562,9 @@ body {
   line-height: 1.8rem;
   letter-spacing: 0.5px;
   text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.7); }
-  .delivery-info__title {
+  .delivery-detail__title {
     font-weight: 300; }
-  .delivery-info__time {
+  .delivery-detail__time {
     margin-top: .5rem;
     font: 400 15px "Oswald",sans-serif; }
 
@@ -1608,8 +1618,8 @@ body {
   .restaurant-search {
     padding: 10rem;
     margin: 0;
-    margin-top: 4rem;
-    margin-left: 7rem;
+    margin-top: 7rem;
+    padding-left: 2rem;
     width: 80%; }
     .restaurant-search__title {
       font-size: 3.6rem;
@@ -1652,13 +1662,11 @@ body {
 /* Restaurant Menu */
 /* Mobile-first*/
 /* header */
-.header {
-  background: url(img/photo-1540265556701-ae209ac395cd.jpg);
-  background-size: cover;
-  height: 45rem;
-  position: relative; }
-
 .restaurant-menu-page__header {
+  background: url(../../restaurant-menu/img/photo-1540265556701-ae209ac395cd.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 45rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
@@ -1669,15 +1677,13 @@ body {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column; }
-
-.restaurant-info__title {
-  font-size: 2.5rem;
-  line-height: 3.6rem;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2); }
-
-.restaurant-info__desc {
-  font-size: 1.8rem;
-  line-height: 1.5; }
+  .restaurant-info-box__head-title {
+    font-size: 2.5rem;
+    line-height: 3.6rem;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  .restaurant-info-box__head-desc {
+    font-size: 1.8rem;
+    line-height: 1.5; }
 
 .restaurant-delivery {
   margin-top: 3rem; }
@@ -1787,13 +1793,13 @@ body {
   .menu-item__img {
     min-width: 35rem;
     min-height: 24.5rem;
-    background-image: url(./img/photo-1549611016-3a70d82b5040.jpg);
+    background-image: url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
     background-size: cover;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem; }
   .menu-item__detail {
     background-color: #efefef;
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: .5rem 1.5rem 2rem 1.5rem;
     min-height: 12rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem; }
@@ -1832,16 +1838,11 @@ body {
 /*-----------------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-  /* header */
-  .header {
-    position: static;
-    background-position: center; }
   .restaurant-menu-page__header {
     justify-content: space-around; }
   .restaurant-info-box {
-    padding: 3rem 12rem;
     margin-top: 20rem;
-    width: 74%; }
+    width: 66%; }
   .change-location__btn:hover {
     cursor: pointer;
     background-color: #323232; }
@@ -1864,8 +1865,7 @@ body {
     display: block; }
   /* menu items */
   .menu-items-by-category {
-    width: 94%;
-    margin-left: 3%; }
+    width: 94%; }
     .menu-items-by-category__menu-items-row {
       flex-direction: row-reverse;
       justify-content: space-evenly; }
@@ -1881,7 +1881,7 @@ body {
       transition: all .2s; }
       .menu-item__img:hover {
         transform: scale(1.01);
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/photo-1549611016-3a70d82b5040.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
         background-size: cover;
         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
     .menu-item__price {
@@ -1890,72 +1890,79 @@ body {
 
 /* Login */
 /* Mobile-first*/
-.wrapper {
+.login-page__wrapper {
   padding: 1.5rem; }
 
-.login {
+.login-page__login {
   margin-top: 8rem;
   border-radius: .5rem .5rem 0 0;
   height: 700px;
   display: block;
   width: 100%;
   overflow: hidden;
-  background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+  background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   position: relative; }
-  .login__box {
-    width: 100%;
-    top: 10rem;
-    padding: 1rem 2.5rem;
-    position: relative;
-    z-index: 19;
-    visibility: visible;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    color: #fff; }
-  .login_heading {
-    font-size: 2.4rem;
-    font-family: "Oswald",sans-serif;
-    font-weight: 400;
-    letter-spacing: .5px;
-    margin-bottom: 1rem; }
-  .login__remember-me {
-    margin-top: 4rem;
-    margin-bottom: 3rem; }
-  .login__remember-me-label {
-    font-family: "Source Sans Pro",sans-serif;
-    color: #fff;
-    font-weight: 300;
-    font-size: 1.5rem;
-    padding-top: 1rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin: .5rem 0;
-    cursor: pointer;
-    min-height: 2rem; }
-  .login__submit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: moveInUp-short .65s ease-out .2s;
-    animation-fill-mode: backwards; }
-  .login__sumbit-btn {
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    width: 50%;
-    border: 0;
-    background-color: #009a9a;
-    font: 400 16px/22px "Oswald",sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.5px;
-    -webkit-border-radius: .4rem;
-    -moz-border-radius: .4rem;
-    border-radius: .4rem;
-    color: #fff; }
-  .login__forget-password {
-    font-size: 1.6rem; }
+
+.login__box {
+  width: 100%;
+  top: 10rem;
+  padding: 1rem 2.5rem;
+  position: relative;
+  z-index: 19;
+  visibility: visible;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  color: #fff; }
+
+.login_heading {
+  font-size: 2.4rem;
+  font-family: "Oswald",sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin-bottom: 1rem; }
+
+.login__remember-me {
+  margin-top: 4rem;
+  margin-bottom: 3rem; }
+
+.login__remember-me-label {
+  font-family: "Source Sans Pro",sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: .5rem 0;
+  cursor: pointer;
+  min-height: 2rem; }
+
+.login__submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: moveInUp-short .65s ease-out .2s;
+  animation-fill-mode: backwards; }
+
+.login__sumbit-btn {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  width: 50%;
+  border: 0;
+  background-color: #009a9a;
+  font: 400 16px/22px "Oswald",sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  border-radius: .4rem;
+  color: #fff; }
+
+.login__forget-password {
+  font-size: 1.6rem; }
 
 .form-group {
   margin-bottom: 30px; }
@@ -1979,33 +1986,36 @@ body {
     margin-right: 1rem; }
 
 /* sign up */
-.sign-up {
+.login-page__sign-up {
   position: relative;
   bottom: 10rem;
   border-radius: 0 0 .5rem .5rem;
   height: 20rem;
   width: 100%;
   background-color: #009a9a; }
-  .sign-up__box {
-    padding: 4rem 2.5rem; }
-  .sign-up__heading {
-    margin-bottom: 1rem;
-    font-family: "Oswald",sans-serif;
-    font-weight: 400;
-    letter-spacing: .5px;
-    font-size: 2.4rem;
-    color: #fff; }
-  .sign-up__btn {
-    width: 100%;
-    background: #fff;
-    color: #323232;
-    padding: 1rem 1rem;
-    font-size: 1.4rem;
-    border: 1px solid #fff;
-    transition: all 0.2s ease-in-out;
-    margin-top: 2rem;
-    border-radius: .4rem;
-    font: 400 16px/22px "Oswald",sans-serif; }
+
+.sign-up__box {
+  padding: 4rem 2.5rem; }
+
+.sign-up__heading {
+  margin-bottom: 1rem;
+  font-family: "Oswald",sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-size: 2.4rem;
+  color: #fff; }
+
+.sign-up__btn {
+  width: 100%;
+  background: #fff;
+  color: #323232;
+  padding: 1rem 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #fff;
+  transition: all 0.2s ease-in-out;
+  margin-top: 2rem;
+  border-radius: .4rem;
+  font: 400 16px/22px "Oswald",sans-serif; }
 
 /*--- animation ---*/
 .login_heading,
@@ -2020,27 +2030,29 @@ body {
 /*-----------------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-  .wrapper {
+  .login-page__main {
+    padding: 0; }
+  .login-page__wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 15rem;
-    padding: 0 10rem; }
-  .login {
-    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+    margin-top: 3rem;
+    margin-bottom: 15rem; }
+  .login-page__login {
+    background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     margin-top: 0;
     top: 10rem;
     height: 50rem;
     width: 200vw;
     border-radius: .5rem 0 0 .5rem; }
-    .login__sumbit-btn:hover {
-      background-color: #323232;
-      border: 1px solid #e8e8e8;
-      cursor: pointer; }
-    .login__forget-password:hover {
-      cursor: pointer;
-      text-decoration: underline; }
-  .sign-up {
+  .login__sumbit-btn:hover {
+    background-color: #323232;
+    border: 1px solid #e8e8e8;
+    cursor: pointer; }
+  .login__forget-password:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+  /* sign-up */
+  .login-page__sign-up {
     bottom: 0;
     top: 10rem;
     height: 50rem;
@@ -2048,15 +2060,15 @@ body {
     flex-direction: column;
     justify-content: center;
     border-radius: 0 .5rem .5rem 0; }
-    .sign-up__btn:hover {
-      background-color: #323232;
-      color: #e8e8e8;
-      cursor: pointer;
-      transition: 0.3s; } }
+  .sign-up__btn:hover {
+    background-color: #323232;
+    color: #e8e8e8;
+    cursor: pointer;
+    transition: 0.3s; } }
 
 /* Sign Up */
 /* Mobile-first*/
-.wrapper {
+.register-page__wrapper {
   width: 90%;
   margin: 0 auto;
   margin-top: 10rem;
@@ -2066,8 +2078,8 @@ body {
   justify-content: center;
   align-items: center; }
 
-.sign-in,
-.sign-up {
+.register-page__sign-in,
+.register-page__register {
   width: 100%;
   color: #fff;
   padding: 4.5rem 2.5rem;
@@ -2075,7 +2087,7 @@ body {
   flex-direction: column; }
 
 .sign-in__heading,
-.sign-up__heading {
+.register__heading {
   font-family: "Oswald",sans-serif;
   font-weight: 400;
   letter-spacing: .5px;
@@ -2083,7 +2095,7 @@ body {
   margin-top: 2rem; }
 
 .sign-in__btn,
-.sign-up__btn {
+.register__btn {
   margin-top: 2rem;
   padding: 1rem 2rem;
   font-size: 1.4rem;
@@ -2097,22 +2109,24 @@ body {
   -moz-border-radius: .4rem;
   border-radius: .4rem; }
 
-.sign-in {
+.register-page__sign-in {
   height: 20rem;
-  background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+  background: url(../../sign-up/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   justify-content: space-between;
   border-radius: .5rem .5rem 0 0; }
-  .sign-in__btn {
-    background-color: #009a9a;
-    color: #fff; }
 
-.sign-up {
+.sign-in__btn {
+  background-color: #009a9a;
+  color: #fff; }
+
+.register-page__register {
   height: 70rem;
   background-color: #323232;
   margin-bottom: 3rem;
   border-radius: 0 0 .5rem .5rem; }
-  .sign-up__heading {
-    margin-bottom: 3rem; }
+
+.register__heading {
+  margin-bottom: 3rem; }
 
 .form-group {
   margin-bottom: 3rem;
@@ -2129,15 +2143,15 @@ body {
     font-weight: 300;
     padding: .75em;
     border: 0;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0.5px solid rgba(68, 68, 68, 0.2);
     letter-spacing: 0.75px; }
 
 /*--- animation ---*/
-.sign-up__heading, .sign-up__form {
+.register__heading, .register__form {
   animation: moveInDown-short .65s ease-out .2s;
   animation-fill-mode: backwards; }
 
-.sign-up__btn {
+.register__btn {
   animation: moveInUp-short .65s ease-out .2s;
   animation-fill-mode: backwards; }
 
@@ -2147,96 +2161,107 @@ body {
 /*-----------------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-  .wrapper {
-    width: 70%;
+  .register-page__main {
+    padding: 0; }
+  .register-page__wrapper {
+    width: 96%;
+    margin-top: 13rem;
+    margin-bottom: 5rem;
     flex-direction: row;
     justify-content: center;
     align-items: center; }
-  .sign-in,
-  .sign-up {
+  .register-page__sign-in,
+  .register-page__sign-up {
     height: 50rem; }
-  .sign-in {
+  .register-page__sign-in {
     margin-top: -3rem;
     width: 30%;
     justify-content: center;
     border-radius: .5rem 0 0 .5rem; }
-    .sign-in__btn:hover {
-      background-color: #323232;
-      cursor: pointer;
-      transition: 0.3s;
-      border: 1px solid #e8e8e8; }
-  .sign-up {
+  .sign-in__btn:hover {
+    background-color: #323232;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #e8e8e8; }
+  .register-page__register {
     width: 70%;
+    height: 50rem;
     border-radius: 0 .5rem .5rem 0; }
-    .sign-up__form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-    .sign-up__btn:hover {
-      background-color: #323232;
-      color: #e8e8e8;
-      border: 1px solid #e8e8e8;
-      cursor: pointer;
-      transition: 0.3s; }
+  .register__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .register__btn:hover {
+    background-color: #323232;
+    color: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+    transition: 0.3s; }
   .form-group {
     min-width: 48%; } }
 
 /* Contact Us */
 /* Mobile-first*/
-.header {
+.contact-us-page__header {
   margin-top: 4.5rem;
   width: 100%;
   height: 50vh;
   color: #fff;
-  background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat left top; }
-  .header__breadcrumb {
-    width: 100%;
-    height: 6rem;
-    background: rgba(255, 255, 255, 0.2); }
-  .header__breadcrumb-list {
-    list-style: none;
-    display: flex;
-    padding: 2rem; }
-  .header__breadcrumb-item {
-    display: inline-block;
-    margin: 0; }
-    .header__breadcrumb-item::after {
-      padding: 0 .5rem;
-      color: #444;
-      content: "/\00a0"; }
-    .header__breadcrumb-item:nth-child(2)::after {
-      content: ""; }
-  .header__breadcrumb-link {
-    padding: 0px .7rem 1px .7rem;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    font-size: 1.4rem; }
-    .header__breadcrumb-link--home {
-      border: 1px solid #e8e8e8;
-      border-radius: .3rem; }
-    .header__breadcrumb-link--current {
-      padding-left: 0; }
-  .header__msg {
-    margin-top: 5rem;
-    padding: 0 3rem; }
-    .header__msg-primary {
-      line-height: 5rem;
-      font-size: 5.5rem;
-      margin: 0;
-      text-transform: none;
-      font-family: "Oswald",sans-serif;
-      font-weight: 400;
-      letter-spacing: .5px; }
-    .header__msg-secondary {
-      padding-top: 1.5rem;
-      line-height: 3.5rem;
-      margin: 0;
-      text-transform: none;
-      font-family: "Oswald",sans-serif;
-      font-weight: 400;
-      letter-spacing: .5px;
-      font-size: 3rem; }
+  background: url(../../contact-us/img/photo-1484659619207-9165d119dafe.jpg) no-repeat left top;
+  padding: 0; }
+
+.header__breadcrumb {
+  width: 100%;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.2); }
+
+.header__breadcrumb-list {
+  list-style: none;
+  display: flex;
+  padding: 2rem; }
+
+.header__breadcrumb-item {
+  display: inline-block;
+  margin: 0; }
+  .header__breadcrumb-item::after {
+    padding: 0 .5rem;
+    color: #444;
+    content: "/\00a0"; }
+  .header__breadcrumb-item:nth-child(2)::after {
+    content: ""; }
+
+.header__breadcrumb-link {
+  padding: 0px .7rem 1px .7rem;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.4rem; }
+  .header__breadcrumb-link--home {
+    border: 1px solid #e8e8e8;
+    border-radius: .3rem; }
+  .header__breadcrumb-link--current {
+    padding-left: 0; }
+
+.header__msg {
+  margin-top: 5rem;
+  padding: 0 3rem; }
+  .header__msg-primary {
+    line-height: 5rem;
+    font-size: 5.5rem;
+    margin: 0;
+    text-transform: none;
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px; }
+  .header__msg-secondary {
+    padding-top: 1.5rem;
+    line-height: 3.5rem;
+    margin: 0;
+    text-transform: none;
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 3rem; }
 
 .contact-us-page__main {
   color: #323232; }
@@ -2335,29 +2360,25 @@ body {
 
 /*----------------------------------------------------------------------------------------*/
 /* Mobile Landscape */
-@media only screen and (min-width: 480px) {
-  .header {
-    height: 65vh; } }
-
 /*----------------------------------------------------------------------------------------*/
 /* Tablet Screen Sizes */
 /*----------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
-  /* header */
-  .header {
+  .contact-us-page__header {
     background-size: cover;
     height: 60vh; }
-    .header__breadcrumb {
-      height: 9rem;
-      padding-top: 3rem; }
-    .header__breadcrumb-list {
-      padding-left: 11rem; }
-    .header__msg {
-      margin-left: 13rem;
-      margin-top: 10rem; }
+  .header__breadcrumb {
+    height: 9rem;
+    padding-top: 3rem; }
+  .header__breadcrumb-list {
+    padding-left: 12%; }
+  .header__msg {
+    margin-left: 13rem;
+    margin-top: 10rem; }
+  .contact-us-page__main {
+    padding: 0; }
   .contact-us {
-    width: 80%;
     margin: 0 auto;
     position: relative;
     top: -12rem;
@@ -2379,13 +2400,11 @@ body {
 
 /* Checkout */
 /* Mobile-first*/
-.header {
-  background: url(img/photo-1540265556701-ae209ac395cd.jpg);
+.checkout-page__header {
+  background: url(../../checkout/img/photo-1540265556701-ae209ac395cd.jpg);
   background-size: cover;
   background-position: center center;
-  height: 25rem; }
-
-.checkout-page__header {
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
@@ -2394,6 +2413,7 @@ body {
   color: #fff;
   width: 100%;
   padding: 3rem 2rem;
+  transform: translateX(-4rem);
   display: flex;
   flex-direction: column;
   margin-top: 15rem; }
@@ -2566,7 +2586,7 @@ body {
 .cart-controls {
   display: flex; }
   .cart-controls__btn {
-    padding-bottom: .6rem;
+    padding: 1.25rem;
     border-radius: .4rem;
     vertical-align: middle;
     width: 3.8rem;
@@ -2578,6 +2598,8 @@ body {
     background-color: #fff;
     margin-right: .5rem;
     background-color: #e8e8e8; }
+    .cart-controls__btn-remove {
+      padding: 1.5rem; }
   .cart-controls__count {
     padding-bottom: .6rem;
     border-radius: .4rem;
@@ -2635,32 +2657,35 @@ body {
 /*----------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
+  .checkout-page__main {
+    padding: 0; }
   .restaurant-info {
-    padding-left: 17rem; }
+    padding-left: 6rem; }
   .checkout {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0 13rem; }
+    justify-content: space-evenly; }
   .customer-info {
     width: 70%; }
   /* delivery info */
-  .delivery-info__add:hover {
-    background-color: #009a9a;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s; }
-  .delivery-info .delivery-info__time {
-    width: 100%; }
-  .delivery-info .expected-delivery-time {
-    width: 50%; }
-    .delivery-info .expected-delivery-time:hover {
+  .delivery-info {
+    position: static; }
+    .delivery-info__add:hover {
+      background-color: #009a9a;
+      color: #fff;
       cursor: pointer;
-      border-color: #009a9a; }
+      transition: 0.3s; }
+    .delivery-info .delivery-info__time {
+      width: 100%; }
+    .delivery-info .expected-delivery-time {
+      width: 50%; }
+      .delivery-info .expected-delivery-time:hover {
+        cursor: pointer;
+        border-color: #009a9a; }
   /* order info */
   .order-info {
     width: 50%;
-    height: 50rem;
+    height: 53rem;
     transform: translateY(-11.5rem);
     background-color: #fff; }
   .cart-controls__btn:hover {

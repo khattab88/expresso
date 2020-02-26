@@ -5,7 +5,7 @@
 
 /* Mobile-first*/
 
-.wrapper {
+.register-page__wrapper {
     width: 90%;
     margin: 0 auto;
     margin-top: 10rem;
@@ -16,26 +16,29 @@
     align-items: center;
 }
 
-.sign-in,
-.sign-up {
+.register-page__sign-in,
+.register-page__register {
     @include box;
 }
 
 .sign-in__heading,
-.sign-up__heading {
+.register__heading {
     @include heading;
 }
 
 .sign-in__btn,
-.sign-up__btn {
+.register__btn {
     @include btn;
 }
 
-.sign-in {
+
+.register-page__sign-in {
     height: 20rem;
-    background: url(./img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+    background: url(../../sign-up/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     justify-content: space-between;
     border-radius: .5rem .5rem 0 0;
+}
+.sign-in {
 
     &__btn {
         background-color: $color-main;
@@ -43,12 +46,14 @@
     }
 }
 
-.sign-up {
+.register-page__register {
     height: 70rem;
     background-color: $color-font-dark;
     margin-bottom: 3rem;
     border-radius: 0 0 .5rem .5rem;
-
+}
+.register {
+    
     &__heading {
         margin-bottom: 3rem;
     }
@@ -70,13 +75,13 @@
         font-weight: 300;
         padding: .75em;
         border: 0;
-        border-bottom: 0.5px solid rgba($color-white, .2);
+        border-bottom: 0.5px solid rgba($color-gray-dark, .2);
         letter-spacing: 0.75px;
     }
 }
 
 /*--- animation ---*/
-.sign-up {
+.register {
     &__heading,
     &__form {
         animation: moveInDown-short .65s ease-out .2s;
@@ -102,24 +107,33 @@
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
-    .wrapper {
-        width: 70%;
+    .register-page__main {
+        padding: 0;
+    }
+
+    .register-page__wrapper {
+        width: 96%;
+        margin-top: 13rem;
+        margin-bottom: 5rem;
+
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
-    .sign-in,
-    .sign-up {
+    .register-page__sign-in,
+    .register-page__sign-up {
         height: 50rem;
     }
 
-    .sign-in {
+    .register-page__sign-in {
         margin-top: -3rem;
         width: 30%;
         justify-content: center;
         border-radius: .5rem 0 0 .5rem;
-
+    }
+    .sign-in {
+        
         &__btn:hover {
             background-color: $color-font-dark;
             cursor: pointer;
@@ -128,9 +142,12 @@
         }
     }
 
-    .sign-up {
+    .register-page__register {
         width: 70%;
+        height: 50rem;
         border-radius: 0 .5rem .5rem 0;
+    }
+    .register {
 
         &__form {
             display: flex;

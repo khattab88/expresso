@@ -11,6 +11,7 @@
     color: #fff;
     position: absolute;
     top: 4rem;
+    left: 0;
     padding-top: 1rem;
     padding-left: 1.5rem;
     display: flex;
@@ -58,7 +59,7 @@
 @media only screen and (min-width: 1024px) {
     .breadcrumb {
         height: 8rem;
-        padding-left: 11rem;
+        padding-left: 12%;
         padding-top: 3rem;
         color: #fff;
 

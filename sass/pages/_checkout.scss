@@ -4,11 +4,12 @@
 
 /* Mobile-first*/
 
-.header {
-    background: url(img/photo-1540265556701-ae209ac395cd.jpg);
+.checkout-page__header {
+    background: url(../../checkout/img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
     background-position: center center;
     height: 25rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -18,6 +19,7 @@
     color: $color-white;
     width: 100%;
     padding: 3rem 2rem;
+    transform: translateX(-4rem);
     display: flex;
     flex-direction: column;
     margin-top: 15rem;
@@ -232,7 +234,7 @@
     display: flex;
 
     &__btn {
-        padding-bottom: .6rem;
+        padding: 1.25rem;
         border-radius: .4rem;
         vertical-align: middle;
         width: 3.8rem;
@@ -244,6 +246,10 @@
         background-color: $color-white;
         margin-right: .5rem;
         background-color: $color-font-light;
+
+        &-remove {
+            padding: 1.5rem;
+        }
     }
     &__count {
         padding-bottom: .6rem;
@@ -323,15 +329,18 @@
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
 
+    .checkout-page__main {
+        padding: 0;
+    }
+
     .restaurant-info {
-        padding-left: 17rem;
+        padding-left: 6rem;
     }
     
     .checkout {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 0 13rem;
     }
 
     .customer-info {
@@ -340,6 +349,8 @@
 
     /* delivery info */
     .delivery-info {
+        position: static;
+
         &__add:hover {
             background-color: $color-main;
             color: $color-white;
@@ -363,7 +374,7 @@
     /* order info */
     .order-info {
         width: 50%;
-        height: 50rem;
+        height: 53rem;
         transform: translateY(-11.5rem);
         background-color: $color-white;
     }
