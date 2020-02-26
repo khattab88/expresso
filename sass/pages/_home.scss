@@ -5,6 +5,9 @@
 /* Mobile-first*/
 
 /* header */
+.home-page__header {
+    padding: 0;
+}
 .search {
     margin: 4.5rem auto 0 auto;
     padding-top: 15%;
@@ -15,7 +18,7 @@
 
     &__title {
         font-weight: 300;
-        font-size: 200%;
+        font-size: 2.5rem;
         color: #fff;
         text-shadow: .2rem .2rem .1rem rgba($color-black, .2);
         line-height: 125%;
@@ -280,6 +283,10 @@
     .search {
         width: 96%;
         padding-top: 10%;
+
+        &__title {
+            font-size: 3rem;
+        }
     }
 
     .showcase__col {
@@ -301,7 +308,7 @@
         padding: 10rem 0;
         margin: 0 auto;
         margin-top: 4rem;
-        width: 80%;
+        width: 92%;
 
         &__title {
             font-size: 3.6rem;
@@ -345,9 +352,8 @@
     }
 
     .showcase__show-all {
-        width: 49%;
         text-align: center;
-        margin-left: 0.5%;
+        margin-left: .7rem;
     }
 }
 
@@ -357,8 +363,8 @@
 @media only screen and (min-width: 1024px) {
 
     .search {
-        width: 40%;
-        margin-left: 1rem;
+        width: 35%;
+        margin-left: 19rem;
         margin-top: 6.5rem;
 
         &__title {
@@ -396,9 +402,13 @@
         }
     }
 
-    .showcase__show-all:hover {
-        cursor: pointer;
-        background-color: $color-font-dark;
-        transform: translateY(-.3rem);
+    .showcase__show-all {
+        width: 48.5%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-font-dark;
+            transform: translateY(-.3rem);
+        }
     }
 }

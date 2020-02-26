@@ -517,7 +517,7 @@ body {
 @media only screen and (min-width: 768px) {
   .navbar {
     height: 7rem;
-    padding: 0 10rem; }
+    padding: 0 3%; }
     .navbar__toggle {
       display: none; }
   .logo {
@@ -590,10 +590,6 @@ body {
 /* mobile landscape */
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Tablet */
-@media only screen and (min-width: 768px) {
-  .main {
-    width: 86%; } }
-
 /*-----------------------------------------------------------------------------------------------------------*/
 /* desktop */
 @media only screen and (min-width: 1024px) {
@@ -1148,6 +1144,9 @@ body {
 /* Home */
 /* Mobile-first*/
 /* header */
+.home-page__header {
+  padding: 0; }
+
 .search {
   margin: 4.5rem auto 0 auto;
   padding-top: 15%;
@@ -1157,7 +1156,7 @@ body {
   flex-direction: column; }
   .search__title {
     font-weight: 300;
-    font-size: 200%;
+    font-size: 2.5rem;
     color: #fff;
     text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
     line-height: 125%; }
@@ -1371,6 +1370,8 @@ body {
   .search {
     width: 96%;
     padding-top: 10%; }
+    .search__title {
+      font-size: 3rem; }
   .showcase__col {
     width: 100%; }
   .restaurant-card--big {
@@ -1384,7 +1385,7 @@ body {
     padding: 10rem 0;
     margin: 0 auto;
     margin-top: 4rem;
-    width: 80%; }
+    width: 92%; }
     .search__title {
       font-size: 3.6rem; }
     .search__submit:hover {
@@ -1411,16 +1412,15 @@ body {
   .restaurant-card__desc {
     font-size: 3rem; }
   .showcase__show-all {
-    width: 49%;
     text-align: center;
-    margin-left: 0.5%; } }
+    margin-left: .7rem; } }
 
 /*-----------------------------------------------------------------------------------------------------*/
 /* Desktop screen sizes */
 @media only screen and (min-width: 1024px) {
   .search {
-    width: 40%;
-    margin-left: 1rem;
+    width: 35%;
+    margin-left: 19rem;
     margin-top: 6.5rem; }
     .search__title {
       font-size: 3.8rem;
@@ -1443,10 +1443,12 @@ body {
     transform: scale(1.05) translateY(-0.5rem); }
     .category-card:hover--active:hover {
       color: #fff; }
-  .showcase__show-all:hover {
-    cursor: pointer;
-    background-color: #323232;
-    transform: translateY(-0.3rem); } }
+  .showcase__show-all {
+    width: 48.5%; }
+    .showcase__show-all:hover {
+      cursor: pointer;
+      background-color: #323232;
+      transform: translateY(-0.3rem); } }
 
 /* Restaurant List */
 /* Mobile-first*/
