@@ -47,13 +47,14 @@
         width: inherit;
         height: inherit;
         margin: 0 auto;
+
         pointer-events: all;
         border: 0;
         -webkit-box-shadow: 0px .2rem 2.9rem .7rem rgba($color-black, .2);
         -moz-box-shadow: 0px .2rem 2.9rem .7rem rgba($color-black, .2);
         box-shadow: 0px .2rem 2.9rem .7rem rgba($color-black, .2);
     
-        margin-top: 10rem;
+        margin-top: 15rem;
         margin-bottom: 5rem;
         padding-bottom: 0;
     }
@@ -200,15 +201,26 @@
 
 /* Mobile Landscape */
 @media only screen and (min-width: 480px)  {
-     .cart-view-modal .modal-content {
-        margin-top: 1rem;
+
+    .cart-modal__content {
+        margin-top: 10rem;
+    }
+
+    .cart-controls {
+        width: 22%;
     }
 }
 
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .cart-modal__content {
+        width: 80%;
+        margin-top: 20rem;
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -217,7 +229,8 @@
 
     .cart-modal {
         &__content {
-            width: 60%;
+            width: 45%;
+            margin-top: 10rem;
         }
         &__body {
             padding: 2rem;
