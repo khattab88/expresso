@@ -542,8 +542,7 @@ body {
   .navbar {
     padding: 0 12%; }
   .logo__title {
-    font-size: 3.5rem;
-    font-weight: 100; }
+    font-size: 3.5rem; }
   .navigation__item {
     margin: 0 1.5rem;
     transition: all .2s; }
@@ -2277,7 +2276,8 @@ body {
 .header__breadcrumb-list {
   list-style: none;
   display: flex;
-  padding: 2rem; }
+  padding: 2rem;
+  padding-top: 2.5rem; }
 
 .header__breadcrumb-item {
   display: inline-block;
@@ -2302,7 +2302,7 @@ body {
     padding-left: 0; }
 
 .header__msg {
-  margin-top: 5rem;
+  margin-top: 7rem;
   padding: 0 3rem; }
   .header__msg-primary {
     line-height: 5rem;
@@ -2419,32 +2419,57 @@ body {
 
 /*----------------------------------------------------------------------------------------*/
 /* Mobile Landscape */
+@media only screen and (min-width: 480px) {
+  .contact-us-page__header {
+    height: 88vh; }
+  .header__msg {
+    margin-top: 8rem; }
+  .form-control {
+    width: 96%; } }
+
 /*----------------------------------------------------------------------------------------*/
 /* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {
+  .header__breadcrumb-list {
+    padding: 3.5rem; }
+  .header__breadcrumb-link {
+    letter-spacing: 1px; }
+  .header__msg {
+    margin-top: 10rem; }
+  .contact-us-page__header {
+    height: 45rem; }
+  .contact-us {
+    position: relative;
+    top: -10rem;
+    background-color: #fff;
+    border-radius: .5rem .5rem 0 0; } }
+
 /*----------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
   .contact-us-page__header {
     background-size: cover;
-    height: 60vh; }
+    height: 70vh; }
   .header__breadcrumb {
     height: 9rem;
     padding-top: 3rem; }
   .header__breadcrumb-list {
+    padding: 2rem;
     padding-left: 12%; }
   .header__msg {
-    margin-left: 13rem;
-    margin-top: 10rem; }
+    margin-left: 16rem;
+    margin-top: 12rem; }
   .contact-us-page__main {
     padding: 0; }
   .contact-us {
     margin: 0 auto;
     position: relative;
-    top: -12rem;
+    top: -8rem;
     background-color: #fff;
     border: 1px solid #f9f9f9;
     border-radius: .5rem;
-    display: flex; }
+    display: flex;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
     .contact-us__messaging {
       width: 70%;
       padding-right: 23.5rem; }
