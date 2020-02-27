@@ -6,7 +6,7 @@
 /* Mobile-first*/
 
 .register-page__wrapper {
-    width: 90%;
+    width: 94%;
     margin: 0 auto;
     margin-top: 10rem;
     margin-bottom: 2rem;
@@ -96,7 +96,12 @@
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
-@media only screen and (min-width: 480px)  {}
+@media only screen and (min-width: 480px)  {
+
+    .register-page__wrapper {
+        width: 98%;
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -112,7 +117,7 @@
     }
 
     .register-page__wrapper {
-        width: 96%;
+        width: 82%;
         margin-top: 13rem;
         margin-bottom: 5rem;
 

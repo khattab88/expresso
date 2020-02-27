@@ -541,6 +541,9 @@ body {
 @media only screen and (min-width: 1024px) {
   .navbar {
     padding: 0 12%; }
+  .logo__title {
+    font-size: 3.5rem;
+    font-weight: 100; }
   .navigation__item {
     margin: 0 1.5rem;
     transition: all .2s; }
@@ -2121,7 +2124,7 @@ body {
 /* Sign Up */
 /* Mobile-first*/
 .register-page__wrapper {
-  width: 90%;
+  width: 94%;
   margin: 0 auto;
   margin-top: 10rem;
   margin-bottom: 2rem;
@@ -2209,6 +2212,10 @@ body {
 
 /*-----------------------------------------------------------------------------------------------*/
 /* Mobile Landscape */
+@media only screen and (min-width: 480px) {
+  .register-page__wrapper {
+    width: 98%; } }
+
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
@@ -2216,7 +2223,7 @@ body {
   .register-page__main {
     padding: 0; }
   .register-page__wrapper {
-    width: 96%;
+    width: 82%;
     margin-top: 13rem;
     margin-bottom: 5rem;
     flex-direction: row;
