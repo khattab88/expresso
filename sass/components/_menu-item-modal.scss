@@ -13,6 +13,7 @@
     
     z-index: 2;
     background-color: rgba($color-black, .5);
+    margin-bottom: .5rem;
 
     &--open {
         display: block;
@@ -26,7 +27,7 @@
     &__content {
         background-color: $color-white;
         margin: 0 1rem;
-        margin-top: 15rem;
+        margin-top: 14rem;
         position: relative;
         padding: 1rem 2rem 2rem;
         border-radius: .4rem;
@@ -152,11 +153,12 @@
 .cart-controls {
     display: flex;
     justify-content: space-evenly;
+    font-size: 3.5rem;
 
     &__btn {
         width: 5.2rem;
         height: 5.2rem;
-        font: 300 42px/38px "Source Sans Pro",sans-serif;
+        font-size: inherit;
         border: 1px solid $color-font-light;
         text-align: center;
         vertical-align: middle;
@@ -167,7 +169,7 @@
         min-width: 5rem;
         min-height: 5.2rem;
         text-align: center;
-        font: 400 22px/42px "Oswald",sans-serif;
+        font-size: inherit;
         letter-spacing: 1px;
         padding-top: .3rem;
     }
@@ -189,12 +191,30 @@
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
-@media only screen and (min-width: 480px)  {}
+@media only screen and (min-width: 480px)  {
+
+    .add-order-btn {
+        width: 30rem;
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .menu-item-modal {
+        &__content {
+            width: 76%;
+            margin: 20% auto;
+        }
+        &__item-img {
+            max-height: 35rem;
+        }
+        &__body {
+            padding-top: 28rem;   
+        }
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
