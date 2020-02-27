@@ -33,8 +33,6 @@
     &__link {
         text-decoration: none;
         color: #fff;
-        /* transition: all .1s; */
-        /* text-shadow: .5rem .5rem 1rem rgba(0,0,0,7); */
     }
 }
 
@@ -48,8 +46,9 @@
 /* Tablet Screen Sizes */
 @media only screen and (min-width: 768px) {
     .breadcrumb {
-        padding-left: 10rem;
-        padding-top: 2.5rem;
+        padding-left: 2rem;
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -61,6 +60,7 @@
         height: 8rem;
         padding-left: 12%;
         padding-top: 3rem;
+        padding-bottom: 0;
         color: #fff;
 
         &__item:hover {
