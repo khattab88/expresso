@@ -163,7 +163,12 @@
 
 /*-----------------------------------------------------------------------------------------------*/
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .login-page__wrapper {
+        margin-top: 3rem;
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -171,6 +176,7 @@
 @media only screen and (min-width: 1024px) {
 
     .login-page__main {
+        width: 66%;
         padding: 0;
     }
 
@@ -178,7 +184,7 @@
         display: flex;
         justify-content: center;
 
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-bottom: 15rem;
     }
     
