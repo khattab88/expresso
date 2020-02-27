@@ -1,0 +1,324 @@
+/* Restaurant List */
+
+@import "../abstracts/variables";
+
+/* Mobile-first*/
+
+.restaurant-list-page__header {
+    height: 45rem;
+}
+
+.restaurant-search {
+    margin: 4.5rem auto 0 auto;
+    padding-top: 6rem;
+    width: 94%;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: 3.6rem;
+        font-weight: 100;
+        color: $color-white;
+        text-shadow: 2px 2px 1px rgba($color-black, .2);
+    }
+    &__box {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        height: 5rem;
+        color: $color-font-dark;
+        line-height: 5rem;
+        font-size: 1.8rem;
+        padding: .5rem 1.5rem;
+        border-style: none;
+        border-radius: .5rem;
+        margin-bottom: .5rem;
+    }
+    &__submit {
+        display: block;
+        width: 100%;
+        background-color: $color-main;
+        color: $color-white;
+        font-weight: 500;
+        margin-top: .5rem;
+        height: 4rem;
+        line-height: 3rem;
+        font-size: 1.8rem;
+        padding: .5rem 1rem;
+        border-style: none;
+        border-radius: .5rem;
+        transition: all .2s;
+    }
+}
+
+.restaurant-list-breadcrumb {
+    padding: 1.5rem;
+    border-bottom: 1px solid $color-font-light;
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+    &__item {
+        font-size: 1.6rem;
+    }
+    &__separator {
+        margin: 0 .5rem;
+    }
+    &--current {
+        font-weight: 700;
+        font-size: 150%;
+    }
+}
+
+/* restaurant list filter */
+.restaurant-list-filter {
+    border: 1px solid $color-font-light;
+    margin: 2rem 0;
+
+    .filter-dropdown {
+        padding: 1.5rem 3rem;
+        padding-right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        color: $color-font-dark;
+        border-bottom: 1px solid $color-font-light;
+
+        &__icon {
+            font-size: 2.7rem;
+            margin-right: 1.5rem;
+        }
+        &__title {
+            font-size: 2.2rem;
+            margin-right: 11rem;
+        }
+    }
+    
+    .filter-checkbox {
+        padding: 1.5rem 3rem;
+        padding-left: 3.5rem;
+        background-color: $color-font-light;
+        font-size: 150%;
+    }    
+}
+
+/* restaurant list */
+.restaurant-list {
+    margin-bottom: 4rem;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.restaurant-info-card {
+    width: 100%;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $color-font-light;
+
+    &__head {
+        min-width: 38.5rem;
+        min-height: 23rem;
+        background-image: url(../../restaurant-list/img/pexels-photo-262978.jpeg);
+        background-size: cover;
+        border-radius: .35rem;
+        position: relative;
+    }
+}
+
+.delivery-detail {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: $color-white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.8rem;
+    letter-spacing: 0.5px;
+    text-shadow: .5rem .5rem 1rem rgba($color-black, .7);
+
+    &__title {
+        font-weight: 300;
+    }
+    &__time {
+        margin-top: .5rem;
+        font: 400 15px "Oswald",sans-serif;
+    }
+}
+
+.restaurant-detail {
+    padding: 1rem;
+    padding-bottom: 2rem;
+    min-height: 7.5rem;
+    border-bottom: 1px solid $color-font-light;
+    color: $color-font-dark;
+
+    &__name {
+        font-size: 2rem;
+        line-height: 2.8rem;
+        font-weight: 400;
+        letter-spacing: .5px;
+    }
+    &__desc {
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+    }
+}
+
+.restaurant-tags {
+    padding: 1rem 1rem;
+    backface-visibility: hidden;
+
+    &__tag-item {
+        list-style: none;
+        display: inline-block;
+        font-size: 1.3rem;
+        border-radius: 1.5rem;
+        padding: .4rem .8rem;
+        margin-right: .2rem;
+        transition: all .2s;
+        background-color: $color-main;
+        color: $color-white;
+        letter-spacing: .5px;
+
+        &--empty {
+            background-color: $color-font-light;
+            color: $color-font-dark;
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px)  {
+
+    .restaurant-search {
+        width: 96%;
+    }
+    
+    .filter-dropdown__icon--angle-down {
+        margin-left: 30rem;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {
+
+    .delivery-detail {
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__time {
+            font-size: 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    }
+
+    .restaurant-detail {
+        &__name {
+            font-size: 3rem;
+        }
+        &__desc {
+            font-size: 1.75rem;
+            margin-top: 1rem;
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 1024px) {
+
+    /* header */
+    .restaurant-search {
+        padding: 10rem;
+        margin: 0;
+        margin-top: 7rem;
+        padding-left: 2rem;
+        width: 80%;
+
+        &__title {
+            font-size: 3.6rem;
+            font-weight: 300;
+        }
+        &__form {
+            display: flex;
+        }
+        &__input {
+            margin-right: 1rem;
+        }
+        &__submit {
+            height: 5rem;
+            width: 50%;
+            margin-top: 0;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color-font-dark;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .filter-dropdown {
+        &:hover {
+            cursor: pointer;
+        }
+        &__icon--angle-down {
+            margin-left: 0;
+        }
+    }
+
+    /* restaurant list */
+    .restaurant-list__row {
+        flex-direction: row;
+        margin-bottom: 3rem;
+    }
+
+    .restaurant-info-card {
+        width: 33%;
+        margin-right: 2%;
+        margin-bottom: 1rem;
+        transition: all .2s;
+
+        &:hover {
+            cursor: pointer;
+        }
+        &__head {
+            min-width: auto;
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
+            }
+        }
+    }
+   
+    .restaurant-detail {
+        &__name {
+            font-size: 2.5rem;
+        }
+        &__desc {
+            font-size: 1.5rem;
+            margin-top: .5rem;
+        }
+    }
+
+    .restaurant-tags__tag-item:hover {
+        transform: scale(1.05) translateY(-.2rem);
+    }
+}

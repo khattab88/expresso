@@ -1,0 +1,91 @@
+/* Base */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    // this defines what is 1 rem
+    font-size: 62.5%; /* (10px/16px)=> root font-size = 10px */
+}
+
+body {
+    box-sizing: border-box;
+}
+
+h1 { margin: 0; }
+
+.container {
+    margin: 0 auto;
+}
+
+// :root {
+//     --main-color: #009a9a;
+//     --font-color: #323232;
+//     --font-color-lite: #e8e8e8;
+// }
+
+/*
+CSS PROPERTIES CATEGORIES:
+--------------------------------
+
+1. { Position & Display }
+    - position: (relative, absolute, fixed, top, bottom, left, right, ...)
+    - display: (block, inline, inline-block, none, flex-*, grid-*, ...)
+
+2. { Layout & Box-model }
+    - width, height
+    - padding,
+    - border
+    - margin
+
+3. { Appearance }
+    - z-index
+    - opacity, visibility
+    - transition
+
+4. { Font & Text }
+    - font-*
+    - text-decoration
+
+5. {Colors & Backgrounds}
+    - color
+    - background, background-color
+
+6. { Effects }
+    - transform: (scale, translate, rotate, filter, ...)
+    - animation-*
+
+---------------------------------------------------------------------
+
+=> used as a guideline for ordering css properties inside a css declaration,
+ .btn {
+     // position & display
+     display: flex;
+
+     // layout
+     width: 20rem;
+
+     // appearance
+     z-index: 1;
+
+     // font
+     font-size: 1.5rem;
+
+     // colors
+     background-color: #ccc;
+
+     // effects
+     transform: scale(1.1);
+
+ }
+
+*/
