@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 15rem;
+    margin-left: 4rem;
 
     &__name {
         line-height: 3.6rem;
@@ -42,7 +43,7 @@
 
     &-info-box {
         padding: 3rem 4rem;
-        width: 90%;
+        width: 96%;
         margin: 20px auto;
         border: 1px solid $color-font-light;
         border-radius: .5rem;
@@ -200,7 +201,7 @@
         display: flex;
         align-items: center;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $color-font-light;
+        border-bottom: 1px solid $color-gray-light;
     }
     &__header-icon {
         font-size: 3rem;
@@ -212,7 +213,7 @@
     &__items {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        border-bottom: 1px solid $color-font-light;
+        border-bottom: 1px solid $color-gray-light;
     }
     &__item {
         margin-bottom: 1.5rem;
@@ -276,7 +277,7 @@
     &--total {
         font-size: 1.8rem;
         margin-top: 1.5rem;
-        border-top: 1px solid $color-font-light;
+        border-top: 1px solid $color-gray-light;
     }
 }
 
@@ -311,7 +312,11 @@
     }
 
     .restaurant-info {
-        padding-left: 4rem;
+        padding-left: 3rem;
+    }
+
+    .checkout-info-box {
+        width: 98%;
     }
 
     .expected-delivery-time {
@@ -334,7 +339,7 @@
     }
 
     .restaurant-info {
-        padding-left: 6rem;
+        padding-left: 1rem;
     }
     
     .checkout {
@@ -345,6 +350,7 @@
 
     .customer-info {
         width: 70%;
+        margin-right: 3rem;
     }
 
     /* delivery info */
@@ -373,7 +379,7 @@
 
     /* order info */
     .order-info {
-        width: 50%;
+        width: 40%;
         height: 53rem;
         transform: translateY(-11.5rem);
         background-color: $color-white;

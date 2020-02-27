@@ -743,10 +743,10 @@ body {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   position: absolute;
-  top: 4rem;
+  top: 4.5rem;
   left: 0;
   padding-top: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   display: flex;
   align-items: center; }
   .breadcrumb__list {
@@ -756,7 +756,7 @@ body {
     font-size: 1.7rem;
     padding: .3rem; }
   .breadcrumb__item--back {
-    border: 1px solid var(#f9f9f9);
+    border: 1px solid #f9f9f9;
     border-radius: .3rem;
     padding: 0; }
   .breadcrumb__link {
@@ -765,6 +765,10 @@ body {
 
 /*------------------------------------------------------------*/
 /* Mobile Landscape */
+@media only screen and (min-width: 480px) {
+  .breadcrumb {
+    padding-left: 2.5rem; } }
+
 /*------------------------------------------------------------*/
 /* Tablet Screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -2500,7 +2504,8 @@ body {
   transform: translateX(-4rem);
   display: flex;
   flex-direction: column;
-  margin-top: 15rem; }
+  margin-top: 15rem;
+  margin-left: 4rem; }
   .restaurant-info__name {
     line-height: 3.6rem;
     font-size: 2.8rem;
@@ -2515,7 +2520,7 @@ body {
   flex-direction: column; }
   .checkout-info-box {
     padding: 3rem 4rem;
-    width: 90%;
+    width: 96%;
     margin: 20px auto;
     border: 1px solid #f9f9f9;
     border-radius: .5rem;
@@ -2646,7 +2651,7 @@ body {
     display: flex;
     align-items: center;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #f9f9f9; }
+    border-bottom: 1px solid #d5d5d5; }
   .order-info__header-icon {
     font-size: 3rem; }
   .order-info__header-title {
@@ -2655,7 +2660,7 @@ body {
   .order-info__items {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #f9f9f9; }
+    border-bottom: 1px solid #d5d5d5; }
   .order-info__item {
     margin-bottom: 1.5rem; }
   .order-info__item-detail {
@@ -2706,7 +2711,7 @@ body {
   .cart-pricing--total {
     font-size: 1.8rem;
     margin-top: 1.5rem;
-    border-top: 1px solid #f9f9f9; }
+    border-top: 1px solid #d5d5d5; }
 
 .checkout__make-order {
   margin: 4rem auto 2rem auto;
@@ -2732,7 +2737,9 @@ body {
   .header-breadcrumb-wrapper {
     padding-left: 4rem; }
   .restaurant-info {
-    padding-left: 4rem; }
+    padding-left: 3rem; }
+  .checkout-info-box {
+    width: 98%; }
   .expected-delivery-time {
     width: 50%; } }
 
@@ -2744,13 +2751,14 @@ body {
   .checkout-page__main {
     padding: 0; }
   .restaurant-info {
-    padding-left: 6rem; }
+    padding-left: 1rem; }
   .checkout {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; }
   .customer-info {
-    width: 70%; }
+    width: 70%;
+    margin-right: 3rem; }
   /* delivery info */
   .delivery-info {
     position: static; }
@@ -2768,7 +2776,7 @@ body {
         border-color: #009a9a; }
   /* order info */
   .order-info {
-    width: 50%;
+    width: 40%;
     height: 53rem;
     transform: translateY(-11.5rem);
     background-color: #fff; }
