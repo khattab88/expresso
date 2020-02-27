@@ -1223,7 +1223,7 @@ body {
 
 /* categories section */
 .categories {
-  background-color: #d5d5d5;
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column; }
   .categories__title {
