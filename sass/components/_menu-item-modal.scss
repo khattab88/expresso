@@ -1,0 +1,252 @@
+/* Menu Item Modal */
+
+@import "../abstracts/variables";
+
+/* mobile-first */
+
+.menu-item-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    z-index: 2;
+    background-color: rgba($color-black, .5);
+    margin-bottom: .5rem;
+
+    &--open {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    &--close {
+        display: none;
+        overflow-y: auto;
+    }
+    &__content {
+        background-color: $color-white;
+        margin: 0 1rem;
+        margin-top: 14rem;
+        position: relative;
+        padding: 1rem 2rem 2rem;
+        border-radius: .4rem;
+        padding: 1rem 2rem 2rem;
+        border-radius: .4rem;
+        border: 1px solid $color-font-light;
+        z-index: 3;
+    }
+    &__content--animated {
+        animation: moveInDown .65s ease-out;
+    }
+    &__container {
+        position: relative;
+        left: 0;
+    }
+    &__head{
+        max-height: 22rem;
+        position: absolute;
+        top: -10rem;
+    }
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        width: 2.7rem;
+        height: 2.7rem;
+        border: 1px solid $color-black;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $color-font-light;
+        background-color: $color-main;
+        color: $color-white;
+        padding-top: .5rem;
+        transition: all .2s;
+    }
+    &__item-img {
+        width: 100%;
+        max-height: 22rem;
+        max-width: 100%;
+        border-radius: .8rem;
+        box-shadow: 0px .4rem 1.2rem -1px rgba($color-black, .4);
+    }
+    &__body {
+        padding-top: 15rem;
+        color: $color-font-dark;
+    }
+    &__footer {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
+}
+
+.dish-info {
+    padding-bottom: 3rem;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        width: 60%;
+        display: inline-block;
+        padding-bottom: .8rem;
+        font-size: 2.4rem;
+    }
+    &__price {
+        font-size: 2rem;
+    }
+    &__desc {
+        font-size: 1.5rem;
+    }  
+}
+
+/* dish options */
+.dish-options {
+    padding-bottom: 2rem;
+
+    &__title {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+    &__sigle-selection {
+        list-style: none;
+    }
+}
+
+.validation-info {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding-bottom: .8rem;
+    border-bottom: 1px solid $color-font-light;
+
+    &--required {
+        color: $color-red;
+    }
+    &--optional {
+        color: $color-main;
+    }
+}
+
+.dish-option {
+    font: 300 17px/38px "Source Sans Pro",sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+    &__name {
+        padding-left: .3rem;
+    }
+    &__price {
+        font-size: 1.4rem;
+    }
+    
+    &__input-textarea {
+        width: 100%;
+        border-radius: .3rem;
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+}
+
+.cart-controls {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3.5rem;
+
+    &__btn {
+        width: 5.2rem;
+        height: 5.2rem;
+        font-size: inherit;
+        border: 1px solid $color-font-light;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: .5rem;
+        transition: all .2s;
+    }
+    &__count {
+        min-width: 5rem;
+        min-height: 5.2rem;
+        text-align: center;
+        font-size: inherit;
+        letter-spacing: 1px;
+        padding-top: .3rem;
+    }
+}
+
+.add-order-btn {
+    background-color: $color-main;
+    font: 400 16px/22px "Oswald",sans-serif;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: .4rem;
+    color: $color-white;
+    transition: all .2s;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px)  {
+
+    .add-order-btn {
+        width: 30rem;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {
+    .menu-item-modal {
+        &__content {
+            width: 76%;
+            margin: 20% auto;
+        }
+        &__item-img {
+            max-height: 35rem;
+        }
+        &__body {
+            padding-top: 28rem;   
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 1024px) {
+
+    .menu-item-modal {
+        &__content {
+            width: 40%;
+            margin: 2rem auto;
+            top: 10rem;
+        }
+        &__head {
+            top: -10rem;
+        }
+        &__close:hover {
+            cursor: pointer;
+            box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+            background-color: $color-font-dark;
+        }
+    }
+    
+    .cart-controls__btn:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+    }
+
+    .add-order-btn:hover {
+        cursor: pointer;
+        background-color: $color-font-dark;
+        transform: translateY(-2px);
+        box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+    }
+}
