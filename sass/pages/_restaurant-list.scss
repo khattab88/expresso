@@ -18,6 +18,7 @@
 
     &__title {
         font-size: 3.6rem;
+        font-weight: 100;
         color: $color-white;
         text-shadow: 2px 2px 1px rgba($color-black, .2);
     }
@@ -120,13 +121,13 @@
 
 .restaurant-info-card {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     border-bottom: 1px solid $color-font-light;
 
     &__head {
         min-width: 38.5rem;
         min-height: 23rem;
-        background-image: url(../../restaurant-list/img/pexels-photo-262978.jpeg); //url(./img/pexels-photo-262978.jpeg);
+        background-image: url(../../restaurant-list/img/pexels-photo-262978.jpeg);
         background-size: cover;
         border-radius: .35rem;
         position: relative;
@@ -212,7 +213,29 @@
 /*-----------------------------------------------------------------------------------------------------------*/
 
 /* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .delivery-detail {
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__time {
+            font-size: 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    }
+
+    .restaurant-detail {
+        &__name {
+            font-size: 3rem;
+        }
+        &__desc {
+            font-size: 1.75rem;
+            margin-top: 1rem;
+        }
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
@@ -262,12 +285,13 @@
     /* restaurant list */
     .restaurant-list__row {
         flex-direction: row;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 
     .restaurant-info-card {
         width: 33%;
         margin-right: 2%;
+        margin-bottom: 1rem;
         transition: all .2s;
 
         &:hover {
@@ -284,6 +308,16 @@
         }
     }
    
+    .restaurant-detail {
+        &__name {
+            font-size: 2.5rem;
+        }
+        &__desc {
+            font-size: 1.5rem;
+            margin-top: .5rem;
+        }
+    }
+
     .restaurant-tags__tag-item:hover {
         transform: scale(1.05) translateY(-.2rem);
     }

@@ -559,8 +559,7 @@ body {
   width: 100%;
   position: relative;
   color: #fff;
-  margin-top: 0;
-  padding: 0 12%; }
+  margin-top: 0; }
 
 /*------------------------------------------------------------*/
 /* Mobile Landscape */
@@ -1464,6 +1463,7 @@ body {
   flex-direction: column; }
   .restaurant-search__title {
     font-size: 3.6rem;
+    font-weight: 100;
     color: #fff;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2); }
   .restaurant-search__box {
@@ -1544,7 +1544,7 @@ body {
 
 .restaurant-info-card {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   border-bottom: 1px solid #e8e8e8; }
   .restaurant-info-card__head {
     min-width: 38.5rem;
@@ -1613,6 +1613,19 @@ body {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {
+  .delivery-detail__title {
+    font-size: 2.5rem; }
+  .delivery-detail__time {
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 1rem; }
+  .restaurant-detail__name {
+    font-size: 3rem; }
+  .restaurant-detail__desc {
+    font-size: 1.75rem;
+    margin-top: 1rem; } }
+
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
@@ -1645,10 +1658,11 @@ body {
   /* restaurant list */
   .restaurant-list__row {
     flex-direction: row;
-    margin-bottom: 4rem; }
+    margin-bottom: 3rem; }
   .restaurant-info-card {
     width: 33%;
     margin-right: 2%;
+    margin-bottom: 1rem;
     transition: all .2s; }
     .restaurant-info-card:hover {
       cursor: pointer; }
@@ -1658,6 +1672,11 @@ body {
       .restaurant-info-card__head:hover {
         transform: scale(1.03);
         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .restaurant-detail__name {
+    font-size: 2.5rem; }
+  .restaurant-detail__desc {
+    font-size: 1.5rem;
+    margin-top: .5rem; }
   .restaurant-tags__tag-item:hover {
     transform: scale(1.05) translateY(-0.2rem); } }
 
