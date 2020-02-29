@@ -6,7 +6,6 @@
 /* Mobile-first*/
 
 .cart {
-    padding: 3rem 4rem;
     min-height: 20rem;
     display: flex;
     flex-direction: column;
@@ -157,4 +156,18 @@
 /*----------------------------------------------------------------------------------------*/
 
 /* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+
+    .cart__item-controls-btn:hover {
+        cursor: pointer;
+        background-color: $color-font-dark;
+        color: $color-font-light;
+        transition: 0.2s;
+    }
+
+    .cart__submit-btn:hover {
+        background-color: $color-font-dark;
+        cursor: pointer;
+        transform: scale(1.05) ;
+    } 
+}

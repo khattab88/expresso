@@ -982,7 +982,6 @@ body {
 /* cart component */
 /* Mobile-first*/
 .cart {
-  padding: 3rem 4rem;
   min-height: 20rem;
   display: flex;
   flex-direction: column; }
@@ -1089,6 +1088,17 @@ body {
 /* Tablet Screen Sizes */
 /*----------------------------------------------------------------------------------------*/
 /* Desktop screen Sizes */
+@media only screen and (min-width: 1024px) {
+  .cart__item-controls-btn:hover {
+    cursor: pointer;
+    background-color: #323232;
+    color: #f9f9f9;
+    transition: 0.2s; }
+  .cart__submit-btn:hover {
+    background-color: #323232;
+    cursor: pointer;
+    transform: scale(1.05); } }
+
 /* Cart Modal */
 .cart-modal {
   opacity: 0;
@@ -2753,93 +2763,9 @@ body {
 
 /* order info */
 .order-info {
-  padding: 3rem 4rem;
   min-height: 20rem;
   display: flex;
   flex-direction: column; }
-  .order-info__header {
-    display: flex;
-    align-items: center;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #d5d5d5; }
-  .order-info__header-icon {
-    font-size: 3rem; }
-  .order-info__header-title {
-    margin-left: 1rem;
-    font-size: 2.4rem; }
-  .order-info__items {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #d5d5d5; }
-  .order-info__item {
-    margin-bottom: 1.5rem; }
-  .order-info__item-detail {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .5rem; }
-  .order-info__item-name, .order-info__item-price {
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 2.2rem; }
-
-.cart-controls {
-  display: flex; }
-  .cart-controls__btn {
-    padding: 1.25rem;
-    border-radius: .4rem;
-    vertical-align: middle;
-    width: 3.8rem;
-    height: 3.7rem;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    margin-right: .5rem;
-    background-color: #f9f9f9; }
-    .cart-controls__btn-remove {
-      padding: 1.5rem; }
-  .cart-controls__count {
-    padding-bottom: .6rem;
-    border-radius: .4rem;
-    vertical-align: middle;
-    width: 3.8rem;
-    height: 3.7rem;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    margin-right: .5rem; }
-
-.cart-pricing {
-  font-size: 1.6rem;
-  font-weight: 300;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: space-between; }
-  .cart-pricing--total {
-    font-size: 1.8rem;
-    margin-top: 1.5rem;
-    border-top: 1px solid #d5d5d5; }
-
-.checkout__make-order {
-  margin: 4rem auto 2rem auto;
-  margin-top: 4rem;
-  width: 98%;
-  text-align: center; }
-  .checkout__make-order-btn {
-    font: 400 20px/26px "Oswald",sans-serif;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    letter-spacing: 0.5px;
-    border: none;
-    border-radius: .4rem;
-    width: 100%;
-    background-color: #009a9a;
-    color: #fff;
-    line-height: 2.2rem;
-    transition: all 0.3s; }
 
 /*----------------------------------------------------------------------------------------*/
 /* Mobile Landscape */
@@ -2887,17 +2813,8 @@ body {
   /* order info */
   .order-info {
     width: 40%;
-    height: 53rem;
+    height: 52rem;
     transform: translateY(-11.5rem);
-    background-color: #fff; }
-  .cart-controls__btn:hover {
-    cursor: pointer;
-    background-color: #323232;
-    color: #f9f9f9;
-    transition: 0.2s; }
-  .checkout__make-order-btn:hover {
-    background-color: #323232;
-    cursor: pointer;
-    transform: scale(1.05); } }
+    background-color: #fff; } }
 
 /* Primary Theme */
