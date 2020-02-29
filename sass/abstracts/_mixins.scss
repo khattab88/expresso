@@ -30,3 +30,9 @@
     -moz-border-radius: .4rem;
     border-radius: .4rem;
 }
+
+@mixin items-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

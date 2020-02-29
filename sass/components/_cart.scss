@@ -1,0 +1,180 @@
+/* cart component */
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+/* Mobile-first*/
+
+.cart {
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+
+    &__header {
+        @include items-row;
+
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $color-gray-light;
+
+        &-main {
+            @include items-row;
+
+            &-icon {
+                font-size: 3rem;
+            }
+            &-title {
+                margin-left: 1rem;
+                font-size: 2.4rem;
+            }
+        }
+        &-close {
+            color: $color-main;
+            transition: all .2s;
+
+            &--visible {
+                display: inline-block;
+            }
+            &--hidden {
+                display: none;
+            }
+            &-icon {
+                font-size: 2.4rem;
+            }
+        }
+    }
+    
+    &__items {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $color-gray-light;
+
+        .cart__item {
+            margin-bottom: 1.5rem;
+    
+            &-detail {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: .5rem;
+            }
+            &-name,
+            &-price {
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+            }
+
+            &-controls {
+                display: flex;
+            
+                &-btn {
+                    padding: 1.25rem;
+                    border-radius: .4rem;
+                    vertical-align: middle;
+                    width: 3.8rem;
+                    height: 3.7rem;
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-white;
+                    margin-right: .5rem;
+                    background-color: $color-font-light;
+            
+                    &-remove {
+                        padding: 1.5rem;
+                    }
+                }
+                &-count {
+                    padding-bottom: .6rem;
+                    border-radius: .4rem;
+                    vertical-align: middle;
+                    width: 3.8rem;
+                    height: 3.7rem;
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-white;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+
+    &__pricing {
+        margin-top: .5rem;
+
+        &-box {
+            font-size: 1.6rem;
+            font-weight: 300;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+        
+            &-total {
+                font-size: 1.8rem;
+                margin-top: 1.5rem;
+                border-top: 1px solid $color-gray-light;
+            }
+        }
+    }
+
+    &__submit {
+        margin: 4rem auto 2rem auto;
+        margin-top: 4rem;
+        width: 98%;
+        text-align: center;
+    
+        &-btn {
+            font: 400 20px/26px "Oswald",sans-serif;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+            border: none;
+            border-radius: .4rem;
+            width: 100%;
+            background-color: $color-main;
+            color: #fff;
+            line-height: 2.2rem;
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------*/
+
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px)  {}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) {}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 1024px) {
+
+    .cart__header-close:hover {
+        cursor: pointer;
+        color: $color-font-dark;
+        box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+    }
+
+    .cart__item-controls-btn:hover {
+        cursor: pointer;
+        background-color: $color-font-dark;
+        color: $color-font-light;
+        transition: 0.2s;
+    }
+
+    .cart__submit-btn:hover {
+        background-color: $color-font-dark;
+        cursor: pointer;
+        transform: scale(1.05) ;
+    } 
+}
