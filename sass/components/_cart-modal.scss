@@ -61,60 +61,6 @@
     &__content--animated {
         animation: moveInDown .65s ease-out;
     }
-    
-    &__body {
-        position: relative;
-        padding: 1.5rem;
-        padding-top: .5rem;
-        padding: 2rem 0 2rem 0;
-        min-height: 20rem;
-    
-        display: flex;
-        flex-direction: column;
-    }
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid $color-font-light;
-    }
-    &__header-row {
-        display: flex;
-    }
-    &__icon {
-        font-size: 3rem;
-    }
-    &__title {
-        margin-left: 1rem;
-        font-size: 2.4rem;
-    }
-    &__close {
-        color: $color-main;
-        transition: all .2s;
-
-        &-icon {
-            font-size: 2.4rem;
-        }
-    }
-
-    &__checkout {
-        margin: 4rem auto 2rem auto;
-        margin-top: 4rem;
-        width: 98%;
-        text-align: center;
-    
-        font: 400 20px/26px "Oswald",sans-serif;
-        padding: 1.5rem 1rem;
-        text-align: center;
-        letter-spacing: 0.5px;
-        border: none;
-        border-radius: 4px;
-        width: 100%;
-        background-color: $color-main;
-        color: #fff;
-        line-height: 2.2rem;
-        transition: all .2s;
-    }
 }
 
  .vertical-alignment-helper {
@@ -138,65 +84,6 @@
     transform: translate(0,0);
 }
 
-/* cart items */
-.cart-items {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid $color-font-light;
-
-    .cart-item {
-        margin-bottom: 2rem;
-    
-        &__info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-        &__name,
-        &__price {
-            font-size: 1.8rem;
-            font-weight: 400;
-            line-height: 2.2rem;
-        }
-    }
-}
-
-/* cart controls */
-.cart-controls {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__btn {
-        padding-bottom: .6rem;
-        border-radius: .4rem;
-        vertical-align: middle;
-        width: 3.8rem;
-        height: 3.7rem;
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-white;
-        margin-right: .5rem;
-    }    
-}
-
-.cart-pricing {
-    font-size: 1.6rem;
-    font-weight: 300;
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-
-    &--total {
-        font-size: 1.8rem;
-        margin-top: 1.5rem;
-        border-top: 1px solid $color-font-light;
-    }
-}
-
 /*-----------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape */
@@ -204,10 +91,6 @@
 
     .cart-modal__content {
         margin-top: 10rem;
-    }
-
-    .cart-controls {
-        width: 22%;
     }
 }
 
@@ -232,25 +115,5 @@
             width: 45%;
             margin-top: 10rem;
         }
-        &__body {
-            padding: 2rem;
-        }
-        &__close:hover {
-            cursor: pointer;
-            color: $color-font-dark;
-            box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
-        }
-        &__checkout:hover {
-            cursor: pointer;
-            background-color: $color-font-dark;
-            transform: translateY(-3px);
-        }
-    }
-
-    .cart-controls__btn:hover {
-        cursor: pointer;
-        background-color: $color-font-dark;
-        color: $color-white;
-        border: none;
     }
 }

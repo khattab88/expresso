@@ -9,6 +9,7 @@
     min-height: 20rem;
     display: flex;
     flex-direction: column;
+    padding: 2rem 1rem;
 
     &__header {
         @include items-row;
@@ -157,6 +158,12 @@
 
 /* Desktop screen Sizes */
 @media only screen and (min-width: 1024px) {
+
+    .cart__header-close:hover {
+        cursor: pointer;
+        color: $color-font-dark;
+        box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+    }
 
     .cart__item-controls-btn:hover {
         cursor: pointer;
