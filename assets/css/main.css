@@ -472,7 +472,7 @@ body {
       top: 2.85rem;
       right: -17.6rem;
       width: 41.5rem;
-      height: 36rem;
+      height: 35.5rem;
       background-color: #323232;
       padding: 2rem 1rem;
       padding-top: 0;
@@ -487,7 +487,7 @@ body {
     opacity: 0; }
   100% {
     opacity: 1;
-    height: 36rem; } }
+    height: 35.5rem; } }
   .navigation__item {
     font-size: 2rem;
     margin: 1.5rem;
@@ -532,6 +532,13 @@ body {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Mobile Landscape  */
+@media only screen and (min-width: 480px) {
+  .navigation__items--mobile-open {
+    left: -40rem;
+    width: 74.5rem; }
+  .navigation__item {
+    padding-bottom: 1.5rem; } }
+
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {

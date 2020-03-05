@@ -53,7 +53,7 @@
             right: -17.6rem;
 
             width: 41.5rem;
-            height: 36rem;
+            height: 35.5rem;
             background-color: $color-font-dark;
             padding: 2rem 1rem;
             padding-top: 0;
@@ -76,7 +76,7 @@
         }
         100% {
             opacity: 1;
-            height: 36rem;
+            height: 35.5rem;
         }
     }
 
@@ -137,7 +137,21 @@
 /*-----------------------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape  */
-@media only screen and (min-width: 480px)  {}
+@media only screen and (min-width: 480px)  {
+    .navigation {
+
+        &__items {
+            &--mobile-open {
+                left: -40rem;
+                width: 74.5rem;
+            }
+        }
+
+        &__item {
+            padding-bottom: 1.5rem;
+        }
+    }
+}
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
