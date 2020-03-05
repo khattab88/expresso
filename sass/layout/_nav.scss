@@ -41,6 +41,7 @@
 
     &__items {
         display: none;
+
         list-style: none;
         transition: all .3s;
 
@@ -56,6 +57,26 @@
             background-color: $color-font-dark;
             padding: 2rem 1rem;
             padding-top: 0;
+
+            animation-name: open-mobile-nav;
+            animation-duration: .5s;
+            //animation-delay: -.2s;
+            //animation-timing-function: ease;
+            //animation-fill-mode: both;
+        }
+    }
+
+    @keyframes open-mobile-nav {
+        0% {
+            opacity: 0;
+            height: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            height: 36rem;
         }
     }
 

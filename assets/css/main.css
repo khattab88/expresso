@@ -475,7 +475,19 @@ body {
       height: 36rem;
       background-color: #323232;
       padding: 2rem 1rem;
-      padding-top: 0; }
+      padding-top: 0;
+      animation-name: open-mobile-nav;
+      animation-duration: .5s; }
+
+@keyframes open-mobile-nav {
+  0% {
+    opacity: 0;
+    height: 0; }
+  40% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    height: 36rem; } }
   .navigation__item {
     font-size: 2rem;
     margin: 1.5rem;
