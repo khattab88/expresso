@@ -2013,7 +2013,7 @@ body {
   top: 10rem;
   padding: 1rem 2.5rem;
   position: relative;
-  z-index: 19;
+  z-index: 1;
   visibility: visible;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
