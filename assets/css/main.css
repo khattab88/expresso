@@ -446,17 +446,11 @@ body {
   justify-content: space-between;
   align-items: center; }
   .navbar__toggle {
-    display: inline-block; }
+    display: inline-block;
+    background-color: #fff; }
   .navbar__toggle-icon {
     font-size: 2.5rem;
     color: #009a9a; }
-  .navbar__toggle--open {
-    background-color: var(--font-color);
-    position: absolute;
-    top: 5.4rem;
-    left: 0px;
-    width: 4.14rem;
-    height: 30vh; }
 
 .logo__link {
   text-decoration: none;
@@ -467,14 +461,32 @@ body {
   font-size: 2.5rem; }
 
 .navigation {
-  display: none; }
+  position: relative; }
   .navigation__items {
-    list-style: none; }
+    display: none;
+    list-style: none;
+    transition: all .3s; }
+    .navigation__items--mobile-open {
+      display: inline-block;
+      position: absolute;
+      top: 2.85rem;
+      right: -17.6rem;
+      width: 41.5rem;
+      height: 36rem;
+      background-color: #323232;
+      padding: 2rem 1rem;
+      padding-top: 0; }
   .navigation__item {
-    margin: 1.2rem 3rem; }
+    font-size: 2rem;
+    margin: 1.5rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 2rem; }
+    .navigation__item:last-child {
+      border-bottom: none; }
   .navigation__link {
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    letter-spacing: 1.5px; }
 
 .country-btn__img {
   margin-right: .3rem;
@@ -490,7 +502,7 @@ body {
   .cart-btn__item-count {
     position: absolute;
     top: -1.2rem;
-    right: -1.2rem;
+    left: 2rem;
     height: 2rem;
     width: 2rem;
     font: 400 12px/22px "Oswald",sans-serif;
@@ -508,11 +520,6 @@ body {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Mobile Landscape  */
-@media only screen and (min-width: 480px) {
-  .navbar__toggle--open {
-    left: 3.2rem;
-    height: 55vh; } }
-
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Tablet screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -526,8 +533,11 @@ body {
   .navigation {
     display: inline-block; }
     .navigation__items {
+      display: inline-block;
       font-size: 1.8rem;
       color: #009a9a; }
+      .navigation__items--mobile-open {
+        display: none; }
     .navigation__item {
       margin: 0 .5rem;
       display: inline-block;

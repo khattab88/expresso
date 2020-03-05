@@ -1,7 +1,5 @@
 /* Nav */
 
-@import "../abstracts/variables";
-
 /* Mobile-first*/
 
 .navbar {
@@ -19,19 +17,11 @@
 
     &__toggle {
         display: inline-block;
+        background-color: $color-white;
     }
     &__toggle-icon {
         font-size: 2.5rem;
         color: $color-main;
-    }
-    &__toggle--open {
-        background-color: var(--font-color);
-    
-        position: absolute;
-        top: 5.4rem;
-        left: 0px;
-        width: 4.14rem;
-        height: 30vh;
     }
 }
 
@@ -47,17 +37,42 @@
 }
 
 .navigation {
-    display: none;
+    position: relative;
 
     &__items {
+        display: none;
         list-style: none;
+        transition: all .3s;
+
+        &--mobile-open {
+            display: inline-block;
+    
+            position: absolute;
+            top: 2.85rem;
+            right: -17.6rem;
+
+            width: 41.5rem;
+            height: 36rem;
+            background-color: $color-font-dark;
+            padding: 2rem 1rem;
+            padding-top: 0;
+        }
     }
+
     &__item {
-        margin: 1.2rem 3rem;
+        font-size: 2rem;
+        margin: 1.5rem;
+        border-bottom: 1px solid $color-gray-dark;
+        padding-bottom: 2rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
     &__link {
         text-decoration: none;
         color: $color-white;
+        letter-spacing: 1.5px;
     }
 }
 
@@ -80,7 +95,7 @@
     &__item-count {
         position: absolute;
         top: -1.2rem;
-        right: -1.2rem;
+        left: 2rem;
         height: 2rem;
         width: 2rem;
         font: 400 12px/22px "Oswald",sans-serif;
@@ -101,13 +116,7 @@
 /*-----------------------------------------------------------------------------------------------------------*/
 
 /* Mobile Landscape  */
-@media only screen and (min-width: 480px)  {
-
-    .navbar__toggle--open {
-        left: 3.2rem;
-        height: 55vh;
-    }
-}
+@media only screen and (min-width: 480px)  {}
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
@@ -131,8 +140,13 @@
         display: inline-block;
 
         &__items {
+            display: inline-block;
             font-size: 1.8rem;
             color: $color-main;
+
+            &--mobile-open {
+                display: none;
+            }
         }
         &__item {
             margin: 0 .5rem;
