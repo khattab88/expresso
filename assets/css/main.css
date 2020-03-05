@@ -554,13 +554,15 @@ body {
     .navigation__items {
       display: inline-block;
       font-size: 1.8rem;
-      color: #009a9a; }
+      color: #009a9a;
+      margin-top: 2rem; }
       .navigation__items--mobile-open {
         display: none; }
     .navigation__item {
       margin: 0 .5rem;
       display: inline-block;
-      transition: all .2s; }
+      transition: all .2s;
+      border-bottom: none; }
     .navigation__link:hover {
       color: #323232;
       cursor: pointer; } }

@@ -178,6 +178,7 @@
             display: inline-block;
             font-size: 1.8rem;
             color: $color-main;
+            margin-top: 2rem;
 
             &--mobile-open {
                 display: none;
@@ -187,6 +188,7 @@
             margin: 0 .5rem;
             display: inline-block;
             transition: all .2s;
+            border-bottom: none;
         }
         &__link:hover {
             color: $color-font-dark;
