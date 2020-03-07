@@ -46,7 +46,7 @@
         color: $color-white;
         font-weight: 500;
         margin-top: .5rem;
-        height: 4rem;
+        height: 4.4rem;
         line-height: 3rem;
         font-size: 2rem;
         padding: .5rem 1rem;
@@ -397,15 +397,25 @@
     .arrow-btn:hover {
         cursor: pointer;
         transform: scale(1.05);
-        box-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+        background-color: $color-font-dark;
+        box-shadow: 0 1rem 2rem rgba($color-black, .1);
     }    
 
-    .category-card:hover {
-        cursor: pointer;
-        color: $color-main;
-        transform: scale(1.05) translateY(-.5rem);
+    .category-card {
 
-        &--active:hover {
+        &:hover {
+            cursor: pointer;
+            color: $color-white;
+            background-color: $color-font-dark;
+            border-color: $color-font-dark;
+            transform: scale(1.05) translateY(-.5rem);
+        }
+
+        &__head:hover {
+            border-color: $color-white;
+        }
+
+        &--active {
             color: #fff;
         }
     }

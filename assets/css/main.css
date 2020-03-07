@@ -1277,7 +1277,7 @@ body {
     color: #fff;
     font-weight: 500;
     margin-top: .5rem;
-    height: 4rem;
+    height: 4.4rem;
     line-height: 3rem;
     font-size: 2rem;
     padding: .5rem 1rem;
@@ -1537,13 +1537,18 @@ body {
   .arrow-btn:hover {
     cursor: pointer;
     transform: scale(1.05);
-    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+    background-color: #323232;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
   .category-card:hover {
     cursor: pointer;
-    color: #009a9a;
+    color: #fff;
+    background-color: #323232;
+    border-color: #323232;
     transform: scale(1.05) translateY(-0.5rem); }
-    .category-card:hover--active:hover {
-      color: #fff; }
+  .category-card__head:hover {
+    border-color: #fff; }
+  .category-card--active {
+    color: #fff; }
   .showcase__show-all {
     width: 48.5%; }
     .showcase__show-all:hover {
