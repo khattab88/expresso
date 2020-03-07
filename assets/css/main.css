@@ -444,7 +444,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  font-weight: 400; }
   .navbar__toggle {
     display: inline-block;
     background-color: #fff; }
@@ -458,7 +459,8 @@ body {
 
 .logo__title {
   letter-spacing: 1px;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  font-weight: inherit; }
 
 .navigation {
   position: relative; }

@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 400;
 
     &__toggle {
         display: inline-block;
@@ -26,6 +27,7 @@
 }
 
 .logo {
+
     &__link {
         text-decoration: none;
         color: $color-white;
@@ -33,6 +35,7 @@
     &__title {
         letter-spacing: 1px;
         font-size: 2.5rem;
+        font-weight: inherit;
     }
 }
 
