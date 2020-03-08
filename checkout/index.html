@@ -269,6 +269,11 @@
         $(document).ready(function () {
             //$(".navbar").load("../../assets/templates/nav.html");
             //$(".footer").load("../../assets/templates/footer.html");
+
+            $(".navbar__toggle").click(function () {
+                let nav = $(".navigation__items");
+                nav.toggleClass("navigation__items--mobile-open");
+            });
         });
     </script>
 </body>

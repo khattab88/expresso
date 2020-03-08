@@ -1,7 +1,5 @@
 /* Login */
 
-@import "../abstracts/variables";
-
 /* Mobile-first*/
 
 .login-page__wrapper {
@@ -26,7 +24,7 @@
         top: 10rem;
         padding: 1rem 2.5rem;
         position: relative;
-        z-index: 19;
+        z-index: 1;
         visibility: visible;
         transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
@@ -83,6 +81,7 @@
     }
     &__forget-password {
         font-size: 1.6rem;
+        letter-spacing: .25px;
     }
 }
 

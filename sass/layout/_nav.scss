@@ -1,7 +1,5 @@
 /* Nav */
 
-@import "../abstracts/variables";
-
 /* Mobile-first*/
 
 .navbar {
@@ -16,26 +14,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 400;
 
     &__toggle {
         display: inline-block;
+        background-color: $color-white;
     }
     &__toggle-icon {
         font-size: 2.5rem;
         color: $color-main;
     }
-    &__toggle--open {
-        background-color: var(--font-color);
-    
-        position: absolute;
-        top: 5.4rem;
-        left: 0px;
-        width: 4.14rem;
-        height: 30vh;
-    }
 }
 
 .logo {
+
     &__link {
         text-decoration: none;
         color: $color-white;
@@ -43,21 +35,70 @@
     &__title {
         letter-spacing: 1px;
         font-size: 2.5rem;
+        font-weight: inherit;
     }
 }
 
 .navigation {
-    display: none;
+    position: relative;
 
     &__items {
+        display: none;
+
         list-style: none;
+        transition: all .3s;
+
+        &--mobile-open {
+            display: inline-block;
+    
+            position: absolute;
+            top: 2.85rem;
+            right: -17.6rem;
+
+            width: 41.5rem;
+            height: 35.5rem;
+            background-color: $color-font-dark;
+            padding: 2rem 1rem;
+            padding-top: 0;
+
+            animation-name: open-mobile-nav;
+            animation-duration: .5s;
+            //animation-delay: -.2s;
+            //animation-timing-function: ease;
+            //animation-fill-mode: both;
+        }
     }
+
+    @keyframes open-mobile-nav {
+        0% {
+            opacity: 0;
+            height: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            height: 35.5rem;
+        }
+    }
+
     &__item {
-        margin: 1.2rem 3rem;
+        font-size: 2rem;
+        margin: 1.5rem;
+        border-bottom: 1px solid $color-gray-dark;
+        padding-bottom: 2rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
+
     &__link {
         text-decoration: none;
         color: $color-white;
+        letter-spacing: .5px;
+        transition: all .2s;
     }
 }
 
@@ -80,7 +121,7 @@
     &__item-count {
         position: absolute;
         top: -1.2rem;
-        right: -1.2rem;
+        left: 2rem;
         height: 2rem;
         width: 2rem;
         font: 400 12px/22px "Oswald",sans-serif;
@@ -102,10 +143,18 @@
 
 /* Mobile Landscape  */
 @media only screen and (min-width: 480px)  {
+    .navigation {
 
-    .navbar__toggle--open {
-        left: 3.2rem;
-        height: 55vh;
+        &__items {
+            &--mobile-open {
+                left: -40rem;
+                width: 74.5rem;
+            }
+        }
+
+        &__item {
+            padding-bottom: 1.5rem;
+        }
     }
 }
 
@@ -131,13 +180,20 @@
         display: inline-block;
 
         &__items {
+            display: inline-block;
             font-size: 1.8rem;
             color: $color-main;
+            margin-top: 2rem;
+
+            &--mobile-open {
+                display: none;
+            }
         }
         &__item {
             margin: 0 .5rem;
             display: inline-block;
             transition: all .2s;
+            border-bottom: none;
         }
         &__link:hover {
             color: $color-font-dark;

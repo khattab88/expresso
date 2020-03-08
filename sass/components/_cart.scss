@@ -1,8 +1,5 @@
 /* cart component */
 
-@import "../abstracts/variables";
-@import "../abstracts/mixins";
-
 /* Mobile-first*/
 
 .cart {
@@ -26,6 +23,7 @@
             &-title {
                 margin-left: 1rem;
                 font-size: 2.4rem;
+                font-weight: 400;
             }
         }
         &-close {
