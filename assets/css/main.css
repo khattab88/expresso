@@ -1409,7 +1409,8 @@ body {
     color: #fff;
     display: block;
     background-color: #000;
-    border-radius: 5px; }
+    border-radius: 5px;
+    height: 100%; }
   .restaurant-card__img {
     width: 100%;
     height: 19.8rem;
