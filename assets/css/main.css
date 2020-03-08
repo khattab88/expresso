@@ -1043,7 +1043,8 @@ body {
         font-size: 3rem; }
       .cart__header-main-title {
         margin-left: 1rem;
-        font-size: 2.4rem; }
+        font-size: 2.4rem;
+        font-weight: 400; }
     .cart__header-close {
       color: #009a9a;
       transition: all .2s; }
@@ -2670,7 +2671,7 @@ body {
   margin-top: 3rem; }
 
 .delivery-info__time-heading {
-  letter-spacing: 0.5px;
+  letter-spacing: .75px;
   font-size: 1.5rem;
   color: #323232; }
 
@@ -2685,6 +2686,8 @@ body {
   padding: 0 1rem;
   font-size: 1.5rem;
   transition: all .2s; }
+  .delivery-info .expected-delivery-time__value {
+    color: #323232; }
   .delivery-info .expected-delivery-time__icon {
     color: #009a9a; }
 

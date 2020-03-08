@@ -129,7 +129,7 @@
         margin-top: 3rem;
     }
     &__time-heading {
-        letter-spacing: 0.5px;
+        letter-spacing: .75px;
         font-size: 1.5rem;
         color: $color-font-dark;
     }
@@ -145,6 +145,10 @@
         padding: 0 1rem;
         font-size: 1.5rem;
         transition: all .2s;
+
+        &__value {
+            color: $color-font-dark;
+        }
 
         &__icon {
             color: $color-main;
