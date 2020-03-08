@@ -2088,7 +2088,8 @@ body {
   color: #fff; }
 
 .login__forget-password {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  letter-spacing: .25px; }
 
 .form-group {
   margin-bottom: 30px; }
@@ -2274,7 +2275,7 @@ body {
     font-weight: 300;
     padding: .75em;
     border: 0;
-    border-bottom: 0.5px solid rgba(85, 85, 85, 0.2);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.9);
     letter-spacing: 0.75px; }
 
 /*--- animation ---*/
