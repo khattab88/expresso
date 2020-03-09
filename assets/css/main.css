@@ -2145,7 +2145,10 @@ body {
   animation-fill-mode: backwards; }
 
 /* Sign Up */
-/* Mobile-first*/
+@media (min-width: 64em) {
+  .register-page__main {
+    padding: 0; } }
+
 .register-page__wrapper {
   width: 94%;
   margin: 0 auto;
@@ -2155,6 +2158,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media (min-width: 30em) {
+    .register-page__wrapper {
+      width: 98%; } }
+  @media (min-width: 64em) {
+    .register-page__wrapper {
+      width: 82%;
+      margin-top: 13rem;
+      margin-bottom: 5rem;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; } }
 
 .register-page__sign-in,
 .register-page__register {
@@ -2163,6 +2177,10 @@ body {
   padding: 4.5rem 2.5rem;
   display: flex;
   flex-direction: column; }
+  @media (min-width: 64em) {
+    .register-page__sign-in,
+    .register-page__register {
+      height: 50rem !important; } }
 
 .sign-in__heading,
 .register__heading {
@@ -2192,23 +2210,63 @@ body {
   background: url(../../sign-up/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   justify-content: space-between;
   border-radius: .5rem .5rem 0 0; }
+  @media (min-width: 64em) {
+    .register-page__sign-in {
+      margin-top: -3rem;
+      width: 30%;
+      justify-content: center;
+      border-radius: .5rem 0 0 .5rem; } }
 
 .sign-in__btn {
   background-color: #009a9a;
-  color: #fff; }
+  color: #fff;
+  transition: 0.3s; }
+  .sign-in__btn:hover {
+    background-color: #323232;
+    cursor: pointer;
+    border: 1px solid #f9f9f9; }
 
 .register-page__register {
   height: 70rem;
   background-color: #323232;
   margin-bottom: 3rem;
   border-radius: 0 0 .5rem .5rem; }
+  @media (min-width: 64em) {
+    .register-page__register {
+      width: 70%;
+      height: 50rem;
+      border-radius: 0 .5rem .5rem 0; } }
 
 .register__heading {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  animation: moveInDown-short .65s ease-out .2s;
+  animation-fill-mode: backwards; }
+
+.register__form {
+  animation: moveInDown-short .65s ease-out .2s;
+  animation-fill-mode: backwards; }
+  @media (min-width: 64em) {
+    .register__form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+
+.register__btn {
+  transition: 0.3s;
+  animation: moveInUp-short .65s ease-out .2s;
+  animation-fill-mode: backwards; }
+  .register__btn:hover {
+    background-color: #009a9a;
+    color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    cursor: pointer; }
 
 .form-group {
   margin-bottom: 3rem;
   min-height: 1px; }
+  @media (min-width: 64em) {
+    .form-group {
+      min-width: 48%; } }
   .form-group__input-text {
     background: none;
     color: #fff;
@@ -2223,64 +2281,6 @@ body {
     border: 0;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.9);
     letter-spacing: 0.75px; }
-
-/*--- animation ---*/
-.register__heading, .register__form {
-  animation: moveInDown-short .65s ease-out .2s;
-  animation-fill-mode: backwards; }
-
-.register__btn {
-  animation: moveInUp-short .65s ease-out .2s;
-  animation-fill-mode: backwards; }
-
-/*-----------------------------------------------------------------------------------------------*/
-/* Mobile Landscape */
-@media only screen and (min-width: 480px) {
-  .register-page__wrapper {
-    width: 98%; } }
-
-/*-----------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------*/
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-  .register-page__main {
-    padding: 0; }
-  .register-page__wrapper {
-    width: 82%;
-    margin-top: 13rem;
-    margin-bottom: 5rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-  .register-page__sign-in,
-  .register-page__sign-up {
-    height: 50rem; }
-  .register-page__sign-in {
-    margin-top: -3rem;
-    width: 30%;
-    justify-content: center;
-    border-radius: .5rem 0 0 .5rem; }
-  .sign-in__btn:hover {
-    background-color: #323232;
-    cursor: pointer;
-    transition: 0.3s;
-    border: 1px solid #f9f9f9; }
-  .register-page__register {
-    width: 70%;
-    height: 50rem;
-    border-radius: 0 .5rem .5rem 0; }
-  .register__form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .register__btn:hover {
-    background-color: #323232;
-    color: #f9f9f9;
-    border: 1px solid #f9f9f9;
-    cursor: pointer;
-    transition: 0.3s; }
-  .form-group {
-    min-width: 48%; } }
 
 /* Contact Us */
 /* Mobile-first*/
