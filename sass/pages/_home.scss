@@ -1,7 +1,5 @@
 /* Home */
 
-/* Mobile-first*/
-
 /* header */
 .home-page__header {
     padding: 0;
@@ -14,17 +12,52 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(phone-land) {
+        width: 96%;
+        padding-top: 10%;
+    }
+
+    @include respond(tab) {
+        padding: 10rem 0;
+        margin: 0 auto;
+        margin-top: 4rem;
+        width: 92%;
+    }
+
+    @include respond(desktop) {
+        width: 35%;
+        margin-left: 19rem;
+        margin-top: 6.5rem;
+    }
+
     &__title {
         font-weight: 400;
         font-size: 2.5rem;
         color: #fff;
         text-shadow: .2rem .2rem .1rem rgba($color-black, .2);
         line-height: 125%;
+
+        @include respond(phone-land) {
+            font-size: 3rem;
+        }
+
+        @include respond(tab) {
+            font-size: 3.6rem;
+        }
+
+        @include respond(desktop) {
+            font-size: 3.8rem;
+            animation: moveInLeft 1s ease-out;
+        }
     }
     &__box{
         padding-top: 3rem;
         display: flex;
         flex-direction: column;
+
+        @include respond(desktop) {
+            animation: moveInRight 1s ease-out;
+        }
     }
     &__input {
         display: block;
@@ -54,6 +87,17 @@
         text-decoration: none;
         text-align: center;
         transition: all 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-font-dark;
+            transform: translateY(-2px);
+            box-shadow: 0 1rem 2rem rgba($color-black, .7);
+        }
+        &:active {
+            transform: translate(-1px);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .7);
+        } 
     }
 }
 
@@ -80,6 +124,11 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+
+        @include respond(tab) {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 
     .arrow-btn {
@@ -91,6 +140,17 @@
         font-weight: 300;
         margin-right: .5rem;
         transition: all .2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            background-color: $color-font-dark;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        }
+
+        @include respond(tab) {
+            min-width: 3rem;
+        }
 
         &__icon {
             margin-left: -.3rem;
@@ -115,6 +175,18 @@
     border: .15rem solid $color-main;
     transition: all .2s;
 
+    &:hover {
+        cursor: pointer;
+        color: $color-white;
+        background-color: $color-font-dark;
+        border-color: $color-font-dark;
+        transform: scale(1.05) translateY(-.5rem);
+    }
+
+    @include respond(tab) {
+        min-width: 18rem;
+    }
+
     &__head {
         width: 8rem;
         height: 8rem;
@@ -125,6 +197,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            border-color: $color-white;
+        }
     }
     &__icon {
         font-size: 4rem;
@@ -174,6 +250,10 @@
     }
     &__col {
         margin: .5rem;
+
+        @include respond(phone-land) {
+            width: 100%;
+        }
     }
 
     &__show-all {
@@ -194,6 +274,21 @@
         display: inline-block;
         color: $color-white;
         text-decoration: none;
+
+        @include respond(tab) {
+            text-align: center;
+            margin-left: .7rem;
+        }
+
+        @include respond(desktop) {
+            width: 48.5%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-font-dark;
+            transform: translateY(-.3rem);
+        }
     }
 }
 
@@ -203,9 +298,13 @@
     border-radius: $border-radius-medium;
     color: $color-white;
     position: relative;
-    transition: all .2s;
+    transition: all .3s;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgba($color-black, .1);
+
+    &:hover {
+        transform: scale(1.01);
+    }
 
     &__link {
         color: $color-white;
@@ -226,6 +325,10 @@
     &__desc {
         left: 2rem;
         text-shadow: 0 .5rem 1rem rgba($color-black, .7);
+
+        @include respond(tab) {
+            text-align: center;
+        }
     }
     &__name {
         font-size: 2.4rem;
@@ -247,6 +350,10 @@
     &--big {
         width: 38.5rem;
         height: 35rem;
+
+        @include respond(phone-land) {
+            width: 100%;
+        }
 
         .restaurant-card__img {
             height: 100%;
@@ -286,146 +393,4 @@
 }
 .app-download-links button {
     display: inline-block;
-}
-
-/*-----------------------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    .search {
-        width: 96%;
-        padding-top: 10%;
-
-        &__title {
-            font-size: 3rem;
-        }
-    }
-
-    .showcase__col {
-        width: 100%;
-    }
-    
-    .restaurant-card--big {
-        width: 100%;
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------------*/
-
-/* Tablet screen Sizes */
-@media only screen and (min-width: 768px) {
-
-    /* header */
-    .search {
-        padding: 10rem 0;
-        margin: 0 auto;
-        margin-top: 4rem;
-        width: 92%;
-
-        &__title {
-            font-size: 3.6rem;
-        }
-        &__submit:hover {
-            cursor: pointer;
-            background-color: $color-font-dark;
-        }
-    }
-
-    /* categories section */
-    .categories__list {
-        width: 100%;
-        justify-content: space-between;
-    }
-    .arrow-btn {
-        min-width: 3rem;
-    }
-    .category-card {
-        min-width: 18rem;
-    }
-
-    /* showcase section */
-    .restaurant-card {
-
-        &:hover {
-            transform: scale(1.01);
-            transition: transform 0.3s, opacity 0.3s;
-        }
-
-        &__name,
-        &__desc {
-            text-align: center;
-        }
-    }
-
-    .showcase__show-all {
-        text-align: center;
-        margin-left: .7rem;
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------------*/
-
-/* Desktop screen sizes */
-@media only screen and (min-width: 1024px) {
-
-    .search {
-        width: 35%;
-        margin-left: 19rem;
-        margin-top: 6.5rem;
-
-        &__title {
-            font-size: 3.8rem;
-    
-            animation: moveInLeft 1s ease-out;
-        }
-    
-        &__box {
-            animation: moveInRight 1s ease-out;
-        }
-        &__submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 1rem 2rem rgba($color-black, .7);
-        }
-        &__submit:active {
-            transform: translate(-1px);
-            box-shadow: 0 .5rem 1rem rgba($color-black, .7);
-        }
-    }
-
-    .arrow-btn:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        background-color: $color-font-dark;
-        box-shadow: 0 1rem 2rem rgba($color-black, .1);
-    }    
-
-    .category-card {
-
-        &:hover {
-            cursor: pointer;
-            color: $color-white;
-            background-color: $color-font-dark;
-            border-color: $color-font-dark;
-            transform: scale(1.05) translateY(-.5rem);
-        }
-
-        &__head:hover {
-            border-color: $color-white;
-        }
-
-        &--active {
-            color: #fff;
-        }
-    }
-
-    .showcase__show-all {
-        width: 48.5%;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $color-font-dark;
-            transform: translateY(-.3rem);
-        }
-    }
 }
