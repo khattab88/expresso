@@ -10,37 +10,17 @@
 
     height: 45rem;
     width: 100%;
-
     position: relative;
-
     color: $color-white;
-
     margin-top: 0;
 
-    //padding: 0 12%;
-}
-
-/*------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {}
-
-/*------------------------------------------------------------*/
-
-/* Tablet screen Sizes */
-@media only screen and (min-width: 768px) {
-    .header {
+    @include respond(tab) {
         background: linear-gradient(rgba($color-black, .4), 
                                     rgba($color-black, .4)),
                           url(../../assets/img/photo-1466978913421-dad2ebd01d17.jpg);
     }
-}
 
-/*------------------------------------------------------------*/
-
-/* Desktop screen sizes */
-@media only screen and (min-width: 1024px) {
-    .header {
+    @include respond(tab-land) {
         padding: 0 12%;
         height: 55rem;
 
