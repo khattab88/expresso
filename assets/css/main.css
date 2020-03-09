@@ -1,3 +1,22 @@
+/*-------------------------------------------------------------------------------*/
+/*
+0 - 479px:        phone portrait    [x-small] (default styles => mobile-first)
+480 - 767px:      Phone landscape   [small]
+768 - 1023px:     Tablet portrait   [medium]
+1024 - 1199px:    Tablet landscape  [large]
+1200 - 1799px:    Desktop           [x-large]
+1800px +:         Big desktop       [huge]
+
+
+$breakpoint argument options
+- phone-land
+- tab
+- tab-land
+- desktop
+- big-desktop
+
+  1em = 16px
+*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
