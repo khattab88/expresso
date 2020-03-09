@@ -1968,7 +1968,7 @@ body {
     font-size: 1.6rem; }
 
 /* Login */
-@media (min-width: 75em) {
+@media (min-width: 64em) {
   .login-page__main {
     width: 66%;
     padding: 0; } }
@@ -1978,7 +1978,7 @@ body {
   @media (min-width: 48em) {
     .login-page__wrapper {
       margin-top: 3rem; } }
-  @media (min-width: 75em) {
+  @media (min-width: 64em) {
     .login-page__wrapper {
       display: flex;
       justify-content: center;
@@ -1994,7 +1994,7 @@ body {
   overflow: hidden;
   background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   position: relative; }
-  @media (min-width: 75em) {
+  @media (min-width: 64em) {
     .login-page__login {
       margin-top: 0;
       top: 10rem;
@@ -2100,7 +2100,7 @@ body {
   height: 20rem;
   width: 100%;
   background-color: #009a9a; }
-  @media (min-width: 75em) {
+  @media (min-width: 64em) {
     .login-page__sign-up {
       bottom: 0;
       top: 10rem;

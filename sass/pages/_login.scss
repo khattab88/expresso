@@ -2,7 +2,7 @@
 
 .login-page__main {
 
-    @include respond(desktop) {
+    @include respond(tab-land) {
         width: 66%;
         padding: 0;
     }
@@ -15,7 +15,7 @@
         margin-top: 3rem;
     }
 
-    @include respond(desktop) {
+    @include respond(tab-land) {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
@@ -33,7 +33,7 @@
     background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     position: relative;
 
-    @include respond(desktop) {
+    @include respond(tab-land) {
         margin-top: 0;
         top: 10rem;
         height: 50rem;
@@ -155,7 +155,7 @@
     width: 100%;
     background-color: $color-main;
 
-    @include respond(desktop) {
+    @include respond(tab-land) {
         bottom: 0;
         top: 10rem;
         height: 50rem;
