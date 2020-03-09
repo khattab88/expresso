@@ -1,7 +1,5 @@
 /* Menu Item Modal */
 
-/* mobile-first */
-
 .menu-item-modal {
     position: fixed;
     top: 0;
@@ -33,6 +31,17 @@
         border-radius: .4rem;
         border: 1px solid $color-font-light;
         z-index: 3;
+
+        @include respond(tab) {
+            width: 76%;
+            margin: 20% auto;
+        }
+
+        @include respond(desktop) {
+            width: 40%;
+            margin: 2rem auto;
+            top: 10rem;
+        }
     }
     &__content--animated {
         animation: moveInDown .65s ease-out;
@@ -60,6 +69,12 @@
         color: $color-white;
         padding-top: .5rem;
         transition: all .2s;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+            background-color: $color-font-dark;
+        }
     }
     &__item-img {
         width: 100%;
@@ -67,10 +82,18 @@
         max-width: 100%;
         border-radius: .8rem;
         box-shadow: 0px .4rem 1.2rem -1px rgba($color-black, .4);
+
+        @include respond(tab) {
+            max-height: 35rem;
+        }
     }
     &__body {
         padding-top: 15rem;
         color: $color-font-dark;
+
+        @include respond(tab) {
+            padding-top: 28rem;   
+        }
     }
     &__footer {
         margin-top: 1.5rem;
@@ -162,6 +185,11 @@
         vertical-align: middle;
         padding-top: .5rem;
         transition: all .2s;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+        }
     }
     &__count {
         min-width: 5rem;
@@ -184,64 +212,12 @@
     border-radius: .4rem;
     color: $color-white;
     transition: all .2s;
-}
 
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    .add-order-btn {
+    @include respond(phone-land) {
         width: 30rem;
     }
-}
 
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {
-    .menu-item-modal {
-        &__content {
-            width: 76%;
-            margin: 20% auto;
-        }
-        &__item-img {
-            max-height: 35rem;
-        }
-        &__body {
-            padding-top: 28rem;   
-        }
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-
-    .menu-item-modal {
-        &__content {
-            width: 40%;
-            margin: 2rem auto;
-            top: 10rem;
-        }
-        &__head {
-            top: -10rem;
-        }
-        &__close:hover {
-            cursor: pointer;
-            box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
-            background-color: $color-font-dark;
-        }
-    }
-    
-    .cart-controls__btn:hover {
-        cursor: pointer;
-        transition: 0.2s;
-        box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
-    }
-
-    .add-order-btn:hover {
+    @include respond(desktop) {
         cursor: pointer;
         background-color: $color-font-dark;
         transform: translateY(-2px);

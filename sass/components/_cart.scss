@@ -1,6 +1,4 @@
-/* cart component */
-
-/* Mobile-first*/
+/* cart */
 
 .cart {
     min-height: 20rem;
@@ -29,6 +27,12 @@
         &-close {
             color: $color-main;
             transition: all .2s;
+
+            &:hover {
+                cursor: pointer;
+                color: $color-font-dark;
+                box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+            }
 
             &--visible {
                 display: inline-block;
@@ -78,6 +82,13 @@
                     background-color: $color-white;
                     margin-right: .5rem;
                     background-color: $color-font-light;
+                    transition: 0.2s;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $color-font-dark;
+                        color: $color-font-light;
+                    }
             
                     &-remove {
                         padding: 1.5rem;
@@ -136,43 +147,12 @@
             color: #fff;
             line-height: 2.2rem;
             transition: all 0.3s;
+
+            &:hover {
+                background-color: $color-font-dark;
+                cursor: pointer;
+                transform: scale(1.05) ;
+            }
         }
     }
-}
-
-
-/*----------------------------------------------------------------------------------------*/
-
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {}
-
-/*----------------------------------------------------------------------------------------*/
-
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
-
-/*----------------------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-
-    .cart__header-close:hover {
-        cursor: pointer;
-        color: $color-font-dark;
-        box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
-    }
-
-    .cart__item-controls-btn:hover {
-        cursor: pointer;
-        background-color: $color-font-dark;
-        color: $color-font-light;
-        transition: 0.2s;
-    }
-
-    .cart__submit-btn:hover {
-        background-color: $color-font-dark;
-        cursor: pointer;
-        transform: scale(1.05) ;
-    } 
 }
