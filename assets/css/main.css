@@ -2508,7 +2508,6 @@ body {
     transform: translateY(-0.5rem) scale(1.05); } }
 
 /* Checkout */
-/* Mobile-first*/
 .checkout-page__header {
   background: url(../../checkout/img/photo-1540265556701-ae209ac395cd.jpg);
   background-size: cover;
@@ -2527,6 +2526,12 @@ body {
   flex-direction: column;
   margin-top: 15rem;
   margin-left: 4rem; }
+  @media (min-width: 30em) {
+    .restaurant-info {
+      padding-left: 3rem; } }
+  @media (min-width: 64em) {
+    .restaurant-info {
+      padding-left: 1rem; } }
   .restaurant-info__name {
     line-height: 3.6rem;
     font-size: 2.8rem;
@@ -2536,9 +2541,18 @@ body {
     font-size: 1.8rem;
     line-height: 1.5; }
 
+@media (min-width: 64em) {
+  .checkout-page__main {
+    padding: 0; } }
+
 .checkout {
   display: flex;
   flex-direction: column; }
+  @media (min-width: 64em) {
+    .checkout {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly; } }
   .checkout-info-box {
     padding: 3rem 4rem;
     width: 96%;
@@ -2546,6 +2560,14 @@ body {
     border: 1px solid #f9f9f9;
     border-radius: .5rem;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+    @media (min-width: 30em) {
+      .checkout-info-box {
+        width: 98%; } }
+
+@media (min-width: 64em) {
+  .customer-info {
+    width: 70%;
+    margin-right: 3rem; } }
 
 /* user info */
 .user-info {
@@ -2586,6 +2608,10 @@ body {
     padding: .3rem .5rem; }
 
 /* delivery info */
+@media (min-width: 64em) {
+  .delivery-info {
+    position: static; } }
+
 .delivery-info__heading {
   font-family: "Oswald",sans-serif;
   font-weight: 400;
@@ -2605,7 +2631,12 @@ body {
   background-color: #fff;
   width: 60%;
   margin: 3rem 0;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  transition: 0.3s; }
+  .delivery-info__add:hover {
+    background-color: #009a9a;
+    color: #fff;
+    cursor: pointer; }
 
 .delivery-info__locate {
   font-size: 1.4rem; }
@@ -2615,6 +2646,9 @@ body {
 
 .delivery-info__time {
   margin-top: 3rem; }
+  @media (min-width: 64em) {
+    .delivery-info__time {
+      width: 100%; } }
 
 .delivery-info__time-heading {
   letter-spacing: .75px;
@@ -2632,6 +2666,15 @@ body {
   padding: 0 1rem;
   font-size: 1.5rem;
   transition: all .2s; }
+  @media (min-width: 30em) {
+    .delivery-info .expected-delivery-time {
+      width: 50%; } }
+  @media (min-width: 64em) {
+    .delivery-info .expected-delivery-time {
+      width: 50%; } }
+  .delivery-info .expected-delivery-time:hover {
+    cursor: pointer;
+    border-color: #009a9a; }
   .delivery-info .expected-delivery-time__value {
     color: #323232; }
   .delivery-info .expected-delivery-time__icon {
@@ -2669,55 +2712,11 @@ body {
   min-height: 20rem;
   display: flex;
   flex-direction: column; }
-
-/*----------------------------------------------------------------------------------------*/
-/* Mobile Landscape */
-@media only screen and (min-width: 480px) {
-  .header-breadcrumb-wrapper {
-    padding-left: 4rem; }
-  .restaurant-info {
-    padding-left: 3rem; }
-  .checkout-info-box {
-    width: 98%; }
-  .expected-delivery-time {
-    width: 50%; } }
-
-/*----------------------------------------------------------------------------------------*/
-/* Tablet Screen Sizes */
-/*----------------------------------------------------------------------------------------*/
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-  .checkout-page__main {
-    padding: 0; }
-  .restaurant-info {
-    padding-left: 1rem; }
-  .checkout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; }
-  .customer-info {
-    width: 70%;
-    margin-right: 3rem; }
-  /* delivery info */
-  .delivery-info {
-    position: static; }
-    .delivery-info__add:hover {
-      background-color: #009a9a;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s; }
-    .delivery-info .delivery-info__time {
-      width: 100%; }
-    .delivery-info .expected-delivery-time {
-      width: 50%; }
-      .delivery-info .expected-delivery-time:hover {
-        cursor: pointer;
-        border-color: #009a9a; }
-  /* order info */
-  .order-info {
-    width: 45%;
-    height: 52rem;
-    transform: translateY(-11.5rem);
-    background-color: #fff; } }
+  @media (min-width: 64em) {
+    .order-info {
+      width: 45%;
+      height: 52rem;
+      transform: translateY(-11.5rem);
+      background-color: #fff; } }
 
 /* Primary Theme */

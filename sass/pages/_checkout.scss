@@ -1,7 +1,5 @@
 /* Checkout */
 
-/* Mobile-first*/
-
 .checkout-page__header {
     background: url(../../checkout/img/photo-1540265556701-ae209ac395cd.jpg);
     background-size: cover;
@@ -23,6 +21,14 @@
     margin-top: 15rem;
     margin-left: 4rem;
 
+    @include respond(phone-land) {
+        padding-left: 3rem;
+    }
+
+    @include respond(tab-land) {
+        padding-left: 1rem;
+    }
+
     &__name {
         line-height: 3.6rem;
         font-size: 2.8rem;
@@ -35,9 +41,22 @@
     }
 }
 
+.checkout-page__main {
+
+    @include respond(tab-land) {
+        padding: 0;
+    }
+}
+
 .checkout {
     display: flex;
     flex-direction: column;
+
+    @include respond(tab-land) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
     &-info-box {
         padding: 3rem 4rem;
@@ -46,6 +65,18 @@
         border: 1px solid $color-font-light;
         border-radius: .5rem;
         box-shadow: .5rem .5rem 1rem rgba($color-black, .1);
+
+        @include respond(phone-land) {
+            width: 98%;
+        }
+    }
+}
+
+.customer-info {
+
+    @include respond(tab-land) {
+        width: 70%;
+        margin-right: 3rem;
     }
 }
 
@@ -98,6 +129,11 @@
 
 /* delivery info */
 .delivery-info {
+
+    @include respond(tab-land) {
+        position: static;
+    }
+
     &__heading {
         font-family: "Oswald",sans-serif;
         font-weight: 400;
@@ -118,6 +154,13 @@
         width: 60%;
         margin: 3rem 0;
         font-size: 1.5rem;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $color-main;
+            color: $color-white;
+            cursor: pointer;
+        }
     }
     &__locate {
         font-size: 1.4rem;
@@ -127,6 +170,10 @@
     }
     &__time {
         margin-top: 3rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
     }
     &__time-heading {
         letter-spacing: .75px;
@@ -145,6 +192,19 @@
         padding: 0 1rem;
         font-size: 1.5rem;
         transition: all .2s;
+
+        @include respond(phone-land) {
+            width: 50%;
+        }
+
+        @include respond(tab-land) {
+            width: 50%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-color: $color-main;
+        }
 
         &__value {
             color: $color-font-dark;
@@ -196,85 +256,8 @@
     min-height: 20rem;
     display: flex;
     flex-direction: column;
-}
 
-/*----------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    .header-breadcrumb-wrapper {
-        padding-left: 4rem;
-    }
-
-    .restaurant-info {
-        padding-left: 3rem;
-    }
-
-    .checkout-info-box {
-        width: 98%;
-    }
-
-    .expected-delivery-time {
-        width: 50%;
-    }
-}
-
-/*----------------------------------------------------------------------------------------*/
-
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
-
-/*----------------------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-
-    .checkout-page__main {
-        padding: 0;
-    }
-
-    .restaurant-info {
-        padding-left: 1rem;
-    }
-    
-    .checkout {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .customer-info {
-        width: 70%;
-        margin-right: 3rem;
-    }
-
-    /* delivery info */
-    .delivery-info {
-        position: static;
-
-        &__add:hover {
-            background-color: $color-main;
-            color: $color-white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .delivery-info__time {
-            width: 100%;
-        }
-
-        .expected-delivery-time {
-            width: 50%;
-
-            &:hover {
-                cursor: pointer;
-                border-color: $color-main;
-            }
-        }
-    }
-
-    /* order info */
-    .order-info {
+    @include respond(tab-land) {
         width: 45%;
         height: 52rem;
         transform: translateY(-11.5rem);
