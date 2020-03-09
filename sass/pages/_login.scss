@@ -1,9 +1,26 @@
 /* Login */
 
-/* Mobile-first*/
+.login-page__main {
+
+    @include respond(desktop) {
+        width: 66%;
+        padding: 0;
+    }
+}
 
 .login-page__wrapper {
     padding: 1.5rem;
+
+    @include respond(tab) {
+        margin-top: 3rem;
+    }
+
+    @include respond(desktop) {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 15rem;
+    }
 }
 
 .login-page__login {
@@ -15,6 +32,14 @@
     overflow: hidden;
     background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
     position: relative;
+
+    @include respond(desktop) {
+        margin-top: 0;
+        top: 10rem;
+        height: 50rem;
+        width: 200vw;
+        border-radius: .5rem 0 0 .5rem;
+    }
 }
 
 .login {
@@ -78,10 +103,21 @@
         -moz-border-radius: .4rem;
         border-radius: .4rem;
         color: $color-white;
+
+        &:hover {
+            background-color: $color-font-dark;
+            border: 1px solid $color-font-light;
+            cursor: pointer;
+        }
     }
     &__forget-password {
         font-size: 1.6rem;
         letter-spacing: .25px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -118,6 +154,16 @@
     height: 20rem;
     width: 100%;
     background-color: $color-main;
+
+    @include respond(desktop) {
+        bottom: 0;
+        top: 10rem;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 .5rem .5rem 0;
+    }
 }
 
 .sign-up {
@@ -140,10 +186,16 @@
         padding: 1rem 1rem;
         font-size: 1.4rem;
         border: 1px solid $color-white;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-in-out;
         margin-top: 2rem;
         border-radius: .4rem;
         font: 400 16px/22px "Oswald",sans-serif;
+
+        &:hover {
+            background-color: $color-font-dark;
+            color: $color-font-light;
+            cursor: pointer;
+        }
     }
 }
 
@@ -153,81 +205,4 @@
 .login__remember-me {
     animation: moveInDown-short .65s ease-out .2s;
     animation-fill-mode: backwards;
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-@media only screen and (min-width: 768px) {
-
-    .login-page__wrapper {
-        margin-top: 3rem;
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-
-    .login-page__main {
-        width: 66%;
-        padding: 0;
-    }
-
-    .login-page__wrapper {
-        display: flex;
-        justify-content: center;
-
-        margin-top: 2rem;
-        margin-bottom: 15rem;
-    }
-    
-    .login-page__login {
-        background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
-        margin-top: 0;
-        top: 10rem;
-        height: 50rem;
-        width: 200vw;
-        border-radius: .5rem 0 0 .5rem;
-    }
-
-    .login {
-
-        &__sumbit-btn:hover {
-            background-color: $color-font-dark;
-            border: 1px solid $color-font-light;
-            cursor: pointer;
-        } 
-        &__forget-password:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    }
-
-    /* sign-up */
-    .login-page__sign-up {
-        bottom: 0;
-        top: 10rem;
-        height: 50rem;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 0 .5rem .5rem 0;
-    }
-
-    .sign-up {
-        
-        &__btn:hover {
-            background-color: $color-font-dark;
-            color: $color-font-light;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-    }
 }

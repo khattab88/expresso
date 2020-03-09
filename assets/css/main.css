@@ -1968,9 +1968,22 @@ body {
     font-size: 1.6rem; }
 
 /* Login */
-/* Mobile-first*/
+@media (min-width: 75em) {
+  .login-page__main {
+    width: 66%;
+    padding: 0; } }
+
 .login-page__wrapper {
   padding: 1.5rem; }
+  @media (min-width: 48em) {
+    .login-page__wrapper {
+      margin-top: 3rem; } }
+  @media (min-width: 75em) {
+    .login-page__wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-bottom: 15rem; } }
 
 .login-page__login {
   margin-top: 8rem;
@@ -1981,6 +1994,13 @@ body {
   overflow: hidden;
   background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   position: relative; }
+  @media (min-width: 75em) {
+    .login-page__login {
+      margin-top: 0;
+      top: 10rem;
+      height: 50rem;
+      width: 200vw;
+      border-radius: .5rem 0 0 .5rem; } }
 
 .login__box {
   width: 100%;
@@ -2039,10 +2059,17 @@ body {
   -moz-border-radius: .4rem;
   border-radius: .4rem;
   color: #fff; }
+  .login__sumbit-btn:hover {
+    background-color: #323232;
+    border: 1px solid #f9f9f9;
+    cursor: pointer; }
 
 .login__forget-password {
   font-size: 1.6rem;
   letter-spacing: .25px; }
+  .login__forget-password:hover {
+    cursor: pointer;
+    text-decoration: underline; }
 
 .form-group {
   margin-bottom: 30px; }
@@ -2073,6 +2100,15 @@ body {
   height: 20rem;
   width: 100%;
   background-color: #009a9a; }
+  @media (min-width: 75em) {
+    .login-page__sign-up {
+      bottom: 0;
+      top: 10rem;
+      height: 50rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 0 .5rem .5rem 0; } }
 
 .sign-up__box {
   padding: 4rem 2.5rem; }
@@ -2092,10 +2128,14 @@ body {
   padding: 1rem 1rem;
   font-size: 1.4rem;
   border: 1px solid #fff;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin-top: 2rem;
   border-radius: .4rem;
   font: 400 16px/22px "Oswald",sans-serif; }
+  .sign-up__btn:hover {
+    background-color: #323232;
+    color: #f9f9f9;
+    cursor: pointer; }
 
 /*--- animation ---*/
 .login_heading,
@@ -2103,53 +2143,6 @@ body {
 .login__remember-me {
   animation: moveInDown-short .65s ease-out .2s;
   animation-fill-mode: backwards; }
-
-/*-----------------------------------------------------------------------------------------------*/
-/* Mobile Landscape */
-/*-----------------------------------------------------------------------------------------------*/
-@media only screen and (min-width: 768px) {
-  .login-page__wrapper {
-    margin-top: 3rem; } }
-
-/*-----------------------------------------------------------------------------------------------*/
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-  .login-page__main {
-    width: 66%;
-    padding: 0; }
-  .login-page__wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 15rem; }
-  .login-page__login {
-    background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
-    margin-top: 0;
-    top: 10rem;
-    height: 50rem;
-    width: 200vw;
-    border-radius: .5rem 0 0 .5rem; }
-  .login__sumbit-btn:hover {
-    background-color: #323232;
-    border: 1px solid #f9f9f9;
-    cursor: pointer; }
-  .login__forget-password:hover {
-    cursor: pointer;
-    text-decoration: underline; }
-  /* sign-up */
-  .login-page__sign-up {
-    bottom: 0;
-    top: 10rem;
-    height: 50rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0 .5rem .5rem 0; }
-  .sign-up__btn:hover {
-    background-color: #323232;
-    color: #f9f9f9;
-    cursor: pointer;
-    transition: 0.3s; } }
 
 /* Sign Up */
 /* Mobile-first*/
