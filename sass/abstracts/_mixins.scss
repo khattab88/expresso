@@ -61,18 +61,18 @@ $breakpoint argument options
 */
 @mixin respond($breakpoint) {
     @if $breakpoint == phone-land {
-        @media (min-width: 30em) { @content };     //480px
+        @media only screen and (min-width: 30em) { @content };     //480px
     }
     @if $breakpoint == tab {
-        @media (min-width: 48em) { @content };     //768px
+        @media only screen and (min-width: 48em) { @content };     //768px
     }
     @if $breakpoint == tab-land {
-        @media (min-width: 64em) { @content };     //1024px
+        @media only screen and (min-width: 64em) { @content };     //1024px
     }
     @if $breakpoint == desktop {
-        @media (min-width: 75em) { @content };     //1200px
+        @media only screen and (min-width: 75em) { @content };     //1200px
     }
     @if $breakpoint == big-desktop {
-        @media (min-width: 112.5em) { @content };  //1800px
+        @media only screen and (min-width: 112.5em) { @content };  //1800px
     }
 }
