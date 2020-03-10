@@ -1,7 +1,5 @@
 /* Footer */
 
-/* Mobile-first*/ 
-
 .footer {
     padding: 0 2rem;
     background-color: $color-font-dark;
@@ -9,6 +7,10 @@
     display: $color-white;
     flex-direction: column;
     align-items: center;
+
+    @include respond(desktop) {
+        padding: 0 12%;
+    }
 
     &__logo {
         text-align: center;
@@ -22,6 +24,12 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+
+        @include respond(desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -38,18 +46,31 @@
         font-size: 1.6rem;
         line-height: 4.4rem;
         letter-spacing: .75px;
+
+        @include respond(desktop) {
+            margin: 0 3rem;
+        }
     }
 
     &__link {
         text-decoration: none;
         color: $color-white;
         transition: all .2s;
+
+        &:hover {
+            color: $color-main;
+        }
     } 
 }
 
 .social-navigation {
     margin-top: 4rem;
     margin-bottom: 2rem;
+
+    @include respond(desktop) {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
 
     &__items {
         display: flex;
@@ -59,6 +80,10 @@
         list-style: none;
         display: inline-block;
         margin: 0 1rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -69,6 +94,19 @@
     &__icon {
         font-size: 2.4rem;
         transition: all .2s;
+
+        &[class*="facebook"]:hover{
+            color: $color-social-facebook;
+            transform: translateY(-3px);
+        }
+        &[class*="twitter"]:hover {
+            color: $color-social-twitter;
+            transform: translateY(-3px);
+        }
+        &[class*="instagram"]:hover {
+            color: $color-social-instagram;
+            transform: translateY(-3px);
+        }
     }
 }
 
@@ -81,6 +119,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .change-country {
@@ -98,6 +141,11 @@
         transition: all .2s;
         font-size: 2rem;
         font-weight: 300;
+
+        &:hover {
+            color: $color-main;
+            cursor: pointer;
+        }
     }
     &__flag {
         margin-right: 1.2rem;
@@ -110,9 +158,17 @@
 .app-download {
     margin-top: 2rem;
 
+    @include respond(desktop) {
+        margin-top: 0;
+    }
+
     &__img {
         height: 3.6rem;
         transition: all .2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -122,81 +178,4 @@
     font-size: 1.4rem;
     letter-spacing: 0.75px;
     line-height: 1.5;
-}
-
-/*------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {}
-
-/*------------------------------------------------------------------------*/
-
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {}
-
-/*--------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-    .footer {
-        padding: 0 12%;
-
-        &__links {
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-    }
-
-    .secondary-navigation {
-        flex-direction: row;
-
-        &__item {
-            margin: 0 3rem;
-        }
-        &__link:hover {
-            color: $color-main;
-        }
-    }
-
-    .social-navigation {
-        margin-top: 1rem;
-
-        &__item:hover {
-            cursor: pointer;
-        }
-    }
-
-    .social-link__icon {
-        &[class*="facebook"]:hover{
-            color: $color-social-facebook;
-            transform: translateY(-3px);
-        }
-        &[class*="twitter"]:hover {
-            color: $color-social-twitter;
-            transform: translateY(-3px);
-        }
-        &[class*="instagram"]:hover {
-            color: $color-social-instagram;
-            transform: translateY(-3px);
-        }
-    }
-
-    .sub-footer {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .change-country__btn:hover {
-        color: $color-main;
-        cursor: pointer;
-    }
-
-    .app-download {
-        margin-top: 0;
-
-        &__img:hover {
-            transform: scale(1.05);
-        }
-    }
 }

@@ -1,7 +1,5 @@
 /* Restaurant List */
 
-/* Mobile-first*/
-
 .restaurant-list-page__header {
     height: 45rem;
 }
@@ -14,16 +12,39 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(phone-land) {
+        width: 96%;
+    }
+
+    @include respond(desktop) {
+        padding: 10rem;
+        margin: 0;
+        margin-top: 7rem;
+        padding-left: 2rem;
+        width: 80%;
+    }
+
     &__title {
         font-size: 3.6rem;
         font-weight: 100;
         color: $color-white;
         text-shadow: 2px 2px 1px rgba($color-black, .2);
+
+        @include respond(desktop) {
+            font-size: 3.6rem;
+            font-weight: 300;
+        }
     }
     &__box {
         padding-top: 2rem;
         display: flex;
         flex-direction: column;
+    }
+    &__form {
+        
+        @include respond(desktop) {
+            display: flex;
+        }
     }
     &__input {
         display: block;
@@ -36,6 +57,10 @@
         border-style: none;
         border-radius: .5rem;
         margin-bottom: .5rem;
+
+        @include respond(desktop) {
+            margin-right: 1rem;
+        }
     }
     &__submit {
         display: block;
@@ -51,6 +76,18 @@
         border-style: none;
         border-radius: .5rem;
         transition: all .2s;
+
+        @include respond(desktop) {
+            height: 5rem;
+            width: 50%;
+            margin-top: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-font-dark;
+            transform: translateY(-3px);
+        }
     }
 }
 
@@ -89,9 +126,24 @@
         color: $color-font-dark;
         border-bottom: 1px solid $color-font-light;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &__icon {
             font-size: 2.7rem;
             margin-right: 1.5rem;
+
+            &--angle-down {
+
+                @include respond(phone-land) {
+                    margin-left: 30rem;
+                }
+
+                @include respond(desktop) {
+                    margin-left: 0;
+                }
+            }
         }
         &__title {
             font-size: 2.2rem;
@@ -114,6 +166,11 @@
     &__row {
         display: flex;
         flex-direction: column;
+
+        @include respond(desktop) {
+            flex-direction: row;
+            margin-bottom: 3rem;
+        }
     }
 }
 
@@ -122,6 +179,17 @@
     margin-bottom: 3rem;
     border-bottom: 1px solid $color-font-light;
 
+    @include respond(desktop) {
+        width: 33%;
+        margin-right: 2%;
+        margin-bottom: 1rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
     &__head {
         min-width: 38.5rem;
         min-height: 23rem;
@@ -129,6 +197,16 @@
         background-size: cover;
         border-radius: .35rem;
         position: relative;
+        transition: all .3s;
+
+        @include respond(desktop) {
+            min-width: auto;
+        }
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
+        }
     }
 }
 
@@ -149,6 +227,11 @@
     &__time {
         margin-top: .5rem;
         font-size: 1.25rem;
+
+        @include respond(tab) {
+            display: inline-block;
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -164,10 +247,28 @@
         line-height: 1;
         font-weight: 400;
         letter-spacing: .5px;
+
+        @include respond(tab) {
+            font-size: 3rem;
+        }
+
+        @include respond(desktop) {
+            font-size: 2.5rem;
+        }
     }
     &__desc {
         font-size: 1.5rem;
         line-height: 2.8rem;
+
+        @include respond(tab) {
+            font-size: 1.75rem;
+            margin-top: 1rem;
+        }
+
+        @include respond(desktop) {
+            font-size: 1.5rem;
+            margin-top: .5rem;
+        }
     }
 }
 
@@ -187,133 +288,13 @@
         color: $color-white;
         letter-spacing: .5px;
 
+        &:hover {
+            transform: scale(1.05) translateY(-.2rem);
+        }
+
         &--empty {
             background-color: $color-font-light;
             color: $color-font-dark;
         }
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    .restaurant-search {
-        width: 96%;
-    }
-    
-    .filter-dropdown__icon--angle-down {
-        margin-left: 30rem;
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {
-
-    .delivery-detail {
-        &__title {}
-        &__time {
-            display: inline-block;
-            margin-top: 1rem;
-        }
-    }
-
-    .restaurant-detail {
-        &__name {
-            font-size: 3rem;
-        }
-        &__desc {
-            font-size: 1.75rem;
-            margin-top: 1rem;
-        }
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-
-    /* header */
-    .restaurant-search {
-        padding: 10rem;
-        margin: 0;
-        margin-top: 7rem;
-        padding-left: 2rem;
-        width: 80%;
-
-        &__title {
-            font-size: 3.6rem;
-            font-weight: 300;
-        }
-        &__form {
-            display: flex;
-        }
-        &__input {
-            margin-right: 1rem;
-        }
-        &__submit {
-            height: 5rem;
-            width: 50%;
-            margin-top: 0;
-
-            &:hover {
-                cursor: pointer;
-                background-color: $color-font-dark;
-                transform: translateY(-3px);
-            }
-        }
-    }
-
-    .filter-dropdown {
-        &:hover {
-            cursor: pointer;
-        }
-        &__icon--angle-down {
-            margin-left: 0;
-        }
-    }
-
-    /* restaurant list */
-    .restaurant-list__row {
-        flex-direction: row;
-        margin-bottom: 3rem;
-    }
-
-    .restaurant-info-card {
-        width: 33%;
-        margin-right: 2%;
-        margin-bottom: 1rem;
-        transition: all .2s;
-
-        &:hover {
-            cursor: pointer;
-        }
-        &__head {
-            min-width: auto;
-            transition: all .3s;
-
-            &:hover {
-                transform: scale(1.03);
-                box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
-            }
-        }
-    }
-   
-    .restaurant-detail {
-        &__name {
-            font-size: 2.5rem;
-        }
-        &__desc {
-            font-size: 1.5rem;
-            margin-top: .5rem;
-        }
-    }
-
-    .restaurant-tags__tag-item:hover {
-        transform: scale(1.05) translateY(-.2rem);
     }
 }

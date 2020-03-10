@@ -55,6 +55,20 @@
         margin-top: 15rem;
         margin-bottom: 5rem;
         padding-bottom: 0;
+
+        @include respond(phone-land) {
+            margin-top: 10rem;
+        }
+
+        @include respond(tab) {
+            width: 80%;
+            margin-top: 20rem;
+        }
+
+        @include respond(desktop) {
+            width: 45%;
+            margin-top: 10rem;
+        }
     }
     &__content--animated {
         animation: moveInDown .65s ease-out;
@@ -80,38 +94,4 @@
     transition: transform .3s ease-out;
 
     transform: translate(0,0);
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape */
-@media only screen and (min-width: 480px)  {
-
-    .cart-modal__content {
-        margin-top: 10rem;
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) {
-
-    .cart-modal__content {
-        width: 80%;
-        margin-top: 20rem;
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 1024px) {
-
-    .cart-modal {
-        &__content {
-            width: 45%;
-            margin-top: 10rem;
-        }
-    }
 }

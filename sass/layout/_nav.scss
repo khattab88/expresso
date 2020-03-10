@@ -1,7 +1,5 @@
 /* Nav */
 
-/* Mobile-first*/
-
 .navbar {
     z-index: 2;
     background-color: $color-main;
@@ -16,9 +14,22 @@
     align-items: center;
     font-weight: 400;
 
+    @include respond(tab) {
+        height: 7rem;
+        padding: 0 3%;
+    }
+
+    @include respond(desktop) {
+        padding: 0 12%;
+    }
+
     &__toggle {
         display: inline-block;
         background-color: $color-white;
+
+        @include respond(tab) {
+            display: none;
+        }
     }
     &__toggle-icon {
         font-size: 2.5rem;
@@ -28,6 +39,10 @@
 
 .logo {
 
+    @include respond(tab) {
+        font-size: 2.2rem;
+    }
+
     &__link {
         text-decoration: none;
         color: $color-white;
@@ -36,17 +51,31 @@
         letter-spacing: 1px;
         font-size: 2.5rem;
         font-weight: inherit;
+
+        @include respond(desktop) {
+            font-size: 3.5rem;
+        }
     }
 }
 
 .navigation {
     position: relative;
 
+    @include respond(tab) {
+        display: inline-block;
+    }
+
     &__items {
         display: none;
-
         list-style: none;
         transition: all .3s;
+
+        @include respond(tab) {
+            display: inline-block;
+            font-size: 1.8rem;
+            color: $color-main;
+            margin-top: 2rem;
+        }
 
         &--mobile-open {
             display: inline-block;
@@ -66,20 +95,15 @@
             //animation-delay: -.2s;
             //animation-timing-function: ease;
             //animation-fill-mode: both;
-        }
-    }
 
-    @keyframes open-mobile-nav {
-        0% {
-            opacity: 0;
-            height: 0;
-        }
-        40% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-            height: 35.5rem;
+            @include respond(phone-land) {
+                left: -40rem;
+                width: 74.5rem;
+            }
+
+            @include respond(tab) {
+                display: none;
+            }
         }
     }
 
@@ -88,9 +112,25 @@
         margin: 1.5rem;
         border-bottom: 1px solid $color-gray-dark;
         padding-bottom: 2rem;
+        transition: all .2s;
 
         &:last-child {
             border-bottom: none;
+        }
+
+        @include respond(phone-land) {
+            padding-bottom: 1.5rem;
+        }
+
+        @include respond(tab) {
+            margin: 0 .5rem;
+            display: inline-block;
+            transition: all .2s;
+            border-bottom: none;
+        }
+
+        @include respond(desktop) {
+            margin: 0 1.5rem;
         }
     }
 
@@ -99,6 +139,11 @@
         color: $color-white;
         letter-spacing: .5px;
         transition: all .2s;
+
+        &:hover {
+            color: $color-font-dark;
+            cursor: pointer;
+        }
     }
 }
 
@@ -136,98 +181,10 @@
         transform: scale(1);
         transform-origin: 50% 50%;
         text-transform: uppercase;
-    }
-}
 
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/* Mobile Landscape  */
-@media only screen and (min-width: 480px)  {
-    .navigation {
-
-        &__items {
-            &--mobile-open {
-                left: -40rem;
-                width: 74.5rem;
-            }
+        &:hover {
+            background-color: $color-font-dark;
+            color: $color-font-light;
         }
-
-        &__item {
-            padding-bottom: 1.5rem;
-        }
-    }
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/* Tablet screen Sizes */
-@media only screen and (min-width: 768px) {
-
-    .navbar {
-        height: 7rem;
-        padding: 0 3%;
-
-        &__toggle {
-            display: none;
-        }
-    }
-
-    .logo {
-        font-size: 2.2rem;
-    }
-
-    .navigation {
-        display: inline-block;
-
-        &__items {
-            display: inline-block;
-            font-size: 1.8rem;
-            color: $color-main;
-            margin-top: 2rem;
-
-            &--mobile-open {
-                display: none;
-            }
-        }
-        &__item {
-            margin: 0 .5rem;
-            display: inline-block;
-            transition: all .2s;
-            border-bottom: none;
-        }
-        &__link:hover {
-            color: $color-font-dark;
-            cursor: pointer;
-        }
-    }
-}
-
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/* Desktop screen sizes */
-@media only screen and (min-width: 1024px) {
-    .navbar {
-        padding: 0 12%;
-    }
-
-    .logo {
-        &__title {
-            font-size: 3.5rem;
-        }
-    }
-
-    .navigation__item {
-        margin: 0 1.5rem;
-        transition: all .2s;
-
-        &__link {
-            transition: all .2s;
-        }
-    }
-    
-    .cart-btn__item-count:hover {
-        background-color: $color-font-dark;
-        color: $color-font-light;
     }
 }
