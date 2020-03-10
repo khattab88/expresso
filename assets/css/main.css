@@ -830,6 +830,10 @@ body {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: .5rem; }
+  @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+    .menu-item-modal {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px); } }
   .menu-item-modal--open {
     display: block;
     overflow-x: hidden;
@@ -1117,7 +1121,6 @@ body {
 
 /* Cart Modal */
 .cart-modal {
-  opacity: 0;
   -webkit-transition: opacity .15s linear;
   -o-transition: opacity .15s linear;
   transition: opacity .15s linear;
@@ -1135,6 +1138,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   overflow-x: hidden;
   overflow-y: auto; }
+  @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+    .cart-modal {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px); } }
   .cart-modal--open {
     display: block; }
   .cart-modal--close {
