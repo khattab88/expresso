@@ -74,21 +74,22 @@
             display: inline-block;
             font-size: 1.8rem;
             color: $color-main;
-            margin-top: 2rem;
+            margin-top: 0;
         }
 
         &--mobile-open {
-            display: inline-block;
+            display: block;
+            overflow: auto;
     
             position: absolute;
             top: 2.85rem;
             right: -17.6rem;
 
             width: 41.5rem;
-            height: 35.5rem;
+            height: 40rem;
             background-color: $color-font-dark;
             padding: 2rem 1rem;
-            padding-top: 0;
+            border-bottom: .5rem solid $color-gray-light;
 
             animation-name: open-mobile-nav;
             animation-duration: .5s;
@@ -99,6 +100,8 @@
             @include respond(phone-land) {
                 left: -40rem;
                 width: 74.5rem;
+                height: 32rem;
+                padding-top: 1rem;
             }
 
             @include respond(tab) {
@@ -118,8 +121,12 @@
             border-bottom: none;
         }
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @include respond(phone-land) {
-            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
         }
 
         @include respond(tab) {
@@ -147,14 +154,51 @@
     }
 }
 
+
+.nav-country {
+    margin-left: 1.5rem;
+}
+
 .country-btn {
+    position: relative;
+    color: $color-white;
+    background-color: $color-font-dark;
+    outline: none;
+    border: none;
+    border-radius: $border-radius-small;
+    cursor: pointer;
+
+    &--open {
+        background-color: $color-font-dark;
+        text-align: left;
+    }
+
+    @include respond(tab) {
+        padding: .5rem;
+        background-color: $color-main;
+
+        &--open {
+            background-color: $color-white;
+
+            .country-btn__caret--down {
+                color: $color-main;
+            }
+        }
+    }
+
     &__img {
-        margin-right: .3rem;
+        width: 3rem;
+        height: 3rem;
+        margin-right: .2rem;
         vertical-align: middle;
     }
     &__caret--down {
         font-size: 1.4rem;
     }
+}
+
+.nav-cart {
+    margin-top: 2rem;
 }
 
 .cart-btn {

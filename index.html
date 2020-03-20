@@ -33,17 +33,48 @@
                     <li class="navigation__item"><a href="./contact-us/index.html" class="navigation__link">Contact
                             Us</a></li>
                     <li class="navigation__item nav-language"><a href="#" class="navigation__link">العربية</a></li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">
-                            <div class="country-btn">
-                                <img class="country-btn__img"
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
-                                    alt="egypt" height="20" width="30">
-                                <i class="country-btn__caret--down fa fa-caret-down"></i>
-                            </div>
-                        </a>
+                    <li class="navigation__item nav-country">
+                        <button class="country-btn">
+                            <img class="country-btn__img"
+                                src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                                alt="egypt">
+                            <i class="country-btn__caret--down fa fa-caret-down"></i>
+
+                            <ul class="country-dropdown">
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="./assets/img/flags/ae.svg" alt="UAE">
+                                        UAE
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="./assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                        Saudi Arabia
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="./assets/img/flags/kw.svg" alt="Kuwait">
+                                        Kuwait
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="./assets/img/flags/qa.svg" alt="Qatar">
+                                        Qatar
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="./assets/img/flags/bh.svg" alt="Bahrain">
+                                        Bahrain
+                                    </a>
+                                </li>
+                            </ul>
+                        </button>
                     </li>
-                    <li class="navigation__item">
+                    <li class="navigation__item nav-cart">
                         <a href="./checkout/index.html" class="navigation__link">
                             <div class="cart-btn">
                                 <img alt="Cart" height="27" class="cart-btn__img"
@@ -273,13 +304,19 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            //$(".navbar").load("./assets/templates/nav.html");
-            //$(".footer").load("./assets/templates/footer.html");
-
-
+            
+            // toggle mobile nav
             $(".navbar__toggle").click(function () {
                 let nav = $(".navigation__items");
                 nav.toggleClass("navigation__items--mobile-open");
+            });
+
+            // toggle nav country
+            let namCountryBtn = $(".country-btn");
+            namCountryBtn.click(function(){
+                let dropdown = $(".country-dropdown");
+                namCountryBtn.toggleClass("country-btn--open");
+                dropdown.toggleClass("country-dropdown--open");
             });
         });
     </script>

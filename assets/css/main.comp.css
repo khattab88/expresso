@@ -530,23 +530,26 @@ body {
         display: inline-block;
         font-size: 1.8rem;
         color: #009a9a;
-        margin-top: 2rem; } }
+        margin-top: 0; } }
     .navigation__items--mobile-open {
-      display: inline-block;
+      display: block;
+      overflow: auto;
       position: absolute;
       top: 2.85rem;
       right: -17.6rem;
       width: 41.5rem;
-      height: 35.5rem;
+      height: 40rem;
       background-color: #323232;
       padding: 2rem 1rem;
-      padding-top: 0;
+      border-bottom: 0.5rem solid #d5d5d5;
       animation-name: open-mobile-nav;
       animation-duration: .5s; }
       @media only screen and (min-width: 30em) {
         .navigation__items--mobile-open {
           left: -40rem;
-          width: 74.5rem; } }
+          width: 74.5rem;
+          height: 32rem;
+          padding-top: 1rem; } }
       @media only screen and (min-width: 48em) {
         .navigation__items--mobile-open {
           display: none; } }
@@ -558,9 +561,11 @@ body {
     transition: all .2s; }
     .navigation__item:last-child {
       border-bottom: none; }
+    .navigation__item:hover {
+      cursor: pointer; }
     @media only screen and (min-width: 30em) {
       .navigation__item {
-        padding-bottom: 1.5rem; } }
+        padding-bottom: 1rem; } }
     @media only screen and (min-width: 48em) {
       .navigation__item {
         margin: 0 .5rem;
@@ -579,12 +584,38 @@ body {
       color: #323232;
       cursor: pointer; }
 
-.country-btn__img {
-  margin-right: .3rem;
-  vertical-align: middle; }
+.nav-country {
+  margin-left: 1.5rem; }
 
-.country-btn__caret--down {
-  font-size: 1.4rem; }
+.country-btn {
+  position: relative;
+  color: #fff;
+  background-color: #323232;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer; }
+  .country-btn--open {
+    background-color: #323232;
+    text-align: left; }
+  @media only screen and (min-width: 48em) {
+    .country-btn {
+      padding: .5rem;
+      background-color: #009a9a; }
+      .country-btn--open {
+        background-color: #fff; }
+        .country-btn--open .country-btn__caret--down {
+          color: #009a9a; } }
+  .country-btn__img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: .2rem;
+    vertical-align: middle; }
+  .country-btn__caret--down {
+    font-size: 1.4rem; }
+
+.nav-cart {
+  margin-top: 2rem; }
 
 .cart-btn {
   position: relative; }
@@ -1202,6 +1233,47 @@ body {
   pointer-events: none;
   transition: transform .3s ease-out;
   transform: translate(0, 0); }
+
+.country-dropdown {
+  display: none;
+  list-style: none;
+  text-align: left; }
+  .country-dropdown--open {
+    display: block; }
+  @media only screen and (min-width: 48em) {
+    .country-dropdown {
+      position: absolute;
+      top: 3.6rem;
+      right: 0;
+      width: 17rem;
+      height: 23rem;
+      background-color: #fff;
+      padding-left: 1rem;
+      border-radius: 3px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); } }
+  @media only screen and (min-width: 75em) {
+    .country-dropdown {
+      padding-top: 1rem; } }
+  .country-dropdown__item {
+    margin-top: 2rem; }
+    @media only screen and (min-width: 75em) {
+      .country-dropdown__item {
+        margin: 0;
+        padding: 1rem 0 1rem 0; } }
+    @media only screen and (min-width: 75em) {
+      .country-dropdown__item:hover {
+        background-color: #f9f9f9; } }
+  .country-dropdown__link:link, .country-dropdown__link:visited {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: .5px; }
+    @media only screen and (min-width: 48em) {
+      .country-dropdown__link:link, .country-dropdown__link:visited {
+        color: #323232; } }
+  .country-dropdown__img {
+    width: 3rem;
+    height: 2rem;
+    margin-right: 1rem; }
 
 /* Home */
 /* header */

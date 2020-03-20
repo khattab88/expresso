@@ -1,0 +1,63 @@
+.country-dropdown {
+    display: none;
+    list-style: none;
+    text-align: left;
+
+    &--open {
+        display: block;
+    }
+
+    @include respond(tab) {
+        position: absolute;
+        top: 3.6rem;
+        right: 0;
+        width: 17rem;
+        height: 23rem;
+        background-color: $color-white;
+        padding-left: 1rem;
+        border-radius: $border-radius-small;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, .3);
+    }
+
+    @include respond(desktop) {
+        padding-top: 1rem;
+    }
+
+    &__item {
+        margin-top: 2rem;
+
+        @include respond(desktop) {
+            margin: 0;
+            padding: 1rem 0 1rem 0;
+        }
+
+        &:hover {
+
+            @include respond(desktop) {
+                background-color: $color-font-light;
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-white;
+            text-decoration: none;
+            letter-spacing: .5px;
+
+            @include respond(tab) {
+                color: $color-font-dark;
+            }
+        }
+
+        &:hover,
+        &:active {}
+    }
+
+    &__img {
+        width: 3rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+}
