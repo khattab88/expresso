@@ -8,7 +8,7 @@ github: https://github.com/expresso-app
 Feaures:
 
 - navbar:
-    - change country dropdown
+    - change country dropdown [DONE]
     - category dropdown
 
 - header:
@@ -17,7 +17,7 @@ Feaures:
     - change location (restaurant menu)
 
 - footer:
-    - change country dropdown
+    - change country dropdown [DONE]
 
 - menu item modal
     - show/hide item options

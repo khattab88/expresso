@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel devserver watch:sass",
-    "watch:sass": "node-sass sass/main.scss assets/css/main.css -w",
+    "watch:sass": "node-sass sass/main.scss assets/css/main.css",
     "devserver": "lite-server",
     
     "compile:sass": "node-sass sass/main.scss assets/css/main.comp.css",

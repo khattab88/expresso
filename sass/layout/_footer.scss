@@ -64,7 +64,7 @@
 }
 
 .social-navigation {
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 
     @include respond(desktop) {
@@ -114,7 +114,7 @@
     border-top: 1px solid $color-gray-dark;
     border-bottom: 1px solid $color-gray-dark;
     width: 100%;
-    padding: 2rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,11 +128,12 @@
 
 .change-country {
     border: 1px solid $color-gray-dark;
-    padding: .7rem 4rem;
+    padding: .7rem 2rem;
     border-radius: .5rem;
 
     &__flag {
         vertical-align: middle;
+        margin-right: 1rem;
     }
     &__btn {
         background-color: transparent;
@@ -141,17 +142,87 @@
         transition: all .2s;
         font-size: 2rem;
         font-weight: 300;
+        position: relative;
 
         &:hover {
             color: $color-main;
             cursor: pointer;
         }
-    }
-    &__flag {
-        margin-right: 1.2rem;
+
+        &--open {
+            color: $color-main;
+        }
+
+        /* change country dropdown */
+        .country-dropdown {
+            position: absolute;
+            top: 3.75rem;
+            background-color: $color-white;
+            width: 14rem;
+            height: 16rem;
+            padding: 1rem;
+            transform: translateX(-1.5rem);
+            border-radius: $border-radius-small;
+
+            &--open {
+
+                @include respond(desktop) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+
+            @include respond(tab) {
+                transform: translateX(1.75rem);
+            }
+
+            @include respond(desktop) {
+                width: 30rem;
+                height: auto;
+                top: -.75rem;
+                left: 11.5rem;
+            }
+
+            &__item {
+                margin-top: .5rem;
+
+                @include respond(desktop) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            &__link:link,
+            &__link:visited {
+                color: $color-font-dark;
+                font-size: 1.65rem;
+
+                @include respond(desktop) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            &__img {
+                width: 2.5rem;
+                height: 1.5rem;
+                margin-right: .5rem;
+
+                @include respond(desktop) {
+                    display: block;
+                    text-align: center;
+                    width: 3rem;
+                    height: 2rem;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+
     }
     &__caret--down{
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 }
 

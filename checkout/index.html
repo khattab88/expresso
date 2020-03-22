@@ -278,6 +278,39 @@
                             alt="egypt" height="20" width="30">
                         Egypt
                         <i class="change-country__caret--down fa fa-caret-down"></i>
+
+                        <ul class="country-dropdown">
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/ae.svg" alt="UAE">
+                                    UAE
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                    Saudi Arabia
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                    Kuwait
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/qa.svg" alt="Qatar">
+                                    Qatar
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
+                                    Bahrain
+                                </a>
+                            </li>
+                        </ul>
                     </button>
                 </div>
                 <div class="app-download">
@@ -309,10 +342,18 @@
             });
 
             // toggle nav country
-            let namCountryBtn = $(".country-btn");
-            namCountryBtn.click(function(){
-                let dropdown = $(".country-dropdown");
-                namCountryBtn.toggleClass("country-btn--open");
+            let navCountryBtn = $(".country-btn");
+            navCountryBtn.click(function(){
+                let dropdown = $(".country-btn > .country-dropdown");
+                navCountryBtn.toggleClass("country-btn--open");
+                dropdown.toggleClass("country-dropdown--open");
+            });
+
+            // toggle footer country
+            let footerCountryBtn = $(".change-country__btn");
+            footerCountryBtn.click(function(){
+                let dropdown = $(".change-country__btn > .country-dropdown");
+                footerCountryBtn.toggleClass("change-country__btn--open");
                 dropdown.toggleClass("country-dropdown--open");
             });
         });
