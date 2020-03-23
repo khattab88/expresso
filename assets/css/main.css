@@ -530,7 +530,7 @@ body {
         display: inline-block;
         font-size: 1.8rem;
         color: #009a9a;
-        margin-top: 0; } }
+        margin-top: .75rem; } }
     .navigation__items--mobile-open {
       display: block;
       overflow: auto;
@@ -568,7 +568,7 @@ body {
         padding-bottom: 1rem; } }
     @media only screen and (min-width: 48em) {
       .navigation__item {
-        margin: 0 .5rem;
+        margin: 0 1.25rem;
         display: inline-block;
         transition: all .2s;
         border-bottom: none; } }
@@ -585,7 +585,8 @@ body {
       cursor: pointer; }
 
 .nav-country {
-  margin-left: 1.5rem; }
+  margin-left: .5rem;
+  margin-right: 0; }
 
 .country-btn {
   position: relative;
@@ -609,10 +610,10 @@ body {
   .country-btn__img {
     width: 3rem;
     height: 3rem;
-    margin-right: .2rem;
     vertical-align: middle; }
   .country-btn__caret--down {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    margin-left: .5rem; }
 
 .nav-cart {
   margin-top: 2rem; }
@@ -642,6 +643,50 @@ body {
     .cart-btn__item-count:hover {
       background-color: #323232;
       color: #f9f9f9; }
+
+.nav-category {
+  position: relative; }
+  @media only screen and (min-width: 48em) {
+    .nav-category {
+      margin-left: 1rem; } }
+
+.category-btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center; }
+  @media only screen and (min-width: 48em) {
+    .category-btn {
+      padding-left: .5rem;
+      padding-top: .5rem;
+      padding-bottom: 1rem;
+      border-radius: 3px; } }
+  @media only screen and (min-width: 48em) {
+    .category-btn--open {
+      background-color: #f9f9f9; }
+      .category-btn--open .category-btn__caret--down {
+        color: #009a9a; } }
+  .category-btn__icon {
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    background-color: #009a9a;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; }
+  .category-btn__caret--down {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    color: #fff; }
+    @media only screen and (min-width: 48em) {
+      .category-btn__caret--down {
+        margin-top: 1.25rem;
+        margin-left: .5rem;
+        margin-right: .5rem; } }
 
 /* Header */
 .header {
@@ -1325,6 +1370,77 @@ body {
     width: 3rem;
     height: 2rem;
     margin-right: 1rem; }
+
+.category-dropdown {
+  display: none;
+  list-style: none;
+  padding-top: 1rem;
+  padding-left: .5rem;
+  position: static; }
+  .category-dropdown--open {
+    display: block; }
+    @media only screen and (min-width: 75em) {
+      .category-dropdown--open {
+        display: flex;
+        flex-direction: column; } }
+  @media only screen and (min-width: 48em) {
+    .category-dropdown {
+      position: absolute;
+      background-color: #fff;
+      top: 5.45rem;
+      right: 0;
+      border-radius: 3px;
+      width: 20rem;
+      padding: .5rem 2rem;
+      padding-bottom: 2rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); } }
+  @media only screen and (min-width: 75em) {
+    .category-dropdown {
+      padding: 0;
+      padding-bottom: 1rem; } }
+  .category-dropdown__item {
+    margin-top: 2rem; }
+    @media only screen and (min-width: 48em) {
+      .category-dropdown__item {
+        margin-top: 2.5rem; }
+        .category-dropdown__item:first-child {
+          margin-top: 1rem; } }
+    @media only screen and (min-width: 75em) {
+      .category-dropdown__item {
+        margin: 0;
+        padding: 1rem;
+        padding-left: 1.5rem; }
+        .category-dropdown__item:hover {
+          background-color: #f9f9f9; } }
+  .category-dropdown__link:link, .category-dropdown__link:visited {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    font-size: 1.75rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; }
+    @media only screen and (min-width: 48em) {
+      .category-dropdown__link:link, .category-dropdown__link:visited {
+        color: #323232;
+        letter-spacing: .5px;
+        font-weight: 400;
+        font-size: 1.5rem; } }
+  .category-dropdown__icon {
+    margin-right: 1.75rem;
+    background-color: #fff;
+    color: #323232;
+    padding: .35rem;
+    border-radius: 50%; }
+    @media only screen and (min-width: 48em) {
+      .category-dropdown__icon {
+        margin-right: 1rem;
+        color: #fff;
+        background-color: #323232;
+        font-size: 2rem;
+        font-weight: 100;
+        padding: .5rem; } }
 
 /* Home */
 /* header */

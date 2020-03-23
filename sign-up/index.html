@@ -84,6 +84,45 @@
                             </div>
                         </a>
                     </li>
+                    <li class="navigation__item nav-category">
+                        <button class="category-btn">
+                            <i class="category-btn__icon material-icons">fastfood</i>
+                            <i class="category-btn__caret--down fa fa-caret-down"></i>
+                        </button>
+
+                        <ul class="category-dropdown">
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">shopping_basket</i>
+                                    Groceries
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">local_florist</i>
+                                    Flowers
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">card_giftcard</i>
+                                    Cosmetics
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">local_pharmacy</i>
+                                    Supplements
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">touch_app</i>
+                                    Electronics
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="navbar__toggle">
@@ -218,6 +257,14 @@
                 let dropdown = $(".country-btn > .country-dropdown");
                 navCountryBtn.toggleClass("country-btn--open");
                 dropdown.toggleClass("country-dropdown--open");
+            });
+
+            // toggle nav category dropdown
+            let navCategoryBtn = document.querySelector(".category-btn");
+            navCategoryBtn.addEventListener("click", function(){
+                let dropdown = document.querySelector(".category-dropdown");
+                navCategoryBtn.classList.toggle("category-btn--open");
+                dropdown.classList.toggle("category-dropdown--open");
             });
 
             // toggle footer country

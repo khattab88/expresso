@@ -74,7 +74,7 @@
             display: inline-block;
             font-size: 1.8rem;
             color: $color-main;
-            margin-top: 0;
+            margin-top: .75rem;
         }
 
         &--mobile-open {
@@ -130,7 +130,7 @@
         }
 
         @include respond(tab) {
-            margin: 0 .5rem;
+            margin: 0 1.25rem;
             display: inline-block;
             transition: all .2s;
             border-bottom: none;
@@ -156,7 +156,8 @@
 
 
 .nav-country {
-    margin-left: 1.5rem;
+    margin-left: .5rem;
+    margin-right: 0;
 }
 
 .country-btn {
@@ -189,11 +190,11 @@
     &__img {
         width: 3rem;
         height: 3rem;
-        margin-right: .2rem;
         vertical-align: middle;
     }
     &__caret--down {
         font-size: 1.4rem;
+        margin-left: .5rem;
     }
 }
 
@@ -229,6 +230,64 @@
         &:hover {
             background-color: $color-font-dark;
             color: $color-font-light;
+        }
+    }
+}
+
+.nav-category {
+    position: relative;
+
+    @include respond(tab) {
+        margin-left: 1rem;
+    }
+}
+
+.category-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab) {
+        padding-left: .5rem;
+        padding-top: .5rem;
+        padding-bottom: 1rem;
+        border-radius: $border-radius-small;
+    }
+
+    &--open {
+        @include respond(tab) {
+            background-color: $color-font-light;
+
+            .category-btn__caret--down {
+                color: $color-main;
+            }
+        }
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        color: $color-white;
+        background-color: $color-main;
+        border: 1.5px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__caret--down {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        color: $color-white;
+
+        @include respond(tab) {
+            margin-top: 1.25rem;
+            margin-left: .5rem;
+            margin-right: .5rem;;
         }
     }
 }

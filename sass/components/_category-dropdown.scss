@@ -1,0 +1,91 @@
+.category-dropdown {
+    display: none;
+    list-style: none;
+    padding-top: 1rem;
+    padding-left: .5rem;
+    position: static;
+
+    &--open {
+        display: block;
+
+        @include respond(desktop) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @include respond(tab) {
+        position: absolute;
+        background-color: $color-white;
+        top: 5.45rem;
+        right: 0;
+        border-radius: $border-radius-small;
+        width: 20rem;
+        padding: .5rem 2rem;
+        padding-bottom: 2rem;
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    }
+
+    @include respond(desktop) {
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    &__item {
+        margin-top: 2rem;
+
+        @include respond(tab) {
+            margin-top: 2.5rem;
+
+            &:first-child {
+                margin-top: 1rem;
+            }
+        }
+
+        @include respond(desktop) {
+            margin: 0;
+            padding: 1rem;
+            padding-left: 1.5rem;
+
+            &:hover {
+                background-color: $color-font-light;
+            }
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        display: flex;
+        align-items: center;
+        font-weight: 100;
+        font-size: 1.75rem;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        @include respond(tab) {
+            color: $color-font-dark;
+            letter-spacing: .5px;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__icon {
+        margin-right: 1.75rem;
+        background-color: $color-white;
+        color: $color-font-dark;
+        padding: .35rem;
+        border-radius: 50%;
+
+        @include respond(tab) {
+            margin-right: 1rem;
+            color: $color-white;
+            background-color: $color-font-dark;
+            font-size: 2rem;
+            font-weight: 100;
+            padding: .5rem;
+        }
+    }
+}
