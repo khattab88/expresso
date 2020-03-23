@@ -661,7 +661,8 @@ body {
       padding-left: .5rem;
       padding-top: .5rem;
       padding-bottom: 1rem;
-      border-radius: 3px; } }
+      border-radius: 3px;
+      cursor: pointer; } }
   @media only screen and (min-width: 48em) {
     .category-btn--open {
       background-color: #f9f9f9; }

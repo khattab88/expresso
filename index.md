@@ -10,7 +10,7 @@ Feaures:
 
 - navbar:
     - change country dropdown [DONE]
-    - category dropdown
+    - category dropdown [DONE]
 
 - header:
     - city/area selection (home)
