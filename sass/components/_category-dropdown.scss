@@ -7,6 +7,11 @@
 
     &--open {
         display: block;
+
+        @include respond(desktop) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     @include respond(tab) {
@@ -20,6 +25,11 @@
         padding-bottom: 2rem;
     }
 
+    @include respond(desktop) {
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
     &__item {
         margin-top: 2rem;
 
@@ -28,6 +38,15 @@
 
             &:first-child {
                 margin-top: 1rem;
+            }
+        }
+
+        @include respond(desktop) {
+            margin: 0;
+            padding: 1rem;
+
+            &:hover {
+                background-color: $color-font-light;
             }
         }
     }
