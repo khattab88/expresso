@@ -391,6 +391,13 @@
                 dropdown.toggleClass("country-dropdown--open");
             });
 
+            // toggle nav category dropdown
+            let navCategoryBtn = document.querySelector(".category-btn");
+            navCategoryBtn.addEventListener("click", function(){
+                let dropdown = document.querySelector(".category-dropdown");
+                dropdown.classList.toggle("category-dropdown--open");
+            });
+
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
             footerCountryBtn.click(function(){
