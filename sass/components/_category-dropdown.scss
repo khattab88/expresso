@@ -23,6 +23,7 @@
         width: 20rem;
         padding: .5rem 2rem;
         padding-bottom: 2rem;
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
     }
 
     @include respond(desktop) {
@@ -44,6 +45,7 @@
         @include respond(desktop) {
             margin: 0;
             padding: 1rem;
+            padding-left: 1.5rem;
 
             &:hover {
                 background-color: $color-font-light;
