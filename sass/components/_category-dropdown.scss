@@ -9,8 +9,27 @@
         display: block;
     }
 
+    @include respond(tab) {
+        position: absolute;
+        background-color: $color-white;
+        top: 5.45rem;
+        right: 0;
+        border-radius: $border-radius-small;
+        width: 20rem;
+        padding: .5rem 2rem;
+        padding-bottom: 2rem;
+    }
+
     &__item {
         margin-top: 2rem;
+
+        @include respond(tab) {
+            margin-top: 2.5rem;
+
+            &:first-child {
+                margin-top: 1rem;
+            }
+        }
     }
 
     &__link:link,
@@ -23,6 +42,13 @@
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 1.5px;
+
+        @include respond(tab) {
+            color: $color-font-dark;
+            letter-spacing: .5px;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
     }
 
     &__icon {
@@ -31,5 +57,14 @@
         color: $color-font-dark;
         padding: .35rem;
         border-radius: 50%;
+
+        @include respond(tab) {
+            margin-right: 1rem;
+            color: $color-white;
+            background-color: $color-font-dark;
+            font-size: 2rem;
+            font-weight: 100;
+            padding: .5rem;
+        }
     }
 }

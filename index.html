@@ -395,6 +395,7 @@
             let navCategoryBtn = document.querySelector(".category-btn");
             navCategoryBtn.addEventListener("click", function(){
                 let dropdown = document.querySelector(".category-dropdown");
+                navCategoryBtn.classList.toggle("category-btn--open");
                 dropdown.classList.toggle("category-dropdown--open");
             });
 
