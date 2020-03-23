@@ -1,0 +1,22 @@
+.category-dropdown {
+    list-style: none;
+    position: static;
+
+    &__item {
+        margin-top: 1rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+        font-weight: 100;
+        font-size: 1.5rem;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .75px;
+    }
+
+    &__icon {
+        margin-right: 1rem;
+    }
+}

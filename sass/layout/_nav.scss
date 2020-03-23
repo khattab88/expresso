@@ -194,6 +194,7 @@
     }
     &__caret--down {
         font-size: 1.4rem;
+        margin-left: 1rem;
     }
 }
 
@@ -230,5 +231,36 @@
             background-color: $color-font-dark;
             color: $color-font-light;
         }
+    }
+}
+
+.nav-category {
+    position: relative;
+}
+
+.category-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        color: $color-white;
+        background-color: $color-main;
+        border: 1.5px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__caret--down {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        color: $color-white;
     }
 }
