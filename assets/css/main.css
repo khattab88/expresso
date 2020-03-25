@@ -1493,6 +1493,9 @@ body {
     @media only screen and (min-width: 75em) {
       .search__box {
         animation: moveInRight 1s ease-out; } }
+  @media only screen and (min-width: 64em) {
+    .search__form {
+      display: flex; } }
   .search__input {
     display: block;
     width: 100%;
@@ -1503,6 +1506,10 @@ body {
     border-style: none;
     border-radius: .5rem;
     letter-spacing: .5px; }
+    @media only screen and (min-width: 64em) {
+      .search__input {
+        width: 40rem;
+        margin-right: 1rem; } }
   .search__submit {
     display: block;
     width: 100%;
@@ -1520,6 +1527,12 @@ body {
     text-decoration: none;
     text-align: center;
     transition: all 0.2s; }
+    @media only screen and (min-width: 64em) {
+      .search__submit {
+        width: 18rem;
+        height: 5rem;
+        margin-top: 0;
+        padding-top: .75rem; } }
     .search__submit:hover {
       cursor: pointer;
       background-color: #323232;

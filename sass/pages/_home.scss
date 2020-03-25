@@ -59,6 +59,12 @@
             animation: moveInRight 1s ease-out;
         }
     }
+    &__form {
+
+        @include respond(tab-land) {
+            display: flex;
+        }
+    }
     &__input {
         display: block;
         width: 100%;
@@ -69,6 +75,11 @@
         border-style: none;
         border-radius: .5rem;
         letter-spacing: .5px;
+
+        @include respond(tab-land) {
+            width: 40rem;
+            margin-right: 1rem;
+        }
     }
     &__submit {
         display: block;
@@ -87,6 +98,13 @@
         text-decoration: none;
         text-align: center;
         transition: all 0.2s;
+
+        @include respond(tab-land) {
+            width: 18rem;
+            height: 5rem;
+            margin-top: 0;
+            padding-top: 1rem;
+        }
 
         &:hover {
             cursor: pointer;
