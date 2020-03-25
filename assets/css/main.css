@@ -1447,6 +1447,9 @@ body {
 /* header */
 .home-page__header {
   padding: 0; }
+  @media only screen and (min-width: 75em) {
+    .home-page__header {
+      height: 50rem; } }
 
 .search {
   margin: 4.5rem auto 0 auto;
@@ -1467,9 +1470,10 @@ body {
       width: 92%; } }
   @media only screen and (min-width: 75em) {
     .search {
-      width: 35%;
+      width: 40%;
       margin-left: 19rem;
-      margin-top: 6.5rem; } }
+      margin-top: 6.5rem;
+      padding-top: 15rem; } }
   .search__title {
     font-weight: 400;
     font-size: 2.5rem;
@@ -1492,6 +1496,7 @@ body {
     flex-direction: column; }
     @media only screen and (min-width: 75em) {
       .search__box {
+        padding-top: 1.5rem;
         animation: moveInRight 1s ease-out; } }
   @media only screen and (min-width: 64em) {
     .search__form {
@@ -1532,7 +1537,7 @@ body {
         width: 18rem;
         height: 5rem;
         margin-top: 0;
-        padding-top: .75rem; } }
+        padding-top: 1rem; } }
     .search__submit:hover {
       cursor: pointer;
       background-color: #323232;
