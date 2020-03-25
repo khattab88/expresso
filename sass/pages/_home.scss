@@ -117,7 +117,7 @@
             cursor: pointer;
             background-color: $color-font-dark;
             transform: translateY(-2px);
-            box-shadow: 0 1rem 2rem rgba($color-black, .7);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .7);
         }
         &:active {
             transform: translate(-1px);

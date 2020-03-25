@@ -1542,7 +1542,7 @@ body {
       cursor: pointer;
       background-color: #323232;
       transform: translateY(-2px);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7); }
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7); }
     .search__submit:active {
       transform: translate(-1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7); }
