@@ -1703,14 +1703,15 @@ body {
     display: flex;
     padding: 0 1rem;
     border: none;
-    outline: none; }
-    /* line 16, sass/components/_location-selection.scss */
+    outline: none;
+    cursor: pointer; }
+    /* line 17, sass/components/_location-selection.scss */
     .location-selection__btn--open .location-selection__icon-caret--up {
       display: block; }
-    /* line 17, sass/components/_location-selection.scss */
+    /* line 18, sass/components/_location-selection.scss */
     .location-selection__btn--open .location-selection__icon-caret--down {
       display: none; }
-  /* line 21, sass/components/_location-selection.scss */
+  /* line 22, sass/components/_location-selection.scss */
   .location-selection__title {
     font-size: 2rem;
     font-weight: 300;
@@ -1719,22 +1720,22 @@ body {
     color: #323232;
     margin-left: 1rem;
     margin-right: auto; }
-  /* line 32, sass/components/_location-selection.scss */
+  /* line 33, sass/components/_location-selection.scss */
   .location-selection__icon-location, .location-selection__icon-caret {
     font-size: 3.5rem; }
-  /* line 37, sass/components/_location-selection.scss */
+  /* line 38, sass/components/_location-selection.scss */
   .location-selection__icon-location {
     color: #323232; }
-  /* line 41, sass/components/_location-selection.scss */
+  /* line 42, sass/components/_location-selection.scss */
   .location-selection__icon-caret {
     color: #009a9a; }
-    /* line 44, sass/components/_location-selection.scss */
+    /* line 45, sass/components/_location-selection.scss */
     .location-selection__icon-caret--down {
       display: block; }
-    /* line 45, sass/components/_location-selection.scss */
+    /* line 46, sass/components/_location-selection.scss */
     .location-selection__icon-caret--up {
       display: none; }
-  /* line 49, sass/components/_location-selection.scss */
+  /* line 50, sass/components/_location-selection.scss */
   .location-selection__box {
     visibility: hidden;
     opacity: 0;
@@ -1749,11 +1750,11 @@ body {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
-    /* line 65, sass/components/_location-selection.scss */
+    /* line 66, sass/components/_location-selection.scss */
     .location-selection__box--open {
       visibility: visible;
       opacity: 1; }
-  /* line 71, sass/components/_location-selection.scss */
+  /* line 72, sass/components/_location-selection.scss */
   .location-selection__input {
     margin-top: .5rem;
     width: 100%;
@@ -1765,19 +1766,18 @@ body {
     color: #323232;
     font-weight: 100;
     letter-spacing: 1px; }
-    /* line 83, sass/components/_location-selection.scss */
+    /* line 84, sass/components/_location-selection.scss */
     .location-selection__input:focus {
       border-color: #009a9a; }
-  /* line 89, sass/components/_location-selection.scss */
+  /* line 90, sass/components/_location-selection.scss */
   .location-selection__city-list {
     list-style: none;
-    margin-top: 1.25rem;
-    margin-bottom: .5rem;
-    margin: 1.25rem 0 .5rem .5rem;
+    margin: 1.5rem 0 1.5rem .5rem;
     max-height: 20rem;
     overflow-y: auto; }
-  /* line 98, sass/components/_location-selection.scss */
+  /* line 97, sass/components/_location-selection.scss */
   .location-selection__city-name {
+    font-size: 2.25rem;
     font-weight: 400; }
   /* line 102, sass/components/_location-selection.scss */
   .location-selection__area-list {
@@ -1790,7 +1790,8 @@ body {
     height: 3.75rem; }
     /* line 112, sass/components/_location-selection.scss */
     .location-selection__area:hover {
-      background-color: #d5d5d5; }
+      background-color: #d5d5d5;
+      cursor: pointer; }
 
 /* Home */
 /* header */
