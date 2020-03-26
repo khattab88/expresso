@@ -3,6 +3,10 @@
 /* header */
 .home-page__header {
     padding: 0;
+    
+    @include respond(desktop) {
+        height: 50rem;
+    }
 }
 .search {
     margin: 4.5rem auto 0 auto;
@@ -25,9 +29,10 @@
     }
 
     @include respond(desktop) {
-        width: 35%;
+        width: 40%;
         margin-left: 19rem;
         margin-top: 6.5rem;
+        padding-top: 15rem;
     }
 
     &__title {
@@ -56,7 +61,14 @@
         flex-direction: column;
 
         @include respond(desktop) {
+            padding-top: 1.5rem;
             animation: moveInRight 1s ease-out;
+        }
+    }
+    &__form {
+
+        @include respond(tab-land) {
+            display: flex;
         }
     }
     &__input {
@@ -65,10 +77,16 @@
         height: 5rem;
         color: $color-font-dark;
         font-size: 200%;
-        padding: .5rem 1.5rem;
+        padding: 0;
         border-style: none;
         border-radius: .5rem;
         letter-spacing: .5px;
+
+        @include respond(tab-land) {
+            width: 40rem;
+            margin-right: 1rem;
+        }
+
     }
     &__submit {
         display: block;
@@ -88,11 +106,18 @@
         text-align: center;
         transition: all 0.2s;
 
+        @include respond(tab-land) {
+            width: 18rem;
+            height: 5rem;
+            margin-top: 0;
+            padding-top: 1rem;
+        }
+
         &:hover {
             cursor: pointer;
             background-color: $color-font-dark;
             transform: translateY(-2px);
-            box-shadow: 0 1rem 2rem rgba($color-black, .7);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .7);
         }
         &:active {
             transform: translate(-1px);
