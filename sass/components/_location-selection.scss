@@ -1,0 +1,117 @@
+.location-selection {
+    position: relative;
+
+    &__btn {
+        background-color: $color-font-light;
+        width: 100%;
+        height: 5rem;
+        border-radius: $border-radius-medium;
+        display: flex;
+        padding: 0 1rem;
+        border: none;
+        outline: none;
+
+        &--open {
+
+            .location-selection__icon-caret--up { display: block; }
+            .location-selection__icon-caret--down { display: none; }
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 3rem;
+        color: $color-font-dark;
+
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+
+    &__icon-location,
+    &__icon-caret {
+        font-size: 3.5rem;
+    }
+
+    &__icon-location {
+        color: $color-font-dark;
+    }
+
+    &__icon-caret {
+        color: $color-main;
+
+        &--down { display: block; }
+        &--up { display: none; }
+    }
+
+
+    &__box {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s;
+
+        width: 100%;
+        background-color: $color-white;
+        z-index: 1;
+        position: absolute;
+        top: 4.75rem;
+        padding: 1rem;
+        border-top: 1px solid $color-font-dark;
+        border-bottom-left-radius: $border-radius-small;
+        border-bottom-right-radius: $border-radius-small;
+        box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+
+        &--open { 
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__input {
+        margin-top: .5rem;
+        width: 100%;
+        height: 4rem;
+        border-radius: $border-radius-small;
+        outline: none;
+        border: 1px solid $color-gray-light;
+        padding: .5rem 1rem;
+        color: $color-font-dark;
+        font-weight: 100;
+        letter-spacing: 1px;
+
+        &:focus {
+            border-color: $color-main;
+        }
+    }
+
+
+    &__city-list {
+        list-style: none;
+        margin-top: 1.25rem;
+        margin-bottom: .5rem;
+        margin: 1.25rem 0 .5rem .5rem;
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+    &__city-name {
+        font-weight: 400;
+    }
+
+    &__area-list {
+        list-style: none;
+        margin-top: .5rem;
+    }
+
+    &__area {
+        font-weight: 100;
+        padding: .75rem 0 .75rem 1rem;
+        height: 3.75rem;
+
+        &:hover {
+            background-color: $color-gray-light;
+        }
+    }
+
+}
