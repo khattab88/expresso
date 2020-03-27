@@ -140,7 +140,7 @@
                             <div class="location-selection">
                                 <button class="location-selection__btn">
                                     <i class="location-selection__icon-location material-icons-outlined">location_on</i>
-                                    <p class="location-selection__title">Type a delivery location</p>
+                                    <p class="location-selection__value">Type a delivery location</p>
                                     <i class="location-selection__icon-caret location-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
                                     <i class="location-selection__icon-caret location-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
                                 </button>
@@ -456,6 +456,11 @@
                 locationSelectionBtn.classList.toggle("location-selection__btn--open");
                 document.querySelector(".location-selection__box").classList.toggle("location-selection__box--open");
             });
+            document.querySelector(".location-selection__city-list").addEventListener("click", (e) => {
+                const area = e.target.textContent;
+                document.querySelector(".location-selection__value").textContent = area;
+            });
+
 
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
