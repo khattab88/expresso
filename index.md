@@ -13,7 +13,7 @@ Feaures:
     - category dropdown [DONE]
 
 - header:
-    - city/area selection (home)
+    - city/area selection (home) [DONE]
     - restaurant selection (restaurant list)
     - change location (restaurant menu)
 
