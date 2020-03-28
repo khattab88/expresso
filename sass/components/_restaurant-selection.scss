@@ -1,0 +1,105 @@
+.restaurant-selection {
+    position: relative;
+
+    &__btn {
+        background-color: $color-font-light;
+        width: 100%;
+        height: 5rem;
+        border-radius: $border-radius-medium;
+        display: flex;
+        padding: 0 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &--open {
+
+            .restaurant-selection__icon-caret--up { display: block; }
+            .restaurant-selection__icon-caret--down { display: none; }
+        }
+    }
+
+    &__value {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 3rem;
+        color: $color-font-dark;
+        margin: .25rem auto 0 1rem;
+    }
+
+    &__icon-store,
+    &__icon-caret {
+        font-size: 3.5rem;
+    }
+
+    &__icon-store {
+        color: $color-font-dark;
+    }
+
+    &__icon-caret {
+        color: $color-main;
+
+        &--down { display: block; }
+        &--up { display: none; }
+    }
+
+
+    &__box {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s;
+
+        width: 100%;
+        background-color: $color-white;
+        z-index: 1;
+        position: absolute;
+        top: 4.75rem;
+        padding: 1rem;
+        border-top: 1px solid $color-font-dark;
+        border-bottom-left-radius: $border-radius-small;
+        border-bottom-right-radius: $border-radius-small;
+        box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+
+        &--open { 
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__input {
+        margin-top: .5rem;
+        width: 100%;
+        height: 4rem;
+        border-radius: $border-radius-small;
+        outline: none;
+        border: 1px solid $color-gray-light;
+        padding: .5rem 1rem;
+        color: $color-font-dark;
+        font-weight: 100;
+        letter-spacing: 1px;
+
+        &:focus {
+            border-color: $color-main;
+        }
+    }
+
+    &__restaurant-list {
+        list-style: none;
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+    &__restaurant {
+        font-weight: 100;
+        padding: .75rem 0 .75rem 1rem;
+        height: 3.75rem;
+        line-height: 1;
+
+        &:hover {
+            background-color: $color-gray-light;
+            cursor: pointer;
+        }
+    }
+
+}
