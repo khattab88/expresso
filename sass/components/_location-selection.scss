@@ -97,17 +97,19 @@
     &__city-name {
         font-size: 2.25rem;
         font-weight: 400;
+        line-height: 1;
+        margin-top: 1rem;
     }
 
     &__area-list {
         list-style: none;
-        margin-top: .5rem;
     }
 
     &__area {
         font-weight: 100;
         padding: .75rem 0 .75rem 1rem;
         height: 3.75rem;
+        line-height: 1;
 
         &:hover {
             background-color: $color-gray-light;

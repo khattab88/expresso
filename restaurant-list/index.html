@@ -9,8 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -49,13 +49,15 @@
                                 </li>
                                 <li class="country-dropdown__item">
                                     <a class="country-dropdown__link" href="#">
-                                        <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/sa.svg"
+                                            alt="Saudi Arabia">
                                         Saudi Arabia
                                     </a>
                                 </li>
                                 <li class="country-dropdown__item">
                                     <a class="country-dropdown__link" href="#">
-                                        <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/kw.svg"
+                                            alt="Kuwait">
                                         Kuwait
                                     </a>
                                 </li>
@@ -67,7 +69,8 @@
                                 </li>
                                 <li class="country-dropdown__item">
                                     <a class="country-dropdown__link" href="#">
-                                        <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/bh.svg"
+                                            alt="Bahrain">
                                         Bahrain
                                     </a>
                                 </li>
@@ -134,8 +137,60 @@
             <div class="restaurant-search">
                 <h2 class="restaurant-search__title">Restaurants delivering to your city.</h2>
                 <div class="restaurant-search__box">
-                    <form action="" class="restaurant-search__form">
-                        <input class="restaurant-search__input" type="text" placeholder="City">
+                    <form action="#" class="restaurant-search__form">
+
+                        <div class="restaurant-search__input">
+                            <div class="location-selection">
+                                <button class="location-selection__btn">
+                                    <i class="location-selection__icon-location material-icons-outlined">location_on</i>
+                                    <p class="location-selection__value">Type a delivery location</p>
+                                    <i
+                                        class="location-selection__icon-caret location-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
+                                    <i
+                                        class="location-selection__icon-caret location-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
+                                </button>
+
+                                <div class="location-selection__box">
+                                    <input type="text" class="location-selection__input">
+
+                                    <ul class="location-selection__city-list">
+                                        <li class="location-selection__city">
+                                            <div class="location-selection__city-name">Cairo</div>
+                                            <ul class="location-selection__area-list">
+                                                <li class="location-selection__area">Heliopolis</li>
+                                                <li class="location-selection__area">Zamalek</li>
+                                                <li class="location-selection__area">DownTown</li>
+                                                <li class="location-selection__area">Nasr City</li>
+                                                <li class="location-selection__area">Maadi</li>
+                                                <li class="location-selection__area">Shoubra</li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="location-selection__city">
+                                            <div class="location-selection__city-name">Giza</div>
+                                            <ul class="location-selection__area-list">
+                                                <li class="location-selection__area">Mohandessien</li>
+                                                <li class="location-selection__area">Dokki</li>
+                                                <li class="location-selection__area">Giza Square</li>
+                                                <li class="location-selection__area">Haram</li>
+                                                <li class="location-selection__area">6th October</li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="location-selection__city">
+                                            <div class="location-selection__city-name">Alexandria</div>
+                                            <ul class="location-selection__area-list">
+                                                <li class="location-selection__area">San Stephano</li>
+                                                <li class="location-selection__area">DownTown</li>
+                                                <li class="location-selection__area">Sidi Beshr</li>
+                                                <li class="location-selection__area">El Raml</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                         <input class="restaurant-search__input" type="text" placeholder="Restaurant Name">
                         <button class="restaurant-search__submit" type="submit">Find Food</button>
                     </form>
@@ -203,7 +258,8 @@
                         </div>
                         <div class="restaurant-info-card__footer">
                             <ul class="restaurant-tags">
-                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available</li>
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available
+                                </li>
                             </ul>
                         </div>
                     </article>
@@ -287,7 +343,8 @@
                         </div>
                         <div class="restaurant-info-card__footer">
                             <ul class="restaurant-tags">
-                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available</li>
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available
+                                </li>
                             </ul>
                         </div>
                     </article>
@@ -298,14 +355,18 @@
 
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
-            
+
             <section class="footer__links">
                 <div class="secondary-navigation">
                     <ul class="secondary-navigation__items">
-                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About Us</a></li>
-                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it works</a></li>
-                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html" class="secondary-navigation__link">Restaurants</a></li>
-                        <li class="secondary-navigation__item"><a href="../contact-us/index.html" class="secondary-navigation__link">Contact Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About
+                                Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it
+                                works</a></li>
+                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html"
+                                class="secondary-navigation__link">Restaurants</a></li>
+                        <li class="secondary-navigation__item"><a href="../contact-us/index.html"
+                                class="secondary-navigation__link">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="social-navigation">
@@ -324,7 +385,7 @@
                     </ul>
                 </div>
             </section>
-        
+
             <section class="sub-footer">
                 <div class="change-country">
                     <button class="change-country__btn">
@@ -343,7 +404,8 @@
                             </li>
                             <li class="country-dropdown__item">
                                 <a class="country-dropdown__link" href="#">
-                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg"
+                                        alt="Saudi Arabia">
                                     Saudi Arabia
                                 </a>
                             </li>
@@ -379,17 +441,17 @@
                     </a>
                 </div>
             </section>
-            
+
             <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
         </footer>
-        
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-           
+
             // toggle mobile nav
             $(".navbar__toggle").click(function () {
                 let nav = $(".navigation__items");
@@ -398,7 +460,7 @@
 
             // toggle nav country
             let navCountryBtn = $(".country-btn");
-            navCountryBtn.click(function(){
+            navCountryBtn.click(function () {
                 let dropdown = $(".country-btn > .country-dropdown");
                 navCountryBtn.toggleClass("country-btn--open");
                 dropdown.toggleClass("country-dropdown--open");
@@ -406,26 +468,41 @@
 
             // toggle nav category dropdown
             let navCategoryBtn = document.querySelector(".category-btn");
-            navCategoryBtn.addEventListener("click", function(){
+            navCategoryBtn.addEventListener("click", function () {
                 let dropdown = document.querySelector(".category-dropdown");
                 navCategoryBtn.classList.toggle("category-btn--open");
                 dropdown.classList.toggle("category-dropdown--open");
             });
 
+            // toggle header location selection
+            let locationSelectionBtn = document.querySelector(".location-selection__btn");
+            let locationSelectionBox = document.querySelector(".location-selection__box");
+            locationSelectionBtn.addEventListener("click", function(){
+                locationSelectionBtn.classList.toggle("location-selection__btn--open");
+                locationSelectionBox.classList.toggle("location-selection__box--open");
+            });
+            document.querySelector(".location-selection__city-list").addEventListener("click", (e) => {
+                const area = e.target.textContent;
+                document.querySelector(".location-selection__value").textContent = area;
+                locationSelectionBtn.classList.toggle("location-selection__btn--open");
+                locationSelectionBox.classList.toggle("location-selection__box--open");
+            });
+
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
-            footerCountryBtn.click(function(){
+            footerCountryBtn.click(function () {
                 let dropdown = $(".change-country__btn > .country-dropdown");
                 footerCountryBtn.toggleClass("change-country__btn--open");
                 dropdown.toggleClass("country-dropdown--open");
             });
         });
 
-        document.querySelectorAll(".restaurant-info-card").forEach((e)=>{
-            e.addEventListener("click", ()=>{
+        document.querySelectorAll(".restaurant-info-card").forEach((e) => {
+            e.addEventListener("click", () => {
                 window.location.assign("../restaurant-menu/index.html");
             });
         });
     </script>
 </body>
+
 </html>
