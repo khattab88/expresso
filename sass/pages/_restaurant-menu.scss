@@ -2,7 +2,7 @@
 
 /* header */
 .restaurant-menu-page__header {
-    background: url(../../restaurant-menu/img/restaurant-cover-2.jpg);
+    background: url(../img/restaurant-cover-2.jpg);
     background-size: cover;
     background-position: center;
     
@@ -236,8 +236,8 @@
         transform: scale(1.01);
         background: linear-gradient(
                         rgba($color-black, .2), 
-                        rgba($color-black, .2)), 
-                    url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
+                        rgba($color-black, .2)),
+                    url(../img/photo-1549611016-3a70d82b5040.jpg);
         background-size: cover;
         box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
     }
@@ -245,7 +245,7 @@
     &__img {
         min-width: 35rem;
         min-height: 24.5rem;
-        background-image:  url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
+        background-image: url(../img/photo-1549611016-3a70d82b5040.jpg);
         background-size: cover;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
