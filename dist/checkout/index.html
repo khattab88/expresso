@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresso - Checkout</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <div class="container checkout-page">
+
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html" class="logo__link">
+                    <h2 class="logo__title">Expresso</h2>
+                </a>
+            </div>
+            <div class="navigation">
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="../login/index.html" class="navigation__link">Login</a></li>
+                    <li class="navigation__item"><a href="../sign-up/index.html" class="navigation__link">Sign Up</a>
+                    </li>
+                    <li class="navigation__item"><a href="../contact-us/index.html" class="navigation__link">Contact
+                            Us</a></li>
+                    <li class="navigation__item nav-language"><a href="#" class="navigation__link">العربية</a></li>
+                    <li class="navigation__item nav-country">
+                        <button class="country-btn">
+                            <img class="country-btn__img"
+                                src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                                alt="egypt">
+                            <i class="country-btn__caret--down fa fa-caret-down"></i>
+
+                            <ul class="country-dropdown">
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/ae.svg" alt="UAE">
+                                        UAE
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                        Saudi Arabia
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                        Kuwait
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/qa.svg" alt="Qatar">
+                                        Qatar
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
+                                        Bahrain
+                                    </a>
+                                </li>
+                            </ul>
+                        </button>
+                    </li>
+                    <li class="navigation__item nav-cart">
+                        <a href="../checkout/index.html" class="navigation__link">
+                            <div class="cart-btn">
+                                <img alt="Cart" height="27" class="cart-btn__img"
+                                    src="https://trycarriage.global.ssl.fastly.net/assets/v2/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
+                                    title="Cart" width="30">
+                                <em class="cart-btn__item-count">1</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="navigation__item nav-category">
+                        <button class="category-btn">
+                            <i class="category-btn__icon material-icons">fastfood</i>
+                            <i class="category-btn__caret--down fa fa-caret-down"></i>
+                        </button>
+
+                        <ul class="category-dropdown">
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">shopping_basket</i>
+                                    Groceries
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">local_florist</i>
+                                    Flowers
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">card_giftcard</i>
+                                    Cosmetics
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">local_pharmacy</i>
+                                    Supplements
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">touch_app</i>
+                                    Electronics
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar__toggle">
+                <span class="navbar__toggle-icon fa fa-align-justify"></span>
+            </div>
+        </nav>
+
+        <header class="header checkout-page__header">
+            <section class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item breadcrumb__item--back">
+                        <i class="material-icons">chevron_left</i>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--current">
+                        <a class="breadcrumb__link" href="#">Burger Shop</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="restaurant-info">
+                <p class="restaurant-info__heading">You are ordering from</p>
+                <h2 class="restaurant-info__name">Burger Shop</h2>
+            </section>
+        </header>
+
+        <main class="main checkout-page__main">
+
+            <div class="checkout">
+
+                <div class="customer-info">
+                    <section class="checkout-info-box user-info">
+                        <h3 class="user-info__heading-primary">New to Expresso?</h3>
+                        <p class="user-info__heading-secondary">Please provide your name, email and phone to continue
+                        </p>
+                        <div class="user-info__form">
+                            <div class="form-group">
+                                <label class="form-group__label" for="customer-name">Name</label>
+                                <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                    size="30" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label" for="customer-email">Email</label>
+                                <input class="form-group__input" type="text" name="customer-email" id="customer-email"
+                                    size="30" required>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="checkout-info-box delivery-info">
+                        <h4 class="delivery-info__heading">Delivery Details</h4>
+                        <div class="delivery-info__address">
+                            <button class="delivery-info__add">Add New Address</button>
+                            <span class="delivery-info__locate">
+                                <i class="delivery-info__locate-icon material-icons">info</i>
+                                Locate your address on the map
+                            </span>
+                        </div>
+                        <div class="delivery-info__time">
+                            <h5 class="delivery-info__time-heading">Expected Delivery Time</h5>
+                            <div class="expected-delivery-time">
+                                <p class="expected-delivery-time__value">Now</p>
+                                <i
+                                    class="expected-delivery-time__icon expected-delivery-time__icon--arrow-down fa fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="checkout-info-box payment-info">
+                        <h4 class="payment-info__heading">Payment Methods</h4>
+                        <ul class="payment-info__options">
+                            <li class="payment-info__option">
+                                <input class="payment-info__option-input" type="radio" name="card_pay" id="card_pay">
+                                <label class="payment-info__option-label" for="card_pay">
+                                    <i class="payment-info__option-icon material-icons">credit_card</i>
+                                    <h5 class="payment-info__option-name">Credit Card</h5>
+                                </label>
+                            </li>
+                            <li class="payment-info__option">
+                                <input class="payment-info__option-input" type="radio" name="cash_pay" id="cash_pay">
+                                <label class="payment-info__option-label" for="cash_pay">
+                                    <i class="payment-info__option-icon material-icons">money</i>
+                                    <h5 class="payment-info__option-name">Cash on Delivery</h5>
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <section class="checkout-info-box order-info">
+                    <section class="cart">
+                        <div class="cart__header">
+                            <div class="cart__header-main">
+                                <i class="cart__header-main-icon material-icons">shopping_cart</i>
+                                <h3 class="cart__header-main-title">Your Oredr</h3>
+                            </div>
+                            <p class="cart__header-close cart__header-close--visible">
+                                <i class="cart__header-close-icon fa fa-times"></i>
+                            </p>
+                        </div>
+                    
+                        <div class="cart__items">
+                            <article class="cart__item">
+                                <div class="cart__item-detail">
+                                    <p class="cart__item-name">Double Cheese Burger</p>
+                                    <p class="cart__item-price">75.00 EGP</p>
+                                </div>
+                                <div class="cart__item-controls">
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                                    <p class="cart__item-controls-count">1</p>
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                                </div>
+                            </article>
+                            <article class="cart__item">
+                                <div class="cart__item-detail">
+                                    <p class="cart__item-name">Large Coca Cola</p>
+                                    <p class="cart__item-price">20.00 EGP</p>
+                                </div>
+                                <div class="cart__item-controls">
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                                    <p class="cart__item-controls-count">1</p>
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                                </div>
+                            </article>
+                        </div>
+                    
+                        <div class="cart__pricing">
+                            <div class="cart__pricing-box cart__pricing-box-subtotal">
+                                <p class="cart__pricing-box__title">subtotal</p>
+                                <p class="cart__pricing-box__value">95.00 EGP</p>
+                            </div>
+                            <div class="cart__pricing-box cart__pricing-box-delivery">
+                                <p class="cart__pricing-box__title">delivery fee</p>
+                                <p class="cart__pricing-box__value">10.00 EGP</p>
+                            </div>
+                            <div class="cart__pricing-box cart__pricing-box-total">
+                                <p class="cart__pricing-box__title">Total</p>
+                                <p class="cart__pricing-box__value">105.00 EGP</p>
+                            </div>
+                        </div>
+                    
+                        <div class="cart__submit">
+                            <button class="cart__submit-btn">Place Order</button>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <h2 class="footer__logo">Expresso</h2>
+
+            <section class="footer__links">
+                <div class="secondary-navigation">
+                    <ul class="secondary-navigation__items">
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About
+                                Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it
+                                works</a></li>
+                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html"
+                                class="secondary-navigation__link">Restaurants</a></li>
+                        <li class="secondary-navigation__item"><a href="../contact-us/index.html"
+                                class="secondary-navigation__link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="social-navigation">
+                    <ul class="social-navigation__items">
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link">
+                                <i class="social-link__icon fa fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="sub-footer">
+                <div class="change-country">
+                    <button class="change-country__btn">
+                        <img class="change-country__flag"
+                            src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                            alt="egypt" height="20" width="30">
+                        Egypt
+                        <i class="change-country__caret--down fa fa-caret-down"></i>
+
+                        <ul class="country-dropdown">
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/ae.svg" alt="UAE">
+                                    UAE
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                    Saudi Arabia
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                    Kuwait
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/qa.svg" alt="Qatar">
+                                    Qatar
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
+                                    Bahrain
+                                </a>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+                <div class="app-download">
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Google Playstore" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
+                    </a>
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Apple App Store" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
+                    </a>
+                </div>
+            </section>
+
+            <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            // toggle mobile nav
+            $(".navbar__toggle").click(function () {
+                let nav = $(".navigation__items");
+                nav.toggleClass("navigation__items--mobile-open");
+            });
+
+            // toggle nav country
+            let navCountryBtn = $(".country-btn");
+            navCountryBtn.click(function(){
+                let dropdown = $(".country-btn > .country-dropdown");
+                navCountryBtn.toggleClass("country-btn--open");
+                dropdown.toggleClass("country-dropdown--open");
+            });
+
+            // toggle nav category dropdown
+            let navCategoryBtn = document.querySelector(".category-btn");
+            navCategoryBtn.addEventListener("click", function(){
+                let dropdown = document.querySelector(".category-dropdown");
+                navCategoryBtn.classList.toggle("category-btn--open");
+                dropdown.classList.toggle("category-dropdown--open");
+            });
+
+            // toggle footer country
+            let footerCountryBtn = $(".change-country__btn");
+            footerCountryBtn.click(function(){
+                let dropdown = $(".change-country__btn > .country-dropdown");
+                footerCountryBtn.toggleClass("change-country__btn--open");
+                dropdown.toggleClass("country-dropdown--open");
+            });
+        });
+    </script>
+<script src="../js/bundle.js"></script></body>
+
+</html>

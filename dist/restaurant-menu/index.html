@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresso - Restaurant Menu</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <div class="container restaurant-menu-page">
+
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html" class="logo__link">
+                    <h2 class="logo__title">Expresso</h2>
+                </a>
+            </div>
+            <div class="navigation">
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="../login/index.html" class="navigation__link">Login</a></li>
+                    <li class="navigation__item"><a href="../sign-up/index.html" class="navigation__link">Sign Up</a>
+                    </li>
+                    <li class="navigation__item"><a href="../contact-us/index.html" class="navigation__link">Contact
+                            Us</a></li>
+                    <li class="navigation__item nav-language"><a href="#" class="navigation__link">العربية</a></li>
+                    <li class="navigation__item nav-country">
+                        <button class="country-btn">
+                            <img class="country-btn__img"
+                                src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                                alt="egypt">
+                            <i class="country-btn__caret--down fa fa-caret-down"></i>
+
+                            <ul class="country-dropdown">
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/ae.svg" alt="UAE">
+                                        UAE
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                        Saudi Arabia
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                        Kuwait
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/qa.svg" alt="Qatar">
+                                        Qatar
+                                    </a>
+                                </li>
+                                <li class="country-dropdown__item">
+                                    <a class="country-dropdown__link" href="#">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
+                                        Bahrain
+                                    </a>
+                                </li>
+                            </ul>
+                        </button>
+                    </li>
+                    <li class="navigation__item nav-cart">
+                        <a href="../checkout/index.html" class="navigation__link">
+                            <div class="cart-btn">
+                                <img alt="Cart" height="27" class="cart-btn__img"
+                                    src="https://trycarriage.global.ssl.fastly.net/assets/v2/shopping_cart_icon_white-9c4c2230af01610868ccb639a00b01bb.svg"
+                                    title="Cart" width="30">
+                                <em class="cart-btn__item-count">1</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="navigation__item nav-category">
+                        <button class="category-btn">
+                            <i class="category-btn__icon material-icons">fastfood</i>
+                            <i class="category-btn__caret--down fa fa-caret-down"></i>
+                        </button>
+
+                        <ul class="category-dropdown">
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">shopping_basket</i>
+                                    Groceries
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">local_florist</i>
+                                    Flowers
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">card_giftcard</i>
+                                    Cosmetics
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">local_pharmacy</i>
+                                    Supplements
+                                </a>
+                            </li>
+                            <li class="category-dropdown__item">
+                                <a href="#" class="category-dropdown__link">
+                                    <i class="category-dropdown__icon material-icons">touch_app</i>
+                                    Electronics
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar__toggle">
+                <span class="navbar__toggle-icon fa fa-align-justify"></span>
+            </div>
+        </nav>
+
+        <header class="header restaurant-menu-page__header">
+            <section class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item breadcrumb__item--home">
+                        <a class="breadcrumb__link" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item">
+                        <a class="breadcrumb__link" href="#">Restaurants</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--current">
+                        <a class="breadcrumb__link" href="#">Burger Shop</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="restaurant-info-box">
+                <div class="restaurant-info-box__head">
+                    <h2 class="restaurant-info-box__head-title">Burger Shop</h2>
+                    <p class="restaurant-info-box__head-desc">Originated in Los Angeles</p>
+                </div>
+                <div class="restaurant-delivery">
+                    <h5 class="restaurant-delivery__heading">Delivery Location</h5>
+                    <div class="change-location">
+                        <p class="change-location__location">Cairo</p>
+                        <button class="change-location__btn">Change Location</button>
+                    </div>
+                    <em class="restaurant-delivery__footer">Average delivery time: 30 mins</em>
+                </div>
+            </section>
+        </header>
+
+        <main class="main restaurant-menu-page__main">
+
+            <aside class="restaurant-sidebar">
+                <section class="restaurant-sidebar__show-cart">
+                    <h3 class="restaurant-sidebar__show-cart-title">Your Order</h3>
+                    <i class="restaurant-sidebar__show-cart-icon material-icons">shopping_cart</i>
+                </section>
+                <section class="menu-categories">
+                    <div class="menu-categories__head">
+                        <h3 class="menu-categories__title">What's on the Menu</h3>
+                        <i class="menu-categories__icon--arrow-down material-icons">keyboard_arrow_down</i>
+                    </div>
+                    <div class="menu-categories__body">
+                        <ul class="menu-categories__list">
+                            <li class="menu-categories__category-item">Sandwiches</li>
+                            <li class="menu-categories__category-item">Sides</li>
+                            <li class="menu-categories__category-item">Beverages</li>
+                            <li class="menu-categories__category-item">Salads</li>
+                            <li class="menu-categories__category-item">Specialities</li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+
+            <div class="menu-items-wrapper">
+                <article class="menu-items-by-category">    
+                    <h2 class="menu-items-by-category__category-name">Sandwiches</h2>
+                    <div class="menu-items-by-category__menu-items-list">
+                        <div class="menu-items-by-category__menu-items-row">
+                            <article class="menu-item" id="item-1">
+                                <div class="menu-item__img"></div>
+                                <div class="menu-item__detail">
+                                    <div class="menu-item__detail-box">
+                                        <h4 class="menu-item__name">Double Cheese Burger</h4>
+                                        <p class="menu-item__price">80 EGP</p>
+                                    </div>
+                                    <p class="menu-item__desc">House-made turkey sausage, cage-free over medium egg, cheddar
+                                        cheese, honey...</p>
+                                </div>
+                            </article>
+                            <article class="menu-item" id="item-2">
+                                <div class="menu-item__img"></div>
+                                <div class="menu-item__detail">
+                                    <div class="menu-item__detail-box">
+                                        <h4 class="menu-item__name">Double Cheese Burger</h4>
+                                        <p class="menu-item__price">80 EGP</p>
+                                    </div>
+                                    <p class="menu-item__desc">House-made turkey sausage, cage-free over medium egg, cheddar
+                                        cheese, honey...</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-items-by-category">    
+                    <h2 class="menu-items-by-category__category-name">Sandwiches</h2>
+                    <div class="menu-items-by-category__menu-items-list">
+                        <div class="menu-items-by-category__menu-items-row">
+                            <article class="menu-item" id="item-1">
+                                <div class="menu-item__img"></div>
+                                <div class="menu-item__detail">
+                                    <div class="menu-item__detail-box">
+                                        <h4 class="menu-item__name">Double Cheese Burger</h4>
+                                        <p class="menu-item__price">80 EGP</p>
+                                    </div>
+                                    <p class="menu-item__desc">House-made turkey sausage, cage-free over medium egg, cheddar
+                                        cheese, honey...</p>
+                                </div>
+                            </article>
+                            <article class="menu-item" id="item-2">
+                                <div class="menu-item__img"></div>
+                                <div class="menu-item__detail">
+                                    <div class="menu-item__detail-box">
+                                        <h4 class="menu-item__name">Double Cheese Burger</h4>
+                                        <p class="menu-item__price">80 EGP</p>
+                                    </div>
+                                    <p class="menu-item__desc">House-made turkey sausage, cage-free over medium egg, cheddar
+                                        cheese, honey...</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+            <!-- menu item modal -->
+            <section class="menu-item-modal menu-item-modal--close">
+                <div class="menu-item-modal__content menu-item-modal__content--animated">
+                    <div class="menu-item-modal__container">
+                        <div class="menu-item-modal__head">
+                            <p class="menu-item-modal__close"><i class="fa fa-times"></i></p>
+                            <img class="menu-item-modal__item-img" src="./img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
+                        </div>
+                        <div class="menu-item-modal__body">
+                            <section class="dish-info">
+                                <div class="dish-info__row">
+                                    <h3 class="dish-info__name">Big Tasty Burger</h3>
+                                    <p class="dish-info__price">70 EGP</p>
+                                </div>
+                                <p class="dish-info__desc">2 organic beef patties, 2 slices of real cheddar cheese.</p>
+                            </section>
+
+                            <article class="dish-options" >
+                                <div class="dish-options__head">
+                                    <h4 class="dish-options__title">Choice of bun or lettuce wrap</h4>
+                                    <span class="dish-options__icon--arrow-down"><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="validation-info validation-info--required">Required, choose at least one.</p>
+                                <ul class="dish-options__sigle-selection">
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__checkbox" type="radio" checked name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Potato Bun</label>
+                                        </div>
+                                        <p class="dish-option__price">0.75 EGP</p>
+                                    </li>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-radio" type="radio" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Lettuce Wrap</label>
+                                        </div>
+                                        <p class="dish-option__price">0.50 EGP</p>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="dish-options">
+                                <div class="dish-options__head">
+                                    <h4 class="dish-options__title">Choice of cheese</h4>
+                                    <span class="dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="validation-info validation-info--optional">Optional, choose multiple.</p>
+                                <ul class="dish-options__multiple-selection">
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" checked name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">No Cheese</label>
+                                        </div>
+                                        <p class="dish-option__price">0.00 EGP</p>
+                                    </li>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Regular</label>
+                                        </div>
+                                        <p class="dish-option__price">0.50 EGP</p>
+                                    </li>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Cheddar</label>
+                                        </div>
+                                        <p class="dish-option__price">0.75 EGP</p>
+                                    </li>
+                                    <li class="dish-option">
+                                        <div class="dish-option__detail">
+                                            <input class="dish-option__input-checkbox" type="checkbox" name="option-1" id="option-1">
+                                            <label class="dish-option__name" for="option-1">Spicy</label>
+                                        </div>
+                                        <p class="dish-option__price">0.50 EGP</p>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="dish-options">
+                                <div class="dish-options__head">
+                                    <h4 class="dish-options__title">Add Special Instructions</h4>
+                                    <span class="dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                </div>
+                                <p class="validation-info validation-info--optional"></p>
+                                <textarea class="dish-option__input-textarea" name="notes" id="notes" cols="40" rows="6"
+                                    placeholder="Add a note (food allergies, extra sauce, no onions, etc.). Please be clear and concise so we can get your order perfect."></textarea>
+                            </article>
+                        </div>
+                        <div class="menu-item-modal__footer">
+                            <div class="cart-controls">
+                                <span class="cart-controls__btn cart-controls__btn-remove">-</span>
+                                <p class="cart-controls__count">1</p>
+                                <span class="cart-controls__btn cart-controls__btn-add">+</span>
+                            </div>
+                            <button class="add-order-btn">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- cart modal -->
+            <div class="cart-modal cart-modal--close">
+                <div class="vertical-alignment-helper">
+                    <div class="modal-dailog">
+                        <div class="cart-modal__content cart-modal__content--animated">
+                            <section class="cart">
+                                <div class="cart__header">
+                                    <div class="cart__header-main">
+                                        <i class="cart__header-main-icon material-icons">shopping_cart</i>
+                                        <h3 class="cart__header-main-title">Your Oredr</h3>
+                                    </div>
+                                    <p class="cart__header-close cart__header-close--visible">
+                                        <i class="cart__header-close-icon fa fa-times"></i>
+                                    </p>
+                                </div>
+                            
+                                <div class="cart__items">
+                                    <article class="cart__item">
+                                        <div class="cart__item-detail">
+                                            <p class="cart__item-name">Double Cheese Burger</p>
+                                            <p class="cart__item-price">75.00 EGP</p>
+                                        </div>
+                                        <div class="cart__item-controls">
+                                            <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                                            <p class="cart__item-controls-count">1</p>
+                                            <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                                        </div>
+                                    </article>
+                                    <article class="cart__item">
+                                        <div class="cart__item-detail">
+                                            <p class="cart__item-name">Large Coca Cola</p>
+                                            <p class="cart__item-price">20.00 EGP</p>
+                                        </div>
+                                        <div class="cart__item-controls">
+                                            <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                                            <p class="cart__item-controls-count">1</p>
+                                            <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                                        </div>
+                                    </article>
+                                </div>
+                            
+                                <div class="cart__pricing">
+                                    <div class="cart__pricing-box cart__pricing-box-subtotal">
+                                        <p class="cart__pricing-box__title">subtotal</p>
+                                        <p class="cart__pricing-box__value">95.00 EGP</p>
+                                    </div>
+                                    <div class="cart__pricing-box cart__pricing-box-delivery">
+                                        <p class="cart__pricing-box__title">delivery fee</p>
+                                        <p class="cart__pricing-box__value">10.00 EGP</p>
+                                    </div>
+                                    <div class="cart__pricing-box cart__pricing-box-total">
+                                        <p class="cart__pricing-box__title">Total</p>
+                                        <p class="cart__pricing-box__value">105.00 EGP</p>
+                                    </div>
+                                </div>
+                            
+                                <div class="cart__submit">
+                                    <button class="cart__submit-btn">Place Order</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer class="footer">
+            <h2 class="footer__logo">Expresso</h2>
+            
+            <section class="footer__links">
+                <div class="secondary-navigation">
+                    <ul class="secondary-navigation__items">
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">About Us</a></li>
+                        <li class="secondary-navigation__item"><a href="#" class="secondary-navigation__link">How it works</a></li>
+                        <li class="secondary-navigation__item"><a href="../restaurant-list/index.html" class="secondary-navigation__link">Restaurants</a></li>
+                        <li class="secondary-navigation__item"><a href="../contact-us/index.html" class="secondary-navigation__link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="social-navigation">
+                    <ul class="social-navigation__items">
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link">
+                                <i class="social-link__icon fa fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social-navigation__item">
+                            <a href="#" class="social-link"><i class="social-link__icon fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        
+            <section class="sub-footer">
+                <div class="change-country">
+                    <button class="change-country__btn">
+                        <img class="change-country__flag"
+                            src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/eg.svg"
+                            alt="egypt" height="20" width="30">
+                        Egypt
+                        <i class="change-country__caret--down fa fa-caret-down"></i>
+
+                        <ul class="country-dropdown">
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/ae.svg" alt="UAE">
+                                    UAE
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                    Saudi Arabia
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                    Kuwait
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/qa.svg" alt="Qatar">
+                                    Qatar
+                                </a>
+                            </li>
+                            <li class="country-dropdown__item">
+                                <a class="country-dropdown__link" href="#">
+                                    <img class="country-dropdown__img" src="./assets/img/flags/bh.svg" alt="Bahrain">
+                                    Bahrain
+                                </a>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+                <div class="app-download">
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Google Playstore" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/playstore_icon-b9ca6f7b9f6d29531733dab0586cd3ab.svg">
+                    </a>
+                    <a href="#" class="app-download__btn">
+                        <img alt="Download App from Apple App Store" class="app-download__img"
+                            src="https://trycarriage.global.ssl.fastly.net/assets/v2/appstore_icon-71d0475940474ee2ba3be457483be01b.svg">
+                    </a>
+                </div>
+            </section>
+            
+            <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
+        </footer>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            // toggle mobile nav
+            $(".navbar__toggle").click(function () {
+                let nav = $(".navigation__items");
+                nav.toggleClass("navigation__items--mobile-open");
+            });
+
+             // toggle nav country
+            let navCountryBtn = $(".country-btn");
+            navCountryBtn.click(function(){
+                let dropdown = $(".country-btn > .country-dropdown");
+                navCountryBtn.toggleClass("country-btn--open");
+                dropdown.toggleClass("country-dropdown--open");
+            });
+
+            // toggle nav category dropdown
+            let navCategoryBtn = document.querySelector(".category-btn");
+            navCategoryBtn.addEventListener("click", function(){
+                let dropdown = document.querySelector(".category-dropdown");
+                navCategoryBtn.classList.toggle("category-btn--open");
+                dropdown.classList.toggle("category-dropdown--open");
+            });
+
+            // toggle footer country
+            let footerCountryBtn = $(".change-country__btn");
+            footerCountryBtn.click(function(){
+                let dropdown = $(".change-country__btn > .country-dropdown");
+                footerCountryBtn.toggleClass("change-country__btn--open");
+                dropdown.toggleClass("country-dropdown--open");
+            });
+        });
+    </script>
+    <script>
+        (function () {
+
+            // menu item detail
+            document.querySelector(".menu-items-by-category__menu-items-list").addEventListener("click", function (e) {
+                const item = e.target.closest(".menu-item");
+                console.log(item.id);
+
+                const modal = document.querySelector(".menu-item-modal");
+                modal.classList.remove("menu-item-modal--close");
+                modal.classList.add("menu-item-modal--open");
+                return;
+            });
+
+            document.querySelector(".menu-item-modal__close").addEventListener("click", function (e) {
+                const modal = document.querySelector(".menu-item-modal");
+                modal.classList.remove("menu-item-modal--open");
+                modal.classList.add("menu-item-modal--close");
+                return;
+            });
+
+
+            // item cart
+            document.querySelector(".restaurant-sidebar__show-cart").addEventListener("click", function(e){
+                const modal = document.querySelector(".cart-modal");
+                modal.classList.remove("cart-modal--close");
+                modal.classList.add("cart-modal--open");
+                return;
+            });
+
+            document.querySelector(".cart__header-close").addEventListener("click", function(e){
+                const modal = document.querySelector(".cart-modal");
+                modal.classList.remove("cart-modal--open");
+                modal.classList.add("cart-modal--close");
+                return;
+            });
+
+        })();       
+    </script>
+<script src="../js/bundle.js"></script></body>
+
+</html>
