@@ -7,10 +7,8 @@
     "start": "webpack-dev-server --mode development --open",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-
     "devserver": "lite-server",
     "watch:sass": "node-sass sass/main.scss assets/css/main.css -watch",
-
     "compile:sass": "node-sass sass/main.scss assets/css/main.comp.css",
     "concat:css": "concat -o assets/css/main.concat.css assets/css/main.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/css/main.comp.css -o assets/css/main.prefix.css",
@@ -26,6 +24,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "concat": "^1.0.3",
+    "html-webpack-plugin": "^4.0.3",
     "lite-server": "^2.5.4",
     "live-server": "^1.2.1",
     "node-sass": "^4.13.1",
