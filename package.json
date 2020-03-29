@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --mode development --open",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "watch:sass": "node-sass sass/main.scss assets/css/main.css -watch",
+
     "devserver": "lite-server",
+    "watch:sass": "node-sass sass/main.scss assets/css/main.css -watch",
+
     "compile:sass": "node-sass sass/main.scss assets/css/main.comp.css",
     "concat:css": "concat -o assets/css/main.concat.css assets/css/main.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/css/main.comp.css -o assets/css/main.prefix.css",
@@ -30,6 +32,7 @@
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
