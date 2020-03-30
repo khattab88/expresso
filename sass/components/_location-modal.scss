@@ -22,7 +22,20 @@
         z-index: 3;
         background-color: $color-white;
         border-radius: $border-radius-small;
+        box-shadow: $box-shadow;
         animation: moveInDown .65s ease-out;
+
+        @include respond(tab) {
+            width: 80%;
+        }
+
+        @include respond(tab-land) {
+            width: 60%;
+        }
+
+        @include respond(desktop) {
+            width: 40%;
+        }
     }
 
     &__header {
@@ -31,6 +44,10 @@
         align-items: center;
         padding-top: 1.5rem;
         color: $color-font-dark;
+
+        @include respond(phone-land) {
+            grid-template-columns: 1fr 4rem;
+        }
     }
 
     &__title {
@@ -42,6 +59,7 @@
     }
 
     &__close {
+        cursor: pointer;
 
         &-icon {
             color: inherit;
@@ -50,7 +68,7 @@
     }
 
     &__body {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -73,6 +91,12 @@
         color: $color-white;
         font-size: 2rem;
         letter-spacing: 1px;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-font-dark;
+        }
     }
 
 }
