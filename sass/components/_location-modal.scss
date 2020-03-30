@@ -1,0 +1,102 @@
+.location-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: all .2s;
+    display: none;
+    @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
+        -webkit-backdrop-filter: brightness(30%);
+        backdrop-filter: brightness(30%)
+    }
+
+    &--open {
+        @include flex-center;
+    }
+
+    &__content {
+        width: 96%;
+        padding: 1rem 2rem 4rem 2rem;
+        z-index: 3;
+        background-color: $color-white;
+        border-radius: $border-radius-small;
+        box-shadow: $box-shadow;
+        animation: moveInDown .65s ease-out;
+
+        @include respond(tab) {
+            width: 80%;
+        }
+
+        @include respond(tab-land) {
+            width: 60%;
+        }
+
+        @include respond(desktop) {
+            width: 40%;
+        }
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 3rem;
+        align-items: center;
+        padding-top: 1.5rem;
+        color: $color-font-dark;
+
+        @include respond(phone-land) {
+            grid-template-columns: 1fr 4rem;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: inherit;
+        font-size: 2.4rem;
+        font-weight: 400;
+        padding: .5rem;
+    }
+
+    &__close {
+        cursor: pointer;
+
+        &-icon {
+            color: inherit;
+            font-size: 2.7rem;
+        }
+    }
+
+    &__body {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__select {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    &__update {
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 96%;
+        height: 5rem;
+        outline: none;
+        border: none;
+        border-radius: $border-radius-small;
+        background-color: $color-main;
+        color: $color-white;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-font-dark;
+        }
+    }
+
+}

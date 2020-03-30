@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -259,7 +259,7 @@
                     <div class="menu-item-modal__container">
                         <div class="menu-item-modal__head">
                             <p class="menu-item-modal__close"><i class="fa fa-times"></i></p>
-                            <img class="menu-item-modal__item-img" src="./img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
+                            <img class="menu-item-modal__item-img" src="../assets/img/photo-1549611016-3a70d82b5040.jpg" alt="burger">
                         </div>
                         <div class="menu-item-modal__body">
                             <section class="dish-info">
@@ -416,6 +416,71 @@
                     </div>
                 </div>
             </div>
+
+            <!-- location modal -->
+            <div class="location-modal">
+                <div class="location-modal__content">
+                    <div class="location-modal__header">
+                        <h3 class="location-modal__title">Change Location</h3>
+                        <p class="location-modal__close">
+                            <span class="location-modal__close-icon material-icons">clear</span>
+                        </p>
+                    </div>
+                    <div class="location-modal__body">
+                        <div class="location-modal__select">
+                            <div class="location-selection">
+                                <button class="location-selection__btn">
+                                    <i class="location-selection__icon-location material-icons-outlined">location_on</i>
+                                    <p class="location-selection__value">Type a delivery location</p>
+                                    <i class="location-selection__icon-caret location-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
+                                    <i class="location-selection__icon-caret location-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
+                                </button>
+                            
+                                <div class="location-selection__box">
+                                    <input type="text" class="location-selection__input">
+                            
+                                    <ul class="location-selection__city-list">
+                                        <li class="location-selection__city">
+                                            <div class="location-selection__city-name">Cairo</div>
+                                            <ul class="location-selection__area-list">
+                                                <li class="location-selection__area">Heliopolis</li>
+                                                <li class="location-selection__area">Zamalek</li>
+                                                <li class="location-selection__area">DownTown</li>
+                                                <li class="location-selection__area">Nasr City</li>
+                                                <li class="location-selection__area">Maadi</li>
+                                                <li class="location-selection__area">Shoubra</li>
+                                            </ul>
+                                        </li>
+                            
+                                        <li class="location-selection__city">
+                                            <div class="location-selection__city-name">Giza</div>
+                                            <ul class="location-selection__area-list">
+                                                <li class="location-selection__area">Mohandessien</li>
+                                                <li class="location-selection__area">Dokki</li>
+                                                <li class="location-selection__area">Giza Square</li>
+                                                <li class="location-selection__area">Haram</li>
+                                                <li class="location-selection__area">6th October</li>
+                                            </ul>
+                                        </li>
+                            
+                                        <li class="location-selection__city">
+                                            <div class="location-selection__city-name">Alexandrai</div>
+                                            <ul class="location-selection__area-list">
+                                                <li class="location-selection__area">San Stephano</li>
+                                                <li class="location-selection__area">DownTown</li>
+                                                <li class="location-selection__area">Sidi Beshr</li>
+                                                <li class="location-selection__area">El Raml</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <button class="location-modal__update">Update</button>
+                    </div>
+                </div>
+            </div>
             
         </main>
 
@@ -484,7 +549,7 @@
                             </li>
                             <li class="country-dropdown__item">
                                 <a class="country-dropdown__link" href="#">
-                                    <img class="country-dropdown__img" src="./assets/img/flags/bh.svg" alt="Bahrain">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
                                     Bahrain
                                 </a>
                             </li>
@@ -534,6 +599,28 @@
                 let dropdown = document.querySelector(".category-dropdown");
                 navCategoryBtn.classList.toggle("category-btn--open");
                 dropdown.classList.toggle("category-dropdown--open");
+            });
+
+            // open location modal
+            const toggleLocationModal = () => { document.querySelector(".location-modal").classList.toggle("location-modal--open"); };
+
+            Array.from(document.querySelectorAll(".change-location__btn, .location-modal__close, .location-modal__update"))
+            .forEach((elm) => {
+                elm.addEventListener("click", toggleLocationModal);
+            });
+
+            // toggle header location selection
+            let locationSelectionBtn = document.querySelector(".location-selection__btn");
+            let locationSelectionBox = document.querySelector(".location-selection__box");
+            locationSelectionBtn.addEventListener("click", function(){
+                locationSelectionBtn.classList.toggle("location-selection__btn--open");
+                locationSelectionBox.classList.toggle("location-selection__box--open");
+            });
+            document.querySelector(".location-selection__city-list").addEventListener("click", (e) => {
+                const area = e.target.textContent;
+                document.querySelector(".location-selection__value").textContent = area;
+                locationSelectionBtn.classList.toggle("location-selection__btn--open");
+                locationSelectionBox.classList.toggle("location-selection__box--open");
             });
 
             // toggle footer country

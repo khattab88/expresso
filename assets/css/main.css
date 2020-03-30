@@ -1887,6 +1887,101 @@ body {
       background-color: #d5d5d5;
       cursor: pointer; }
 
+/* line 1, sass/components/_location-modal.scss */
+.location-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all .2s;
+  display: none; }
+  @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
+    /* line 1, sass/components/_location-modal.scss */
+    .location-modal {
+      -webkit-backdrop-filter: brightness(30%);
+      backdrop-filter: brightness(30%); } }
+  /* line 15, sass/components/_location-modal.scss */
+  .location-modal--open {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  /* line 19, sass/components/_location-modal.scss */
+  .location-modal__content {
+    width: 96%;
+    padding: 1rem 2rem 4rem 2rem;
+    z-index: 3;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    animation: moveInDown .65s ease-out; }
+    @media only screen and (min-width: 48em) {
+      /* line 19, sass/components/_location-modal.scss */
+      .location-modal__content {
+        width: 80%; } }
+    @media only screen and (min-width: 64em) {
+      /* line 19, sass/components/_location-modal.scss */
+      .location-modal__content {
+        width: 60%; } }
+    @media only screen and (min-width: 75em) {
+      /* line 19, sass/components/_location-modal.scss */
+      .location-modal__content {
+        width: 40%; } }
+  /* line 41, sass/components/_location-modal.scss */
+  .location-modal__header {
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    align-items: center;
+    padding-top: 1.5rem;
+    color: #323232; }
+    @media only screen and (min-width: 30em) {
+      /* line 41, sass/components/_location-modal.scss */
+      .location-modal__header {
+        grid-template-columns: 1fr 4rem; } }
+  /* line 53, sass/components/_location-modal.scss */
+  .location-modal__title {
+    text-align: center;
+    color: inherit;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: .5rem; }
+  /* line 61, sass/components/_location-modal.scss */
+  .location-modal__close {
+    cursor: pointer; }
+    /* line 64, sass/components/_location-modal.scss */
+    .location-modal__close-icon {
+      color: inherit;
+      font-size: 2.7rem; }
+  /* line 70, sass/components/_location-modal.scss */
+  .location-modal__body {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  /* line 77, sass/components/_location-modal.scss */
+  .location-modal__select {
+    width: 96%;
+    margin: 0 auto; }
+  /* line 82, sass/components/_location-modal.scss */
+  .location-modal__update {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 96%;
+    height: 5rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #009a9a;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .2s; }
+    /* line 97, sass/components/_location-modal.scss */
+    .location-modal__update:hover {
+      background-color: #323232; }
+
 /* Home */
 /* header */
 /* line 4, sass/pages/_home.scss */

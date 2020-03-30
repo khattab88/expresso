@@ -1603,6 +1603,66 @@ body {
       background-color: #d5d5d5;
       cursor: pointer; }
 
+.location-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all .2s;
+  display: none; }
+  @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
+    .location-modal {
+      -webkit-backdrop-filter: brightness(30%);
+      backdrop-filter: brightness(30%); } }
+  .location-modal--open {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .location-modal__content {
+    width: 96%;
+    padding: 1rem 2rem 4rem 2rem;
+    z-index: 3;
+    background-color: #fff;
+    border-radius: 3px;
+    animation: moveInDown .65s ease-out; }
+  .location-modal__header {
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    align-items: center;
+    padding-top: 1.5rem;
+    color: #323232; }
+  .location-modal__title {
+    text-align: center;
+    color: inherit;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: .5rem; }
+  .location-modal__close-icon {
+    color: inherit;
+    font-size: 2.7rem; }
+  .location-modal__body {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .location-modal__select {
+    width: 96%;
+    margin: 0 auto; }
+  .location-modal__update {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 96%;
+    height: 5rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #009a9a;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1px; }
+
 /* Home */
 /* header */
 .home-page__header {
@@ -2111,7 +2171,7 @@ body {
   .restaurant-info-card__head {
     min-width: 38.5rem;
     min-height: 23rem;
-    background-image: url(../../restaurant-list/img/pexels-photo-262978.jpeg);
+    background-image: url(../img/pexels-photo-262978.jpeg);
     background-size: cover;
     border-radius: .35rem;
     position: relative;
@@ -2195,7 +2255,7 @@ body {
 /* Restaurant Menu */
 /* header */
 .restaurant-menu-page__header {
-  background: url(../../restaurant-menu/img/restaurant-cover-2.jpg);
+  background: url(../img/restaurant-cover-2.jpg);
   background-size: cover;
   background-position: center;
   height: 45rem;
@@ -2375,13 +2435,13 @@ body {
     cursor: pointer; }
   .menu-item:hover .menu-item__img {
     transform: scale(1.01);
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/photo-1549611016-3a70d82b5040.jpg);
     background-size: cover;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
   .menu-item__img {
     min-width: 35rem;
     min-height: 24.5rem;
-    background-image: url(../../restaurant-menu/img/photo-1549611016-3a70d82b5040.jpg);
+    background-image: url(../img/photo-1549611016-3a70d82b5040.jpg);
     background-size: cover;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -2447,7 +2507,7 @@ body {
   display: block;
   width: 100%;
   overflow: hidden;
-  background: url(../../login/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+  background: url(../img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   position: relative; }
   @media only screen and (min-width: 64em) {
     .login-page__login {
@@ -2662,7 +2722,7 @@ body {
 
 .register-page__sign-in {
   height: 20rem;
-  background: url(../../sign-up/img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
+  background: url(../img/photo-1484659619207-9165d119dafe.jpg) no-repeat center center transparent;
   justify-content: space-between;
   border-radius: .5rem .5rem 0 0; }
   @media only screen and (min-width: 64em) {
@@ -2743,7 +2803,7 @@ body {
   width: 100%;
   height: 50vh;
   color: #fff;
-  background: url(../../contact-us/img/photo-1484659619207-9165d119dafe.jpg) no-repeat left top;
+  background: url(../img/photo-1484659619207-9165d119dafe.jpg) no-repeat left top;
   padding: 0; }
   @media only screen and (min-width: 30em) {
     .contact-us-page__header {
@@ -2967,7 +3027,7 @@ body {
 
 /* Checkout */
 .checkout-page__header {
-  background: url(../../checkout/img/photo-1540265556701-ae209ac395cd.jpg);
+  background: url(../img/restaurant-cover-2.jpg);
   background-size: cover;
   background-position: center center;
   height: 25rem;

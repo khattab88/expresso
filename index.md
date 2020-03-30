@@ -15,7 +15,7 @@ Feaures:
 - header:
     - city/area selection (home) [DONE]
     - restaurant selection (restaurant list) [DONE]
-    - change location (restaurant menu)
+    - change location (restaurant menu) [DONE]
 
 - footer:
     - change country dropdown [DONE]
