@@ -37,7 +37,6 @@ Feaures:
     - type filter / tags selection 
 
 - restaurant menu
-    - change location
     - menu section dropdown    
 
 - login 
