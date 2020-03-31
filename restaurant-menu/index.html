@@ -658,8 +658,7 @@
 
             // show/hide item option
             document.querySelector(".menu-item-modal__body").addEventListener("click", e => {
-                const option = e.target.parentNode.parentNode.parentNode;
-                //console.log(option);
+                const option = e.target.closest(".dish-options");
                 option.classList.toggle("dish-options--closed")
 
             });
