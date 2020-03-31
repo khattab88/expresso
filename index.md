@@ -22,7 +22,7 @@ Feaures:
 
 - menu item modal
     - show/hide item options [DONE]
-    - add/remove item count 
+    - add/remove item count [DONE]
 
 - cart
     - delete item record
