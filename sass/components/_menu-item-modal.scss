@@ -133,10 +133,47 @@
 .dish-options {
     padding-bottom: 2rem;
 
+    &--closed {
+        .dish-options__icon--arrow-up { display: none; }
+        .dish-options__icon--arrow-down { display: block; }
+
+        .dish-options__body {
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
     &__title {
         font-size: 2rem;
         line-height: 2.8rem;
+        margin-right: auto;
     }
+
+    &__icon {
+        
+        i {
+            font-size: 1.75rem;
+            font-weight: 100;
+            color: $color-main;
+        }
+
+        &--arrow-up { display: block; }
+        &--arrow-down { display: none; }
+    }
+
+    &__body {
+        opacity: 1;
+        visibility: visible;
+        transition: all .2s;
+    }
+
     &__sigle-selection {
         list-style: none;
     }
@@ -227,5 +264,12 @@
         background-color: $color-font-dark;
         transform: translateY(-2px);
         box-shadow: .5rem .5rem 1rem rgba($color-black, .2);
+    }
+}
+
+@keyframes close {
+    0% {}
+    100% {
+        height: 0;
     }
 }

@@ -273,10 +273,11 @@
                             <article class="dish-options" >
                                 <div class="dish-options__head">
                                     <h4 class="dish-options__title">Choice of bun or lettuce wrap</h4>
-                                    <span class="dish-options__icon--arrow-down"><i class="fa fa-chevron-up"></i></span>
+                                    <span class="dish-options__icon dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                    <span class="dish-options__icon dish-options__icon--arrow-down"><i class="fa fa-chevron-down"></i></span>
                                 </div>
                                 <p class="validation-info validation-info--required">Required, choose at least one.</p>
-                                <ul class="dish-options__sigle-selection">
+                                <ul class="dish-options__body dish-options__sigle-selection">
                                     <li class="dish-option">
                                         <div class="dish-option__detail">
                                             <input class="dish-option__checkbox" type="radio" checked name="option-1" id="option-1">
@@ -296,10 +297,11 @@
                             <article class="dish-options">
                                 <div class="dish-options__head">
                                     <h4 class="dish-options__title">Choice of cheese</h4>
-                                    <span class="dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                    <span class="dish-options__icon dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                    <span class="dish-options__icon dish-options__icon--arrow-down"><i class="fa fa-chevron-down"></i></span>
                                 </div>
                                 <p class="validation-info validation-info--optional">Optional, choose multiple.</p>
-                                <ul class="dish-options__multiple-selection">
+                                <ul class="dish-options__body dish-options__multiple-selection">
                                     <li class="dish-option">
                                         <div class="dish-option__detail">
                                             <input class="dish-option__input-checkbox" type="checkbox" checked name="option-1" id="option-1">
@@ -333,10 +335,11 @@
                             <article class="dish-options">
                                 <div class="dish-options__head">
                                     <h4 class="dish-options__title">Add Special Instructions</h4>
-                                    <span class="dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                    <span class="dish-options__icon dish-options__icon--arrow-up"><i class="fa fa-chevron-up"></i></span>
+                                    <span class="dish-options__icon dish-options__icon--arrow-down"><i class="fa fa-chevron-down"></i></span>
                                 </div>
                                 <p class="validation-info validation-info--optional"></p>
-                                <textarea class="dish-option__input-textarea" name="notes" id="notes" cols="40" rows="6"
+                                <textarea class="dish-options__body dish-option__input-textarea" name="notes" id="notes" cols="40" rows="6"
                                     placeholder="Add a note (food allergies, extra sauce, no onions, etc.). Please be clear and concise so we can get your order perfect."></textarea>
                             </article>
                         </div>
@@ -651,6 +654,14 @@
                 modal.classList.remove("menu-item-modal--open");
                 modal.classList.add("menu-item-modal--close");
                 return;
+            });
+
+            // show/hide item option
+            document.querySelector(".menu-item-modal__body").addEventListener("click", e => {
+                const option = e.target.parentNode.parentNode.parentNode;
+                //console.log(option);
+                option.classList.toggle("dish-options--closed")
+
             });
 
 
