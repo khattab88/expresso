@@ -21,7 +21,7 @@ Feaures:
     - change country dropdown [DONE]
 
 - menu item modal
-    - show/hide item options
+    - show/hide item options [DONE]
     - add/remove item count
 
 - cart
