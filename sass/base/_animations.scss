@@ -77,3 +77,11 @@ $animation-move-long: 50rem;
         height: 35.5rem;
     }
 }
+
+
+@keyframes close {
+    0% {}
+    100% {
+        height: 0;
+    }
+}

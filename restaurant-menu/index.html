@@ -649,18 +649,36 @@
                 return;
             });
 
-            document.querySelector(".menu-item-modal__close").addEventListener("click", function (e) {
+            Array.from(document.querySelectorAll(".menu-item-modal__close, .add-order-btn"))
+            .forEach((elm) => elm.addEventListener("click", (e) => {
                 const modal = document.querySelector(".menu-item-modal");
                 modal.classList.remove("menu-item-modal--open");
                 modal.classList.add("menu-item-modal--close");
-                return;
-            });
+            }));
 
             // show/hide item option
             document.querySelector(".menu-item-modal__body").addEventListener("click", e => {
                 const option = e.target.closest(".dish-options");
                 option.classList.toggle("dish-options--closed")
 
+            });
+
+            // increment/decrement menu item count
+            document.querySelector(".cart-controls").addEventListener("click", (e) => {
+                const op = e.target.closest(".cart-controls__btn").textContent;
+
+                const countLabel = document.querySelector(".cart-controls__count");
+                let count = parseInt(countLabel.textContent);
+
+                if(op === "+") {
+                    count++;
+                } else {
+                    if(count > 1) {
+                        count--;
+                    }
+                }
+
+                countLabel.textContent = count;
             });
 
 
