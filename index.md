@@ -24,6 +24,12 @@ Feaures:
     - show/hide item options [DONE]
     - add/remove item count [DONE]
 
+
+
+----------------------------------------------------------------------------------
+
+
+
 - cart
     - delete item record
     - add/remove item count
@@ -34,7 +40,7 @@ Feaures:
     - category carousel 
 
 - restaurant list
-    - type filter / tags selection 
+    - type filter / tags selection  [TODO]
 
 - restaurant menu
     - menu section dropdown    
@@ -50,10 +56,10 @@ Feaures:
     - add captcha
 
 - checkout
-    - add address/delivery location (map)
+    - add address/delivery location (map) [TODO]
     - expected delivery time dropdown
-    - enhance payment option selection
-    - add delivery details section
+    - enhance payment option selection 
+    - add delivery details section    [TODO]
 
 
 

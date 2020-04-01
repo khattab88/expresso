@@ -236,9 +236,104 @@
 
             <section class="restaurant-list-filter">
                 <div class="filter-dropdown">
-                    <i class="filter-dropdown__icon fa fa-filter"></i>
-                    <p class="filter-dropdown__title">Filter by types of food</p>
-                    <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
+                    <div class="filter-dropdown__head">
+                        <i class="filter-dropdown__icon fa fa-filter">
+                            <span class="filter-dropdown__count">2</span>
+                        </i>
+                        <p class="filter-dropdown__title">Filter by types of food</p>
+                        <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
+                        <span class="filter-dropdown__clear">Clear all</span>
+                    </div>
+                    <ul class="filter-dropdown__cuisine-list">
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="offers">
+                            <label class="filter-dropdown__cuisine-name" for="offers">Offers</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="American">
+                            <label class="filter-dropdown__cuisine-name" for="American">American</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Arabic">
+                            <label class="filter-dropdown__cuisine-name" for="Arabic">Arabic</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Asian">
+                            <label class="filter-dropdown__cuisine-name" for="Asian">Asian</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Bakery">
+                            <label class="filter-dropdown__cuisine-name" for="Bakery">Bakery</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Beverages">
+                            <label class="filter-dropdown__cuisine-name" for="Beverages">Beverages</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Burgers">
+                            <label class="filter-dropdown__cuisine-name" for="Burgers">Burgers</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Coffee">
+                            <label class="filter-dropdown__cuisine-name" for="Coffee">Coffee</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Desserts">
+                            <label class="filter-dropdown__cuisine-name" for="Desserts">Desserts</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="European">
+                            <label class="filter-dropdown__cuisine-name" for="European">European</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Fast Food">
+                            <label class="filter-dropdown__cuisine-name" for="Fast Food">Fast Food</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Healthy">
+                            <label class="filter-dropdown__cuisine-name" for="Healthy">Healthy</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Indian">
+                            <label class="filter-dropdown__cuisine-name" for="Indian">Indian</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Italian">
+                            <label class="filter-dropdown__cuisine-name" for="Italian">Italian</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Latin">
+                            <label class="filter-dropdown__cuisine-name" for="Latin">Latin</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Middle Eastern">
+                            <label class="filter-dropdown__cuisine-name" for="Middle Eastern">Middle Eastern</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Pizza">
+                            <label class="filter-dropdown__cuisine-name" for="Pizza">Pizza</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Salads">
+                            <label class="filter-dropdown__cuisine-name" for="Salads">Salads</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Sandwiches">
+                            <label class="filter-dropdown__cuisine-name" for="Sandwiches">Sandwiches</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Sea Food">
+                            <label class="filter-dropdown__cuisine-name" for="Sea Food">Sea Food</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Turkish">
+                            <label class="filter-dropdown__cuisine-name" for="Turkish">Turkish</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Vegan">
+                            <label class="filter-dropdown__cuisine-name" for="Vegan">Vegan</label>
+                        </li>
+                    </ul>
                 </div>
                 <div class="filter-checkbox">
                     <input class="filter-checkbox__input" type="checkbox" name="special-offers" id="special-offers">
@@ -526,6 +621,11 @@
                 document.querySelector(".restaurant-selection__value").textContent = rest;
                 restSelectionBtn.classList.toggle("restaurant-selection__btn--open");
                 restSelectionBox.classList.toggle("restaurant-selection__box--open");
+            });
+
+            // toggle filter dropdown
+            document.querySelector(".filter-dropdown__head").addEventListener("click", e => {
+                document.querySelector(".filter-dropdown").classList.toggle("filter-dropdown--open");
             });
 
             // toggle footer country

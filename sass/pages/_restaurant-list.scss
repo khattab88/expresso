@@ -113,24 +113,49 @@
 
 /* restaurant list filter */
 .restaurant-list-filter {
-    border: 1px solid $color-font-light;
+    border: 1px solid $color-gray-light;
+    border-radius: $border-radius-small;
     margin: 2rem 0;
+}
 
     .filter-dropdown {
-        padding: 1.5rem 3rem;
-        padding-right: 0;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        color: $color-font-dark;
-        border-bottom: 1px solid $color-font-light;
+        position: relative;
 
-        &:hover {
-            cursor: pointer;
+        &--open {
+
+            .filter-dropdown__head {
+                background-color: $color-font-light;
+                box-shadow: $box-shadow;
+            }
+
+            .filter-dropdown__cuisine-list {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__head {
+            height: 8rem;
+            padding: 1.5rem 3rem;
+            padding-right: 0;
+            padding-top: 1rem;
+            margin-right: auto;
+            margin-left: auto;
+            color: $color-font-dark;
+            border-bottom: 1px solid $color-font-light;
+
+            position: relative;
+            display: flex;
+            align-items: center;
+
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         &__icon {
+            position: relative;
             font-size: 2.7rem;
             margin-right: 1.5rem;
 
@@ -145,10 +170,95 @@
                 }
             }
         }
+
+        &__count {
+            opacity: 0;
+            visibility: hidden;
+
+            position: absolute;
+            top: -1rem;
+            right: -.9rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            color: $color-white;
+            background-color: $color-main;
+            font-size: 1.25rem;
+            font-family: "Oswald",sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         &__title {
             font-size: 2.2rem;
-            margin-right: 11rem;
+            margin-right: 6rem;
+            letter-spacing: .5px;
+            text-transform: uppercase;
         }
+
+        &__clear {
+            display: none;
+            position: absolute;
+            left: 6.8rem;
+            bottom: .75rem;
+            color: $color-main;
+            font-size: 1.5rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &__cuisine-list {
+            opacity: 0;
+            visibility: hidden;
+
+            list-style: none;
+            position: absolute;
+            top: 8.1rem;
+            background-color: $color-white;
+            width: 100%;
+            height: 25rem;
+            max-height: 25rem;
+            overflow: scroll;
+            z-index: 1;
+            padding: 1.5rem 2rem;
+            padding-top: 2rem;
+            box-shadow: $box-shadow;
+            border-bottom-left-radius: $border-radius-small;
+            border-bottom-right-radius: $border-radius-small;
+
+            display: flex;
+            flex-wrap: wrap;
+            
+            transition: all .2s;
+        }
+
+        &__cuisine-item {      
+            height: 3.1rem;      
+            margin: .5rem;
+            display: inline-block;
+        }
+
+        &__cuisine-checkbox {
+            display: none;
+        }
+        &__cuisine-name {
+            box-shadow: 0 2px 4px rgba($color-black, .1);
+            padding: .5rem 2rem;
+            color: $color-font-dark;
+            font-size: 1.5rem;
+            letter-spacing: .75px;
+            border: 1px solid $color-gray-light;
+            border-radius: 100px;
+            transition: all .2s;
+        }
+        &__cuisine-checkbox:checked ~ &__cuisine-name {
+            color: $color-white;
+            background-color: $color-main; 
+        }
+
     }
     
     .filter-checkbox {
@@ -157,7 +267,7 @@
         background-color: $color-font-light;
         font-size: 150%;
     }    
-}
+
 
 /* restaurant list */
 .restaurant-list {
