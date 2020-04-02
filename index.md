@@ -31,7 +31,7 @@ Feaures:
 
 
 - cart
-    - delete item record
+    - delete item record [TODO]
     - add/remove item count
     - calculate total
 
@@ -43,7 +43,7 @@ Feaures:
     - type filter / tags selection  [DONE]
 
 - restaurant menu
-    - menu section dropdown    
+    - menu section dropdown   [DONE]
 
 - login 
     - 
@@ -53,7 +53,7 @@ Feaures:
 
 - contact us
     - add subject selection dropdown
-    - add captcha
+    - add captcha [TODO]
 
 - checkout
     - add address/delivery location (map) [DONE]

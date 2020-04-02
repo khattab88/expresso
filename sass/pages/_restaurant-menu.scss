@@ -150,7 +150,7 @@
         padding: 2rem 2.5rem;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid $color-font-light;
+        border-bottom: 1px solid $color-gray-light;
 
         &:hover {
             cursor: pointer;
@@ -166,6 +166,10 @@
     }
     &__body {
         display: none;
+
+        &--open { 
+            display: block; 
+        }
 
         @include respond(desktop) {
             display: block;
