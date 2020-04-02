@@ -194,12 +194,14 @@
                         <div class="restaurant-search__input">
                             <div class="restaurant-selection">
                                 <button class="restaurant-selection__btn">
-                                    <i class="restaurant-selection__icon-store material-icons-outlined">store</i>
+                                    <i class="restaurant-selection__icon-store material-icons">search</i>
                                     <p class="restaurant-selection__value">Find a restaurant</p>
-                                    <i class="restaurant-selection__icon-caret restaurant-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
-                                    <i class="restaurant-selection__icon-caret restaurant-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
+                                    <i
+                                        class="restaurant-selection__icon-caret restaurant-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
+                                    <i
+                                        class="restaurant-selection__icon-caret restaurant-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
                                 </button>
-                            
+
                                 <div class="restaurant-selection__box">
                                     <input type="text" class="restaurant-selection__input">
                                     <ul class="restaurant-selection__restaurant-list">
@@ -598,7 +600,7 @@
             // toggle header location selection
             let locationSelectionBtn = document.querySelector(".location-selection__btn");
             let locationSelectionBox = document.querySelector(".location-selection__box");
-            locationSelectionBtn.addEventListener("click", function(){
+            locationSelectionBtn.addEventListener("click", function () {
                 locationSelectionBtn.classList.toggle("location-selection__btn--open");
                 locationSelectionBox.classList.toggle("location-selection__box--open");
             });
@@ -612,7 +614,7 @@
             // toggle header restaurant selection
             let restSelectionBtn = document.querySelector(".restaurant-selection__btn");
             let restSelectionBox = document.querySelector(".restaurant-selection__box");
-            restSelectionBtn.addEventListener("click", function(){
+            restSelectionBtn.addEventListener("click", function () {
                 restSelectionBtn.classList.toggle("restaurant-selection__btn--open");
                 restSelectionBox.classList.toggle("restaurant-selection__box--open");
             });
@@ -627,6 +629,48 @@
             document.querySelector(".filter-dropdown__head").addEventListener("click", e => {
                 document.querySelector(".filter-dropdown").classList.toggle("filter-dropdown--open");
             });
+
+            // get filter values 
+            const filters = [];
+            document.querySelector(".filter-dropdown__cuisine-list").addEventListener("change", e => {
+                //e.preventDefault();
+
+                // get selected item
+                const filterItem = e.target.closest(".filter-dropdown__cuisine-item").children;
+                const checkbox = filterItem[0];
+                const label = filterItem[1];
+                const value = label.textContent;
+
+                // check if item value in filters list
+                if (checkbox.checked) {
+                    if (filters.indexOf(value) < 0) {
+                        filters.push(value);
+                    }
+                } else {
+                    if (filters.indexOf(value) >= 0) {
+                        const index = filters.indexOf(value);
+                        filters.splice(index, 1);
+                    }
+                }
+
+                // display count and clear label
+                const count = document.querySelector(".filter-dropdown__count");
+                const clear = document.querySelector(".filter-dropdown__clear");
+                if(filters.length > 0) {
+                    count.textContent = filters.length;
+                    count.style.opacity = 1;
+                    count.style.visibility = "visible";
+
+                    clear.style.display = "inline-block";
+                }else {
+                    count.style.opacity = 0;
+                    count.style.visibility = "hidden";
+
+                    clear.style.opacity = 0;
+                    clear.style.display = "none";
+                }
+            });
+
 
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
