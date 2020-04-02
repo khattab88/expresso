@@ -59,7 +59,7 @@ Feaures:
     - add address/delivery location (map) [DONE]
     - expected delivery time dropdown
     - enhance payment option selection 
-    - add delivery details section    [TODO]
+    - add delivery details section    [DONE]
 
 
 

@@ -103,8 +103,9 @@
 }
 
 .form-group {
+    position: relative;
     display: block;
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 4rem 0;
     border: 0;
     border-bottom: 1px solid $color-gray-light;
 
@@ -112,6 +113,12 @@
         transform: translateY(-50%);
         font-size: 1.8rem;
         line-height: 1.8rem;
+        letter-spacing: .5px;
+
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transition: all 0.15s ease-out 0s;
     }
     &__input {
         width: 100%;
@@ -124,6 +131,16 @@
         padding: 0;
         font-size: 1.8rem;
         padding: .3rem .5rem;
+    }
+
+    &__input:focus {
+        outline: none;
+        border-bottom: 1px solid $color-main;
+    }
+    &__input:focus ~ &__label {
+        top: -8px;
+        font-size: 14px;
+        color: $color-gray-dark;
     }
 }
 

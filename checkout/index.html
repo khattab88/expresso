@@ -165,14 +165,14 @@
                         </p>
                         <div class="user-info__form">
                             <div class="form-group">
-                                <label class="form-group__label" for="customer-name">Name</label>
                                 <input class="form-group__input" type="text" name="customer-name" id="customer-name"
                                     size="30" required>
+                                <label class="form-group__label" for="customer-name">Name</label>
                             </div>
                             <div class="form-group">
-                                <label class="form-group__label" for="customer-email">Email</label>
                                 <input class="form-group__input" type="text" name="customer-email" id="customer-email"
                                     size="30" required>
+                                <label class="form-group__label" for="customer-email">Email</label>
                             </div>
                         </div>
                     </section>
@@ -185,14 +185,49 @@
                             </h5>
                             <div class="delivery-info__form-fields">
                                 <div class="form-group">
-                                    <label class="form-group__label" for="customer-name">Name</label>
-                                    <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                    <input class="form-group__input" type="text" name="address-name" id="address-name"
                                         size="30" required>
+                                    <label class="form-group__label" for="address-name">Address</label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-group__label" for="customer-name">Name</label>
-                                    <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                    <input class="form-group__input" type="text" name="address-street" id="address-street"
                                         size="30" required>
+                                    <label class="form-group__label" for="address-street">Street</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-area" id="address-area"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-area">Area</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-city" id="address-city"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-city">City</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-building" id="address-building"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-building">House/Building</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-apartment" id="address-apartment"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-apartment">Apartment/Office</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-floor" id="address-floor"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-floor">Floor</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-instructions" id="address-instructions"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-instructions">INstructions</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="tel" name="address-mobile" id="address-mobile"
+                                        size="30" required pattern="[0-9]{6,20}">
+                                    <label class="form-group__label" for="address-mobile">Mobile</label>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +276,7 @@
                                 <i class="cart__header-main-icon material-icons">shopping_cart</i>
                                 <h3 class="cart__header-main-title">Your Oredr</h3>
                             </div>
-                            <p class="cart__header-close cart__header-close--visible">
+                            <p class="cart__header-close cart__header-close--hidden">
                                 <i class="cart__header-close-icon fa fa-times"></i>
                             </p>
                         </div>

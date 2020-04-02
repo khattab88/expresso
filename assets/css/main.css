@@ -4018,16 +4018,22 @@ body {
 
 /* line 105, sass/pages/_checkout.scss */
 .form-group {
+  position: relative;
   display: block;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 4rem 0;
   border: 0;
   border-bottom: 1px solid #d5d5d5; }
-  /* line 111, sass/pages/_checkout.scss */
+  /* line 112, sass/pages/_checkout.scss */
   .form-group__label {
     transform: translateY(-50%);
     font-size: 1.8rem;
-    line-height: 1.8rem; }
-  /* line 116, sass/pages/_checkout.scss */
+    line-height: 1.8rem;
+    letter-spacing: .5px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transition: all 0.15s ease-out 0s; }
+  /* line 123, sass/pages/_checkout.scss */
   .form-group__input {
     width: 100%;
     min-height: 3.5rem;
@@ -4039,21 +4045,30 @@ body {
     padding: 0;
     font-size: 1.8rem;
     padding: .3rem .5rem; }
+  /* line 136, sass/pages/_checkout.scss */
+  .form-group__input:focus {
+    outline: none;
+    border-bottom: 1px solid #009a9a; }
+  /* line 140, sass/pages/_checkout.scss */
+  .form-group__input:focus ~ .form-group__label {
+    top: -8px;
+    font-size: 14px;
+    color: #555; }
 
 /* delivery info */
 @media only screen and (min-width: 64em) {
-  /* line 131, sass/pages/_checkout.scss */
+  /* line 148, sass/pages/_checkout.scss */
   .delivery-info {
     position: static; } }
 
-/* line 137, sass/pages/_checkout.scss */
+/* line 154, sass/pages/_checkout.scss */
 .delivery-info__heading {
   font-family: "Oswald",sans-serif;
   font-weight: 400;
   letter-spacing: .5px;
   font-size: 2.4rem; }
 
-/* line 146, sass/pages/_checkout.scss */
+/* line 163, sass/pages/_checkout.scss */
 .delivery-info__form-title {
   width: 100%;
   height: 2rem;
@@ -4063,16 +4078,16 @@ body {
   font-weight: 400;
   margin-top: 2rem; }
 
-/* line 156, sass/pages/_checkout.scss */
+/* line 173, sass/pages/_checkout.scss */
 .delivery-info__form-fields {
   margin-top: 3rem; }
 
-/* line 161, sass/pages/_checkout.scss */
+/* line 178, sass/pages/_checkout.scss */
 .delivery-info__address {
   display: flex;
   flex-direction: column; }
 
-/* line 165, sass/pages/_checkout.scss */
+/* line 182, sass/pages/_checkout.scss */
 .delivery-info__add {
   border: 1px solid #009a9a;
   padding: .8rem 2rem;
@@ -4084,35 +4099,35 @@ body {
   margin: 3rem 0;
   font-size: 1.5rem;
   transition: 0.3s; }
-  /* line 177, sass/pages/_checkout.scss */
+  /* line 194, sass/pages/_checkout.scss */
   .delivery-info__add:hover {
     background-color: #009a9a;
     color: #fff;
     cursor: pointer; }
 
-/* line 183, sass/pages/_checkout.scss */
+/* line 200, sass/pages/_checkout.scss */
 .delivery-info__locate {
   font-size: 1.4rem; }
 
-/* line 186, sass/pages/_checkout.scss */
+/* line 203, sass/pages/_checkout.scss */
 .delivery-info__locate-icon {
   font-size: 1.4rem; }
 
-/* line 189, sass/pages/_checkout.scss */
+/* line 206, sass/pages/_checkout.scss */
 .delivery-info__time {
   margin-top: 3rem; }
   @media only screen and (min-width: 64em) {
-    /* line 189, sass/pages/_checkout.scss */
+    /* line 206, sass/pages/_checkout.scss */
     .delivery-info__time {
       width: 100%; } }
 
-/* line 196, sass/pages/_checkout.scss */
+/* line 213, sass/pages/_checkout.scss */
 .delivery-info__time-heading {
   letter-spacing: .75px;
   font-size: 1.5rem;
   color: #323232; }
 
-/* line 202, sass/pages/_checkout.scss */
+/* line 219, sass/pages/_checkout.scss */
 .delivery-info .expected-delivery-time {
   margin-top: 1rem;
   display: flex;
@@ -4125,50 +4140,50 @@ body {
   font-size: 1.5rem;
   transition: all .2s; }
   @media only screen and (min-width: 30em) {
-    /* line 202, sass/pages/_checkout.scss */
+    /* line 219, sass/pages/_checkout.scss */
     .delivery-info .expected-delivery-time {
       width: 50%; } }
   @media only screen and (min-width: 64em) {
-    /* line 202, sass/pages/_checkout.scss */
+    /* line 219, sass/pages/_checkout.scss */
     .delivery-info .expected-delivery-time {
       width: 50%; } }
-  /* line 222, sass/pages/_checkout.scss */
+  /* line 239, sass/pages/_checkout.scss */
   .delivery-info .expected-delivery-time:hover {
     cursor: pointer;
     border-color: #009a9a; }
-  /* line 227, sass/pages/_checkout.scss */
+  /* line 244, sass/pages/_checkout.scss */
   .delivery-info .expected-delivery-time__value {
     color: #323232; }
-  /* line 231, sass/pages/_checkout.scss */
+  /* line 248, sass/pages/_checkout.scss */
   .delivery-info .expected-delivery-time__icon {
     color: #009a9a; }
 
 /* payment info */
-/* line 239, sass/pages/_checkout.scss */
+/* line 256, sass/pages/_checkout.scss */
 .payment-info__heading {
   font-family: "Oswald",sans-serif;
   font-weight: 400;
   letter-spacing: .5px;
   font-size: 2.4rem; }
 
-/* line 245, sass/pages/_checkout.scss */
+/* line 262, sass/pages/_checkout.scss */
 .payment-info__options {
   list-style: none;
   margin-top: 2.5rem; }
 
-/* line 250, sass/pages/_checkout.scss */
+/* line 267, sass/pages/_checkout.scss */
 .payment-info__option {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem; }
-  /* line 255, sass/pages/_checkout.scss */
+  /* line 272, sass/pages/_checkout.scss */
   .payment-info__option-input {
     margin-right: 1.5rem; }
-  /* line 258, sass/pages/_checkout.scss */
+  /* line 275, sass/pages/_checkout.scss */
   .payment-info__option-label {
     display: flex;
     align-items: center; }
-  /* line 262, sass/pages/_checkout.scss */
+  /* line 279, sass/pages/_checkout.scss */
   .payment-info__option-name {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
@@ -4177,13 +4192,13 @@ body {
     margin-left: .5rem; }
 
 /* order info */
-/* line 273, sass/pages/_checkout.scss */
+/* line 290, sass/pages/_checkout.scss */
 .order-info {
   min-height: 20rem;
   display: flex;
   flex-direction: column; }
   @media only screen and (min-width: 64em) {
-    /* line 273, sass/pages/_checkout.scss */
+    /* line 290, sass/pages/_checkout.scss */
     .order-info {
       width: 45%;
       height: 52rem;
