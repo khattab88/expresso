@@ -252,17 +252,17 @@
                         <h4 class="payment-info__heading">Payment Methods</h4>
                         <ul class="payment-info__options">
                             <li class="payment-info__option">
-                                <input class="payment-info__option-input" type="radio" name="card_pay" id="card_pay">
-                                <label class="payment-info__option-label" for="card_pay">
-                                    <i class="payment-info__option-icon material-icons">credit_card</i>
-                                    <h5 class="payment-info__option-name">Credit Card</h5>
+                                <input class="payment-info__option-input" type="radio" checked name="payment" id="cash_pay">
+                                <label class="payment-info__option-label" for="cash_pay">
+                                    <span class="payment-info__option-icon payment-info__option-icon--cash"></span>
+                                    <h5 class="payment-info__option-name">Cash on Delivery</h5>
                                 </label>
                             </li>
                             <li class="payment-info__option">
-                                <input class="payment-info__option-input" type="radio" name="cash_pay" id="cash_pay">
-                                <label class="payment-info__option-label" for="cash_pay">
-                                    <i class="payment-info__option-icon material-icons">money</i>
-                                    <h5 class="payment-info__option-name">Cash on Delivery</h5>
+                                <input class="payment-info__option-input" type="radio" name="payment" id="card_pay">
+                                <label class="payment-info__option-label" for="card_pay">
+                                    <span class="payment-info__option-icon payment-info__option-icon--credit"></span>
+                                    <h5 class="payment-info__option-name">Credit Card</h5>
                                 </label>
                             </li>
                         </ul>

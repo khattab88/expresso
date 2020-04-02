@@ -58,7 +58,7 @@ Feaures:
 - checkout
     - add address/delivery location (map) [DONE]
     - expected delivery time dropdown
-    - enhance payment option selection 
+    - enhance payment option selection [DONE] 
     - add delivery details section    [DONE]
 
 
