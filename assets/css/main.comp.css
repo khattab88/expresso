@@ -2167,36 +2167,171 @@ body {
 
 /* restaurant list filter */
 .restaurant-list-filter {
-  border: 1px solid #f9f9f9;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
   margin: 2rem 0; }
-  .restaurant-list-filter .filter-dropdown {
+  @media only screen and (min-width: 64em) {
+    .restaurant-list-filter {
+      display: flex; } }
+
+.filter-dropdown {
+  position: relative; }
+  @media only screen and (min-width: 64em) {
+    .filter-dropdown {
+      width: 40%; } }
+  .filter-dropdown--open .filter-dropdown__head {
+    background-color: #f9f9f9;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .filter-dropdown--open .filter-dropdown__cuisine-list {
+    opacity: 1;
+    visibility: visible; }
+  .filter-dropdown__head {
+    height: 8rem;
     padding: 1.5rem 3rem;
-    padding-right: 0;
+    padding-top: 1rem;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
-    align-items: center;
     color: #323232;
-    border-bottom: 1px solid #f9f9f9; }
-    .restaurant-list-filter .filter-dropdown:hover {
+    border-bottom: 1px solid #f9f9f9;
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .filter-dropdown__head:hover {
       cursor: pointer; }
-    .restaurant-list-filter .filter-dropdown__icon {
-      font-size: 2.7rem;
-      margin-right: 1.5rem; }
+  .filter-dropdown__icon {
+    position: relative;
+    font-size: 2.7rem;
+    margin-right: 1.5rem; }
+    .filter-dropdown__icon--angle-down {
+      margin-right: 0; }
       @media only screen and (min-width: 30em) {
-        .restaurant-list-filter .filter-dropdown__icon--angle-down {
+        .filter-dropdown__icon--angle-down {
           margin-left: 30rem; } }
-      @media only screen and (min-width: 75em) {
-        .restaurant-list-filter .filter-dropdown__icon--angle-down {
+      @media only screen and (min-width: 64em) {
+        .filter-dropdown__icon--angle-down {
           margin-left: 0; } }
-    .restaurant-list-filter .filter-dropdown__title {
-      font-size: 2.2rem;
-      margin-right: 11rem; }
-  .restaurant-list-filter .filter-checkbox {
-    padding: 1.5rem 3rem;
-    padding-left: 3.5rem;
-    background-color: #f9f9f9;
-    font-size: 150%; }
+      @media only screen and (min-width: 75em) {
+        .filter-dropdown__icon--angle-down {
+          margin-left: 0; } }
+  .filter-dropdown__count {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -1rem;
+    right: -.9rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #009a9a;
+    font-size: 1.25rem;
+    font-family: "Oswald",sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .filter-dropdown__title {
+    font-size: 2.2rem;
+    margin-right: auto;
+    letter-spacing: .5px;
+    text-transform: uppercase; }
+  .filter-dropdown__clear {
+    display: none;
+    position: absolute;
+    left: 6.8rem;
+    bottom: .75rem;
+    color: #009a9a;
+    font-size: 1.5rem; }
+    .filter-dropdown__clear:hover {
+      text-decoration: underline; }
+  .filter-dropdown__cuisine-list {
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    position: absolute;
+    top: 8.1rem;
+    background-color: #fff;
+    width: 100%;
+    height: 25rem;
+    max-height: 25rem;
+    overflow: scroll;
+    z-index: 1;
+    padding: 1.5rem 2rem;
+    padding-top: 2rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .2s; }
+  .filter-dropdown__cuisine-item {
+    height: 3.1rem;
+    margin: .5rem;
+    display: inline-block; }
+  .filter-dropdown__cuisine-checkbox {
+    display: none; }
+  .filter-dropdown__cuisine-name {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: .5rem 2rem;
+    color: #323232;
+    font-size: 1.5rem;
+    letter-spacing: .75px;
+    border: 1px solid #d5d5d5;
+    border-radius: 100px;
+    transition: all .2s; }
+  .filter-dropdown__cuisine-checkbox:checked ~ .filter-dropdown__cuisine-name {
+    color: #fff;
+    background-color: #009a9a; }
+
+.filter-checkbox {
+  padding: 1.5rem 3rem;
+  padding-left: 5rem;
+  background-color: #f9f9f9;
+  font-size: 150%;
+  display: flex;
+  align-items: center; }
+  @media only screen and (min-width: 64em) {
+    .filter-checkbox {
+      width: 60%;
+      display: flex;
+      align-items: center; } }
+  .filter-checkbox__title {
+    position: relative;
+    cursor: pointer; }
+    .filter-checkbox__title::before, .filter-checkbox__title::after {
+      position: absolute; }
+    .filter-checkbox__title::before {
+      top: 0;
+      left: -3rem;
+      content: "";
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+      border: 1px solid #009a9a;
+      border-radius: 3px; }
+    .filter-checkbox__title::after {
+      top: .45rem;
+      left: -2.5rem;
+      content: "";
+      display: inline-block;
+      height: 8px;
+      width: 12px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      transform: rotate(-45deg);
+      color: #009a9a; }
+    @media only screen and (min-width: 64em) {
+      .filter-checkbox__title {
+        font-size: 1.7rem;
+        margin-left: 1rem;
+        letter-spacing: .5px; } }
+  .filter-checkbox__input {
+    opacity: 0; }
+  .filter-checkbox input[type="checkbox"] + label::after {
+    content: none; }
+  .filter-checkbox input[type="checkbox"]:checked + label::after {
+    content: ""; }
+  .filter-checkbox input[type="checkbox"]:focus + label::before {
+    outline: #009a9a auto 5px; }
 
 /* restaurant list */
 .restaurant-list {

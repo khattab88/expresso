@@ -290,6 +290,7 @@
 
         &__title {
             position: relative;
+            cursor: pointer;
 
             &::before,
             &::after {
@@ -337,6 +338,9 @@
         
         & input[type="checkbox"]:checked + label::after {
             content: "";
+        }
+        & input[type="checkbox"]:focus + label::before {
+            outline: $color-main auto 5px;
         }
     }    
 
