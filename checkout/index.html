@@ -179,6 +179,23 @@
 
                     <section class="checkout-info-box delivery-info">
                         <h4 class="delivery-info__heading">Delivery Details</h4>
+                        <div class="delivery-info__form">
+                            <h5 class="delivery-info__form-title">
+                                Add new - <span class="delivery-info__form-address">Heliopolis, Cairo</span>
+                            </h5>
+                            <div class="delivery-info__form-fields">
+                                <div class="form-group">
+                                    <label class="form-group__label" for="customer-name">Name</label>
+                                    <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                        size="30" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-group__label" for="customer-name">Name</label>
+                                    <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                        size="30" required>
+                                </div>
+                            </div>
+                        </div>
                         <div class="delivery-info__address">
                             <button class="delivery-info__add">Add New Address</button>
                             <span class="delivery-info__locate">
@@ -420,9 +437,9 @@
 
             // toggle map modal
             Array.from(document.querySelectorAll(".delivery-info__add, .map-modal__confirm, .map-modal__close"))
-            .forEach(el => el.addEventListener("click", e => {
-                document.querySelector(".map-modal").classList.toggle("map-modal--open");
-            }));
+                .forEach(el => el.addEventListener("click", e => {
+                    document.querySelector(".map-modal").classList.toggle("map-modal--open");
+                }));
 
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
@@ -446,8 +463,9 @@
             var marker = new google.maps.Marker({ position: cairo, map: map });
         }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGWfGrQbUf-NIaYCNEowKfdb3FQWjPrw&callback=initMap">
-    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGWfGrQbUf-NIaYCNEowKfdb3FQWjPrw&callback=initMap">
+        </script>
 </body>
 
 </html>
