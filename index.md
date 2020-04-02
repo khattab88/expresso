@@ -24,7 +24,11 @@ Feaures:
     - show/hide item options [DONE]
     - add/remove item count [DONE]
 
+- restaurant list
+    - type filter / tags selection  [DONE]
 
+- restaurant menu
+    - menu section dropdown   [DONE]
 
 ----------------------------------------------------------------------------------
 
@@ -38,15 +42,6 @@ Feaures:
 
 - home:
     - category carousel 
-
-- restaurant list
-    - type filter / tags selection  [DONE]
-
-- restaurant menu
-    - menu section dropdown   [DONE]
-
-- login 
-    - 
 
 - signup
     - select counry dropdown
