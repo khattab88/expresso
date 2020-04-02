@@ -49,13 +49,15 @@
                                 </li>
                                 <li class="country-dropdown__item">
                                     <a class="country-dropdown__link" href="#">
-                                        <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/sa.svg"
+                                            alt="Saudi Arabia">
                                         Saudi Arabia
                                     </a>
                                 </li>
                                 <li class="country-dropdown__item">
                                     <a class="country-dropdown__link" href="#">
-                                        <img class="country-dropdown__img" src="../assets/img/flags/kw.svg" alt="Kuwait">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/kw.svg"
+                                            alt="Kuwait">
                                         Kuwait
                                     </a>
                                 </li>
@@ -67,7 +69,8 @@
                                 </li>
                                 <li class="country-dropdown__item">
                                     <a class="country-dropdown__link" href="#">
-                                        <img class="country-dropdown__img" src="../assets/img/flags/bh.svg" alt="Bahrain">
+                                        <img class="country-dropdown__img" src="../assets/img/flags/bh.svg"
+                                            alt="Bahrain">
                                         Bahrain
                                     </a>
                                 </li>
@@ -225,7 +228,7 @@
                                 <i class="cart__header-close-icon fa fa-times"></i>
                             </p>
                         </div>
-                    
+
                         <div class="cart__items">
                             <article class="cart__item">
                                 <div class="cart__item-detail">
@@ -250,7 +253,7 @@
                                 </div>
                             </article>
                         </div>
-                    
+
                         <div class="cart__pricing">
                             <div class="cart__pricing-box cart__pricing-box-subtotal">
                                 <p class="cart__pricing-box__title">subtotal</p>
@@ -265,7 +268,7 @@
                                 <p class="cart__pricing-box__value">105.00 EGP</p>
                             </div>
                         </div>
-                    
+
                         <div class="cart__submit">
                             <button class="cart__submit-btn">Place Order</button>
                         </div>
@@ -274,6 +277,24 @@
 
             </div>
 
+            <!-- map modal -->
+            <div class="map-modal map-modal--open">
+                <div class="map-modal__content">
+                    <div class="map-modal__head">
+                        <h3 class="map-modal__title">Choose your location</h3>
+                        <p class="map-modal__close">
+                            <i class="map-modal__close-icon fa fa-times"></i>
+                        </p>
+                    </div>
+                    <div class="map-modal__body">
+                        <p class="map-modal__caption">Please drag and drop the pin to your most accurate location.</p>
+                        <div class="map-modal__map-container" id="map">
+                            MAP
+                        </div>
+                        <button class="map-modal__confirm">Confirm</button>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
@@ -327,7 +348,8 @@
                             </li>
                             <li class="country-dropdown__item">
                                 <a class="country-dropdown__link" href="#">
-                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg" alt="Saudi Arabia">
+                                    <img class="country-dropdown__img" src="../assets/img/flags/sa.svg"
+                                        alt="Saudi Arabia">
                                     Saudi Arabia
                                 </a>
                             </li>
@@ -382,7 +404,7 @@
 
             // toggle nav country
             let navCountryBtn = $(".country-btn");
-            navCountryBtn.click(function(){
+            navCountryBtn.click(function () {
                 let dropdown = $(".country-btn > .country-dropdown");
                 navCountryBtn.toggleClass("country-btn--open");
                 dropdown.toggleClass("country-dropdown--open");
@@ -390,20 +412,41 @@
 
             // toggle nav category dropdown
             let navCategoryBtn = document.querySelector(".category-btn");
-            navCategoryBtn.addEventListener("click", function(){
+            navCategoryBtn.addEventListener("click", function () {
                 let dropdown = document.querySelector(".category-dropdown");
                 navCategoryBtn.classList.toggle("category-btn--open");
                 dropdown.classList.toggle("category-dropdown--open");
             });
 
+            // toggle map modal
+            Array.from(document.querySelectorAll(".delivery-info__add, .map-modal__confirm, .map-modal__close"))
+            .forEach(el => el.addEventListener("click", e => {
+                document.querySelector(".map-modal").classList.toggle("map-modal--open");
+            }));
+
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
-            footerCountryBtn.click(function(){
+            footerCountryBtn.click(function () {
                 let dropdown = $(".change-country__btn > .country-dropdown");
                 footerCountryBtn.toggleClass("change-country__btn--open");
                 dropdown.toggleClass("country-dropdown--open");
             });
         });
+    </script>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var cairo = { lat: 30.044420, lng: 31.235712 };
+            // The map, centered at cairo
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 15, center: cairo });
+            // The marker, positioned at cairo
+            var marker = new google.maps.Marker({ position: cairo, map: map });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGWfGrQbUf-NIaYCNEowKfdb3FQWjPrw&callback=initMap">
     </script>
 </body>
 

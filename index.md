@@ -40,7 +40,7 @@ Feaures:
     - category carousel 
 
 - restaurant list
-    - type filter / tags selection  [TODO]
+    - type filter / tags selection  [DONE]
 
 - restaurant menu
     - menu section dropdown    
@@ -56,7 +56,7 @@ Feaures:
     - add captcha
 
 - checkout
-    - add address/delivery location (map) [TODO]
+    - add address/delivery location (map) [DONE]
     - expected delivery time dropdown
     - enhance payment option selection 
     - add delivery details section    [TODO]
