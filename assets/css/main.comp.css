@@ -1724,32 +1724,87 @@ body {
   bottom: 0;
   z-index: 2;
   transition: all .2s;
-  display: none; }
+  display: none;
+  overflow: scroll; }
   @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
     .map-modal {
       -webkit-backdrop-filter: brightness(30%);
       backdrop-filter: brightness(30%); } }
   .map-modal--open {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    display: block; }
   .map-modal__content {
     width: 96%;
-    padding: 1rem 2rem 4rem 2rem;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem 2rem 2rem;
     z-index: 3;
     background-color: #fff;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
     animation: moveInDown .65s ease-out; }
+    @media only screen and (min-width: 30em) {
+      .map-modal__content {
+        margin-top: 3rem; } }
     @media only screen and (min-width: 48em) {
       .map-modal__content {
-        width: 80%; } }
+        width: 80%;
+        margin-top: 20rem; } }
     @media only screen and (min-width: 64em) {
       .map-modal__content {
-        width: 60%; } }
+        width: 60%;
+        margin-top: 7rem; } }
     @media only screen and (min-width: 75em) {
       .map-modal__content {
-        width: 40%; } }
+        width: 40%;
+        margin-top: 5rem; } }
+  .map-modal__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem .5rem 1.5rem; }
+  .map-modal__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #323232; }
+  .map-modal__close {
+    cursor: pointer; }
+    .map-modal__close-icon {
+      font-size: 2.5rem;
+      color: #009a9a; }
+  .map-modal__body {
+    position: relative;
+    color: #323232;
+    padding: 1.5rem;
+    padding-top: .5rem; }
+  .map-modal__caption {
+    color: inherit;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 100;
+    letter-spacing: .5px;
+    padding-left: .25rem;
+    padding-right: 2rem;
+    line-height: 1.5; }
+  .map-modal__map-container {
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+    height: 42rem; }
+  .map-modal__confirm {
+    width: 100%;
+    height: 5rem;
+    background-color: #009a9a;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    padding: 1.5rem 1rem;
+    letter-spacing: .5px; }
 
 /* Home */
 /* header */

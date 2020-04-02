@@ -7,9 +7,6 @@
     z-index: 2;
     transition: all .2s;
     display: none;
-
-    //overflow-x: hidden;
-    //overflow-y: auto;
     overflow: scroll;
 
     @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
