@@ -7,34 +7,49 @@
     z-index: 2;
     transition: all .2s;
     display: none;
+
+    //overflow-x: hidden;
+    //overflow-y: auto;
+    overflow: scroll;
+
     @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
         -webkit-backdrop-filter: brightness(30%);
         backdrop-filter: brightness(30%)
     }
 
     &--open {
-        @include flex-center;
+        display: block;
     }
 
     &__content {
         width: 96%;
+        margin: 0 auto;
+        margin-top: 4.5rem;
+        margin-bottom: 1.5rem;
         padding: 1rem 2rem 2rem 2rem;
         z-index: 3;
         background-color: $color-white;
-        border-radius: $border-radius-small;
+        border-radius: $border-radius-medium;
         box-shadow: $box-shadow;
         animation: moveInDown .65s ease-out;
 
+        @include respond(phone-land) {
+            margin-top: 3rem;
+        }
+
         @include respond(tab) {
             width: 80%;
+            margin-top: 20rem;
         }
 
         @include respond(tab-land) {
             width: 60%;
+            margin-top: 7rem;
         }
 
         @include respond(desktop) {
             width: 40%;
+            margin-top: 5rem;
         }
     }
 
@@ -79,8 +94,10 @@
     }
 
     &__map-container {
-        height: 40rem;
         margin-bottom: 1rem;
+        display: block;
+        position: relative;
+        height: 42rem;
     }
 
     &__confirm {

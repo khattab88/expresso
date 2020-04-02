@@ -2034,63 +2034,72 @@ body {
   bottom: 0;
   z-index: 2;
   transition: all .2s;
-  display: none; }
+  display: none;
+  overflow: scroll; }
   @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
     /* line 1, sass/components/_map-modal.scss */
     .map-modal {
       -webkit-backdrop-filter: brightness(30%);
       backdrop-filter: brightness(30%); } }
-  /* line 15, sass/components/_map-modal.scss */
+  /* line 20, sass/components/_map-modal.scss */
   .map-modal--open {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  /* line 19, sass/components/_map-modal.scss */
+    display: block; }
+  /* line 24, sass/components/_map-modal.scss */
   .map-modal__content {
     width: 96%;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
     padding: 1rem 2rem 2rem 2rem;
     z-index: 3;
     background-color: #fff;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
     animation: moveInDown .65s ease-out; }
+    @media only screen and (min-width: 30em) {
+      /* line 24, sass/components/_map-modal.scss */
+      .map-modal__content {
+        margin-top: 3rem; } }
     @media only screen and (min-width: 48em) {
-      /* line 19, sass/components/_map-modal.scss */
+      /* line 24, sass/components/_map-modal.scss */
       .map-modal__content {
-        width: 80%; } }
+        width: 80%;
+        margin-top: 20rem; } }
     @media only screen and (min-width: 64em) {
-      /* line 19, sass/components/_map-modal.scss */
+      /* line 24, sass/components/_map-modal.scss */
       .map-modal__content {
-        width: 60%; } }
+        width: 60%;
+        margin-top: 7rem; } }
     @media only screen and (min-width: 75em) {
-      /* line 19, sass/components/_map-modal.scss */
+      /* line 24, sass/components/_map-modal.scss */
       .map-modal__content {
-        width: 40%; } }
-  /* line 41, sass/components/_map-modal.scss */
+        width: 40%;
+        margin-top: 5rem; } }
+  /* line 56, sass/components/_map-modal.scss */
   .map-modal__head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1.5rem .5rem 1.5rem; }
-  /* line 48, sass/components/_map-modal.scss */
+  /* line 63, sass/components/_map-modal.scss */
   .map-modal__title {
     font-size: 2.5rem;
     font-weight: 400;
     color: #323232; }
-  /* line 54, sass/components/_map-modal.scss */
+  /* line 69, sass/components/_map-modal.scss */
   .map-modal__close {
     cursor: pointer; }
-    /* line 57, sass/components/_map-modal.scss */
+    /* line 72, sass/components/_map-modal.scss */
     .map-modal__close-icon {
       font-size: 2.5rem;
       color: #009a9a; }
-  /* line 63, sass/components/_map-modal.scss */
+  /* line 78, sass/components/_map-modal.scss */
   .map-modal__body {
     position: relative;
     color: #323232;
     padding: 1.5rem;
     padding-top: .5rem; }
-  /* line 70, sass/components/_map-modal.scss */
+  /* line 85, sass/components/_map-modal.scss */
   .map-modal__caption {
     color: inherit;
     margin-bottom: 1rem;
@@ -2100,11 +2109,13 @@ body {
     padding-left: .25rem;
     padding-right: 2rem;
     line-height: 1.5; }
-  /* line 81, sass/components/_map-modal.scss */
+  /* line 96, sass/components/_map-modal.scss */
   .map-modal__map-container {
-    height: 40rem;
-    margin-bottom: 1rem; }
-  /* line 86, sass/components/_map-modal.scss */
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+    height: 42rem; }
+  /* line 103, sass/components/_map-modal.scss */
   .map-modal__confirm {
     width: 100%;
     height: 5rem;
