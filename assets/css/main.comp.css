@@ -1716,6 +1716,41 @@ body {
     .location-modal__update:hover {
       background-color: #323232; }
 
+.map-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all .2s;
+  display: none; }
+  @supports (-webkit-backdrop-filter: brightness(30%)) or (backdrop-filter: brightness(30%)) {
+    .map-modal {
+      -webkit-backdrop-filter: brightness(30%);
+      backdrop-filter: brightness(30%); } }
+  .map-modal--open {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .map-modal__content {
+    width: 96%;
+    padding: 1rem 2rem 4rem 2rem;
+    z-index: 3;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    animation: moveInDown .65s ease-out; }
+    @media only screen and (min-width: 48em) {
+      .map-modal__content {
+        width: 80%; } }
+    @media only screen and (min-width: 64em) {
+      .map-modal__content {
+        width: 60%; } }
+    @media only screen and (min-width: 75em) {
+      .map-modal__content {
+        width: 40%; } }
+
 /* Home */
 /* header */
 .home-page__header {
