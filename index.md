@@ -52,7 +52,7 @@ Feaures:
 
 - contact us
     - add subject selection dropdown
-    - add captcha [TODO]
+    - add captcha [DONE]
 
 
 

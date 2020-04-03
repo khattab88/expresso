@@ -263,12 +263,11 @@
 
     &-textarea {
         padding-top: 1rem;
+        border-bottom: none;
     }
 }
 
-.g-recaptcha {
-    display: none;
-}
+.g-recaptcha {}
 
 .social-networks {
     list-style: none;

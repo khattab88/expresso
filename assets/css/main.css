@@ -3932,30 +3932,27 @@ body {
       width: 96%; } }
   /* line 264, sass/pages/_contact-us.scss */
   .form-control-textarea {
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    border-bottom: none; }
 
-/* line 269, sass/pages/_contact-us.scss */
-.g-recaptcha {
-  display: none; }
-
-/* line 273, sass/pages/_contact-us.scss */
+/* line 272, sass/pages/_contact-us.scss */
 .social-networks {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: 1rem; }
-  /* line 279, sass/pages/_contact-us.scss */
+  /* line 278, sass/pages/_contact-us.scss */
   .social-networks__item {
     display: inline-block;
     text-align: center;
     padding-right: 2.5rem; }
-  /* line 284, sass/pages/_contact-us.scss */
+  /* line 283, sass/pages/_contact-us.scss */
   .social-networks__icon {
     font-size: 3.6rem;
     font-weight: 600;
     color: #009a9a;
     transition: all .2s; }
-    /* line 290, sass/pages/_contact-us.scss */
+    /* line 289, sass/pages/_contact-us.scss */
     .social-networks__icon:hover {
       transform: translateY(-0.5rem) scale(1.05); }
 
