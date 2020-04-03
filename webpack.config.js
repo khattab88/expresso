@@ -5,7 +5,7 @@ module.exports = {
     entry: ["babel-polyfill", "./src/index.js"],
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "js/bundle.js"
+        filename: "bundle.js"
     },
     devServer: {
         contentBase: "./dist"
@@ -13,31 +13,31 @@ module.exports = {
     plugins: [
         new htmlWebpackPlugin({
             filename: "index.html",
-            template: "./index.html"
+            template: "./src/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "restaurant-list/index.html",
-            template: "./restaurant-list/index.html"
+            template: "./src/restaurant-list/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "restaurant-menu/index.html",
-            template: "./restaurant-menu/index.html"
+            template: "./src/restaurant-menu/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "login/index.html",
-            template: "./login/index.html"
+            template: "./src/login/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "sign-up/index.html",
-            template: "./sign-up/index.html"
+            template: "./src/sign-up/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "contact-us/index.html",
-            template: "./contact-us/index.html"
+            template: "./src/contact-us/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "checkout/index.html",
-            template: "./checkout/index.html"
+            template: "./src/checkout/index.html"
         }),
     ],
     module: {
