@@ -146,6 +146,7 @@
 
 /* delivery info */
 .delivery-info {
+    background-color: $color-font-light;
 
     @include respond(tab-land) {
         position: static;
@@ -226,6 +227,7 @@
     &__time-heading {
         letter-spacing: .75px;
         font-size: 1.5rem;
+        font-weight: 400;
         color: $color-font-dark;
     }
 
@@ -235,9 +237,9 @@
         justify-content: space-between;
         align-items: center;
         border: 1px solid $color-font-light;
-        border-radius: .3rem;
+        width: 100%;
         height: 4rem;
-        padding: 0 1rem;
+        padding: 0;
         font-size: 1.5rem;
         transition: all .2s;
 
@@ -254,13 +256,31 @@
             border-color: $color-main;
         }
 
-        &__value {
+        &__select {
+            position: relative;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            padding-left: 1.5rem;
+            border: none;
+            border-radius: $border-radius-small;
             color: $color-font-dark;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 0 1em;
+                width: 50px;
+                background: url(../img/arrow-down.svg) no-repeat 16px center transparent;
+                pointer-events: none;
+            }
         }
 
-        &__icon {
-            color: $color-main;
-        }
     }
 }
 

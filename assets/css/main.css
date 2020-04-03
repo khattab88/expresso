@@ -4094,125 +4094,136 @@ body {
     color: #555; }
 
 /* delivery info */
-@media only screen and (min-width: 64em) {
-  /* line 148, sass/pages/_checkout.scss */
-  .delivery-info {
-    position: static; } }
-
-/* line 154, sass/pages/_checkout.scss */
-.delivery-info__heading {
-  font-family: "Oswald",sans-serif;
-  font-weight: 400;
-  letter-spacing: .5px;
-  font-size: 2.4rem;
-  position: relative;
-  padding-left: 4rem; }
-  /* line 162, sass/pages/_checkout.scss */
-  .delivery-info__heading::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 2.5rem;
-    height: 2.5rem;
-    opacity: 0.8;
-    background: url(../img/shopping-bag.svg) no-repeat center center transparent; }
-
-/* line 176, sass/pages/_checkout.scss */
-.delivery-info__form-title {
-  width: 100%;
-  height: 2rem;
-  letter-spacing: 0.5px;
-  color: #323232;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 2rem; }
-
-/* line 186, sass/pages/_checkout.scss */
-.delivery-info__form-fields {
-  margin-top: 3rem; }
-
-/* line 191, sass/pages/_checkout.scss */
-.delivery-info__address {
-  display: flex;
-  flex-direction: column; }
-
-/* line 195, sass/pages/_checkout.scss */
-.delivery-info__add {
-  border: 1px solid #009a9a;
-  padding: .8rem 2rem;
-  border-radius: .4rem;
-  font-weight: 300;
-  color: #009a9a;
-  background-color: #fff;
-  width: 60%;
-  margin: 3rem 0;
-  font-size: 1.5rem;
-  transition: 0.3s; }
-  /* line 207, sass/pages/_checkout.scss */
-  .delivery-info__add:hover {
-    background-color: #009a9a;
-    color: #fff;
-    cursor: pointer; }
-
-/* line 213, sass/pages/_checkout.scss */
-.delivery-info__locate {
-  font-size: 1.4rem; }
-
-/* line 216, sass/pages/_checkout.scss */
-.delivery-info__locate-icon {
-  font-size: 1.4rem; }
-
-/* line 219, sass/pages/_checkout.scss */
-.delivery-info__time {
-  margin-top: 3rem; }
+/* line 148, sass/pages/_checkout.scss */
+.delivery-info {
+  background-color: #f9f9f9; }
   @media only screen and (min-width: 64em) {
-    /* line 219, sass/pages/_checkout.scss */
-    .delivery-info__time {
-      width: 100%; } }
-
-/* line 226, sass/pages/_checkout.scss */
-.delivery-info__time-heading {
-  letter-spacing: .75px;
-  font-size: 1.5rem;
-  color: #323232; }
-
-/* line 232, sass/pages/_checkout.scss */
-.delivery-info .expected-delivery-time {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #f9f9f9;
-  border-radius: .3rem;
-  height: 4rem;
-  padding: 0 1rem;
-  font-size: 1.5rem;
-  transition: all .2s; }
-  @media only screen and (min-width: 30em) {
-    /* line 232, sass/pages/_checkout.scss */
-    .delivery-info .expected-delivery-time {
-      width: 50%; } }
-  @media only screen and (min-width: 64em) {
-    /* line 232, sass/pages/_checkout.scss */
-    .delivery-info .expected-delivery-time {
-      width: 50%; } }
-  /* line 252, sass/pages/_checkout.scss */
-  .delivery-info .expected-delivery-time:hover {
-    cursor: pointer;
-    border-color: #009a9a; }
-  /* line 257, sass/pages/_checkout.scss */
-  .delivery-info .expected-delivery-time__value {
+    /* line 148, sass/pages/_checkout.scss */
+    .delivery-info {
+      position: static; } }
+  /* line 155, sass/pages/_checkout.scss */
+  .delivery-info__heading {
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 2.4rem;
+    position: relative;
+    padding-left: 4rem; }
+    /* line 163, sass/pages/_checkout.scss */
+    .delivery-info__heading::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 2.5rem;
+      height: 2.5rem;
+      opacity: 0.8;
+      background: url(../img/shopping-bag.svg) no-repeat center center transparent; }
+  /* line 177, sass/pages/_checkout.scss */
+  .delivery-info__form-title {
+    width: 100%;
+    height: 2rem;
+    letter-spacing: 0.5px;
+    color: #323232;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 2rem; }
+  /* line 187, sass/pages/_checkout.scss */
+  .delivery-info__form-fields {
+    margin-top: 3rem; }
+  /* line 192, sass/pages/_checkout.scss */
+  .delivery-info__address {
+    display: flex;
+    flex-direction: column; }
+  /* line 196, sass/pages/_checkout.scss */
+  .delivery-info__add {
+    border: 1px solid #009a9a;
+    padding: .8rem 2rem;
+    border-radius: .4rem;
+    font-weight: 300;
+    color: #009a9a;
+    background-color: #fff;
+    width: 60%;
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    transition: 0.3s; }
+    /* line 208, sass/pages/_checkout.scss */
+    .delivery-info__add:hover {
+      background-color: #009a9a;
+      color: #fff;
+      cursor: pointer; }
+  /* line 214, sass/pages/_checkout.scss */
+  .delivery-info__locate {
+    font-size: 1.4rem; }
+  /* line 217, sass/pages/_checkout.scss */
+  .delivery-info__locate-icon {
+    font-size: 1.4rem; }
+  /* line 220, sass/pages/_checkout.scss */
+  .delivery-info__time {
+    margin-top: 3rem; }
+    @media only screen and (min-width: 64em) {
+      /* line 220, sass/pages/_checkout.scss */
+      .delivery-info__time {
+        width: 100%; } }
+  /* line 227, sass/pages/_checkout.scss */
+  .delivery-info__time-heading {
+    letter-spacing: .75px;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: #323232; }
-  /* line 261, sass/pages/_checkout.scss */
-  .delivery-info .expected-delivery-time__icon {
-    color: #009a9a; }
+  /* line 234, sass/pages/_checkout.scss */
+  .delivery-info .expected-delivery-time {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f9f9f9;
+    width: 100%;
+    height: 4rem;
+    padding: 0;
+    font-size: 1.5rem;
+    transition: all .2s; }
+    @media only screen and (min-width: 30em) {
+      /* line 234, sass/pages/_checkout.scss */
+      .delivery-info .expected-delivery-time {
+        width: 50%; } }
+    @media only screen and (min-width: 64em) {
+      /* line 234, sass/pages/_checkout.scss */
+      .delivery-info .expected-delivery-time {
+        width: 50%; } }
+    /* line 254, sass/pages/_checkout.scss */
+    .delivery-info .expected-delivery-time:hover {
+      cursor: pointer;
+      border-color: #009a9a; }
+    /* line 259, sass/pages/_checkout.scss */
+    .delivery-info .expected-delivery-time__select {
+      position: relative;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding-left: 1.5rem;
+      border: none;
+      border-radius: 3px;
+      color: #323232; }
+      /* line 271, sass/pages/_checkout.scss */
+      .delivery-info .expected-delivery-time__select::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 1em;
+        width: 50px;
+        background: url(../img/arrow-down.svg) no-repeat 16px center transparent;
+        pointer-events: none; }
 
 /* payment info */
-/* line 268, sass/pages/_checkout.scss */
+/* line 288, sass/pages/_checkout.scss */
 .payment-info {
   background-color: #f9f9f9; }
-  /* line 271, sass/pages/_checkout.scss */
+  /* line 291, sass/pages/_checkout.scss */
   .payment-info__heading {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
@@ -4220,7 +4231,7 @@ body {
     font-size: 2.4rem;
     position: relative;
     padding-left: 4rem; }
-    /* line 279, sass/pages/_checkout.scss */
+    /* line 299, sass/pages/_checkout.scss */
     .payment-info__heading::before {
       content: '';
       position: absolute;
@@ -4230,7 +4241,7 @@ body {
       height: 2.5rem;
       opacity: 0.8;
       background: url(../img/wallet.svg) no-repeat center center transparent; }
-  /* line 291, sass/pages/_checkout.scss */
+  /* line 311, sass/pages/_checkout.scss */
   .payment-info__options {
     list-style: none;
     margin-top: 2.5rem;
@@ -4238,10 +4249,10 @@ body {
     flex-direction: column;
     align-items: center; }
     @media only screen and (min-width: 48em) {
-      /* line 291, sass/pages/_checkout.scss */
+      /* line 311, sass/pages/_checkout.scss */
       .payment-info__options {
         flex-direction: row; } }
-  /* line 303, sass/pages/_checkout.scss */
+  /* line 323, sass/pages/_checkout.scss */
   .payment-info__option {
     display: flex;
     align-items: center;
@@ -4249,14 +4260,14 @@ body {
     width: 100%;
     border-radius: 5px; }
     @media only screen and (min-width: 75em) {
-      /* line 303, sass/pages/_checkout.scss */
+      /* line 323, sass/pages/_checkout.scss */
       .payment-info__option {
         width: auto; } }
-    /* line 314, sass/pages/_checkout.scss */
+    /* line 334, sass/pages/_checkout.scss */
     .payment-info__option-input {
       margin-right: 1.5rem;
       display: none; }
-    /* line 319, sass/pages/_checkout.scss */
+    /* line 339, sass/pages/_checkout.scss */
     .payment-info__option-label {
       position: relative;
       display: flex;
@@ -4274,7 +4285,7 @@ body {
       color: #323232;
       cursor: pointer;
       transition: all 0.2s ease-in-out; }
-      /* line 337, sass/pages/_checkout.scss */
+      /* line 357, sass/pages/_checkout.scss */
       .payment-info__option-label::after {
         color: #fff;
         content: "";
@@ -4290,7 +4301,7 @@ body {
         border-radius: 50%;
         background: #fff;
         border: 1px solid #d5d5d5; }
-    /* line 354, sass/pages/_checkout.scss */
+    /* line 374, sass/pages/_checkout.scss */
     .payment-info__option-icon {
       display: inline-block;
       width: 10rem;
@@ -4298,26 +4309,26 @@ body {
       text-align: center;
       margin: 0 0 1.5rem 0;
       transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1); }
-      /* line 362, sass/pages/_checkout.scss */
+      /* line 382, sass/pages/_checkout.scss */
       .payment-info__option-icon--cash {
         background: url(../img/cash_sprite.svg) no-repeat top center transparent; }
-      /* line 365, sass/pages/_checkout.scss */
+      /* line 385, sass/pages/_checkout.scss */
       .payment-info__option-icon--credit {
         background: url(../img/credit_sprite.svg) no-repeat top center transparent; }
-    /* line 370, sass/pages/_checkout.scss */
+    /* line 390, sass/pages/_checkout.scss */
     .payment-info__option-name {
       font-family: "Oswald",sans-serif;
       font-weight: 400;
       letter-spacing: .5px;
       font-size: 1.6rem;
       margin-left: .5rem; }
-    /* line 378, sass/pages/_checkout.scss */
+    /* line 398, sass/pages/_checkout.scss */
     .payment-info__option-input:checked + .payment-info__option-label {
       color: #555;
       background: #fff;
       box-shadow: 0 0.2rem 1.6rem 0 rgba(0, 0, 0, 0.05);
       border-radius: .4rem; }
-    /* line 385, sass/pages/_checkout.scss */
+    /* line 405, sass/pages/_checkout.scss */
     .payment-info__option-input:checked + .payment-info__option-label::after {
       content: "";
       position: absolute;
@@ -4330,18 +4341,18 @@ body {
       line-height: 3rem;
       text-align: center;
       border: 0; }
-    /* line 399, sass/pages/_checkout.scss */
+    /* line 419, sass/pages/_checkout.scss */
     .payment-info__option-input:checked + .payment-info__option-label .payment-info__option-icon {
       background-position: bottom center; }
 
 /* order info */
-/* line 407, sass/pages/_checkout.scss */
+/* line 427, sass/pages/_checkout.scss */
 .order-info {
   min-height: 20rem;
   display: flex;
   flex-direction: column; }
   @media only screen and (min-width: 64em) {
-    /* line 407, sass/pages/_checkout.scss */
+    /* line 427, sass/pages/_checkout.scss */
     .order-info {
       width: 45%;
       height: 52rem;
