@@ -194,12 +194,14 @@
                         <div class="restaurant-search__input">
                             <div class="restaurant-selection">
                                 <button class="restaurant-selection__btn">
-                                    <i class="restaurant-selection__icon-store material-icons-outlined">store</i>
+                                    <i class="restaurant-selection__icon-store material-icons">search</i>
                                     <p class="restaurant-selection__value">Find a restaurant</p>
-                                    <i class="restaurant-selection__icon-caret restaurant-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
-                                    <i class="restaurant-selection__icon-caret restaurant-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
+                                    <i
+                                        class="restaurant-selection__icon-caret restaurant-selection__icon-caret--down material-icons">keyboard_arrow_down</i>
+                                    <i
+                                        class="restaurant-selection__icon-caret restaurant-selection__icon-caret--up material-icons">keyboard_arrow_up</i>
                                 </button>
-                            
+
                                 <div class="restaurant-selection__box">
                                     <input type="text" class="restaurant-selection__input">
                                     <ul class="restaurant-selection__restaurant-list">
@@ -236,13 +238,108 @@
 
             <section class="restaurant-list-filter">
                 <div class="filter-dropdown">
-                    <i class="filter-dropdown__icon fa fa-filter"></i>
-                    <p class="filter-dropdown__title">Filter by types of food</p>
-                    <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
+                    <div class="filter-dropdown__head">
+                        <i class="filter-dropdown__icon fa fa-filter">
+                            <span class="filter-dropdown__count">2</span>
+                        </i>
+                        <p class="filter-dropdown__title">Filter by types of food</p>
+                        <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
+                        <span class="filter-dropdown__clear">Clear all</span>
+                    </div>
+                    <ul class="filter-dropdown__cuisine-list">
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="offers">
+                            <label class="filter-dropdown__cuisine-name" for="offers">Offers</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="American">
+                            <label class="filter-dropdown__cuisine-name" for="American">American</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Arabic">
+                            <label class="filter-dropdown__cuisine-name" for="Arabic">Arabic</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Asian">
+                            <label class="filter-dropdown__cuisine-name" for="Asian">Asian</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Bakery">
+                            <label class="filter-dropdown__cuisine-name" for="Bakery">Bakery</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Beverages">
+                            <label class="filter-dropdown__cuisine-name" for="Beverages">Beverages</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Burgers">
+                            <label class="filter-dropdown__cuisine-name" for="Burgers">Burgers</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Coffee">
+                            <label class="filter-dropdown__cuisine-name" for="Coffee">Coffee</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Desserts">
+                            <label class="filter-dropdown__cuisine-name" for="Desserts">Desserts</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="European">
+                            <label class="filter-dropdown__cuisine-name" for="European">European</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Fast Food">
+                            <label class="filter-dropdown__cuisine-name" for="Fast Food">Fast Food</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Healthy">
+                            <label class="filter-dropdown__cuisine-name" for="Healthy">Healthy</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Indian">
+                            <label class="filter-dropdown__cuisine-name" for="Indian">Indian</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Italian">
+                            <label class="filter-dropdown__cuisine-name" for="Italian">Italian</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Latin">
+                            <label class="filter-dropdown__cuisine-name" for="Latin">Latin</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Middle Eastern">
+                            <label class="filter-dropdown__cuisine-name" for="Middle Eastern">Middle Eastern</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Pizza">
+                            <label class="filter-dropdown__cuisine-name" for="Pizza">Pizza</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Salads">
+                            <label class="filter-dropdown__cuisine-name" for="Salads">Salads</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Sandwiches">
+                            <label class="filter-dropdown__cuisine-name" for="Sandwiches">Sandwiches</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Sea Food">
+                            <label class="filter-dropdown__cuisine-name" for="Sea Food">Sea Food</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Turkish">
+                            <label class="filter-dropdown__cuisine-name" for="Turkish">Turkish</label>
+                        </li>
+                        <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="Vegan">
+                            <label class="filter-dropdown__cuisine-name" for="Vegan">Vegan</label>
+                        </li>
+                    </ul>
                 </div>
                 <div class="filter-checkbox">
                     <input class="filter-checkbox__input" type="checkbox" name="special-offers" id="special-offers">
-                    <span class="filter-checkbox__title">Special Offers</span>
+                    <label for="special-offers" class="filter-checkbox__title">Special Offers</label>
                 </div>
             </section>
 
@@ -503,7 +600,7 @@
             // toggle header location selection
             let locationSelectionBtn = document.querySelector(".location-selection__btn");
             let locationSelectionBox = document.querySelector(".location-selection__box");
-            locationSelectionBtn.addEventListener("click", function(){
+            locationSelectionBtn.addEventListener("click", function () {
                 locationSelectionBtn.classList.toggle("location-selection__btn--open");
                 locationSelectionBox.classList.toggle("location-selection__box--open");
             });
@@ -517,7 +614,7 @@
             // toggle header restaurant selection
             let restSelectionBtn = document.querySelector(".restaurant-selection__btn");
             let restSelectionBox = document.querySelector(".restaurant-selection__box");
-            restSelectionBtn.addEventListener("click", function(){
+            restSelectionBtn.addEventListener("click", function () {
                 restSelectionBtn.classList.toggle("restaurant-selection__btn--open");
                 restSelectionBox.classList.toggle("restaurant-selection__box--open");
             });
@@ -527,6 +624,52 @@
                 restSelectionBtn.classList.toggle("restaurant-selection__btn--open");
                 restSelectionBox.classList.toggle("restaurant-selection__box--open");
             });
+
+            // toggle filter dropdown
+            document.querySelector(".filter-dropdown__head").addEventListener("click", e => {
+                document.querySelector(".filter-dropdown").classList.toggle("filter-dropdown--open");
+            });
+
+            // get filter values 
+            const filters = [];
+            document.querySelector(".filter-dropdown__cuisine-list").addEventListener("change", e => {
+                //e.preventDefault();
+
+                // get selected item
+                const filterItem = e.target.closest(".filter-dropdown__cuisine-item").children;
+                const checkbox = filterItem[0];
+                const label = filterItem[1];
+                const value = label.textContent;
+
+                // check if item value in filters list
+                if (checkbox.checked) {
+                    if (filters.indexOf(value) < 0) {
+                        filters.push(value);
+                    }
+                } else {
+                    if (filters.indexOf(value) >= 0) {
+                        const index = filters.indexOf(value);
+                        filters.splice(index, 1);
+                    }
+                }
+
+                // display count and clear label
+                const count = document.querySelector(".filter-dropdown__count");
+                const clear = document.querySelector(".filter-dropdown__clear");
+                if(filters.length > 0) {
+                    count.textContent = filters.length;
+                    count.style.opacity = 1;
+                    count.style.visibility = "visible";
+
+                    clear.style.display = "inline-block";
+                }else {
+                    count.style.opacity = 0;
+                    count.style.visibility = "hidden";
+
+                    clear.style.display = "none";
+                }
+            });
+
 
             // toggle footer country
             let footerCountryBtn = $(".change-country__btn");
