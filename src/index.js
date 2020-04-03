@@ -1,5 +1,6 @@
 // GLOBAL APP CONTROLLER
 
-import restaurantMenuCtrl from './app/pages/restaurant-menu/ctrl';
+import Cart from "./core/entities/Cart";
 
-console.log("hello " + restaurantMenuCtrl);
+const cart = new Cart();
+cart.test();

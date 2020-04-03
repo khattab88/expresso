@@ -3838,39 +3838,15 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./src/app/pages/restaurant-menu/ctrl.js":
-/*!***********************************************!*\
-  !*** ./src/app/pages/restaurant-menu/ctrl.js ***!
-  \***********************************************/
+/***/ "./src/core/entities/Cart.js":
+/*!***********************************!*\
+  !*** ./src/core/entities/Cart.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _model = __webpack_require__(/*! ./model */ \"./src/app/pages/restaurant-menu/model.js\");\n\nvar _model2 = _interopRequireDefault(_model);\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/app/pages/restaurant-menu/view.js\");\n\nvar _view2 = _interopRequireDefault(_view);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = \"model:\" + _model2.default + \", view:\" + _view2.default;\n\n//# sourceURL=webpack:///./src/app/pages/restaurant-menu/ctrl.js?");
-
-/***/ }),
-
-/***/ "./src/app/pages/restaurant-menu/model.js":
-/*!************************************************!*\
-  !*** ./src/app/pages/restaurant-menu/model.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = \"restaurant menu model\";\n\n//# sourceURL=webpack:///./src/app/pages/restaurant-menu/model.js?");
-
-/***/ }),
-
-/***/ "./src/app/pages/restaurant-menu/view.js":
-/*!***********************************************!*\
-  !*** ./src/app/pages/restaurant-menu/view.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = \"restaurant menu view\";\n\n//# sourceURL=webpack:///./src/app/pages/restaurant-menu/view.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Cart = function () {\n    function Cart() {\n        _classCallCheck(this, Cart);\n    }\n\n    _createClass(Cart, [{\n        key: \"test\",\n        value: function test() {\n            console.log(\"CART CLASS!\");\n        }\n    }]);\n\n    return Cart;\n}();\n\nexports.default = Cart;\n\n//# sourceURL=webpack:///./src/core/entities/Cart.js?");
 
 /***/ }),
 
@@ -3882,7 +3858,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _ctrl = __webpack_require__(/*! ./app/pages/restaurant-menu/ctrl */ \"./src/app/pages/restaurant-menu/ctrl.js\");\n\nvar _ctrl2 = _interopRequireDefault(_ctrl);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.log(\"hello \" + _ctrl2.default); // GLOBAL APP CONTROLLER\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _Cart = __webpack_require__(/*! ./core/entities/Cart */ \"./src/core/entities/Cart.js\");\n\nvar _Cart2 = _interopRequireDefault(_Cart);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar cart = new _Cart2.default(); // GLOBAL APP CONTROLLER\n\ncart.test();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
