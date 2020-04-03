@@ -41,18 +41,14 @@ Feaures:
     - enhance payment option selection [DONE] 
     - add delivery details section    [DONE]
 
+- contact us
+    - add captcha [DONE]
+
+- signup
+    - select counry dropdown [DONE]
+
 ----------------------------------------------------------------------------------
 
 
 - home:
     - category carousel 
-
-- signup
-    - select counry dropdown
-
-- contact us
-    - add subject selection dropdown
-    - add captcha [DONE]
-
-
-
