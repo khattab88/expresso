@@ -30,13 +30,12 @@ Feaures:
 - restaurant menu
     - menu section dropdown   [DONE]
 
-----------------------------------------------------------------------------------
-
-
 - cart
-    - delete item record [TODO]
-    - add/remove item count
-    - calculate total
+    - delete item record [DONE]
+    - add/remove item count [DONE]
+    - calculate total [DONE]
+
+----------------------------------------------------------------------------------
 
 
 - home:
