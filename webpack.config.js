@@ -12,32 +12,32 @@ module.exports = {
     },
     plugins: [
         new htmlWebpackPlugin({
-            filename: "index.html",
-            template: "./src/index.html"
+            filename: "home/index.html",
+            template: "./src/app/home/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "restaurant-list/index.html",
-            template: "./src/restaurant-list/index.html"
+            template: "./src/app/restaurant-list/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "restaurant-menu/index.html",
-            template: "./src/restaurant-menu/index.html"
+            template: "./src/app/restaurant-menu/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "login/index.html",
-            template: "./src/login/index.html"
+            template: "./src/app/login/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "sign-up/index.html",
-            template: "./src/sign-up/index.html"
+            template: "./src/app/sign-up/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "contact-us/index.html",
-            template: "./src/contact-us/index.html"
+            template: "./src/app/contact-us/index.html"
         }),
         new htmlWebpackPlugin({
             filename: "checkout/index.html",
-            template: "./src/checkout/index.html"
+            template: "./src/app/checkout/index.html"
         }),
     ],
     module: {

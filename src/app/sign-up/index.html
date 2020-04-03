@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Expresso - Login</title>
+    <title>Expresso - Register</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <div class="container login-page">
+    <div class="container register-page">
 
         <nav class="navbar">
             <div class="logo">
-                <a href="../index.html" class="logo__link">
+                <a href="../home" class="logo__link">
                     <h2 class="logo__title">Expresso</h2>
                 </a>
             </div>
@@ -129,31 +129,33 @@
                 <span class="navbar__toggle-icon fa fa-align-justify"></span>
             </div>
         </nav>
-
-        <main class="main login-page__main">
-            <div class="login-page__wrapper">
-                <div class="login login-page__login">
-                    <div class="login__box">
-                        <h3 class="login_heading">Login</h3>
-                        <form class="login__form" action="#">
-                            <div class="form-group"><input class="form-group__input-text" type="text" name="email" id="email" required placeholder="Email"></div>
-                            <div class="form-group"><input class="form-group__input-text" type="text" name="password" id="password" required placeholder="Password"></div>
-                            <div class="login__remember-me">
-                                <input class="form-group__input-checkbox" type="checkbox" name="remember-me" id="remember-me">
-                                <label class="login__remember-me-label" for="remember-me">Remember me</label>
-                            </div>
-                            <div class="login__submit">
-                                <button class="login__sumbit-btn">Login</button>
-                                <p class="login__forget-password">Forgot your password?</p>
-                            </div>
-                        </form>
-                    </div>
+        
+        <main class="main register-page__main">
+            <div class="register-page__wrapper">
+                <div class="sign-in register-page__sign-in">
+                    <h3 class="sign-in__heading">Have an Account?</h3>
+                    <button class="sign-in__btn">Login</button>
                 </div>
-                <div class="sign-up login-page__sign-up">
-                    <div class="sign-up__box">
-                        <h3 class="sign-up__heading">New to Expresso?</h3>
-                        <button class="sign-up__btn">Sign Up</button>
-                    </div>
+                <div class="register register-page__register">
+                    <h3 class="register__heading">New to Expresso?</h3>
+                    <form class="register__form" action="#">
+                        <div class="form-group"><input class="form-group__input-text" type="text" name="" id="" placeholder="First Name" required></div>
+                        <div class="form-group"><input class="form-group__input-text" type="text" name="" id="" placeholder="Last Name" required></div>
+                        <div class="form-group form-group--email"><input class="form-group__input-text" type="email" name="" id="" placeholder="Email" required></div>
+                        <div class="form-group"><input class="form-group__input-text" type="password" name="" id="" placeholder="Password" required></div>
+                        <div class="form-group"><input class="form-group__input-text" type="password" name="" id="" placeholder="Confirm Password" required></div>
+                        <div class="form-group form-group--country">
+                            <select class="form-group__select">
+                                <option value="Egypt">Egypt</option>
+                                <option value="UAE">UAE</option>
+                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                <option value="Kuwait">Kuwait</option>
+                                <option value="Qatar">Qatar</option>
+                                <option value="Bahrain">Bahrain</option>
+                            </select>
+                        </div>
+                    </form>
+                    <button class="register__btn">Register</button>
                 </div>
             </div>
         </main>
@@ -244,7 +246,7 @@
             
             <section class="copyright">© 2019 Expresso App. All rights reserved.</section>
         </footer>
-
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
