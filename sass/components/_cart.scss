@@ -67,6 +67,7 @@
             }
 
             &-controls {
+                position: relative;
                 display: flex;
             
                 &-btn {
@@ -106,6 +107,40 @@
                     align-items: center;
                     background-color: $color-white;
                     margin-right: .5rem;
+                }
+
+                &-remove {
+                    position: absolute;
+                    top: .25rem;
+                    right: 1rem;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    @include flex-center;
+
+                    &--hidden { display: none; }
+
+                    span {
+                        display: flex;
+                        @include flex-center;
+
+                        background: $color-font-light;
+                        color: $color-gray-light;
+                        font-weight: 300;
+                        font-size: 2rem;
+                        font-family: "Source Sans Pro",sans-serif;
+                        width: 2rem;
+                        height: 2rem;
+                        padding: 1.4rem;
+                        text-align: center;
+                        border-radius: 25px;
+                        transition: all .2s ease-in-out;
+
+                        &:hover {
+                            background-color: $color-main;
+                            color: $color-white;
+                        }
+                    }
                 }
             }
         }
