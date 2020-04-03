@@ -35,6 +35,12 @@ Feaures:
     - add/remove item count [DONE]
     - calculate total [DONE]
 
+- checkout
+    - add address/delivery location (map) [DONE]
+    - expected delivery time dropdown   [DONE]
+    - enhance payment option selection [DONE] 
+    - add delivery details section    [DONE]
+
 ----------------------------------------------------------------------------------
 
 
@@ -47,12 +53,6 @@ Feaures:
 - contact us
     - add subject selection dropdown
     - add captcha [TODO]
-
-- checkout
-    - add address/delivery location (map) [DONE]
-    - expected delivery time dropdown   [TODO]
-    - enhance payment option selection [DONE] 
-    - add delivery details section    [DONE]
 
 
 
