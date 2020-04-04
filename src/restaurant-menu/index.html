@@ -612,51 +612,6 @@
 
     <!-- <script>
 
-            // 1. menu item detail
-            document.querySelector(".menu-items-by-category__menu-items-list").addEventListener("click", function (e) {
-                const item = e.target.closest(".menu-item");
-                console.log(item.id);
-
-                const modal = document.querySelector(".menu-item-modal");
-                modal.classList.remove("menu-item-modal--close");
-                modal.classList.add("menu-item-modal--open");
-            });
-
-            Array.from(document.querySelectorAll(".menu-item-modal__close, .add-order-btn"))
-                .forEach((elm) => elm.addEventListener("click", (e) => {
-                    const modal = document.querySelector(".menu-item-modal");
-                    modal.classList.remove("menu-item-modal--open");
-                    modal.classList.add("menu-item-modal--close");
-                }));
-
-            // show/hide item option
-            document.querySelector(".menu-item-modal__body").addEventListener("click", e => {
-                const option = e.target.closest(".dish-options");
-                option.classList.toggle("dish-options--closed")
-
-            });
-
-            // increment/decrement menu item count
-            Array.from(document.querySelectorAll(".cart-controls"))
-            .forEach(el => el.addEventListener("click", (e) => {
-                const op = e.target.closest(".cart-controls__btn").textContent;
-                console.log(op);
-
-                const countLabel = document.querySelector(".cart-controls__count");
-                let count = parseInt(countLabel.textContent);
-
-                if (op === "+") {
-                    count++;
-                } else {
-                    if (count > 1) {
-                        count--;
-                    }
-                }
-
-                countLabel.textContent = count;
-            }));
-
-
             // 2. item cart
             document.querySelector(".restaurant-sidebar__show-cart").addEventListener("click", function (e) {
                 const modal = document.querySelector(".cart-modal");
