@@ -3838,18 +3838,6 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./src/core/entities/Cart.js":
-/*!***********************************!*\
-  !*** ./src/core/entities/Cart.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Cart = function () {\n    function Cart() {\n        _classCallCheck(this, Cart);\n    }\n\n    _createClass(Cart, [{\n        key: \"test\",\n        value: function test() {\n            console.log(\"CART CLASS!\");\n        }\n    }]);\n\n    return Cart;\n}();\n\nexports.default = Cart;\n\n//# sourceURL=webpack:///./src/core/entities/Cart.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -3858,7 +3846,31 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _Cart = __webpack_require__(/*! ./core/entities/Cart */ \"./src/core/entities/Cart.js\");\n\nvar _Cart2 = _interopRequireDefault(_Cart);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar cart = new _Cart2.default(); // GLOBAL APP CONTROLLER\n\ncart.test();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _index = __webpack_require__(/*! ./restaurant-menu/index */ \"./src/restaurant-menu/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nnew _index2.default().init(); // GLOBAL APP CONTROLLER\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/restaurant-menu/index.js":
+/*!**************************************!*\
+  !*** ./src/restaurant-menu/index.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/restaurant-menu/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar restaurantMenuCtrl = function () {\n    function restaurantMenuCtrl() {\n        _classCallCheck(this, restaurantMenuCtrl);\n    }\n\n    _createClass(restaurantMenuCtrl, [{\n        key: \"init\",\n        value: function init() {\n\n            /// setup event listeners\n\n            // toggle mobile nav\n            _view.elements.navToggle.addEventListener(\"click\", function (e) {\n                _view.elements.navigationItems.classList.toggle(\"navigation__items--mobile-open\");\n                //elements.navigationItems.style.display = \"block\";\n                console.log(_view.elements.navigationItems);\n            });\n\n            // toggle nav country\n            _view.elements.navCountryBtn.addEventListener(\"click\", function (e) {\n                _view.elements.navCountryBtn.classList.toggle(\"country-btn--open\");\n                _view.elements.navCountryDropdown.classList.toggle(\"country-dropdown--open\");\n                _view.elements.navCountryBtn.style.display = \"block\";\n                _view.elements.navCountryDropdown.style.display = \"block\";\n                console.log(_view.elements.navCountryDropdown);\n            });\n        }\n    }]);\n\n    return restaurantMenuCtrl;\n}();\n\nexports.default = restaurantMenuCtrl;\n\n//# sourceURL=webpack:///./src/restaurant-menu/index.js?");
+
+/***/ }),
+
+/***/ "./src/restaurant-menu/view.js":
+/*!*************************************!*\
+  !*** ./src/restaurant-menu/view.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar elements = exports.elements = {\n    navToggle: document.querySelector(\".navbar__toggle\"),\n    navigationItems: document.querySelector(\".navigation__items\"),\n    navCountryBtn: document.querySelector(\".country-btn\"),\n    navCountryDropdown: document.querySelector(\".country-btn > .country-dropdown\")\n};\n\n//# sourceURL=webpack:///./src/restaurant-menu/view.js?");
 
 /***/ }),
 
