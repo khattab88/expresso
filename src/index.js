@@ -1,5 +1,6 @@
 // GLOBAL APP CONTROLLER
 
-import restaurantMenuCtrl from "./restaurant-menu/index";
+import navCtrl from "./components/nav/index";
 
-new restaurantMenuCtrl().init();
+
+const nav = new navCtrl();
