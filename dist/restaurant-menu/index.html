@@ -615,26 +615,12 @@
 
             // open location modal
             const toggleLocationModal = () => { document.querySelector(".location-modal").classList.toggle("location-modal--open"); };
-
             Array.from(document.querySelectorAll(".change-location__btn, .location-modal__close, .location-modal__update"))
-                .forEach((elm) => {
-                    elm.addEventListener("click", toggleLocationModal);
-                });
-
-            // toggle header location selection
-            let locationSelectionBtn = document.querySelector(".location-selection__btn");
-            let locationSelectionBox = document.querySelector(".location-selection__box");
-            locationSelectionBtn.addEventListener("click", function () {
-                locationSelectionBtn.classList.toggle("location-selection__btn--open");
-                locationSelectionBox.classList.toggle("location-selection__box--open");
-            });
-            document.querySelector(".location-selection__city-list").addEventListener("click", (e) => {
-                const area = e.target.textContent;
-                document.querySelector(".location-selection__value").textContent = area;
-                locationSelectionBtn.classList.toggle("location-selection__btn--open");
-                locationSelectionBox.classList.toggle("location-selection__box--open");
+            .forEach((elm) => {
+                elm.addEventListener("click", toggleLocationModal);
             });
 
+            
             // toggle menu sections
             document.querySelector(".menu-categories__head").addEventListener("click", e =>
                 document.querySelector(".menu-categories__body").classList.toggle("menu-categories__body--open"));

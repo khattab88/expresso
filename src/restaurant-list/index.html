@@ -573,20 +573,6 @@
     <!-- <script>
         $(document).ready(function () {
 
-            // toggle header location selection
-            let locationSelectionBtn = document.querySelector(".location-selection__btn");
-            let locationSelectionBox = document.querySelector(".location-selection__box");
-            locationSelectionBtn.addEventListener("click", function () {
-                locationSelectionBtn.classList.toggle("location-selection__btn--open");
-                locationSelectionBox.classList.toggle("location-selection__box--open");
-            });
-            document.querySelector(".location-selection__city-list").addEventListener("click", (e) => {
-                const area = e.target.textContent;
-                document.querySelector(".location-selection__value").textContent = area;
-                locationSelectionBtn.classList.toggle("location-selection__btn--open");
-                locationSelectionBox.classList.toggle("location-selection__box--open");
-            });
-
             // toggle header restaurant selection
             let restSelectionBtn = document.querySelector(".restaurant-selection__btn");
             let restSelectionBox = document.querySelector(".restaurant-selection__box");
@@ -601,6 +587,7 @@
                 restSelectionBox.classList.toggle("restaurant-selection__box--open");
             });
 
+            
             // toggle filter dropdown
             document.querySelector(".filter-dropdown__head").addEventListener("click", e => {
                 document.querySelector(".filter-dropdown").classList.toggle("filter-dropdown--open");

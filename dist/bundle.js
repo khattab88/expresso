@@ -3862,6 +3862,30 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 
 /***/ }),
 
+/***/ "./src/components/header/index.js":
+/*!****************************************!*\
+  !*** ./src/components/header/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/components/header/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar HeaderComponent = function () {\n    function HeaderComponent() {\n        _classCallCheck(this, HeaderComponent);\n\n        this.setupEventListeners();\n    }\n\n    _createClass(HeaderComponent, [{\n        key: \"setupEventListeners\",\n        value: function setupEventListeners() {\n\n            // toggle header location selection\n            _view.elements.locationSelectionBtn.addEventListener(\"click\", function (e) {\n                _view.elements.locationSelectionBtn.classList.toggle(\"location-selection__btn--open\");\n                _view.elements.locationSelectionBox.classList.toggle(\"location-selection__box--open\");\n            });\n\n            // display selected location value\n            _view.elements.locationList.addEventListener(\"click\", function (e) {\n                var area = e.target.textContent;\n                _view.elements.locationValue.textContent = area;\n                _view.elements.locationSelectionBtn.classList.toggle(\"location-selection__btn--open\");\n                _view.elements.locationSelectionBox.classList.toggle(\"location-selection__box--open\");\n            });\n        }\n    }]);\n\n    return HeaderComponent;\n}();\n\nexports.default = HeaderComponent;\n\n//# sourceURL=webpack:///./src/components/header/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/header/view.js":
+/*!***************************************!*\
+  !*** ./src/components/header/view.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar elements = exports.elements = {\n    locationSelectionBtn: document.querySelector(\".location-selection__btn\"),\n    locationSelectionBox: document.querySelector(\".location-selection__box\"),\n    locationList: document.querySelector(\".location-selection__city-list\"),\n    locationValue: document.querySelector(\".location-selection__value\")\n};\n\n//# sourceURL=webpack:///./src/components/header/view.js?");
+
+/***/ }),
+
 /***/ "./src/components/nav/index.js":
 /*!*************************************!*\
   !*** ./src/components/nav/index.js ***!
@@ -3894,7 +3918,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// GLOBAL APP CONTROLLER\n\nvar navComponent = new _index2.default();\nvar footerComponent = new _index4.default();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/header/index */ \"./src/components/header/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nvar _index5 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index6 = _interopRequireDefault(_index5);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navComponent = new _index2.default(); // GLOBAL APP CONTROLLER\n\nvar headerComponent = new _index4.default();\nvar footerComponent = new _index6.default();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
