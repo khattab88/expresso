@@ -3918,7 +3918,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/header/index */ \"./src/components/header/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nvar _index5 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index6 = _interopRequireDefault(_index5);\n\nvar _index7 = __webpack_require__(/*! ./restaurant-list/index */ \"./src/restaurant-list/index.js\");\n\nvar _index8 = _interopRequireDefault(_index7);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// GLOBAL APP CONTROLLER\n\nvar navComponent = new _index2.default();\nvar headerComponent = new _index4.default();\nvar footerComponent = new _index6.default();\n\nvar restaurantListPage = new _index8.default();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/header/index */ \"./src/components/header/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nvar _index5 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index6 = _interopRequireDefault(_index5);\n\nvar _index7 = __webpack_require__(/*! ./restaurant-list/index */ \"./src/restaurant-list/index.js\");\n\nvar _index8 = _interopRequireDefault(_index7);\n\nvar _index9 = __webpack_require__(/*! ./restaurant-menu/index */ \"./src/restaurant-menu/index.js\");\n\nvar _index10 = _interopRequireDefault(_index9);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navComponent = new _index2.default();\n//const headerComponent = new HeaderComponent();\n// GLOBAL APP CONTROLLER\n\nvar footerComponent = new _index6.default();\n\n//const restaurantListPage = new RestaurantListPage();\nvar restaurantMenuPage = new _index10.default();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -3943,6 +3943,30 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar elements = exports.elements = {\n    filterDropdownHead: document.querySelector(\".filter-dropdown__head\"),\n    filterDropdown: document.querySelector(\".filter-dropdown\"),\n    filterCuisineList: document.querySelector(\".filter-dropdown__cuisine-list\"),\n    filterCount: document.querySelector(\".filter-dropdown__count\"),\n    filterClear: document.querySelector(\".filter-dropdown__clear\"),\n    restaurantInfoCard: document.querySelectorAll(\".restaurant-info-card\")\n};\n\n//# sourceURL=webpack:///./src/restaurant-list/view.js?");
+
+/***/ }),
+
+/***/ "./src/restaurant-menu/index.js":
+/*!**************************************!*\
+  !*** ./src/restaurant-menu/index.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/restaurant-menu/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar RestaurantMenuPage = function () {\n    function RestaurantMenuPage() {\n        _classCallCheck(this, RestaurantMenuPage);\n\n        this.setupEventListeners();\n    }\n\n    _createClass(RestaurantMenuPage, [{\n        key: \"setupEventListeners\",\n        value: function setupEventListeners() {\n            var _this = this;\n\n            // toggle menu sections\n            _view.elements.menuCategoriesHead.addEventListener(\"click\", function (e) {\n                _this.toggleMenuCategories();\n            });\n\n            // toggle location modal\n            Array.from(document.querySelectorAll(\".change-location__btn, .location-modal__close, .location-modal__update\")).forEach(function (elm) {\n                elm.addEventListener(\"click\", _this.toggleLocationModal);\n            });\n        }\n    }, {\n        key: \"toggleLocationModal\",\n        value: function toggleLocationModal() {\n            try {\n                _view.elements.locationModal.classList.toggle(\"location-modal--open\");\n            } catch (err) {\n                console.log(err);\n            }\n        }\n    }, {\n        key: \"toggleMenuCategories\",\n        value: function toggleMenuCategories() {\n            try {\n                _view.elements.menuCategoriesBody.classList.toggle(\"menu-categories__body--open\");\n            } catch (err) {\n                console.log(err);\n            }\n        }\n    }]);\n\n    return RestaurantMenuPage;\n}();\n\nexports.default = RestaurantMenuPage;\n\n//# sourceURL=webpack:///./src/restaurant-menu/index.js?");
+
+/***/ }),
+
+/***/ "./src/restaurant-menu/view.js":
+/*!*************************************!*\
+  !*** ./src/restaurant-menu/view.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar elements = exports.elements = {\n    menuCategoriesHead: document.querySelector(\".menu-categories__head\"),\n    menuCategoriesBody: document.querySelector(\".menu-categories__body\"),\n    locationModal: document.querySelector(\".location-modal\")\n};\n\n//# sourceURL=webpack:///./src/restaurant-menu/view.js?");
 
 /***/ }),
 
