@@ -1,6 +1,8 @@
 // GLOBAL APP CONTROLLER
 
-import navCtrl from "./components/nav/index";
+import NavComponent from "./components/nav/index";
+import FooterComponent from "./components/footer/index";
 
 
-const nav = new navCtrl();
+const navComponent = new NavComponent();
+const footerComponent = new FooterComponent();

@@ -1,12 +1,13 @@
 import { elements } from "./view";
 
-export default class restaurantMenuCtrl {
+export default class NavComponent {
 
     constructor() {
         this.setupEventListeners();
     }
 
     setupEventListeners() {
+
         // toggle mobile nav
         elements.navToggle.addEventListener("click", e => { 
             elements.navigationItems.classList.toggle("navigation__items--mobile-open");
@@ -23,5 +24,6 @@ export default class restaurantMenuCtrl {
             elements.navCategoryBtn.classList.toggle("category-btn--open");
             elements.navCategoryDropdown.classList.toggle("category-dropdown--open");
         });
+        
     }
 }

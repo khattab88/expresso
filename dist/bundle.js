@@ -3838,6 +3838,30 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./src/components/footer/index.js":
+/*!****************************************!*\
+  !*** ./src/components/footer/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/components/footer/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar FooterComponent = function () {\n    function FooterComponent() {\n        _classCallCheck(this, FooterComponent);\n\n        this.setupEventListeners();\n    }\n\n    _createClass(FooterComponent, [{\n        key: \"setupEventListeners\",\n        value: function setupEventListeners() {\n\n            // toggle footer country\n            _view.elements.footerCountryBtn.addEventListener(\"click\", function (e) {\n                _view.elements.footerCountryBtn.classList.toggle(\"change-country__btn--open\");\n                _view.elements.footerCountryDropdown.classList.toggle(\"country-dropdown--open\");\n            });\n        }\n    }]);\n\n    return FooterComponent;\n}();\n\nexports.default = FooterComponent;\n\n//# sourceURL=webpack:///./src/components/footer/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/footer/view.js":
+/*!***************************************!*\
+  !*** ./src/components/footer/view.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar elements = exports.elements = {\n    footerCountryBtn: document.querySelector(\".change-country__btn\"),\n    footerCountryDropdown: document.querySelector(\".change-country__btn > .country-dropdown\")\n};\n\n//# sourceURL=webpack:///./src/components/footer/view.js?");
+
+/***/ }),
+
 /***/ "./src/components/nav/index.js":
 /*!*************************************!*\
   !*** ./src/components/nav/index.js ***!
@@ -3846,7 +3870,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/components/nav/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar restaurantMenuCtrl = function () {\n    function restaurantMenuCtrl() {\n        _classCallCheck(this, restaurantMenuCtrl);\n\n        this.setupEventListeners();\n    }\n\n    _createClass(restaurantMenuCtrl, [{\n        key: \"setupEventListeners\",\n        value: function setupEventListeners() {\n            // toggle mobile nav\n            _view.elements.navToggle.addEventListener(\"click\", function (e) {\n                _view.elements.navigationItems.classList.toggle(\"navigation__items--mobile-open\");\n            });\n\n            // toggle nav country\n            _view.elements.navCountryBtn.addEventListener(\"click\", function (e) {\n                _view.elements.navCountryBtn.classList.toggle(\"country-btn--open\");\n                _view.elements.navCountryDropdown.classList.toggle(\"country-dropdown--open\");\n            });\n\n            // toggle nav category dropdown\n            _view.elements.navCategoryBtn.addEventListener(\"click\", function (e) {\n                _view.elements.navCategoryBtn.classList.toggle(\"category-btn--open\");\n                _view.elements.navCategoryDropdown.classList.toggle(\"category-dropdown--open\");\n            });\n        }\n    }]);\n\n    return restaurantMenuCtrl;\n}();\n\nexports.default = restaurantMenuCtrl;\n\n//# sourceURL=webpack:///./src/components/nav/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/components/nav/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar NavComponent = function () {\n    function NavComponent() {\n        _classCallCheck(this, NavComponent);\n\n        this.setupEventListeners();\n    }\n\n    _createClass(NavComponent, [{\n        key: \"setupEventListeners\",\n        value: function setupEventListeners() {\n\n            // toggle mobile nav\n            _view.elements.navToggle.addEventListener(\"click\", function (e) {\n                _view.elements.navigationItems.classList.toggle(\"navigation__items--mobile-open\");\n            });\n\n            // toggle nav country\n            _view.elements.navCountryBtn.addEventListener(\"click\", function (e) {\n                _view.elements.navCountryBtn.classList.toggle(\"country-btn--open\");\n                _view.elements.navCountryDropdown.classList.toggle(\"country-dropdown--open\");\n            });\n\n            // toggle nav category dropdown\n            _view.elements.navCategoryBtn.addEventListener(\"click\", function (e) {\n                _view.elements.navCategoryBtn.classList.toggle(\"category-btn--open\");\n                _view.elements.navCategoryDropdown.classList.toggle(\"category-dropdown--open\");\n            });\n        }\n    }]);\n\n    return NavComponent;\n}();\n\nexports.default = NavComponent;\n\n//# sourceURL=webpack:///./src/components/nav/index.js?");
 
 /***/ }),
 
@@ -3870,7 +3894,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar nav = new _index2.default(); // GLOBAL APP CONTROLLER\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// GLOBAL APP CONTROLLER\n\nvar navComponent = new _index2.default();\nvar footerComponent = new _index4.default();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
