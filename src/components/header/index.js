@@ -26,7 +26,6 @@ export default class HeaderComponent {
         elements.restaurantSelectionBtn.addEventListener("click", e => {
             elements.restaurantSelectionBtn.classList.toggle("restaurant-selection__btn--open");
             elements.restaurantSelectionBox.classList.toggle("restaurant-selection__box--open");
-            console.log(elements.restaurantSelectionBtn);
         });
 
          // display restaurant location value
