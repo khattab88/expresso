@@ -9,8 +9,8 @@ import RestaurantMenuPage from "./restaurant-menu/index";
 
 
 const navComponent = new NavComponent();
-//const headerComponent = new HeaderComponent();
+const headerComponent = new HeaderComponent();
 const footerComponent = new FooterComponent();
 
-//const restaurantListPage = new RestaurantListPage();
+const restaurantListPage = new RestaurantListPage();
 const restaurantMenuPage = new RestaurantMenuPage();
