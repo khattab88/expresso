@@ -572,21 +572,6 @@
 
     <!-- <script>
         $(document).ready(function () {
-
-            // toggle header restaurant selection
-            let restSelectionBtn = document.querySelector(".restaurant-selection__btn");
-            let restSelectionBox = document.querySelector(".restaurant-selection__box");
-            restSelectionBtn.addEventListener("click", function () {
-                restSelectionBtn.classList.toggle("restaurant-selection__btn--open");
-                restSelectionBox.classList.toggle("restaurant-selection__box--open");
-            });
-            document.querySelector(".restaurant-selection__restaurant-list").addEventListener("click", (e) => {
-                const rest = e.target.textContent;
-                document.querySelector(".restaurant-selection__value").textContent = rest;
-                restSelectionBtn.classList.toggle("restaurant-selection__btn--open");
-                restSelectionBox.classList.toggle("restaurant-selection__box--open");
-            });
-
             
             // toggle filter dropdown
             document.querySelector(".filter-dropdown__head").addEventListener("click", e => {
@@ -635,11 +620,13 @@
 
         });
 
+        // navigate to restaurant menu page
         document.querySelectorAll(".restaurant-info-card").forEach((e) => {
             e.addEventListener("click", () => {
                 window.location.assign("../restaurant-menu/index.html");
             });
         });
+
     </script> -->
 
     </body>
