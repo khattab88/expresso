@@ -2,9 +2,11 @@ import { elements } from "./view";
 
 export default class CartComponent {
     constructor() {
-        this.setupEventListeners();
+        try {
+            this.setupEventListeners();
 
-        this.calculate();
+            this.calculate();
+        } catch (err) { console.log(err); }
     }
 
     setupEventListeners() {
