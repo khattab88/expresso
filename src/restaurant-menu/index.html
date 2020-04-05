@@ -610,38 +610,5 @@
 
     </div>
 
-    <!-- <script>
-
-            // 2. item cart
-            
-
-            // remove item row from cart
-            document.querySelector(".cart__items").addEventListener("click", e => {
-                try {
-                    const item = e.target.closest(".cart__item-controls-remove").closest(".cart__item");
-                    if (item) {
-                        item.parentNode.removeChild(item);
-                    }
-                } catch{ }
-
-            });
-
-            // calculate cart
-            const cartItems = Array.from(document.querySelectorAll(".cart__item"))
-                .map(item => {
-                    const name = item.querySelector(".cart__item-name").textContent;
-                    const price = parseInt(item.querySelector(".cart__item-price").textContent.split(".")[0]);
-                    const count = parseInt(item.querySelector(".cart__item-controls-count").textContent);
-                    return { name, price, count };
-                });
-
-            console.log(cartItems);
-            const subTotal = parseInt(document.querySelector(".cart__pricing-box-subtotal .cart__pricing-box__value").textContent);
-            const deliveryFee = parseInt(document.querySelector(".cart__pricing-box-delivery .cart__pricing-box__value").textContent);
-            const total = document.querySelector(".cart__pricing-box-total .cart__pricing-box__value");
-            total.textContent = `${subTotal + deliveryFee}.00 EGP`;
-    
-    </script> -->
-
     </body>
 </html>
