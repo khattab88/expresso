@@ -18,6 +18,14 @@ export default class RestaurantMenuPage {
                 .forEach((elm) => {
                     elm.addEventListener("click", this.toggleLocationModal);
                 });
+
+            // open cart modal
+            elements.showCart.addEventListener("click", this.openCartModal);
+
+            // close cart modal
+            elements.closeCart.addEventListener("click", this.closeCartModal); 
+            elements.cartSubmit.addEventListener("click", this.closeCartModal); 
+            
         }
         catch (err) { console.log(err); }
 
@@ -30,6 +38,16 @@ export default class RestaurantMenuPage {
 
     toggleMenuCategories() {
         elements.menuCategoriesBody.classList.toggle("menu-categories__body--open");
+    }
+
+    openCartModal() {
+        elements.cartModal.classList.remove("cart-modal--close");
+        elements.cartModal.classList.add("cart-modal--open");
+    }
+
+    closeCartModal() {
+        elements.cartModal.classList.remove("cart-modal--open");
+        elements.cartModal.classList.add("cart-modal--close");
     }
 
 }
