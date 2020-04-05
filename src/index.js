@@ -8,6 +8,7 @@ import CartComponent from "./components/cart/index";
 
 import RestaurantListPage from "./restaurant-list/index";
 import RestaurantMenuPage from "./restaurant-menu/index";
+import CheckoutPage from "./checkout/index";
 
 
 const navComponent = new NavComponent();
@@ -18,3 +19,4 @@ const cartComponent = new CartComponent();
 
 const restaurantListPage = new RestaurantListPage();
 const restaurantMenuPage = new RestaurantMenuPage();
+const checkoutPage = new CheckoutPage();

@@ -3838,6 +3838,30 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./src/checkout/index.js":
+/*!*******************************!*\
+  !*** ./src/checkout/index.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _view = __webpack_require__(/*! ./view */ \"./src/checkout/view.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar CheckoutPage = function () {\n    function CheckoutPage() {\n        _classCallCheck(this, CheckoutPage);\n\n        this.setupEventListeners();\n    }\n\n    _createClass(CheckoutPage, [{\n        key: \"setupEventListeners\",\n        value: function setupEventListeners() {\n            var _this = this;\n\n            // toggle map modal\n            Array.from(document.querySelectorAll(\".delivery-info__add, .map-modal__confirm, .map-modal__close\")).forEach(function (el) {\n                return el.addEventListener(\"click\", function (e) {\n                    _this.toggleMapModal();\n                });\n            });\n        }\n    }, {\n        key: \"toggleMapModal\",\n        value: function toggleMapModal() {\n            _view.elements.mapModal.classList.toggle(\"map-modal--open\");\n        }\n    }]);\n\n    return CheckoutPage;\n}();\n\nexports.default = CheckoutPage;\n\n//# sourceURL=webpack:///./src/checkout/index.js?");
+
+/***/ }),
+
+/***/ "./src/checkout/view.js":
+/*!******************************!*\
+  !*** ./src/checkout/view.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar elements = exports.elements = {\n    mapModal: document.querySelector(\".map-modal\")\n};\n\n//# sourceURL=webpack:///./src/checkout/view.js?");
+
+/***/ }),
+
 /***/ "./src/components/cart/index.js":
 /*!**************************************!*\
   !*** ./src/components/cart/index.js ***!
@@ -3966,7 +3990,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/header/index */ \"./src/components/header/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nvar _index5 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index6 = _interopRequireDefault(_index5);\n\nvar _index7 = __webpack_require__(/*! ./components/menu-item-modal/index */ \"./src/components/menu-item-modal/index.js\");\n\nvar _index8 = _interopRequireDefault(_index7);\n\nvar _index9 = __webpack_require__(/*! ./components/cart/index */ \"./src/components/cart/index.js\");\n\nvar _index10 = _interopRequireDefault(_index9);\n\nvar _index11 = __webpack_require__(/*! ./restaurant-list/index */ \"./src/restaurant-list/index.js\");\n\nvar _index12 = _interopRequireDefault(_index11);\n\nvar _index13 = __webpack_require__(/*! ./restaurant-menu/index */ \"./src/restaurant-menu/index.js\");\n\nvar _index14 = _interopRequireDefault(_index13);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navComponent = new _index2.default(); // GLOBAL APP CONTROLLER\n\nvar headerComponent = new _index4.default();\nvar footerComponent = new _index6.default();\nvar itemModalComponent = new _index8.default();\nvar cartComponent = new _index10.default();\n\nvar restaurantListPage = new _index12.default();\nvar restaurantMenuPage = new _index14.default();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _index = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _index3 = __webpack_require__(/*! ./components/header/index */ \"./src/components/header/index.js\");\n\nvar _index4 = _interopRequireDefault(_index3);\n\nvar _index5 = __webpack_require__(/*! ./components/footer/index */ \"./src/components/footer/index.js\");\n\nvar _index6 = _interopRequireDefault(_index5);\n\nvar _index7 = __webpack_require__(/*! ./components/menu-item-modal/index */ \"./src/components/menu-item-modal/index.js\");\n\nvar _index8 = _interopRequireDefault(_index7);\n\nvar _index9 = __webpack_require__(/*! ./components/cart/index */ \"./src/components/cart/index.js\");\n\nvar _index10 = _interopRequireDefault(_index9);\n\nvar _index11 = __webpack_require__(/*! ./restaurant-list/index */ \"./src/restaurant-list/index.js\");\n\nvar _index12 = _interopRequireDefault(_index11);\n\nvar _index13 = __webpack_require__(/*! ./restaurant-menu/index */ \"./src/restaurant-menu/index.js\");\n\nvar _index14 = _interopRequireDefault(_index13);\n\nvar _index15 = __webpack_require__(/*! ./checkout/index */ \"./src/checkout/index.js\");\n\nvar _index16 = _interopRequireDefault(_index15);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// GLOBAL APP CONTROLLER\n\nvar navComponent = new _index2.default();\nvar headerComponent = new _index4.default();\nvar footerComponent = new _index6.default();\nvar itemModalComponent = new _index8.default();\nvar cartComponent = new _index10.default();\n\nvar restaurantListPage = new _index12.default();\nvar restaurantMenuPage = new _index14.default();\nvar checkoutPage = new _index16.default();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
