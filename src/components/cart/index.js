@@ -37,19 +37,21 @@ export default class CartComponent {
     }
 
     calculate() {
-        const items = this.getItems();
-        console.log(items);
-        let itemsSubTotal = 0;
-        items.forEach(item => {
-            const itemValue = Math.round(item.count * item.price);
-            itemsSubTotal += itemValue;
-        });
+        try {
+            const items = this.getItems();
 
-        elements.subTotal.textContent = this.format(itemsSubTotal);
-        elements.deliveryFee.textContent = this.format(5);
+            let itemsSubTotal = 0;
+            items.forEach(item => {
+                const itemValue = parseInt(item.count * item.price);
+                itemsSubTotal += itemValue;
+            });
 
-        const total = parseInt(elements.subTotal.textContent) + parseInt(elements.deliveryFee.textContent);
-        elements.total.textContent = this.format(total);
+            elements.subTotal.textContent = this.format(itemsSubTotal);
+            elements.deliveryFee.textContent = this.format(5);
+
+            const total = parseInt(elements.subTotal.textContent) + parseInt(elements.deliveryFee.textContent);
+            elements.total.textContent = this.format(total);
+        } catch (err) { console.log(err); }
     }
 
     format(val) {
