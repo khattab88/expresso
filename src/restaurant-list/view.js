@@ -11,6 +11,17 @@ export const elements = {
 export class RestaurantListPageView {
     constructor() {}
 
+    renderTag(tag) {
+        const markup = `
+            <li class="filter-dropdown__cuisine-item">
+                <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="tag-${tag.id}">
+                <label class="filter-dropdown__cuisine-name" for="tag-${tag.id}">${tag.title}</label>
+            </li>
+        `;
+
+        elements.filterCuisineList.insertAdjacentHTML("beforeend", markup);
+    }
+
     renderRestaurantCard(restaurant) {
         const markup = `
         <article class="restaurant-info-card" data-id="${restaurant.id}">

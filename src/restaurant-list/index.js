@@ -14,6 +14,8 @@ export default class RestaurantListPage {
         this.view = new RestaurantListPageView();
 
         this.model.restaurants.forEach(r => this.view.renderRestaurantCard(r));
+        this.model.tags.forEach(t => this.view.renderTag(t));
+
         } catch (err) { handleError(err); }
     }
 
