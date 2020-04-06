@@ -213,25 +213,20 @@
     }
     &__menu-items-list {
         margin: 1rem 0;
-    }
-    &__menu-items-row {
-        display: flex;
-        flex-direction: column;
 
-        @include respond(desktop) {
-            flex-direction: row-reverse;
-            justify-content: space-evenly;
+        display: grid;
+
+        @include respond(tab-land) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
         }
     }
+
 }
 
 .menu-item {
     min-height: 40rem;
     margin-bottom: 1rem;
-
-    @include respond(desktop) {
-        width: 47.5%;
-    }
 
     &:hover {
         cursor: pointer;

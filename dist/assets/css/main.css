@@ -3235,36 +3235,28 @@ body {
 
 /* line 214, src/sass/pages/_restaurant-menu.scss */
 .menu-items-by-category__menu-items-list {
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  display: grid; }
+  @media only screen and (min-width: 64em) {
+    /* line 214, src/sass/pages/_restaurant-menu.scss */
+    .menu-items-by-category__menu-items-list {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem; } }
 
-/* line 217, src/sass/pages/_restaurant-menu.scss */
-.menu-items-by-category__menu-items-row {
-  display: flex;
-  flex-direction: column; }
-  @media only screen and (min-width: 75em) {
-    /* line 217, src/sass/pages/_restaurant-menu.scss */
-    .menu-items-by-category__menu-items-row {
-      flex-direction: row-reverse;
-      justify-content: space-evenly; } }
-
-/* line 228, src/sass/pages/_restaurant-menu.scss */
+/* line 227, src/sass/pages/_restaurant-menu.scss */
 .menu-item {
   min-height: 40rem;
   margin-bottom: 1rem; }
-  @media only screen and (min-width: 75em) {
-    /* line 228, src/sass/pages/_restaurant-menu.scss */
-    .menu-item {
-      width: 47.5%; } }
-  /* line 236, src/sass/pages/_restaurant-menu.scss */
+  /* line 231, src/sass/pages/_restaurant-menu.scss */
   .menu-item:hover {
     cursor: pointer; }
-  /* line 239, src/sass/pages/_restaurant-menu.scss */
+  /* line 234, src/sass/pages/_restaurant-menu.scss */
   .menu-item:hover .menu-item__img {
     transform: scale(1.01);
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/photo-1549611016-3a70d82b5040.jpg);
     background-size: cover;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
-  /* line 249, src/sass/pages/_restaurant-menu.scss */
+  /* line 244, src/sass/pages/_restaurant-menu.scss */
   .menu-item__img {
     min-width: 35rem;
     min-height: 24.5rem;
@@ -3274,31 +3266,31 @@ body {
     border-top-right-radius: .5rem;
     transition: all .2s; }
     @media only screen and (min-width: 48em) {
-      /* line 249, src/sass/pages/_restaurant-menu.scss */
+      /* line 244, src/sass/pages/_restaurant-menu.scss */
       .menu-item__img {
         height: auto; } }
     @media only screen and (min-width: 75em) {
-      /* line 249, src/sass/pages/_restaurant-menu.scss */
+      /* line 244, src/sass/pages/_restaurant-menu.scss */
       .menu-item__img {
         min-width: 24rem; } }
-  /* line 266, src/sass/pages/_restaurant-menu.scss */
+  /* line 261, src/sass/pages/_restaurant-menu.scss */
   .menu-item__detail {
     background-color: #f9f9f9;
     padding: .5rem 1.5rem 2rem 1.5rem;
     min-height: 12rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem; }
-  /* line 273, src/sass/pages/_restaurant-menu.scss */
+  /* line 268, src/sass/pages/_restaurant-menu.scss */
   .menu-item__detail-box {
     display: flex;
     justify-content: space-between;
     margin: 2rem 0 0 0; }
-  /* line 278, src/sass/pages/_restaurant-menu.scss */
+  /* line 273, src/sass/pages/_restaurant-menu.scss */
   .menu-item__name {
     max-width: 50%;
     font-size: 2rem;
     font-weight: 400; }
-  /* line 283, src/sass/pages/_restaurant-menu.scss */
+  /* line 278, src/sass/pages/_restaurant-menu.scss */
   .menu-item__price {
     color: #fff;
     background-color: #009a9a;
@@ -3306,11 +3298,11 @@ body {
     border-radius: .5rem;
     font-size: 1.5rem; }
     @media only screen and (min-width: 75em) {
-      /* line 283, src/sass/pages/_restaurant-menu.scss */
+      /* line 278, src/sass/pages/_restaurant-menu.scss */
       .menu-item__price {
         padding: 1rem;
         height: 4rem; } }
-  /* line 295, src/sass/pages/_restaurant-menu.scss */
+  /* line 290, src/sass/pages/_restaurant-menu.scss */
   .menu-item__desc {
     max-height: 4.4rem;
     margin: 1.2rem 0 0 0;
