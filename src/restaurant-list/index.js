@@ -1,3 +1,5 @@
+import { handleError } from "../base";
+
 import RestaurantListPageModel from "./model";
 import { elements, RestaurantListPageView } from "./view";
 
@@ -12,7 +14,7 @@ export default class RestaurantListPage {
         this.view = new RestaurantListPageView();
 
         this.model.restaurants.forEach(r => this.view.renderRestaurantCard(r));
-        } catch (err) { console.log(err.message); }
+        } catch (err) { handleError(err); }
     }
 
     setupEventListeners() {

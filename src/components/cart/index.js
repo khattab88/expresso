@@ -1,3 +1,5 @@
+import { handleError } from "../../base";
+
 import { elements } from "./view";
 
 export default class CartComponent {
@@ -6,7 +8,7 @@ export default class CartComponent {
             this.setupEventListeners();
 
             this.calculate();
-        } catch (err) { console.log(err); }
+        } catch (err) { handleError(err); }
     }
 
     setupEventListeners() {
@@ -17,7 +19,7 @@ export default class CartComponent {
                 this.removeItem(e);
             });
 
-        } catch (err) { console.log(err); }
+        } catch (err) { handleError(err); }
     }
 
     removeItem(e) {
@@ -53,7 +55,7 @@ export default class CartComponent {
 
             const total = parseInt(elements.subTotal.textContent) + parseInt(elements.deliveryFee.textContent);
             elements.total.textContent = this.format(total);
-        } catch (err) { console.log(err); }
+        } catch (err) { handleError(err); }
     }
 
     format(val) {

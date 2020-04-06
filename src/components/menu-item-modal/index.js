@@ -1,3 +1,5 @@
+import { handleError } from "../../base";
+
 import { elements } from "./view";
 
 export default class ItemModalComponent {
@@ -41,7 +43,7 @@ export default class ItemModalComponent {
                 countLabel.textContent = count;
             }));
 
-        } catch (err) { console.log(err); }
+        } catch (err) { handleError(err); }
     }
 
     open() {

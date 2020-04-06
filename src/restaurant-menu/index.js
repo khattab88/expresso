@@ -1,3 +1,5 @@
+import { handleError } from "../base";
+
 import { elements } from "./view";
 
 export default class RestaurantMenuPage {
@@ -27,7 +29,7 @@ export default class RestaurantMenuPage {
             elements.cartSubmit.addEventListener("click", this.closeCartModal); 
             
         }
-        catch (err) { console.log(err); }
+        catch (err) { handleError(err); }
 
     }
 

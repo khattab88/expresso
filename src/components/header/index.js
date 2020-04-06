@@ -1,3 +1,5 @@
+import { handleError } from "../../base";
+
 import { elements } from "./view";
 
 export default class HeaderComponent {
@@ -37,6 +39,6 @@ export default class HeaderComponent {
                 elements.restaurantSelectionBox.classList.toggle("restaurant-selection__box--open");
             });
 
-        } catch (err) { console.log(err); }
+        } catch (err) { handleError(err); }
     }
 }
