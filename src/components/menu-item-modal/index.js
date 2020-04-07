@@ -11,9 +11,9 @@ export default class ItemModalComponent {
         try {
 
             // open modal
-            elements.itemsList.addEventListener("click", e => {
+            elements.menuItemsWrapper.addEventListener("click", e => {
                 const item = e.target.closest(".menu-item");
-                if(item) {
+                if (item) {
                     this.open();
                     console.log(item.id);
                 }
@@ -29,19 +29,19 @@ export default class ItemModalComponent {
 
             // increment/decrement menu item count
             Array.from(document.querySelectorAll(".cart-controls"))
-            .forEach(el => el.addEventListener("click", (e) => {
+                .forEach(el => el.addEventListener("click", (e) => {
 
-                const op = e.target.closest(".cart-controls__btn").textContent;
-                const countLabel = elements.itemCount;
-                let count = parseInt(countLabel.textContent);
+                    const op = e.target.closest(".cart-controls__btn").textContent;
+                    const countLabel = elements.itemCount;
+                    let count = parseInt(countLabel.textContent);
 
-                if (op === "+") { count++; } 
-                else {
-                    if (count > 1) count--;
-                }
+                    if (op === "+") { count++; }
+                    else {
+                        if (count > 1) count--;
+                    }
 
-                countLabel.textContent = count;
-            }));
+                    countLabel.textContent = count;
+                }));
 
         } catch (err) { handleError(err); }
     }

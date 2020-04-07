@@ -21,7 +21,7 @@ export default class RestaurantMenuPageModel {
             new MenuItem("1", "Double Cheese Burger", "photo-1549611016-3a70d82b5040.jpg", 70, 
             "House-made turkey sausage, cage-free over medium egg, cheddar cheese, honey..."),
 
-            new MenuItem("1", "Double Cheese Burger", "photo-1549611016-3a70d82b5040.jpg", 70, 
+            new MenuItem("2", "Double Cheese Burger", "photo-1549611016-3a70d82b5040.jpg", 70, 
             "House-made turkey sausage, cage-free over medium egg, cheddar cheese, honey..."),
         ];
     }
