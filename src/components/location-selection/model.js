@@ -4,8 +4,8 @@ import Area from "../../core/entities/area";
 
 export default class LocationSelectionModel {
     constructor() {
-        this.location = null;
         this.cities = this.getCitites();
+        this.selectedArea = null;
     }
 
     getCitites() {

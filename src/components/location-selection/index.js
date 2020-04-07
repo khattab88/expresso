@@ -36,11 +36,10 @@ export default class LocationSelectionComponent {
                 if(e.target.matches(".location-selection__btn, .location-selection__btn *")) {
                     btn.classList.toggle("location-selection__btn--open");
                     box.classList.toggle("location-selection__box--open");
-
                 }
 
                 // display selected location value
-                else if(e.target.matches(".location-selection__area, location-selection__area *")) {
+                else if(e.target.matches(".location-selection__area, .location-selection__area *")) {
                     const area = e.target.textContent;
                     value.textContent = area;
 
