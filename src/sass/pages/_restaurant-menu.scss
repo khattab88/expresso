@@ -183,6 +183,19 @@
         font-size: 1.8rem;
         line-height: 4rem;
     }
+    &__category-link {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-font-dark;
+        transition: all .2s;
+
+        &:hover,
+        &--selected
+        {
+            font-weight: 400;
+            transform: scale(1.1);
+        }
+    }
 }
 
 /* menu items */
@@ -197,6 +210,14 @@
 }
 
 .menu-items-by-category {
+
+    &:not(:first-child) {
+        padding-top: 6rem;
+
+        @include respond(tab) {
+            padding-top: 8rem;
+        }
+    }
 
     @include respond(desktop) {
         width: 94%;

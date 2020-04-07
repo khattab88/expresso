@@ -8,13 +8,13 @@ export default class RestaurantListPage {
         this.setupEventListeners();
     }
 
-    init() {     
-        try {   
-        this.model = new RestaurantListPageModel();
-        this.view = new RestaurantListPageView();
+    init() {
+        try {
+            this.model = new RestaurantListPageModel();
+            this.view = new RestaurantListPageView();
 
-        this.model.restaurants.forEach(r => this.view.renderRestaurantCard(r));
-        this.model.tags.forEach(t => this.view.renderTag(t));
+            this.model.restaurants.forEach(r => this.view.renderRestaurantCard(r));
+            this.model.tags.forEach(t => this.view.renderTag(t));
 
         } catch (err) { handleError(err); }
     }
@@ -79,7 +79,7 @@ export default class RestaurantListPage {
                 const id = restaurant.dataset.id;
                 window.location.assign(`../restaurant-menu/index.html?id=${id}`);
             });
-        
+
 
         }
         catch (err) { console.log(err); }

@@ -1,14 +1,29 @@
 import { handleError } from "../base";
 
-import { elements } from "./view";
+import RestaurantMenuPageModel from "./model";
+import { elements, RestaurantMenuPageView } from "./view";
 
 export default class RestaurantMenuPage {
     constructor() {
         this.setupEventListeners();
     }
 
+    init() {
+        try {
+            this.model = new RestaurantMenuPageModel();
+            this.view = new RestaurantMenuPageView();
+
+            this.model.menuCategories.forEach(mc => this.view.renderMenuCategory(mc));
+            this.model.menuCategories.forEach(mc => this.view.renderMenuCategoryItems(mc));
+
+        } catch(err) { handleError(err); }
+    }
+
     setupEventListeners() {
         try {
+
+            // initialize restaurants menu
+            window.addEventListener("load", this.init);
 
             // toggle menu sections
             elements.menuCategoriesHead.addEventListener("click", e => {
