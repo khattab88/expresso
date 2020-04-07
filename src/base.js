@@ -1,2 +1,1 @@
-export const handleError = (err) => 
-    console.log(`ERROR: ${err.message}`);
+export const handleError = (err) => console.log(err);
