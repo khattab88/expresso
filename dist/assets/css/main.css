@@ -2295,30 +2295,49 @@ body {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column; }
-  /* line 135, src/sass/pages/_home.scss */
+  @media only screen and (min-width: 64em) {
+    /* line 130, src/sass/pages/_home.scss */
+    .categories {
+      flex-direction: row;
+      padding-right: 2rem; } }
+  @media only screen and (min-width: 75em) {
+    /* line 130, src/sass/pages/_home.scss */
+    .categories {
+      padding-right: 3rem; } }
+  /* line 144, src/sass/pages/_home.scss */
   .categories__title {
     text-align: center;
     padding: 4rem 0 0 0;
     color: #323232;
     font-size: 2.8rem;
     font-weight: 400; }
-  /* line 142, src/sass/pages/_home.scss */
+    @media only screen and (min-width: 64em) {
+      /* line 144, src/sass/pages/_home.scss */
+      .categories__title {
+        padding-top: 5rem;
+        padding-left: 5rem;
+        text-align: initial; } }
+    @media only screen and (min-width: 75em) {
+      /* line 144, src/sass/pages/_home.scss */
+      .categories__title {
+        padding-left: 20rem; } }
+  /* line 161, src/sass/pages/_home.scss */
   .categories__wrapper {
     overflow-x: hidden;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: space-between; }
-  /* line 148, src/sass/pages/_home.scss */
+  /* line 167, src/sass/pages/_home.scss */
   .categories__list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly; }
     @media only screen and (min-width: 48em) {
-      /* line 148, src/sass/pages/_home.scss */
+      /* line 167, src/sass/pages/_home.scss */
       .categories__list {
         width: 100%;
         justify-content: space-between; } }
-  /* line 159, src/sass/pages/_home.scss */
+  /* line 178, src/sass/pages/_home.scss */
   .categories .arrow-btn {
     border-style: none;
     background-color: #009a9a;
@@ -2328,21 +2347,21 @@ body {
     font-weight: 300;
     margin-right: .5rem;
     transition: all .2s; }
-    /* line 169, src/sass/pages/_home.scss */
+    /* line 188, src/sass/pages/_home.scss */
     .categories .arrow-btn:hover {
       cursor: pointer;
       transform: scale(1.05);
       background-color: #323232;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
     @media only screen and (min-width: 48em) {
-      /* line 159, src/sass/pages/_home.scss */
+      /* line 178, src/sass/pages/_home.scss */
       .categories .arrow-btn {
         min-width: 3rem; } }
-    /* line 180, src/sass/pages/_home.scss */
+    /* line 199, src/sass/pages/_home.scss */
     .categories .arrow-btn__icon {
       margin-left: -.3rem; }
 
-/* line 186, src/sass/pages/_home.scss */
+/* line 205, src/sass/pages/_home.scss */
 .category-card {
   width: 12.5rem;
   height: 16.5rem;
@@ -2358,7 +2377,7 @@ body {
   align-items: center;
   border: 0.15rem solid #009a9a;
   transition: all .2s; }
-  /* line 202, src/sass/pages/_home.scss */
+  /* line 221, src/sass/pages/_home.scss */
   .category-card:hover {
     cursor: pointer;
     color: #fff;
@@ -2366,10 +2385,10 @@ body {
     border-color: #323232;
     transform: scale(1.05) translateY(-0.5rem); }
   @media only screen and (min-width: 48em) {
-    /* line 186, src/sass/pages/_home.scss */
+    /* line 205, src/sass/pages/_home.scss */
     .category-card {
       min-width: 18rem; } }
-  /* line 214, src/sass/pages/_home.scss */
+  /* line 233, src/sass/pages/_home.scss */
   .category-card__head {
     width: 8rem;
     height: 8rem;
@@ -2380,59 +2399,59 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
-    /* line 225, src/sass/pages/_home.scss */
+    /* line 244, src/sass/pages/_home.scss */
     .category-card__head:hover {
       border-color: #fff; }
-  /* line 229, src/sass/pages/_home.scss */
+  /* line 248, src/sass/pages/_home.scss */
   .category-card__icon {
     font-size: 4rem; }
-  /* line 232, src/sass/pages/_home.scss */
+  /* line 251, src/sass/pages/_home.scss */
   .category-card__body {
     font-size: 200%;
     line-height: 2.2rem;
     letter-spacing: 1px; }
-  /* line 237, src/sass/pages/_home.scss */
+  /* line 256, src/sass/pages/_home.scss */
   .category-card__name {
     font-weight: 400; }
-  /* line 241, src/sass/pages/_home.scss */
+  /* line 260, src/sass/pages/_home.scss */
   .category-card--active {
     background-color: #009a9a;
     color: #fff; }
-    /* line 245, src/sass/pages/_home.scss */
+    /* line 264, src/sass/pages/_home.scss */
     .category-card--active .category-card__head {
       border-color: #fff; }
 
 /* showcase section */
-/* line 252, src/sass/pages/_home.scss */
+/* line 271, src/sass/pages/_home.scss */
 .showcase {
   margin: 5rem 0;
   display: grid;
   grid-gap: 1rem;
   grid-template: "head      head" "card-big  card-big" "card-1    card-2" "card-3    card-4" "card-5    card-6" "show-all  show-all"; }
   @media only screen and (min-width: 64em) {
-    /* line 252, src/sass/pages/_home.scss */
+    /* line 271, src/sass/pages/_home.scss */
     .showcase {
       grid-template: "head      .         ." "head      card-1    card-2" "card-big  card-3    card-4" "card-big  card-5    card-6" ".         show-all  show-all"; } }
-  /* line 275, src/sass/pages/_home.scss */
+  /* line 294, src/sass/pages/_home.scss */
   .showcase__head {
     grid-area: head; }
-  /* line 278, src/sass/pages/_home.scss */
+  /* line 297, src/sass/pages/_home.scss */
   .showcase__title-primary {
     font-size: 7rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     color: #323232; }
-    /* line 284, src/sass/pages/_home.scss */
+    /* line 303, src/sass/pages/_home.scss */
     .showcase__title-primary span {
       display: block; }
-  /* line 288, src/sass/pages/_home.scss */
+  /* line 307, src/sass/pages/_home.scss */
   .showcase__title-secondary {
     line-height: 2.8rem;
     font-size: 2.2rem;
     padding: 1rem 0;
     color: #323232;
     letter-spacing: .5px; }
-  /* line 296, src/sass/pages/_home.scss */
+  /* line 315, src/sass/pages/_home.scss */
   .showcase__show-all {
     grid-area: show-all;
     width: 98%;
@@ -2452,18 +2471,18 @@ body {
     color: #fff;
     text-decoration: none; }
     @media only screen and (min-width: 48em) {
-      /* line 296, src/sass/pages/_home.scss */
+      /* line 315, src/sass/pages/_home.scss */
       .showcase__show-all {
         text-align: center;
         width: 100%;
         margin: 0; } }
-    /* line 323, src/sass/pages/_home.scss */
+    /* line 342, src/sass/pages/_home.scss */
     .showcase__show-all:hover {
       cursor: pointer;
       background-color: #323232;
       transform: translateY(-0.3rem); }
 
-/* line 331, src/sass/pages/_home.scss */
+/* line 350, src/sass/pages/_home.scss */
 .restaurant-card {
   grid-area: card;
   border-radius: 5px;
@@ -2471,7 +2490,7 @@ body {
   position: relative;
   transition: all .3s;
   overflow: hidden; }
-  /* line 341, src/sass/pages/_home.scss */
+  /* line 360, src/sass/pages/_home.scss */
   .restaurant-card::before {
     content: "";
     position: absolute;
@@ -2480,56 +2499,56 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 67%, rgba(0, 0, 0, 0.02) 68%, rgba(0, 0, 0, 0.26) 82%, rgba(0, 0, 0, 0.5) 96%); }
-  /* line 355, src/sass/pages/_home.scss */
+  /* line 374, src/sass/pages/_home.scss */
   .restaurant-card:hover {
     transform: scale(1.01); }
   @media only screen and (min-width: 30em) {
-    /* line 331, src/sass/pages/_home.scss */
+    /* line 350, src/sass/pages/_home.scss */
     .restaurant-card {
       height: 18rem; } }
   @media only screen and (min-width: 48em) {
-    /* line 331, src/sass/pages/_home.scss */
+    /* line 350, src/sass/pages/_home.scss */
     .restaurant-card {
       height: 26rem; } }
-  /* line 367, src/sass/pages/_home.scss */
+  /* line 386, src/sass/pages/_home.scss */
   .restaurant-card--1 {
     grid-area: card-1; }
-  /* line 368, src/sass/pages/_home.scss */
+  /* line 387, src/sass/pages/_home.scss */
   .restaurant-card--2 {
     grid-area: card-2; }
-  /* line 369, src/sass/pages/_home.scss */
+  /* line 388, src/sass/pages/_home.scss */
   .restaurant-card--3 {
     grid-area: card-3; }
-  /* line 370, src/sass/pages/_home.scss */
+  /* line 389, src/sass/pages/_home.scss */
   .restaurant-card--4 {
     grid-area: card-4; }
-  /* line 371, src/sass/pages/_home.scss */
+  /* line 390, src/sass/pages/_home.scss */
   .restaurant-card--5 {
     grid-area: card-5; }
-  /* line 372, src/sass/pages/_home.scss */
+  /* line 391, src/sass/pages/_home.scss */
   .restaurant-card--6 {
     grid-area: card-6; }
-  /* line 374, src/sass/pages/_home.scss */
+  /* line 393, src/sass/pages/_home.scss */
   .restaurant-card__link {
     color: #fff;
     display: block;
     border-radius: 5px;
     height: 100%; }
-  /* line 380, src/sass/pages/_home.scss */
+  /* line 399, src/sass/pages/_home.scss */
   .restaurant-card__img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     display: block; }
-  /* line 387, src/sass/pages/_home.scss */
+  /* line 406, src/sass/pages/_home.scss */
   .restaurant-card__name, .restaurant-card__desc {
     left: 2rem;
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7); }
     @media only screen and (min-width: 48em) {
-      /* line 387, src/sass/pages/_home.scss */
+      /* line 406, src/sass/pages/_home.scss */
       .restaurant-card__name, .restaurant-card__desc {
         text-align: center; } }
-  /* line 396, src/sass/pages/_home.scss */
+  /* line 415, src/sass/pages/_home.scss */
   .restaurant-card__name {
     font-size: 2.4rem;
     font-weight: 400;
@@ -2537,7 +2556,7 @@ body {
     position: absolute;
     bottom: 4rem;
     margin-bottom: .5rem; }
-  /* line 404, src/sass/pages/_home.scss */
+  /* line 423, src/sass/pages/_home.scss */
   .restaurant-card__desc {
     font-size: 1.6rem;
     font-weight: 300;
@@ -2545,32 +2564,32 @@ body {
     line-height: 1.8rem;
     position: absolute;
     bottom: 2rem; }
-  /* line 413, src/sass/pages/_home.scss */
+  /* line 432, src/sass/pages/_home.scss */
   .restaurant-card--big {
     height: 37.5rem;
     grid-area: card-big; }
     @media only screen and (min-width: 30em) {
-      /* line 413, src/sass/pages/_home.scss */
+      /* line 432, src/sass/pages/_home.scss */
       .restaurant-card--big {
         width: 100%; } }
     @media only screen and (min-width: 48em) {
-      /* line 413, src/sass/pages/_home.scss */
+      /* line 432, src/sass/pages/_home.scss */
       .restaurant-card--big {
         height: 52rem; } }
     @media only screen and (min-width: 64em) {
-      /* line 413, src/sass/pages/_home.scss */
+      /* line 432, src/sass/pages/_home.scss */
       .restaurant-card--big {
         height: 99.5%; } }
-    /* line 430, src/sass/pages/_home.scss */
+    /* line 449, src/sass/pages/_home.scss */
     .restaurant-card--big .restaurant-card__img {
       height: 100%; }
-    /* line 433, src/sass/pages/_home.scss */
+    /* line 452, src/sass/pages/_home.scss */
     .restaurant-card--big .restaurant-card__name {
       font-size: 3.6rem;
       letter-spacing: 0.5px;
       bottom: 7rem;
       left: 2rem; }
-    /* line 439, src/sass/pages/_home.scss */
+    /* line 458, src/sass/pages/_home.scss */
     .restaurant-card--big .restaurant-card__desc {
       font-size: 2.4rem;
       letter-spacing: 0.5px;
@@ -2579,7 +2598,7 @@ body {
       left: 2rem; }
 
 /* info section */
-/* line 450, src/sass/pages/_home.scss */
+/* line 469, src/sass/pages/_home.scss */
 .info-section {
   background-color: #d5d5d5;
   display: flex;
@@ -2588,7 +2607,7 @@ body {
   align-items: center; }
 
 /* app section */
-/* line 459, src/sass/pages/_home.scss */
+/* line 478, src/sass/pages/_home.scss */
 .app-section {
   background-color: #d5d5d5;
   display: flex;
@@ -2596,7 +2615,7 @@ body {
   justify-content: center;
   align-items: center; }
 
-/* line 466, src/sass/pages/_home.scss */
+/* line 485, src/sass/pages/_home.scss */
 .app-download-links button {
   display: inline-block; }
 
