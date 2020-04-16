@@ -9,7 +9,7 @@ export const elements = {
 };
 
 export class NavView {
-    constructor() {}
+    constructor() { }
 
     toggleMobileNav() {
         const navigationItems = elements.container.querySelector(".navigation__items");
@@ -134,5 +134,26 @@ export class NavView {
         `;
 
         elements.container.insertAdjacentHTML("afterbegin", markup);
+    }
+
+    toggleMobileNav() {
+        const navigationItems = elements.container.querySelector(".navigation__items");
+        navigationItems.classList.toggle("navigation__items--mobile-open");
+    }
+
+    toggleNavCountry() {
+        const navCountryBtn = elements.container.querySelector(".country-btn");
+        navCountryBtn.classList.toggle("country-btn--open");
+
+        const navCountryDropdown = elements.container.querySelector(".country-btn > .country-dropdown");
+        navCountryDropdown.classList.toggle("country-dropdown--open");
+    }
+
+    toggleNavCategory() {
+        const navCategoryBtn = elements.container.querySelector(".category-btn");
+        navCategoryBtn.classList.toggle("category-btn--open");
+
+        const navCategoryDropdown = elements.container.querySelector(".category-dropdown");
+        navCategoryDropdown.classList.toggle("category-dropdown--open");
     }
 }

@@ -41,4 +41,8 @@ export class HomePageView {
 
         elements.showcase.insertAdjacentHTML("beforeend", markup);
     }
+
+    navigate(location) {
+        window.location.assign(location);
+    }
 }

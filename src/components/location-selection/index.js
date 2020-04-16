@@ -5,6 +5,7 @@ import { elements, LocationSelectionView } from "./view";
 
 export default class LocationSelectionComponent {
     constructor() {
+        this.init();
         this.setupEventListeners();
     }
 
@@ -20,10 +21,6 @@ export default class LocationSelectionComponent {
 
     setupEventListeners() {
         try {
-
-            // initialize location selection componenet
-            window.addEventListener("load", this.init);
-
 
             elements.wrapper.addEventListener("click", e => {
 

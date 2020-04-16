@@ -3,8 +3,14 @@ import { handleError } from "../base";
 import RestaurantListPageModel from "./model";
 import { elements, RestaurantListPageView } from "./view";
 
+import NavComponent from "../components/nav/index";
+import FooterComponent from "../components/footer/index";
+import LocationSelectionComponent from "../components/location-selection/index";
+import RestaurantSelectionComponent from "../components/restaurant-selection/index";
+
 export default class RestaurantListPage {
     constructor() {
+        this.init();
         this.setupEventListeners();
     }
 
@@ -12,6 +18,11 @@ export default class RestaurantListPage {
         try {
             this.model = new RestaurantListPageModel();
             this.view = new RestaurantListPageView();
+
+            this.navbar = new NavComponent();
+            this.footer = new FooterComponent();
+            this.locationSelection = new LocationSelectionComponent();
+            this.restaurantSelection = new RestaurantSelectionComponent();
 
             this.model.restaurants.forEach(r => this.view.renderRestaurantCard(r));
             this.model.tags.forEach(t => this.view.renderTag(t));
@@ -21,10 +32,6 @@ export default class RestaurantListPage {
 
     setupEventListeners() {
         try {
-
-            // initialize restaurants list
-            window.addEventListener("load", this.init);
-
 
             // toggle filter dropdown
             elements.filterDropdownHead.addEventListener("click", e => {

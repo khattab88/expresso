@@ -2,19 +2,17 @@
 
  export default class FooterComponent {
     constructor() {
+        this.init();
         this.setupEventListeners();
     }
 
     init() {
         this.view = new FooterView();
-
         this.view.render();
     }
 
     setupEventListeners() {
-        
-        window.addEventListener("load", this.init);
-
+    
         elements.container.addEventListener("click", e => {
 
             // toggle footer country

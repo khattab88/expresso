@@ -5,10 +5,13 @@ import { elements } from "./view";
 export default class CartComponent {
     constructor() {
         try {
+            this.init();
             this.setupEventListeners();
-
-            this.calculate();
         } catch (err) { handleError(err); }
+    }
+
+    init() {
+        this.calculate();
     }
 
     setupEventListeners() {
@@ -23,10 +26,11 @@ export default class CartComponent {
     }
 
     removeItem(e) {
-        const item = e.target.closest(".cart__item-controls-remove").closest(".cart__item");
-        if (item) {
-            item.parentNode.removeChild(item);
-        }
+        // TODO
+        // const item = e.target.closest(".cart__item-controls-remove").closest(".cart__item");
+        // if (item) {
+        //     item.parentNode.removeChild(item);
+        // }
     }
 
     getItems() {

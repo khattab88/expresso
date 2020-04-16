@@ -3,16 +3,28 @@ import { handleError } from "../base";
 import HomePageModel from "./model";
 import { elements, HomePageView } from "./view";
 
+import NavComponent from "../components/nav/index";
+import FooterComponent from "../components/footer/index";
+import LocationSelectionComponent from "../components/location-selection/index";
+
 export default class HomePage {
     constructor() {
+        this.init();
         this.setupEventListeners();
     }
 
     init() {
         try {
+            // initialize model/view instances
             this.model = new HomePageModel();
             this.view = new HomePageView();
 
+            // initialize components
+            this.navbar = new NavComponent();
+            this.footer = new FooterComponent();
+            this.locationSelection = new LocationSelectionComponent();
+
+            // intial rendering
             this.view.renderRestaurantBigCard(this.model.restaurants[0]);
             this.view.renderRestaurantCards(this.model.restaurants.slice(1));
 
@@ -21,14 +33,11 @@ export default class HomePage {
 
     setupEventListeners() {
         try {
-
-            // initialize home page
-            window.addEventListener("load", this.init);
-
             // navigate to restaurant menu page
             elements.showcase.addEventListener("click", e => {
                 const card = e.target.closest(".restaurant-card");
-                window.location.assign(`../restaurant-menu/index.html?id=${card.id}`);
+                //window.location.assign(`../restaurant-menu/index.html?id=${card.id}`);
+                this.view.navigate(`../restaurant-menu/index.html?id=${card.id}`);
             });
 
         } catch (err) { handleError(err); }

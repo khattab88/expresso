@@ -3,8 +3,14 @@ import { handleError } from "../base";
 import RestaurantMenuPageModel from "./model";
 import { elements, RestaurantMenuPageView } from "./view";
 
+import NavComponent from "../components/nav/index";
+import FooterComponent from "../components/footer/index";
+import ItemModalComponent from "../components/menu-item-modal/index";
+import CartComponent from "../components/cart/index";
+
 export default class RestaurantMenuPage {
     constructor() {
+        this.init();
         this.setupEventListeners();
     }
 
@@ -12,6 +18,11 @@ export default class RestaurantMenuPage {
         try {
             this.model = new RestaurantMenuPageModel();
             this.view = new RestaurantMenuPageView();
+
+            this.navbar = new NavComponent();
+            this.footer = new FooterComponent();
+            this.itemModal = new ItemModalComponent();
+            this.cart = new CartComponent();
 
             this.model.menuCategories.forEach(mc => this.view.renderMenuCategory(mc));
             this.model.menuCategories.forEach(mc => this.view.renderMenuCategoryItems(mc));
@@ -21,9 +32,6 @@ export default class RestaurantMenuPage {
 
     setupEventListeners() {
         try {
-
-            // initialize restaurants menu
-            window.addEventListener("load", this.init);
 
             // toggle menu sections
             elements.menuCategoriesHead.addEventListener("click", e => {

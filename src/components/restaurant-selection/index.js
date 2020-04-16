@@ -5,6 +5,7 @@ import { elements, RestaurantSelectionView } from "./view";
 
 export default class RestaurantSelectionComponent {
     constructor () {
+        this.init();
         this.setupEventListeners();
     }
 
@@ -20,10 +21,6 @@ export default class RestaurantSelectionComponent {
 
     setupEventListeners() {
         try {
-
-            // initialize restaurant selection componenet
-            window.addEventListener("load", this.init);
-
 
             elements.wrapper.addEventListener("click", e => {
 
