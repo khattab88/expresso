@@ -661,7 +661,7 @@ body {
 
 /* line 159, src/sass/layout/_nav.scss */
 .nav-country {
-  margin-left: .5rem;
+  margin-left: 1.5rem;
   margin-right: 0; }
 
 /* line 164, src/sass/layout/_nav.scss */
@@ -1706,7 +1706,7 @@ body {
     .category-dropdown {
       position: absolute;
       background-color: #fff;
-      top: 5.45rem;
+      top: 4.95rem;
       right: 0;
       border-radius: 3px;
       width: 20rem;
