@@ -14,25 +14,25 @@ window.addEventListener("load", () => {
     console.log(path);
 
     if (path.indexOf("restaurant-list") > -1) {
-        const restaurantListPage = new RestaurantListPage();
+        const page = new RestaurantListPage();
     }
     else if (path.indexOf("restaurant-menu") > -1) {
-        const restaurantListPage = new RestaurantMenuPage();
+        const page = new RestaurantMenuPage();
     }
     else if (path.indexOf("login") > -1) {
-        const restaurantListPage = new LoginPage();
+        const page = new LoginPage();
     }
     else if (path.indexOf("sign-up") > -1) {
-        const restaurantListPage = new SignupPage();
+        const page = new SignupPage();
     }
     else if (path.indexOf("contact-us") > -1) {
-        const restaurantListPage = new ContactusPage();
+        const page = new ContactusPage();
     }
     else if (path.indexOf("checkout") > -1) {
-        const restaurantListPage = new CheckoutPage();
+        const page = new CheckoutPage();
     }
     else {
-        const restaurantListPage = new HomePage();
+        const page = new HomePage();
     }
 
 });
