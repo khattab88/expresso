@@ -36,7 +36,6 @@ export default class HomePage {
             // navigate to restaurant menu page
             elements.showcase.addEventListener("click", e => {
                 const card = e.target.closest(".restaurant-card");
-                //window.location.assign(`../restaurant-menu/index.html?id=${card.id}`);
                 this.view.navigate(`../restaurant-menu/index.html?id=${card.id}`);
             });
 

@@ -11,28 +11,28 @@ import CheckoutPage from "./checkout/index";
 
 window.addEventListener("load", () => {
     const path = window.location.pathname;
-    console.log(path);
+    let page = null;
 
     if (path.indexOf("restaurant-list") > -1) {
-        const page = new RestaurantListPage();
+        page = new RestaurantListPage();
     }
     else if (path.indexOf("restaurant-menu") > -1) {
-        const page = new RestaurantMenuPage();
+        page = new RestaurantMenuPage();
     }
     else if (path.indexOf("login") > -1) {
-        const page = new LoginPage();
+        page = new LoginPage();
     }
     else if (path.indexOf("sign-up") > -1) {
-        const page = new SignupPage();
+        page = new SignupPage();
     }
     else if (path.indexOf("contact-us") > -1) {
-        const page = new ContactusPage();
+        page = new ContactusPage();
     }
     else if (path.indexOf("checkout") > -1) {
-        const page = new CheckoutPage();
+        page = new CheckoutPage();
     }
     else {
-        const page = new HomePage();
+        page = new HomePage();
     }
 
 });
