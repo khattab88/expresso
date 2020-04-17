@@ -5,7 +5,7 @@ export const elements = {
 };
 
 export class FooterView {
-    constructor() {}
+    constructor() { }
 
     render() {
         const markup = `
@@ -103,6 +103,14 @@ export class FooterView {
         `;
 
         elements.container.insertAdjacentHTML("beforeend", markup);
+    }
+
+    toggleCountryDropdown() {
+        const footerCountryBtn = elements.container.querySelector(".change-country__btn");
+        footerCountryBtn.classList.toggle("change-country__btn--open");
+
+        const footerCountryDropdown = elements.container.querySelector(".change-country__btn > .country-dropdown");
+        footerCountryDropdown.classList.toggle("country-dropdown--open");
     }
 
 }

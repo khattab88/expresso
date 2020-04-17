@@ -7,7 +7,7 @@ export const elements = {
 };
 
 export class LocationSelectionView {
-    constructor() {}
+    constructor() { }
 
     createArea(area) {
         return `<li class="location-selection__area" id="area-${area.id}">${area.name}</li>`;
@@ -45,5 +45,24 @@ export class LocationSelectionView {
         `;
 
         elements.wrapper.insertAdjacentHTML("afterbegin", markup);
+    }
+
+    toggle(e) {
+        const locationSelection = e.target.closest(".location-selection");
+        const btn = locationSelection.querySelector(".location-selection__btn");
+        const box = locationSelection.querySelector(".location-selection__box");
+
+        btn.classList.toggle("location-selection__btn--open");
+        box.classList.toggle("location-selection__box--open");
+    }
+
+    select(e) {
+        const locationSelection = e.target.closest(".location-selection");
+        const value = locationSelection.querySelector(".location-selection__value");
+
+        const area = e.target.textContent;
+        value.textContent = area;
+
+        this.toggle(e);
     }
 }

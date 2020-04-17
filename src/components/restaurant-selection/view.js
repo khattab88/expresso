@@ -7,7 +7,7 @@ export const elements = {
 };
 
 export class RestaurantSelectionView {
-    constructor() {}
+    constructor() { }
 
     createRestaurant(restaurant) {
         return `<li class="restaurant-selection__restaurant" id="${restaurant.id}">${restaurant.name}</li>`;
@@ -32,5 +32,24 @@ export class RestaurantSelectionView {
         `;
 
         elements.wrapper.insertAdjacentHTML("afterbegin", markup);
+    }
+
+    toggle(e) {
+        const restaurantSelection = e.target.closest(".restaurant-selection");
+        const btn = restaurantSelection.querySelector(".restaurant-selection__btn");
+        const box = restaurantSelection.querySelector(".restaurant-selection__box");
+
+        btn.classList.toggle("restaurant-selection__btn--open");
+        box.classList.toggle("restaurant-selection__box--open");
+    }
+
+    select(e) {
+        const restaurantSelection = e.target.closest(".restaurant-selection");
+        const value = restaurantSelection.querySelector(".restaurant-selection__value");
+
+        const restaurant = e.target.textContent;
+        value.textContent = restaurant;
+
+        this.toggle(e);
     }
 }

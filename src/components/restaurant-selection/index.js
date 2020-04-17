@@ -24,24 +24,11 @@ export default class RestaurantSelectionComponent {
 
             elements.wrapper.addEventListener("click", e => {
 
-                const restaurantSelection = e.target.closest(".restaurant-selection");
-                const btn = restaurantSelection.querySelector(".restaurant-selection__btn");
-                const box = restaurantSelection.querySelector(".restaurant-selection__box");
-                const value = restaurantSelection.querySelector(".restaurant-selection__value");
-
-                // toggle header selection
                 if(e.target.matches(".restaurant-selection__btn, .restaurant-selection__btn *")) {
-                    btn.classList.toggle("restaurant-selection__btn--open");
-                    box.classList.toggle("restaurant-selection__box--open");
+                    this.view.toggle(e);
                 }
-
-                // display selected value
                 else if(e.target.matches(".restaurant-selection__restaurant, .restaurant-selection__restaurant *")) {
-                    const restaurant = e.target.textContent;
-                    value.textContent = restaurant;
-
-                    btn.classList.toggle("restaurant-selection__btn--open");
-                    box.classList.toggle("restaurant-selection__box--open");
+                    this.view.select(e);
                 }
 
             });

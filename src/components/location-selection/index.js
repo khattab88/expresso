@@ -24,24 +24,11 @@ export default class LocationSelectionComponent {
 
             elements.wrapper.addEventListener("click", e => {
 
-                const locationSelection = e.target.closest(".location-selection");
-                const btn = locationSelection.querySelector(".location-selection__btn");
-                const box = locationSelection.querySelector(".location-selection__box");
-                const value = locationSelection.querySelector(".location-selection__value");
-
-                // toggle header location selection
                 if(e.target.matches(".location-selection__btn, .location-selection__btn *")) {
-                    btn.classList.toggle("location-selection__btn--open");
-                    box.classList.toggle("location-selection__box--open");
+                    this.view.toggle(e);
                 }
-
-                // display selected location value
                 else if(e.target.matches(".location-selection__area, .location-selection__area *")) {
-                    const area = e.target.textContent;
-                    value.textContent = area;
-
-                    btn.classList.toggle("location-selection__btn--open");
-                    box.classList.toggle("location-selection__box--open");
+                    this.view.select(e);
                 }
 
             });

@@ -1,6 +1,7 @@
 import { handleError } from "../../base";
 
-import { elements } from "./view";
+import CartModel from "./model";
+import { elements, CartView } from "./view";
 
 export default class CartComponent {
     constructor() {
@@ -11,58 +12,34 @@ export default class CartComponent {
     }
 
     init() {
-        this.calculate();
+        this.model = new CartModel();
+        this.view = new CartView();
+
+        this.model.items = this.view.getItems();
+
+        this.view.displayInfo(this.model.getSubTotal(),
+            this.model.getDeliveryFee(),
+            this.model.getTotal());
     }
 
     setupEventListeners() {
         try {
 
-            // remove item row from cart
             elements.cartItems.addEventListener("click", e => {
-                this.removeItem(e);
+
+                // remove item row from cart
+                if (e.target.matches(".cart__item-controls-remove, .cart__item-controls-remove *")) {
+                    this.view.removeItem(e);
+                }
+
+                // change item count 
+                if (e.target.matches(".cart__item-controls-btn, .cart__item-controls-btn *")) {
+                    this.view.updateItemCount(e);
+                }
+
             });
 
         } catch (err) { handleError(err); }
     }
 
-    removeItem(e) {
-        // TODO
-        // const item = e.target.closest(".cart__item-controls-remove").closest(".cart__item");
-        // if (item) {
-        //     item.parentNode.removeChild(item);
-        // }
-    }
-
-    getItems() {
-        const cartItems = Array.from(document.querySelectorAll(".cart__item"))
-            .map(item => {
-                const name = item.querySelector(".cart__item-name").textContent;
-                const price = parseInt(item.querySelector(".cart__item-price").textContent.split(".")[0]);
-                const count = parseInt(item.querySelector(".cart__item-controls-count").textContent);
-                return { name, price, count };
-            });
-        return cartItems;
-    }
-
-    calculate() {
-        try {
-            const items = this.getItems();
-
-            let itemsSubTotal = 0;
-            items.forEach(item => {
-                const itemValue = parseInt(item.count * item.price);
-                itemsSubTotal += itemValue;
-            });
-
-            elements.subTotal.textContent = this.format(itemsSubTotal);
-            elements.deliveryFee.textContent = this.format(5);
-
-            const total = parseInt(elements.subTotal.textContent) + parseInt(elements.deliveryFee.textContent);
-            elements.total.textContent = this.format(total);
-        } catch (err) { handleError(err); }
-    }
-
-    format(val) {
-        return `${val}.00 EGP`;
-    }
 }
