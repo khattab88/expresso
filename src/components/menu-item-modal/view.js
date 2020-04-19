@@ -14,12 +14,16 @@ export class ItemModalView {
         if (item) {
             elements.modal.classList.remove("menu-item-modal--close");
             elements.modal.classList.add("menu-item-modal--open");
+
+            document.body.style.overflow = "hidden";
         }
     }
 
     close() {
         elements.modal.classList.remove("menu-item-modal--open");
         elements.modal.classList.add("menu-item-modal--close");
+
+        document.body.style.overflow = "initial";
     }
 
     toggleItemOption(e) {
