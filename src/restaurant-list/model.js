@@ -5,6 +5,7 @@ export default class RestaurantListPageModel {
     constructor() {
         this.restaurants = this.getRestaurants();
         this.tags = this.getTags();
+        this.selecedTags = this.getSelectedTags();
     }
 
     getRestaurants() {
@@ -68,5 +69,9 @@ export default class RestaurantListPageModel {
             new Tag("21", "Turkish"),
             new Tag("22", "Vegan"),
         ];
+    }
+
+    getSelectedTags() {
+        return [];
     }
 }

@@ -9,7 +9,7 @@ export const elements = {
 };
 
 export class RestaurantListPageView {
-    constructor() {}
+    constructor() { }
 
     renderTag(tag) {
         const markup = `
@@ -50,5 +50,57 @@ export class RestaurantListPageView {
 
     createRestaurantTag(tag) {
         return `<li class="restaurant-tags__tag-item" data-id="${tag.id}">${tag.title}</li>`;
+    }
+
+    toggleFilterDropdown() {
+        elements.filterDropdown.classList.toggle("filter-dropdown--open");
+    }
+
+    navigateToMenu(e) {
+        const restaurant = e.target.closest(".restaurant-info-card");
+        const id = restaurant.dataset.id;
+        window.location.assign(`../restaurant-menu/index.html?id=${id}`);
+    }
+
+    getSelectedTags() {
+        let selectedTags = [];
+        Array.from(elements.filterCuisineList.children).forEach(el => {
+            const checkbox = el.querySelector(".filter-dropdown__cuisine-checkbox");
+            if (checkbox.checked) {
+                const id = checkbox.id.split("-")[1];
+                selectedTags.push(id);
+            }
+        });
+    }
+
+    selectTag(e) {
+        const filterItem = e.target.closest(".filter-dropdown__cuisine-item").children;
+
+        const tagEl = filterItem[1];
+        const id = tagEl.getAttribute("for").split("-")[1];
+        const checked = filterItem[0].checked;
+
+        return {
+            id, checked
+        }
+    }
+
+    displayTagFilterStatus(selectedTagsCount) {
+        if (selectedTagsCount > 0) {
+            elements.filterCount.textContent = selectedTagsCount;
+            elements.filterCount.style.opacity = 1;
+            elements.filterCount.style.visibility = "visible";
+            elements.filterClear.style.display = "inline-block";
+        } else {
+            elements.filterCount.style.opacity = 0;
+            elements.filterCount.style.visibility = "hidden";
+            elements.filterClear.style.display = "none";
+        }
+    }
+
+    clearTagFilter() {
+        elements.filterCount.style.opacity = 0;
+        elements.filterCount.style.visibility = "hidden";
+        elements.filterClear.style.display = "none";
     }
 }
