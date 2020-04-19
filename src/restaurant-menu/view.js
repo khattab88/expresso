@@ -48,4 +48,22 @@ export class RestaurantMenuPageView {
             </article>
         `;
     }
+
+    toggleLocationModal() {
+        elements.locationModal.classList.toggle("location-modal--open");
+    }
+
+    toggleMenuCategories() {
+        elements.menuCategoriesBody.classList.toggle("menu-categories__body--open");
+    }
+
+    openCartModal() {
+        elements.cartModal.classList.remove("cart-modal--close");
+        elements.cartModal.classList.add("cart-modal--open");
+    }
+
+    closeCartModal() {
+        elements.cartModal.classList.remove("cart-modal--open");
+        elements.cartModal.classList.add("cart-modal--close");
+    }
 }
