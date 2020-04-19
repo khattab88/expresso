@@ -62,7 +62,7 @@ export default class RestaurantListPage {
 
             elements.filterClear.addEventListener("click", e => {
                 this.model.selecedTags = [];
-                this.view.clearTagFilters();
+                this.view.clearTagFilter();
             });
 
         }
