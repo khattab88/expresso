@@ -5,7 +5,7 @@ export default class RestaurantListPageModel {
     constructor() {
         this.restaurants = this.getRestaurants();
         this.tags = this.getTags();
-        this.selecedTags = this.getSelectedTags();
+        this.selecedTags = (() => [])();
     }
 
     getRestaurants() {
