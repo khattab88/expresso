@@ -1413,68 +1413,71 @@ body {
   min-height: 20rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem; }
-  /* line 9, src/sass/components/_cart.scss */
+  padding: 2rem 1rem;
+  color: #323232; }
+  /* line 10, src/sass/components/_cart.scss */
   .cart__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #d5d5d5; }
-    /* line 15, src/sass/components/_cart.scss */
+    border-bottom: 1px solid #d5d5d5;
+    color: inherit; }
+    /* line 17, src/sass/components/_cart.scss */
     .cart__header-main {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      /* line 18, src/sass/components/_cart.scss */
+      /* line 20, src/sass/components/_cart.scss */
       .cart__header-main-icon {
         font-size: 3rem; }
-      /* line 21, src/sass/components/_cart.scss */
+      /* line 23, src/sass/components/_cart.scss */
       .cart__header-main-title {
         margin-left: 1rem;
         font-size: 2.4rem;
         font-weight: 400; }
-    /* line 27, src/sass/components/_cart.scss */
+    /* line 29, src/sass/components/_cart.scss */
     .cart__header-close {
       color: #009a9a;
       transition: all .2s; }
-      /* line 31, src/sass/components/_cart.scss */
+      /* line 33, src/sass/components/_cart.scss */
       .cart__header-close:hover {
         cursor: pointer;
         color: #323232;
         box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-      /* line 37, src/sass/components/_cart.scss */
+      /* line 39, src/sass/components/_cart.scss */
       .cart__header-close--visible {
         display: inline-block; }
-      /* line 40, src/sass/components/_cart.scss */
+      /* line 42, src/sass/components/_cart.scss */
       .cart__header-close--hidden {
         display: none; }
-      /* line 43, src/sass/components/_cart.scss */
+      /* line 45, src/sass/components/_cart.scss */
       .cart__header-close-icon {
         font-size: 2.4rem; }
-  /* line 49, src/sass/components/_cart.scss */
+  /* line 51, src/sass/components/_cart.scss */
   .cart__items {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #d5d5d5; }
-    /* line 54, src/sass/components/_cart.scss */
+    /* line 56, src/sass/components/_cart.scss */
     .cart__items .cart__item {
       margin-bottom: 1.5rem; }
-      /* line 57, src/sass/components/_cart.scss */
+      /* line 59, src/sass/components/_cart.scss */
       .cart__items .cart__item-detail {
         display: flex;
         justify-content: space-between;
         margin-bottom: .5rem; }
-      /* line 62, src/sass/components/_cart.scss */
+      /* line 64, src/sass/components/_cart.scss */
       .cart__items .cart__item-name, .cart__items .cart__item-price {
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 2.2rem; }
-      /* line 69, src/sass/components/_cart.scss */
+        line-height: 2.2rem;
+        letter-spacing: .25px; }
+      /* line 72, src/sass/components/_cart.scss */
       .cart__items .cart__item-controls {
         position: relative;
         display: flex; }
-        /* line 73, src/sass/components/_cart.scss */
+        /* line 76, src/sass/components/_cart.scss */
         .cart__items .cart__item-controls-btn {
           padding: 1.25rem;
           border-radius: .4rem;
@@ -1489,15 +1492,15 @@ body {
           margin-right: .5rem;
           background-color: #f9f9f9;
           transition: 0.2s; }
-          /* line 88, src/sass/components/_cart.scss */
+          /* line 91, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-btn:hover {
             cursor: pointer;
             background-color: #323232;
             color: #f9f9f9; }
-          /* line 94, src/sass/components/_cart.scss */
+          /* line 97, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-btn-remove {
             padding: 1.5rem; }
-        /* line 98, src/sass/components/_cart.scss */
+        /* line 101, src/sass/components/_cart.scss */
         .cart__items .cart__item-controls-count {
           padding-bottom: .6rem;
           border-radius: .4rem;
@@ -1510,7 +1513,7 @@ body {
           align-items: center;
           background-color: #fff;
           margin-right: .5rem; }
-        /* line 112, src/sass/components/_cart.scss */
+        /* line 115, src/sass/components/_cart.scss */
         .cart__items .cart__item-controls-remove {
           position: absolute;
           top: .25rem;
@@ -1520,10 +1523,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center; }
-          /* line 121, src/sass/components/_cart.scss */
+          /* line 124, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-remove--hidden {
             display: none; }
-          /* line 123, src/sass/components/_cart.scss */
+          /* line 126, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-remove span {
             display: flex;
             display: flex;
@@ -1540,32 +1543,37 @@ body {
             text-align: center;
             border-radius: 25px;
             transition: all .2s ease-in-out; }
-            /* line 139, src/sass/components/_cart.scss */
+            /* line 142, src/sass/components/_cart.scss */
             .cart__items .cart__item-controls-remove span:hover {
               background-color: #009a9a;
               color: #fff; }
-  /* line 149, src/sass/components/_cart.scss */
+  /* line 152, src/sass/components/_cart.scss */
   .cart__pricing {
     margin-top: .5rem; }
-    /* line 152, src/sass/components/_cart.scss */
+    /* line 155, src/sass/components/_cart.scss */
     .cart__pricing-box {
       font-size: 1.6rem;
       font-weight: 300;
       padding-top: 1rem;
       display: flex;
       justify-content: space-between; }
-      /* line 159, src/sass/components/_cart.scss */
-      .cart__pricing-box-total {
+      /* line 162, src/sass/components/_cart.scss */
+      .cart__pricing-box__title, .cart__pricing-box__value {
         font-size: 1.8rem;
+        letter-spacing: .25px; }
+      /* line 168, src/sass/components/_cart.scss */
+      .cart__pricing-box-total {
+        font-size: 2rem;
+        font-weight: 400;
         margin-top: 1.5rem;
         border-top: 1px solid #d5d5d5; }
-  /* line 167, src/sass/components/_cart.scss */
+  /* line 177, src/sass/components/_cart.scss */
   .cart__submit {
     margin: 4rem auto 2rem auto;
     margin-top: 4rem;
     width: 98%;
     text-align: center; }
-    /* line 173, src/sass/components/_cart.scss */
+    /* line 183, src/sass/components/_cart.scss */
     .cart__submit-btn {
       font: 400 20px/26px "Oswald",sans-serif;
       padding: 1.5rem 1rem;
@@ -1578,7 +1586,7 @@ body {
       color: #fff;
       line-height: 2.2rem;
       transition: all 0.3s; }
-      /* line 186, src/sass/components/_cart.scss */
+      /* line 196, src/sass/components/_cart.scss */
       .cart__submit-btn:hover {
         background-color: #323232;
         cursor: pointer;
@@ -1820,7 +1828,7 @@ body {
     background-color: #f9f9f9;
     width: 100%;
     height: 5rem;
-    border-radius: 5px;
+    border-radius: 4px;
     display: flex;
     padding: 0 1rem;
     border: none;
@@ -1923,7 +1931,7 @@ body {
     background-color: #f9f9f9;
     width: 100%;
     height: 5rem;
-    border-radius: 5px;
+    border-radius: 4px;
     display: flex;
     padding: 0 1rem;
     border: none;
@@ -2131,7 +2139,7 @@ body {
     padding: 1rem 2rem 2rem 2rem;
     z-index: 3;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 4px;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
     animation: moveInDown .65s ease-out; }
     @media only screen and (min-width: 30em) {
@@ -2413,7 +2421,7 @@ body {
   list-style: none;
   display: inline-block;
   margin: 0 .5rem;
-  border-radius: 7px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -2528,7 +2536,7 @@ body {
 /* line 350, src/sass/pages/_home.scss */
 .restaurant-card {
   grid-area: card;
-  border-radius: 5px;
+  border-radius: 4px;
   color: #fff;
   position: relative;
   transition: all .3s;
@@ -2575,13 +2583,13 @@ body {
   .restaurant-card__link {
     color: #fff;
     display: block;
-    border-radius: 5px;
+    border-radius: 4px;
     height: 100%; }
   /* line 399, src/sass/pages/_home.scss */
   .restaurant-card__img {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
     display: block; }
   /* line 406, src/sass/pages/_home.scss */
   .restaurant-card__name, .restaurant-card__desc {
@@ -3128,35 +3136,36 @@ body {
       width: 66%; } }
   /* line 32, src/sass/pages/_restaurant-menu.scss */
   .restaurant-info-box__head-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 3.6rem;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px; }
-  /* line 38, src/sass/pages/_restaurant-menu.scss */
+    letter-spacing: .25px;
+    font-weight: 400; }
+  /* line 39, src/sass/pages/_restaurant-menu.scss */
   .restaurant-info-box__head-desc {
     font-size: 1.8rem;
     line-height: 1.5;
     letter-spacing: .5px; }
 
-/* line 46, src/sass/pages/_restaurant-menu.scss */
+/* line 47, src/sass/pages/_restaurant-menu.scss */
 .restaurant-delivery {
   margin-top: 3rem; }
-  /* line 49, src/sass/pages/_restaurant-menu.scss */
+  /* line 50, src/sass/pages/_restaurant-menu.scss */
   .restaurant-delivery__heading {
     font-family: "Oswald",sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     font-size: 1.3rem; }
-  /* line 55, src/sass/pages/_restaurant-menu.scss */
+  /* line 56, src/sass/pages/_restaurant-menu.scss */
   .restaurant-delivery__footer {
     font-size: 1.4rem;
     font-family: "Source Sans Pro",sans-serif; }
 
-/* line 61, src/sass/pages/_restaurant-menu.scss */
+/* line 62, src/sass/pages/_restaurant-menu.scss */
 .change-location {
   display: flex;
   justify-content: space-between; }
-  /* line 65, src/sass/pages/_restaurant-menu.scss */
+  /* line 66, src/sass/pages/_restaurant-menu.scss */
   .change-location__location {
     margin-top: .5rem;
     font-weight: 400;
@@ -3167,7 +3176,7 @@ body {
     padding: .5rem 0;
     display: flex;
     justify-content: space-between; }
-  /* line 76, src/sass/pages/_restaurant-menu.scss */
+  /* line 77, src/sass/pages/_restaurant-menu.scss */
   .change-location__btn {
     height: 2.5rem;
     font-size: 1.2rem;
@@ -3179,14 +3188,14 @@ body {
     border-radius: 1.5rem;
     transition: all .2s;
     letter-spacing: .5px; }
-    /* line 88, src/sass/pages/_restaurant-menu.scss */
+    /* line 89, src/sass/pages/_restaurant-menu.scss */
     .change-location__btn:hover {
       cursor: pointer;
       background-color: #323232; }
 
 /* main */
 @media only screen and (min-width: 75em) {
-  /* line 96, src/sass/pages/_restaurant-menu.scss */
+  /* line 97, src/sass/pages/_restaurant-menu.scss */
   .restaurant-menu-page__main {
     padding: 0;
     display: flex;
@@ -3194,117 +3203,119 @@ body {
     justify-content: space-between; } }
 
 /* sidebar */
-/* line 107, src/sass/pages/_restaurant-menu.scss */
+/* line 108, src/sass/pages/_restaurant-menu.scss */
 .restaurant-sidebar {
   margin: 2rem 0 2rem 0;
   color: #323232; }
   @media only screen and (min-width: 75em) {
-    /* line 107, src/sass/pages/_restaurant-menu.scss */
+    /* line 108, src/sass/pages/_restaurant-menu.scss */
     .restaurant-sidebar {
       min-width: 30%;
       position: relative;
       top: -20rem; } }
-  /* line 117, src/sass/pages/_restaurant-menu.scss */
+  /* line 118, src/sass/pages/_restaurant-menu.scss */
   .restaurant-sidebar__show-cart {
     background-color: #fff;
     border: 1px solid #f9f9f9;
-    border-radius: .3rem;
+    border-radius: 4px;
     margin-bottom: 1rem;
     padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3); }
-    /* line 127, src/sass/pages/_restaurant-menu.scss */
+    box-shadow: 0px 15px 38px -10px rgba(0, 0, 0, 0.1); }
+    /* line 128, src/sass/pages/_restaurant-menu.scss */
     .restaurant-sidebar__show-cart:hover {
       cursor: pointer; }
-  /* line 131, src/sass/pages/_restaurant-menu.scss */
+  /* line 132, src/sass/pages/_restaurant-menu.scss */
   .restaurant-sidebar__show-cart-title {
     font-size: 1.8rem;
     letter-spacing: 0.5px;
-    font-size: 2rem; }
-  /* line 136, src/sass/pages/_restaurant-menu.scss */
+    font-size: 2rem;
+    font-weight: 400; }
+  /* line 138, src/sass/pages/_restaurant-menu.scss */
   .restaurant-sidebar__show-cart-icon {
     font-size: 3rem; }
 
 /* menu categories */
-/* line 142, src/sass/pages/_restaurant-menu.scss */
+/* line 144, src/sass/pages/_restaurant-menu.scss */
 .menu-categories {
   background-color: #fff;
   border: 1px solid #f9f9f9;
-  border-radius: .3rem;
+  border-radius: 4px;
   margin-top: 1rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3); }
-  /* line 149, src/sass/pages/_restaurant-menu.scss */
+  box-shadow: 0px 15px 38px -10px rgba(0, 0, 0, 0.1); }
+  /* line 151, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__head {
     padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #d5d5d5; }
-    /* line 155, src/sass/pages/_restaurant-menu.scss */
+    /* line 157, src/sass/pages/_restaurant-menu.scss */
     .menu-categories__head:hover {
       cursor: pointer; }
-  /* line 159, src/sass/pages/_restaurant-menu.scss */
+  /* line 161, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__title {
     font-size: 1.8rem;
     letter-spacing: 0.5px;
-    font-size: 2rem; }
-  /* line 164, src/sass/pages/_restaurant-menu.scss */
+    font-size: 2rem;
+    font-weight: 400; }
+  /* line 167, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__icon--arrow-down {
     font-size: 3rem; }
-  /* line 167, src/sass/pages/_restaurant-menu.scss */
+  /* line 170, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__body {
     display: none; }
-    /* line 170, src/sass/pages/_restaurant-menu.scss */
+    /* line 173, src/sass/pages/_restaurant-menu.scss */
     .menu-categories__body--open {
       display: block; }
     @media only screen and (min-width: 75em) {
-      /* line 167, src/sass/pages/_restaurant-menu.scss */
+      /* line 170, src/sass/pages/_restaurant-menu.scss */
       .menu-categories__body {
         display: block; } }
-  /* line 178, src/sass/pages/_restaurant-menu.scss */
+  /* line 181, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__list {
     list-style: none;
     padding: 1.5rem 3.5rem; }
-  /* line 182, src/sass/pages/_restaurant-menu.scss */
+  /* line 185, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__category-item {
     font-size: 1.8rem;
     line-height: 4rem; }
-  /* line 186, src/sass/pages/_restaurant-menu.scss */
+  /* line 189, src/sass/pages/_restaurant-menu.scss */
   .menu-categories__category-link {
     display: inline-block;
     text-decoration: none;
     color: #323232;
     transition: all .2s; }
-    /* line 192, src/sass/pages/_restaurant-menu.scss */
+    /* line 195, src/sass/pages/_restaurant-menu.scss */
     .menu-categories__category-link:hover, .menu-categories__category-link--selected {
       font-weight: 400;
       transform: scale(1.1); }
 
 /* menu items */
-/* line 202, src/sass/pages/_restaurant-menu.scss */
+/* line 205, src/sass/pages/_restaurant-menu.scss */
 .menu-items-wrapper {
   padding: 1.5rem 0;
   margin-bottom: .5rem; }
   @media only screen and (min-width: 75em) {
-    /* line 202, src/sass/pages/_restaurant-menu.scss */
+    /* line 205, src/sass/pages/_restaurant-menu.scss */
     .menu-items-wrapper {
       min-width: 65%;
       margin-right: 1rem; } }
 
-/* line 214, src/sass/pages/_restaurant-menu.scss */
+/* line 217, src/sass/pages/_restaurant-menu.scss */
 .menu-items-by-category:not(:first-child) {
   padding-top: 6rem; }
   @media only screen and (min-width: 48em) {
-    /* line 214, src/sass/pages/_restaurant-menu.scss */
+    /* line 217, src/sass/pages/_restaurant-menu.scss */
     .menu-items-by-category:not(:first-child) {
       padding-top: 8rem; } }
 
 @media only screen and (min-width: 75em) {
-  /* line 212, src/sass/pages/_restaurant-menu.scss */
+  /* line 215, src/sass/pages/_restaurant-menu.scss */
   .menu-items-by-category {
     width: 94%; } }
 
-/* line 226, src/sass/pages/_restaurant-menu.scss */
+/* line 229, src/sass/pages/_restaurant-menu.scss */
 .menu-items-by-category__category-name {
   color: #323232;
   background-color: #d5d5d5;
@@ -3312,32 +3323,37 @@ body {
   font-size: 2rem;
   letter-spacing: 1.25px;
   padding: 1.5rem 0;
-  border-radius: .4rem; }
+  border-radius: .4rem;
+  font-weight: 400; }
 
-/* line 235, src/sass/pages/_restaurant-menu.scss */
+/* line 239, src/sass/pages/_restaurant-menu.scss */
 .menu-items-by-category__menu-items-list {
   margin: 1rem 0;
   display: grid; }
   @media only screen and (min-width: 64em) {
-    /* line 235, src/sass/pages/_restaurant-menu.scss */
+    /* line 239, src/sass/pages/_restaurant-menu.scss */
     .menu-items-by-category__menu-items-list {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2rem; } }
 
-/* line 248, src/sass/pages/_restaurant-menu.scss */
+/* line 252, src/sass/pages/_restaurant-menu.scss */
 .menu-item {
   min-height: 40rem;
-  margin-bottom: 1rem; }
-  /* line 252, src/sass/pages/_restaurant-menu.scss */
+  margin-bottom: 1rem;
+  border: 1px solid #f9f9f9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all .2s; }
+  /* line 260, src/sass/pages/_restaurant-menu.scss */
   .menu-item:hover {
-    cursor: pointer; }
-  /* line 255, src/sass/pages/_restaurant-menu.scss */
-  .menu-item:hover .menu-item__img {
+    cursor: pointer;
     transform: scale(1.01);
+    box-shadow: 0px 15px 38px -10px rgba(0, 0, 0, 0.1); }
+  /* line 267, src/sass/pages/_restaurant-menu.scss */
+  .menu-item:hover__img {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/photo-1549611016-3a70d82b5040.jpg);
-    background-size: cover;
-    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
-  /* line 265, src/sass/pages/_restaurant-menu.scss */
+    background-size: cover; }
+  /* line 276, src/sass/pages/_restaurant-menu.scss */
   .menu-item__img {
     min-width: 35rem;
     min-height: 24.5rem;
@@ -3347,31 +3363,31 @@ body {
     border-top-right-radius: .5rem;
     transition: all .2s; }
     @media only screen and (min-width: 48em) {
-      /* line 265, src/sass/pages/_restaurant-menu.scss */
+      /* line 276, src/sass/pages/_restaurant-menu.scss */
       .menu-item__img {
         height: auto; } }
     @media only screen and (min-width: 75em) {
-      /* line 265, src/sass/pages/_restaurant-menu.scss */
+      /* line 276, src/sass/pages/_restaurant-menu.scss */
       .menu-item__img {
         min-width: 24rem; } }
-  /* line 282, src/sass/pages/_restaurant-menu.scss */
+  /* line 293, src/sass/pages/_restaurant-menu.scss */
   .menu-item__detail {
     background-color: #f9f9f9;
     padding: .5rem 1.5rem 2rem 1.5rem;
-    min-height: 12rem;
+    min-height: 16rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem; }
-  /* line 289, src/sass/pages/_restaurant-menu.scss */
+  /* line 300, src/sass/pages/_restaurant-menu.scss */
   .menu-item__detail-box {
     display: flex;
     justify-content: space-between;
     margin: 2rem 0 0 0; }
-  /* line 294, src/sass/pages/_restaurant-menu.scss */
+  /* line 305, src/sass/pages/_restaurant-menu.scss */
   .menu-item__name {
     max-width: 50%;
     font-size: 2rem;
     font-weight: 400; }
-  /* line 299, src/sass/pages/_restaurant-menu.scss */
+  /* line 310, src/sass/pages/_restaurant-menu.scss */
   .menu-item__price {
     color: #fff;
     background-color: #009a9a;
@@ -3379,11 +3395,12 @@ body {
     border-radius: .5rem;
     font-size: 1.5rem; }
     @media only screen and (min-width: 75em) {
-      /* line 299, src/sass/pages/_restaurant-menu.scss */
+      /* line 310, src/sass/pages/_restaurant-menu.scss */
       .menu-item__price {
         padding: 1rem;
-        height: 4rem; } }
-  /* line 311, src/sass/pages/_restaurant-menu.scss */
+        padding-top: .75rem;
+        height: 3rem; } }
+  /* line 323, src/sass/pages/_restaurant-menu.scss */
   .menu-item__desc {
     max-height: 4.4rem;
     margin: 1.2rem 0 0 0;
@@ -4344,7 +4361,7 @@ body {
     align-items: center;
     margin-bottom: 1.5rem;
     width: 100%;
-    border-radius: 5px; }
+    border-radius: 4px; }
     @media only screen and (min-width: 75em) {
       /* line 323, src/sass/pages/_checkout.scss */
       .payment-info__option {

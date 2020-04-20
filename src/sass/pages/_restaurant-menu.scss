@@ -30,10 +30,11 @@
 
     &__head {
         &-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             line-height: 3.6rem;
             text-shadow: 2px 2px 1px rgba($color-black, .2);
-            letter-spacing: 1px;
+            letter-spacing: .25px;
+            font-weight: 400;
         }
         &-desc {
             font-size: 1.8rem;
@@ -117,12 +118,12 @@
     &__show-cart {
         background-color: #fff;
         border: 1px solid $color-font-light;
-        border-radius: .3rem;
+        border-radius: $border-radius-medium;
         margin-bottom: 1rem;
         padding: 2rem 2.5rem;
         display: flex;
         justify-content: space-between;
-        box-shadow: .5rem .5rem 1rem rgba($color-black, .3);
+        box-shadow: $box-shadow-light;
 
         &:hover {
             cursor: pointer;
@@ -132,6 +133,7 @@
         font-size: 1.8rem;
         letter-spacing: 0.5px;
         font-size: 2rem;
+        font-weight: 400;
     }
     &__show-cart-icon {
         font-size: 3rem;
@@ -142,9 +144,9 @@
 .menu-categories {
     background-color: $color-white;
     border: 1px solid $color-font-light;
-    border-radius: .3rem;
+    border-radius: $border-radius-medium;
     margin-top: 1rem;
-    box-shadow: .5rem .5rem 1rem rgba($color-black, .3);
+    box-shadow: $box-shadow-light;
 
     &__head {
         padding: 2rem 2.5rem;
@@ -160,6 +162,7 @@
         font-size: 1.8rem;
         letter-spacing: 0.5px;
         font-size: 2rem;
+        font-weight: 400;
     }
     &__icon--arrow-down {
         font-size: 3rem;
@@ -231,6 +234,7 @@
         letter-spacing: 1.25px;
         padding: 1.5rem 0;
         border-radius: .4rem;
+        font-weight: 400;
     }
     &__menu-items-list {
         margin: 1rem 0;
@@ -248,18 +252,25 @@
 .menu-item {
     min-height: 40rem;
     margin-bottom: 1rem;
+    border: 1px solid $color-font-light;
+    border-bottom-left-radius: $border-radius-large;
+    border-bottom-right-radius: $border-radius-large;
+    transition: all .2s;
 
     &:hover {
         cursor: pointer;
-    }
-    &:hover &__img {
         transform: scale(1.01);
-        background: linear-gradient(
-                        rgba($color-black, .2), 
-                        rgba($color-black, .2)),
-                    url(../img/photo-1549611016-3a70d82b5040.jpg);
-        background-size: cover;
-        box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
+        box-shadow: $box-shadow-light;
+    }
+
+    &:hover {
+        &__img {
+            background: linear-gradient(
+                            rgba($color-black, .2), 
+                            rgba($color-black, .2)),
+                        url(../img/photo-1549611016-3a70d82b5040.jpg);
+            background-size: cover;
+        }
     }
 
     &__img {
@@ -282,7 +293,7 @@
     &__detail {
         background-color: $color-font-light;
         padding: .5rem 1.5rem 2rem 1.5rem;
-        min-height: 12rem;
+        min-height: 16rem;
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
     }
@@ -305,7 +316,8 @@
 
         @include respond(desktop) {
             padding: 1rem;
-            height: 4rem;
+            padding-top: .75rem;
+            height: 3rem;
         }
     }
     &__desc {

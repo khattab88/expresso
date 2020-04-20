@@ -5,12 +5,14 @@
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
+    color: $color-font-dark;
 
     &__header {
         @include items-row;
 
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $color-gray-light;
+        color: inherit;
 
         &-main {
             @include items-row;
@@ -64,6 +66,7 @@
                 font-size: 1.8rem;
                 font-weight: 400;
                 line-height: 2.2rem;
+                letter-spacing: .25px;
             }
 
             &-controls {
@@ -156,8 +159,15 @@
             display: flex;
             justify-content: space-between;
         
-            &-total {
+            &__title,
+            &__value {
                 font-size: 1.8rem;
+                letter-spacing: .25px;
+            }
+
+            &-total {
+                font-size: 2rem;
+                font-weight: 400;
                 margin-top: 1.5rem;
                 border-top: 1px solid $color-gray-light;
             }
