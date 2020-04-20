@@ -3384,10 +3384,11 @@ body {
     margin: 2rem 0 0 0; }
   /* line 305, src/sass/pages/_restaurant-menu.scss */
   .menu-item__name {
+    color: #323232;
     max-width: 50%;
     font-size: 2rem;
     font-weight: 400; }
-  /* line 310, src/sass/pages/_restaurant-menu.scss */
+  /* line 311, src/sass/pages/_restaurant-menu.scss */
   .menu-item__price {
     color: #fff;
     background-color: #009a9a;
@@ -3395,12 +3396,12 @@ body {
     border-radius: .5rem;
     font-size: 1.5rem; }
     @media only screen and (min-width: 75em) {
-      /* line 310, src/sass/pages/_restaurant-menu.scss */
+      /* line 311, src/sass/pages/_restaurant-menu.scss */
       .menu-item__price {
         padding: 1rem;
         padding-top: .75rem;
         height: 3rem; } }
-  /* line 323, src/sass/pages/_restaurant-menu.scss */
+  /* line 324, src/sass/pages/_restaurant-menu.scss */
   .menu-item__desc {
     max-height: 4.4rem;
     margin: 1.2rem 0 0 0;
