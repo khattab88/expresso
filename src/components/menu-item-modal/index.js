@@ -19,7 +19,7 @@ export default class ItemModalComponent {
             elements.menuItemsWrapper.addEventListener("click", e => this.view.open(e));
 
             // close modal
-            document.querySelectorAll(".menu-item-modal__close, .add-order-btn")
+            document.querySelectorAll(".menu-item-modal__close, .add-order-btn, .menu-item-modal")
                 .forEach(elm => elm.addEventListener("click", this.view.close));
 
             // toggle item option
