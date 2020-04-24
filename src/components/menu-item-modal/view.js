@@ -4,6 +4,7 @@ export const elements = {
     modal: document.querySelector(".menu-item-modal"),
     modalBody: document.querySelector(".menu-item-modal__body"),
     itemCount: document.querySelector(".cart-controls__count"),
+    toastMessage: document.querySelector(".toast-message"),
 };
 
 export class ItemModalView {

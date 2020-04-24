@@ -85,3 +85,20 @@ $animation-move-long: 50rem;
         height: 0;
     }
 }
+
+
+@keyframes open-toast-message {
+    0% {
+        transform: translateY(-2rem);
+
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateY(0);
+
+        opacity: 1;
+        visibility: visible;
+    }
+}

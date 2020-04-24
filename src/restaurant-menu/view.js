@@ -8,6 +8,7 @@ export const elements = {
     cartSubmit: document.querySelector(".cart__submit-btn"),
     menuCategoriesList: document.querySelector(".menu-categories__list"),
     menuItemsWrapper: document.querySelector(".menu-items-wrapper"),
+    toastMessage: document.querySelector(".toast-message"),
 };
 
 export class RestaurantMenuPageView {

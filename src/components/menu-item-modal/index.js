@@ -9,23 +9,34 @@ export default class ItemModalComponent {
     }
 
     init() {
-        this.view = new ItemModalView(); 
+        this.view = new ItemModalView();
     }
 
     setupEventListeners() {
         try {
 
             // open modal
-            elements.menuItemsWrapper.addEventListener("click", e => this.view.open(e),);
+            elements.menuItemsWrapper.addEventListener("click", e => this.view.open(e));
 
             // close modal
-            document.querySelectorAll(".menu-item-modal__close, .add-order-btn")
-                .forEach(elm => elm.addEventListener("click", this.view.close));
+            document.querySelector(".menu-item-modal__close").addEventListener("click", this.view.close);
 
+            // add to order
+            document.querySelector(".add-order-btn").addEventListener("click", e => {
+                this.view.close();
+
+                // display toast message
+                elements.toastMessage.classList.toggle("toast-message--visible");
+
+                setTimeout(() => {
+                    elements.toastMessage.classList.toggle("toast-message--visible");
+                }, 5000);
+            });
 
             // toggle item option
-            elements.modalBody.addEventListener("click", e => { 
-                if(e.target.matches(".dish-options__head, .dish-options__head *")) {
+            elements.modalBody.addEventListener("click", e => {
+                if (e.target.matches(".dish-options__head, .dish-options__head *")) {
+                    e.stopPropagation();
                     this.view.toggleItemOption(e);
                 }
             });

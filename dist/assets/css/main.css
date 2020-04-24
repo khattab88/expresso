@@ -505,6 +505,16 @@ body {
   100% {
     height: 0; } }
 
+@keyframes open-toast-message {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible; } }
+
 /* Utilities */
 /* line 3, src/sass/base/_utilities.scss */
 .margin-bottom-small {
@@ -2216,6 +2226,52 @@ body {
     font-weight: 400;
     padding: 1.5rem 1rem;
     letter-spacing: .5px; }
+
+/* line 1, src/sass/components/_toast-message.scss */
+.toast-message {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  z-index: 1000;
+  width: 25rem;
+  height: 5rem;
+  background-color: #28a745;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  font-size: 1.75rem;
+  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2); }
+  @media only screen and (min-width: 48em) {
+    /* line 1, src/sass/components/_toast-message.scss */
+    .toast-message {
+      top: 3rem;
+      right: 3rem; } }
+  @media only screen and (min-width: 64em) {
+    /* line 1, src/sass/components/_toast-message.scss */
+    .toast-message {
+      top: 4rem;
+      right: 4rem; } }
+  @media only screen and (min-width: 75em) {
+    /* line 1, src/sass/components/_toast-message.scss */
+    .toast-message {
+      right: 18rem;
+      width: 30rem; } }
+  /* line 37, src/sass/components/_toast-message.scss */
+  .toast-message--visible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: open-toast-message;
+    animation-timing-function: ease-out;
+    animation-duration: 1s; }
+  /* line 48, src/sass/components/_toast-message.scss */
+  .toast-message__message {
+    letter-spacing: .85px; }
+  /* line 52, src/sass/components/_toast-message.scss */
+  .toast-message__close {
+    font-size: inherit;
+    cursor: pointer; }
 
 /* Home */
 /* header */

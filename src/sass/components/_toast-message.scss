@@ -1,0 +1,56 @@
+.toast-message {
+    display: none;
+
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    z-index: 1000;
+
+    width: 25rem;
+    height: 5rem;
+
+    background-color: $color-state-success;
+    color: $color-white;
+
+    padding: 1.5rem;
+    border-radius: $border-radius-medium;
+
+    font-size: 1.75rem;
+
+    box-shadow: 0 1rem 2rem rgba(255,255,255, .2);
+
+    @include respond(tab) {
+        top: 3rem;
+        right: 3rem;
+    }
+
+    @include respond(tab-land) {
+        top: 4rem;
+        right: 4rem;
+    }
+
+    @include respond(desktop) {
+        right: 18rem;
+        width: 30rem;
+    }
+
+    &--visible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        //animation: open-toast-message ease-out 1s;
+        animation-name: open-toast-message;
+        animation-timing-function: ease-out;
+        animation-duration: 1s;
+    }
+
+    &__message {
+        letter-spacing: .85px;
+    }
+
+    &__close {
+        font-size: inherit;
+        cursor: pointer;
+    }
+}
