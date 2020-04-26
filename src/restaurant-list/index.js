@@ -16,16 +16,20 @@ export default class RestaurantListPage {
 
     init() {
         try {
+            // key state 
             const area = getArea();
 
+            // model / view
             this.model = new RestaurantListPageModel(area);
             this.view = new RestaurantListPageView();
 
+            // components
             this.navbar = new NavComponent();
             this.footer = new FooterComponent();
             this.locationSelection = new LocationSelectionComponent();
             this.restaurantSelection = new RestaurantSelectionComponent();
 
+            // rendering
             this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
             this.model.tags.forEach(t => this.view.renderTag(t));
 

@@ -10,7 +10,7 @@ export class RestaurantSelectionView {
     constructor() { }
 
     createBranch(branch) {
-        return `<li class="restaurant-selection__restaurant" id="${branch.restaurant.id}">${branch.restaurant.name}</li>`;
+        return `<li class="restaurant-selection__restaurant" id="${branch.restaurant.id}" data-area="${branch.area.id}">${branch.restaurant.name}</li>`;
     }
 
     render(branches) {

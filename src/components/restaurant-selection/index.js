@@ -14,6 +14,7 @@ export default class RestaurantSelectionComponent {
     init() {
         try {
             const area = getArea();
+
             this.model = new RestaurantSelectionModel(area);
             this.view = new RestaurantSelectionView();
 
@@ -27,9 +28,7 @@ export default class RestaurantSelectionComponent {
 
     changeArea(area) {
         this.model.area = area;
-
         const areaBranches = this.model.getAreaBranches(area);
-
         this.view.render(areaBranches);
     }
 

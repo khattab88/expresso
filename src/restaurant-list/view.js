@@ -24,7 +24,7 @@ export class RestaurantListPageView {
 
     renderBranchCard(branch) {
         const markup = `
-        <article class="restaurant-info-card" data-id="${branch.id}">
+        <article class="restaurant-info-card" data-id="${branch.id}" data-area="${branch.area.id}">
             <div class="restaurant-info-card__head" 
                  style="background-image: url(../assets/img/restaurants/${branch.restaurant.image})">
                 <div class="delivery-detail">
