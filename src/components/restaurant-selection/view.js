@@ -9,11 +9,11 @@ export const elements = {
 export class RestaurantSelectionView {
     constructor() { }
 
-    createRestaurant(restaurant) {
-        return `<li class="restaurant-selection__restaurant" id="${restaurant.id}">${restaurant.name}</li>`;
+    createBranch(branch) {
+        return `<li class="restaurant-selection__restaurant" id="${branch.restaurant.id}">${branch.restaurant.name}</li>`;
     }
 
-    render(restaurants) {
+    render(branches) {
         const markup = `
             <div class="restaurant-selection">
                 <button class="restaurant-selection__btn">
@@ -25,7 +25,7 @@ export class RestaurantSelectionView {
                 <div class="restaurant-selection__box">
                     <input type="text" class="restaurant-selection__input">
                     <ul class="restaurant-selection__restaurant-list">
-                        ${restaurants.map(r => this.createRestaurant(r)).join("")}
+                        ${branches.map(r => this.createBranch(r)).join("")}
                     </ul>
                 </div>
             </div> 

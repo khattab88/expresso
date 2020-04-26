@@ -22,25 +22,25 @@ export class RestaurantListPageView {
         elements.filterCuisineList.insertAdjacentHTML("beforeend", markup);
     }
 
-    renderRestaurantCard(restaurant) {
+    renderBranchCard(branch) {
         const markup = `
-        <article class="restaurant-info-card" data-id="${restaurant.id}">
+        <article class="restaurant-info-card" data-id="${branch.id}">
             <div class="restaurant-info-card__head" 
-                 style="background-image: url(../assets/img/restaurants/${restaurant.image})">
+                 style="background-image: url(../assets/img/restaurants/${branch.restaurant.image})">
                 <div class="delivery-detail">
                     <p class="delivery-detail__title">Average delivery time</p>
-                    <span class="delivery-detail__time">${restaurant.deliveryTime} - ${restaurant.deliveryTime + 10} mins</span>
+                    <span class="delivery-detail__time">${branch.restaurant.deliveryTime} - ${branch.restaurant.deliveryTime + 10} mins</span>
                 </div>
             </div>
             <div class="restaurant-info-card__body">
                 <div class="restaurant-detail">
-                    <h3 class="restaurant-detail__name">${restaurant.name}</h3>
-                    <p class="restaurant-detail__desc">${restaurant.slogan}</p>
+                    <h3 class="restaurant-detail__name">${branch.restaurant.name}</h3>
+                    <p class="restaurant-detail__desc">${branch.restaurant.slogan}</p>
                 </div>
             </div>
             <div class="restaurant-info-card__footer">
                 <ul class="restaurant-tags">
-                    ${restaurant.tags.map(t => this.createRestaurantTag(t)).join("")}
+                    ${branch.restaurant.tags.map(t => this.createRestaurantTag(t)).join("")}
                 </ul>
             </div>
         </article>

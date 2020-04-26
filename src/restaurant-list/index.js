@@ -1,4 +1,4 @@
-import { handleError } from "../base";
+import { handleError, getArea } from "../base";
 
 import RestaurantListPageModel from "./model";
 import { elements, RestaurantListPageView } from "./view";
@@ -16,7 +16,9 @@ export default class RestaurantListPage {
 
     init() {
         try {
-            this.model = new RestaurantListPageModel();
+            const area = getArea();
+
+            this.model = new RestaurantListPageModel(area);
             this.view = new RestaurantListPageView();
 
             this.navbar = new NavComponent();
@@ -24,22 +26,24 @@ export default class RestaurantListPage {
             this.locationSelection = new LocationSelectionComponent();
             this.restaurantSelection = new RestaurantSelectionComponent();
 
-            this.model.restaurants.forEach(r => this.view.renderRestaurantCard(r));
+            this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
             this.model.tags.forEach(t => this.view.renderTag(t));
 
         } catch (err) { handleError(err); }
     }
 
+    changeArea(area) {
+        this.model.area = area;
+
+        this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
+    } 
+
     setupEventListeners() {
         try {
 
-            elements.filterDropdownHead.addEventListener("click", e => {
-                this.view.toggleFilterDropdown();
-            });
+            elements.filterDropdownHead.addEventListener("click", e => { this.view.toggleFilterDropdown(); });
 
-            elements.restaurantList.addEventListener("click", e => {
-                this.view.navigateToMenu(e);
-            });
+            elements.restaurantList.addEventListener("click", e => { this.view.navigateToMenu(e); });
 
 
             elements.filterCuisineList.addEventListener("change", e => {
