@@ -7,3 +7,5 @@ export const getArea = () => {
     let area = urlParams.get('area') || "1";
     return area;
 };
+
+export const setArea = (area) => document.location = `?area=${area}`;

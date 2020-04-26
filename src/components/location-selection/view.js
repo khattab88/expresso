@@ -10,7 +10,7 @@ export class LocationSelectionView {
     constructor() { }
 
     createArea(area) {
-        return `<li class="location-selection__area" id="area-${area.id}">${area.name}</li>`;
+        return `<li class="location-selection__area" id="${area.id}">${area.name}</li>`;
     }
 
     createCity(city) {
@@ -64,5 +64,9 @@ export class LocationSelectionView {
         value.textContent = area;
 
         this.toggle(e);
+    }
+
+    displayArea(area) {
+        document.querySelector(".location-selection__value").textContent = area.name;
     }
 }
