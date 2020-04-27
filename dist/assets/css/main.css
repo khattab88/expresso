@@ -3037,31 +3037,61 @@ body {
 /* restaurant list */
 /* line 349, src/sass/pages/_restaurant-list.scss */
 .restaurant-list {
+  position: relative;
+  min-height: 40rem;
   margin-bottom: 4rem;
   display: grid;
-  grid-template-columns: auto; }
+  grid-template-columns: auto;
+  box-shadow: 0px 15px 38px -10px rgba(0, 0, 0, 0.1); }
   @media only screen and (min-width: 64em) {
     /* line 349, src/sass/pages/_restaurant-list.scss */
     .restaurant-list {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 1rem;
       row-gap: 1rem; } }
+  /* line 365, src/sass/pages/_restaurant-list.scss */
+  .restaurant-list__empty-template {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #555; }
+    /* line 374, src/sass/pages/_restaurant-list.scss */
+    .restaurant-list__empty-template--visible {
+      display: block; }
+    /* line 376, src/sass/pages/_restaurant-list.scss */
+    .restaurant-list__empty-template h3 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 2rem; }
+    /* line 382, src/sass/pages/_restaurant-list.scss */
+    .restaurant-list__empty-template img {
+      width: 7.5rem;
+      height: 7.5rem;
+      margin-bottom: 2rem; }
+    /* line 388, src/sass/pages/_restaurant-list.scss */
+    .restaurant-list__empty-template p {
+      font-size: 1.8rem;
+      color: #555;
+      letter-spacing: .5px; }
 
-/* line 361, src/sass/pages/_restaurant-list.scss */
+/* line 396, src/sass/pages/_restaurant-list.scss */
 .restaurant-info-card {
   width: 100%;
   margin-bottom: 3rem;
   border-bottom: 1px solid #f9f9f9; }
   @media only screen and (min-width: 64em) {
-    /* line 361, src/sass/pages/_restaurant-list.scss */
+    /* line 396, src/sass/pages/_restaurant-list.scss */
     .restaurant-info-card {
       margin-right: 2%;
       margin-bottom: 1rem;
       transition: all .2s; } }
-  /* line 372, src/sass/pages/_restaurant-list.scss */
+  /* line 407, src/sass/pages/_restaurant-list.scss */
   .restaurant-info-card:hover {
     cursor: pointer; }
-  /* line 376, src/sass/pages/_restaurant-list.scss */
+  /* line 411, src/sass/pages/_restaurant-list.scss */
   .restaurant-info-card__head {
     min-height: 23rem;
     background-image: url(../img/pexels-photo-262978.jpeg);
@@ -3070,15 +3100,15 @@ body {
     position: relative;
     transition: all .3s; }
     @media only screen and (min-width: 75em) {
-      /* line 376, src/sass/pages/_restaurant-list.scss */
+      /* line 411, src/sass/pages/_restaurant-list.scss */
       .restaurant-info-card__head {
         min-width: auto; } }
-    /* line 388, src/sass/pages/_restaurant-list.scss */
+    /* line 423, src/sass/pages/_restaurant-list.scss */
     .restaurant-info-card__head:hover {
       transform: scale(1.03);
       box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-/* line 395, src/sass/pages/_restaurant-list.scss */
+/* line 430, src/sass/pages/_restaurant-list.scss */
 .delivery-detail {
   position: absolute;
   bottom: 2rem;
@@ -3088,61 +3118,61 @@ body {
   line-height: 1.8rem;
   letter-spacing: 0.5px;
   text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.7); }
-  /* line 405, src/sass/pages/_restaurant-list.scss */
+  /* line 440, src/sass/pages/_restaurant-list.scss */
   .delivery-detail__title {
     font-size: 1.75rem;
     font-weight: 300; }
-  /* line 409, src/sass/pages/_restaurant-list.scss */
+  /* line 444, src/sass/pages/_restaurant-list.scss */
   .delivery-detail__time {
     margin-top: .5rem;
     font-size: 1.25rem; }
     @media only screen and (min-width: 48em) {
-      /* line 409, src/sass/pages/_restaurant-list.scss */
+      /* line 444, src/sass/pages/_restaurant-list.scss */
       .delivery-detail__time {
         display: inline-block;
         margin-top: 1rem; } }
 
-/* line 420, src/sass/pages/_restaurant-list.scss */
+/* line 455, src/sass/pages/_restaurant-list.scss */
 .restaurant-detail {
   padding: 1rem;
   padding-bottom: 1.5rem;
   min-height: 7.5rem;
   border-bottom: 1px solid #f9f9f9;
   color: #323232; }
-  /* line 427, src/sass/pages/_restaurant-list.scss */
+  /* line 462, src/sass/pages/_restaurant-list.scss */
   .restaurant-detail__name {
     font-size: 2rem;
     line-height: 1;
     font-weight: 400;
     letter-spacing: .5px; }
     @media only screen and (min-width: 48em) {
-      /* line 427, src/sass/pages/_restaurant-list.scss */
+      /* line 462, src/sass/pages/_restaurant-list.scss */
       .restaurant-detail__name {
         font-size: 3rem; } }
     @media only screen and (min-width: 75em) {
-      /* line 427, src/sass/pages/_restaurant-list.scss */
+      /* line 462, src/sass/pages/_restaurant-list.scss */
       .restaurant-detail__name {
         font-size: 2.5rem; } }
-  /* line 441, src/sass/pages/_restaurant-list.scss */
+  /* line 476, src/sass/pages/_restaurant-list.scss */
   .restaurant-detail__desc {
     font-size: 1.5rem;
     line-height: 2.8rem; }
     @media only screen and (min-width: 48em) {
-      /* line 441, src/sass/pages/_restaurant-list.scss */
+      /* line 476, src/sass/pages/_restaurant-list.scss */
       .restaurant-detail__desc {
         font-size: 1.75rem;
         margin-top: 1rem; } }
     @media only screen and (min-width: 75em) {
-      /* line 441, src/sass/pages/_restaurant-list.scss */
+      /* line 476, src/sass/pages/_restaurant-list.scss */
       .restaurant-detail__desc {
         font-size: 1.5rem;
         margin-top: .5rem; } }
 
-/* line 457, src/sass/pages/_restaurant-list.scss */
+/* line 492, src/sass/pages/_restaurant-list.scss */
 .restaurant-tags {
   padding: 1rem 1rem;
   backface-visibility: hidden; }
-  /* line 461, src/sass/pages/_restaurant-list.scss */
+  /* line 496, src/sass/pages/_restaurant-list.scss */
   .restaurant-tags__tag-item {
     list-style: none;
     display: inline-block;
@@ -3154,10 +3184,10 @@ body {
     background-color: #009a9a;
     color: #fff;
     letter-spacing: .5px; }
-    /* line 473, src/sass/pages/_restaurant-list.scss */
+    /* line 508, src/sass/pages/_restaurant-list.scss */
     .restaurant-tags__tag-item:hover {
       transform: scale(1.05) translateY(-0.2rem); }
-    /* line 477, src/sass/pages/_restaurant-list.scss */
+    /* line 512, src/sass/pages/_restaurant-list.scss */
     .restaurant-tags__tag-item--empty {
       background-color: #f9f9f9;
       color: #323232; }

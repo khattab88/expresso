@@ -103,4 +103,13 @@ export class RestaurantListPageView {
         elements.filterCount.style.visibility = "hidden";
         elements.filterClear.style.display = "none";
     }
+
+    displayEmptyTemplate(visible) {
+        const emptyTemplate = document.querySelector(".restaurant-list__empty-template");
+        if(visible) {
+            emptyTemplate.classList.add("restaurant-list__empty-template--visible");
+        } else {
+            emptyTemplate.classList.remove("restaurant-list__empty-template--visible");
+        }
+    }
 }

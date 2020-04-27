@@ -30,8 +30,8 @@ export default class RestaurantListPage {
             this.restaurantSelection = new RestaurantSelectionComponent();
 
             // rendering
-            this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
-            this.model.tags.forEach(t => this.view.renderTag(t));
+            this.displayList();
+            this.displayTags();
 
         } catch (err) { handleError(err); }
     }
@@ -39,8 +39,24 @@ export default class RestaurantListPage {
     changeArea(area) {
         this.model.area = area;
 
-        this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
+        this.displayList();
     } 
+
+    displayList() {
+
+        // show/hide empty list template
+        if(this.model.restaurants === 0) {
+            this.view.displayEmptyTemplate(false);
+        } else {
+            this.view.displayEmptyTemplate(true);
+        }
+
+        this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
+    }
+
+    displayTags() {
+        this.model.tags.forEach(t => this.view.renderTag(t));
+    }
 
     setupEventListeners() {
         try {
