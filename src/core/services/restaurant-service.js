@@ -10,7 +10,7 @@ export default class RestaurantService {
 
     get() {
         return [
-            new Restaurant("1", "McDonald's", "I'm lovin' it", "web_cover_Mcd.png", 30, [
+            new Restaurant("1", "McDonald's", "I'm lovin' it", "web_cover_Mcd.png", 25, [
                 new Tag("1", "Offers"),
                 new Tag("2", "American"),
                 new Tag("7", "Burgers"),

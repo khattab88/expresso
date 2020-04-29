@@ -16,8 +16,9 @@ export default class RestaurantMenuPage {
 
     init() {
         try {
+            const id = getQueryString("id");
 
-            this.model = new RestaurantMenuPageModel();
+            this.model = new RestaurantMenuPageModel(id);
             this.view = new RestaurantMenuPageView();
 
             this.navbar = new NavComponent();
@@ -25,9 +26,9 @@ export default class RestaurantMenuPage {
             this.itemModal = new ItemModalComponent();
             this.cart = new CartComponent();
 
-            this.model.id = getQueryString("id");
-            this.model.menuCategories.forEach(mc => this.view.renderMenuCategory(mc));
-            this.model.menuCategories.forEach(mc => this.view.renderMenuCategoryItems(mc));
+            this.view.renderBranchInfo(this.model.branchInfo);
+            this.model.menuSections.forEach(mc => this.view.renderMenuCategory(mc));
+            this.model.menuSections.forEach(mc => this.view.renderMenuCategoryItems(mc));
 
         } catch(err) { handleError(err); }
     }

@@ -1,7 +1,14 @@
 export const elements = {
+    header: document.querySelector(".header"),
+    breadcrumbLink: document.querySelector(".breadcrumb__item--current .breadcrumb__link"),
+    infoBox: document.querySelector("restaurant-info-box"),
+    infoBoxName: document.querySelector(".restaurant-info-box__head-title"),
+    infoBoxSlogan: document.querySelector(".restaurant-info-box__head-desc"),
+    infoBoxLocation: document.querySelector(".change-location__location"),
+    infoBoxDeliveryTime: document.querySelector(".restaurant-delivery__footer"),
     menuCategoriesHead: document.querySelector(".menu-categories__head"),
     menuCategoriesBody: document.querySelector(".menu-categories__body"),
-    locationModal : document.querySelector(".location-modal"),
+    locationModal: document.querySelector(".location-modal"),
     showCart: document.querySelector(".restaurant-sidebar__show-cart"),
     closeCart: document.querySelector(".cart__header-close"),
     cartModal: document.querySelector(".cart-modal"),
@@ -12,7 +19,18 @@ export const elements = {
 };
 
 export class RestaurantMenuPageView {
-    constructor() {}
+    constructor() { }
+
+    renderBranchInfo(branchInfo) {
+       elements.header.style.backgroundImage = `url(../assets/img/restaurants/${branchInfo.restaurant.image}`;
+
+       elements.breadcrumbLink.textContent = branchInfo.restaurant.name;
+
+        elements.infoBoxName.textContent = branchInfo.restaurant.name;
+        elements.infoBoxSlogan.textContent = branchInfo.restaurant.slogan;
+        elements.infoBoxLocation.textContent = branchInfo.area.name;
+        elements.infoBoxDeliveryTime.textContent = `Average delivery time: ${branchInfo.restaurant.deliveryTime} mins`;
+    }
 
     renderMenuCategory(menuCategory) {
         const markup = `
@@ -20,7 +38,7 @@ export class RestaurantMenuPageView {
                 <a href="#category-${menuCategory.id}" class="menu-categories__category-link">${menuCategory.name}</a>
             </li>`;
         elements.menuCategoriesList.insertAdjacentHTML("beforeend", markup);
-    } 
+    }
 
     renderMenuCategoryItems(menuCategory) {
         const markup = `
