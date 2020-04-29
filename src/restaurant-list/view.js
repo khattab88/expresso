@@ -100,9 +100,17 @@ export class RestaurantListPageView {
     }
 
     clearTagFilter() {
+        // unselect all tags
+        document.querySelectorAll(".filter-dropdown__cuisine-checkbox")
+            .forEach(checkbox => checkbox.checked = false);
+
+        // hide labels
         elements.filterCount.style.opacity = 0;
         elements.filterCount.style.visibility = "hidden";
         elements.filterClear.style.display = "none";
+
+        // close dropdown
+        // TODO
     }
 
     displayEmptyTemplate(visible) {

@@ -45,7 +45,7 @@ export default class RestaurantListPage {
     displayList() {
 
         // show/hide empty list template
-        if (this.model.filteredList === 0) {
+        if (this.model.filteredList.length === 0 || this.model.restaurants.length === 0) {
             this.view.displayEmptyTemplate(true);
         } else {
             this.view.displayEmptyTemplate(false);
