@@ -27,8 +27,8 @@ export default class RestaurantMenuPage {
             this.cart = new CartComponent();
 
             this.view.renderBranchInfo(this.model.branchInfo);
-            this.model.menuSections.forEach(mc => this.view.renderMenuCategory(mc));
-            this.model.menuSections.forEach(mc => this.view.renderMenuCategoryItems(mc));
+            this.model.menu.menuSections.forEach(mc => this.view.renderMenuCategory(mc));
+            this.model.menu.menuSections.forEach(mc => this.view.renderMenuCategoryItems(mc));
 
         } catch(err) { handleError(err); }
     }
