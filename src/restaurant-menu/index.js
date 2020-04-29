@@ -1,4 +1,4 @@
-import { handleError } from "../base";
+import { handleError, getQueryString } from "../base";
 
 import RestaurantMenuPageModel from "./model";
 import { elements, RestaurantMenuPageView } from "./view";
@@ -16,6 +16,7 @@ export default class RestaurantMenuPage {
 
     init() {
         try {
+
             this.model = new RestaurantMenuPageModel();
             this.view = new RestaurantMenuPageView();
 
@@ -24,6 +25,7 @@ export default class RestaurantMenuPage {
             this.itemModal = new ItemModalComponent();
             this.cart = new CartComponent();
 
+            this.model.id = getQueryString("id");
             this.model.menuCategories.forEach(mc => this.view.renderMenuCategory(mc));
             this.model.menuCategories.forEach(mc => this.view.renderMenuCategoryItems(mc));
 

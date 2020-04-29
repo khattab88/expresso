@@ -2,10 +2,9 @@ export const handleError = (err) => console.log(err);
 
 export const formatCurrency = (val, currency = "EGP") => `${val}.00 ${currency}`;
 
-export const getArea = () => {
+export const getQueryString = (name) => {
     const urlParams = new URLSearchParams(window.location.search);
-    let area = urlParams.get('area') || "1";
-    return area;
+    return urlParams.get(name) || "1";  
 };
 
-export const setArea = (area) => document.location = `?area=${area}`;
+export const setQueryString = (name, value) => document.location = `?${name}=${value}`;

@@ -1,4 +1,4 @@
-import { handleError, getArea } from "../base";
+import { handleError, getQueryString } from "../base";
 
 import RestaurantListPageModel from "./model";
 import { elements, RestaurantListPageView } from "./view";
@@ -17,10 +17,11 @@ export default class RestaurantListPage {
     init() {
         try {
             // key state 
-            const area = getArea();
+            const area = getQueryString("area");
 
             // model / view
             this.model = new RestaurantListPageModel(area);
+            this.model.area = area;
             this.view = new RestaurantListPageView();
 
             // components

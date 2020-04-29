@@ -1,4 +1,4 @@
-import { handleError, getArea, setArea } from "../../base";
+import { handleError, getQueryString, setQueryString } from "../../base";
 
 import LocationSelectionModel from "./model";
 import { elements, LocationSelectionView } from "./view";
@@ -16,7 +16,7 @@ export default class LocationSelectionComponent {
 
             this.view.render(this.model.cities);
 
-            const areaId = getArea();
+            const areaId = getQueryString("area");
             const area = this.model.getArea(areaId);
             this.view.displayArea(area);
 
@@ -34,7 +34,7 @@ export default class LocationSelectionComponent {
                 else if (e.target.matches(".location-selection__area, .location-selection__area *")) {
 
                     // add area query string and reload
-                    setArea(e.target.id);
+                    setQueryString("area", e.target.id);
 
                     this.view.select(e);
                 }

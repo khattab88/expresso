@@ -1,4 +1,4 @@
-import { handleError, getArea } from "../../base";
+import { handleError, getQueryString } from "../../base";
 
 import RestaurantSelectionModel from "./model";
 import { elements, RestaurantSelectionView } from "./view";
@@ -13,7 +13,7 @@ export default class RestaurantSelectionComponent {
 
     init() {
         try {
-            const area = getArea();
+            const area = getQueryString("area");
 
             this.model = new RestaurantSelectionModel(area);
             this.view = new RestaurantSelectionView();
