@@ -83,6 +83,14 @@ export default class RestaurantListPage {
         this.displayList();
     }
 
+    filterBySpecialOffers(checked) {
+        this.model.filteredList = checked 
+                                    ? this.model.filteredList.filter(r => r.restaurant.specialOffers === true)
+                                    : this.model.restaurants; 
+
+        this.displayList();
+    }
+
     setupEventListeners() {
         try {
 
@@ -113,11 +121,17 @@ export default class RestaurantListPage {
 
             });
 
+            // clear tags filter
             elements.filterClear.addEventListener("click", e => {
                 this.model.selecedTags = [];
                 this.view.clearTagFilter();
                 this.model.filteredList = this.model.restaurants;
                 this.displayList();
+            });
+
+            elements.specialOffersCheckbox.addEventListener("change", e => {
+                const checked = e.target.checked;
+                this.filterBySpecialOffers(checked);
             });
 
         }

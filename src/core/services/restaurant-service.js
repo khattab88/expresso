@@ -15,8 +15,7 @@ export default class RestaurantService {
                 new Tag("2", "American"),
                 new Tag("7", "Burgers"),
                 new Tag("11", "Fast Food"),
-                new Tag("19", "Sandwiches"),
-            ]),
+                new Tag("19", "Sandwiches")], true),
             new Restaurant("2", "KFC", "Finger Lickin Good", "cover_oage__2_.jpg", 30, [
                 new Tag("1", "Offers"),
                 new Tag("2", "American"),
@@ -28,8 +27,7 @@ export default class RestaurantService {
                 new Tag("2", "American"),
                 new Tag("10", "European"),
                 new Tag("11", "Fast Food"),
-                new Tag("14", "Italian"),
-            ]),
+                new Tag("14", "Italian")], true),
             new Restaurant("4", "Burger King", "Have It Your Way", "photo-1571116213508-2a5017ab1324.jpg", 30, [
                 new Tag("1", "Offers"),
                 new Tag("2", "American"),

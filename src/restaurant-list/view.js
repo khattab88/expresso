@@ -6,6 +6,7 @@ export const elements = {
     filterClear: document.querySelector(".filter-dropdown__clear"),
     restaurantList: document.querySelector(".restaurant-list"),
     restaurantInfoCard: document.querySelectorAll(".restaurant-info-card"),
+    specialOffersCheckbox: document.querySelector("#special-offers"),
 };
 
 export class RestaurantListPageView {
