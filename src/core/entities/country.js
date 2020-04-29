@@ -1,6 +1,8 @@
-export default class Country {
+import Entity from "./entity";
+
+export default class Country extends Entity {
     constructor(id, name) {
-        this.id = id;
+        super(id);
         this.name = name;
     }
 }

@@ -1,6 +1,8 @@
-export default class Branch {
+import Entity from "./entity";
+
+export default class Branch extends Entity {
     constructor(id, name, restaurant, area) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.restaurant = restaurant;
         this.area = area;

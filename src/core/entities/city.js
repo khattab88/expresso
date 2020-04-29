@@ -1,6 +1,8 @@
-export default class City {
+import Entity from "./entity";
+
+export default class City extends Entity {
     constructor(id, name, country, areas) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.country = country;
         this.areas = areas;

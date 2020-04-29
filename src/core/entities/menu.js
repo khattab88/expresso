@@ -1,6 +1,8 @@
-export default class Menu {
+import Entity from "./entity";
+
+export default class Menu extends Entity {
     constructor(id, restaurantId, menuSections) {
-        this.id = id;
+        super(id);
         this.restaurantId = restaurantId;
         this.menuSections = menuSections;
     }

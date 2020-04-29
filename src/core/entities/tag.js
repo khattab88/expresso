@@ -1,7 +1,9 @@
-export default class Tag {
+import Entity from "./entity";
+
+export default class Tag extends Entity {
 
     constructor(id, title) {
-        this.id = id;
+        super(id);
         this.title = title;
     }
 
