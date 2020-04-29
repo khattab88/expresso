@@ -40,22 +40,47 @@ export default class RestaurantListPage {
         this.model.area = area;
 
         this.displayList();
-    } 
+    }
 
     displayList() {
 
         // show/hide empty list template
-        if(this.model.restaurants === 0) {
-            this.view.displayEmptyTemplate(false);
-        } else {
+        if (this.model.filteredList === 0) {
             this.view.displayEmptyTemplate(true);
+        } else {
+            this.view.displayEmptyTemplate(false);
         }
 
-        this.model.restaurants.forEach(r => this.view.renderBranchCard(r));
+        this.view.clearList();
+        this.model.filteredList.forEach(r => this.view.renderBranchCard(r));
     }
 
     displayTags() {
         this.model.tags.forEach(t => this.view.renderTag(t));
+    }
+
+    filterByTags() {
+        let filtered = new Set();
+        if (this.model.selecedTags.length > 0) {
+            this.model.selecedTags.forEach(t => {
+                // loop over list
+                this.model.restaurants.forEach(r => {
+                    const tags = r.restaurant.tags.map(t => t.id);
+                    //console.log(tags, t);
+                    if (tags.indexOf(t) > -1) {
+                        filtered.add(r);
+                    }
+                });
+            });
+
+            // update filtered list
+            this.model.filteredList = [...filtered];
+        } else {
+            this.model.filteredList = this.model.restaurants;
+        }
+
+        // display filtered list
+        this.displayList();
     }
 
     setupEventListeners() {
@@ -71,22 +96,28 @@ export default class RestaurantListPage {
                 const tag = this.view.selectTag(e);
                 const tagIndex = this.model.selecedTags.indexOf(tag.id);
 
-                if(tag.checked) {
-                    if(tagIndex < 0) {
+                if (tag.checked) {
+                    if (tagIndex < 0) {
                         this.model.selecedTags.push(tag.id);
                     }
                 } else {
-                    if(tagIndex >= 0) {
+                    if (tagIndex >= 0) {
                         this.model.selecedTags.splice(tagIndex, 1);
                     }
                 }
 
                 this.view.displayTagFilterStatus(this.model.selecedTags.length);
+
+                // filter list based on selected tags
+                this.filterByTags();
+
             });
 
             elements.filterClear.addEventListener("click", e => {
                 this.model.selecedTags = [];
                 this.view.clearTagFilter();
+                this.model.filteredList = this.model.restaurants;
+                this.displayList();
             });
 
         }

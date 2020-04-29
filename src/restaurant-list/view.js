@@ -106,10 +106,17 @@ export class RestaurantListPageView {
 
     displayEmptyTemplate(visible) {
         const emptyTemplate = document.querySelector(".restaurant-list__empty-template");
+
+        emptyTemplate.classList.remove("restaurant-list__empty-template--visible");
+
         if(visible) {
             emptyTemplate.classList.add("restaurant-list__empty-template--visible");
         } else {
             emptyTemplate.classList.remove("restaurant-list__empty-template--visible");
         }
+    }
+
+    clearList() {
+        document.querySelectorAll(".restaurant-info-card").forEach(el => el.parentElement.removeChild(el));
     }
 }

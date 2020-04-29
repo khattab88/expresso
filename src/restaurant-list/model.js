@@ -9,6 +9,7 @@ export default class RestaurantListPageModel {
 
         this.area = area;        
         this.restaurants = this.getRestaurants();
+        this.filteredList = this.restaurants;
         this.tags = this.getTags();
         this.selecedTags = (() => [])();
     }
