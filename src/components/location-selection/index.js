@@ -1,15 +1,16 @@
+/* eslint-disable no-use-before-define */
 import { handleError, getQueryString, setQueryString } from "../../base";
 
 import LocationSelectionModel from "./model";
 import { elements, LocationSelectionView } from "./view";
 
 export default class LocationSelectionComponent {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         try {
             this.model = new LocationSelectionModel(area);
             this.view = new LocationSelectionView();
@@ -18,12 +19,13 @@ export default class LocationSelectionComponent {
 
             const areaId = getQueryString("area");
             const area = this.model.getArea(areaId);
+
             this.view.displayArea(area);
 
         } catch (err) { handleError(err); }
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
 
             elements.wrapper.addEventListener("click", e => {

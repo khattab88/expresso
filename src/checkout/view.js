@@ -1,11 +1,12 @@
+/* eslint-disable no-undef */
 export const elements = {
     mapModal: document.querySelector(".map-modal"),
 };
 
 export class CheckoutView {
-    constructor() {}
+    constructor () {}
 
-    toggleMapModal() {
+    toggleMapModal () {
         elements.mapModal.classList.toggle("map-modal--open");
     }
 }

@@ -2,17 +2,17 @@ import { elements, NavView } from "./view";
 
 export default class NavComponent {
 
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         this.view = new NavView();
         this.view.render();
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
 
         elements.container.addEventListener("click", e => {
 

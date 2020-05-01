@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import { handleError, getQueryString } from "../base";
 
 import RestaurantListPageModel from "./model";
@@ -9,12 +11,12 @@ import LocationSelectionComponent from "../components/location-selection/index";
 import RestaurantSelectionComponent from "../components/restaurant-selection/index";
 
 export default class RestaurantListPage {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         try {
             // key state 
             const area = getQueryString("area");
@@ -37,13 +39,13 @@ export default class RestaurantListPage {
         } catch (err) { handleError(err); }
     }
 
-    changeArea(area) {
+    changeArea (area) {
         this.model.area = area;
 
         this.displayList();
     }
 
-    displayList() {
+    displayList () {
 
         // show/hide empty list template
         if (this.model.filteredList.length === 0 || this.model.restaurants.length === 0) {
@@ -56,18 +58,20 @@ export default class RestaurantListPage {
         this.model.filteredList.forEach(r => this.view.renderBranchCard(r));
     }
 
-    displayTags() {
+    displayTags () {
         this.model.tags.forEach(t => this.view.renderTag(t));
     }
 
-    filterByTags() {
+    filterByTags () {
         let filtered = new Set();
+
         if (this.model.selecedTags.length > 0) {
             this.model.selecedTags.forEach(t => {
                 // loop over list
                 this.model.restaurants.forEach(r => {
+                    // eslint-disable-next-line no-shadow
                     const tags = r.restaurant.tags.map(t => t.id);
-                    //console.log(tags, t);
+
                     if (tags.indexOf(t) > -1) {
                         filtered.add(r);
                     }
@@ -84,15 +88,15 @@ export default class RestaurantListPage {
         this.displayList();
     }
 
-    filterBySpecialOffers(checked) {
+    filterBySpecialOffers (checked) {
         this.model.filteredList = checked 
-                                    ? this.model.filteredList.filter(r => r.restaurant.specialOffers === true)
-                                    : this.model.restaurants; 
+            ? this.model.filteredList.filter(r => r.restaurant.specialOffers === true)
+            : this.model.restaurants; 
 
         this.displayList();
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
 
             elements.filterDropdownHead.addEventListener("click", e => { this.view.toggleFilterDropdown(); });
@@ -132,6 +136,7 @@ export default class RestaurantListPage {
 
             elements.specialOffersCheckbox.addEventListener("change", e => {
                 const checked = e.target.checked;
+                
                 this.filterBySpecialOffers(checked);
             });
 

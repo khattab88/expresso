@@ -9,8 +9,11 @@ import ContactusPage from "./contact-us/index";
 import CheckoutPage from "./checkout/index";
 
 
+// eslint-disable-next-line no-undef
 window.addEventListener("load", () => {
+    // eslint-disable-next-line no-undef
     const path = window.location.pathname;
+    // eslint-disable-next-line no-unused-vars
     let page = null;
 
     if (path.indexOf("restaurant-list") > -1) {

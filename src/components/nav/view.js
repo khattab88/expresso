@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export const elements = {
     container: document.querySelector(".container"),
     navToggle: document.querySelector(".navbar__toggle"),
@@ -5,18 +6,13 @@ export const elements = {
     navCountryBtn: document.querySelector(".country-btn"),
     navCountryDropdown: document.querySelector(".country-btn > .country-dropdown"),
     navCategoryBtn: document.querySelector(".category-btn"),
-    navCategoryDropdown: document.querySelector(".category-dropdown"),
+    navCategoryDropdown: document.querySelector(".category-dropdown")
 };
 
 export class NavView {
-    constructor() { }
+    constructor () { }
 
-    toggleMobileNav() {
-        const navigationItems = elements.container.querySelector(".navigation__items");
-        navigationItems.classList.toggle("navigation__items--mobile-open");
-    }
-
-    render() {
+    render () {
         const markup = `
         <nav class="navbar">
             <div class="logo">
@@ -136,24 +132,29 @@ export class NavView {
         elements.container.insertAdjacentHTML("afterbegin", markup);
     }
 
-    toggleMobileNav() {
+    toggleMobileNav () {
         const navigationItems = elements.container.querySelector(".navigation__items");
+
         navigationItems.classList.toggle("navigation__items--mobile-open");
     }
 
-    toggleNavCountry() {
+    toggleNavCountry () {
         const navCountryBtn = elements.container.querySelector(".country-btn");
+
         navCountryBtn.classList.toggle("country-btn--open");
 
         const navCountryDropdown = elements.container.querySelector(".country-btn > .country-dropdown");
+
         navCountryDropdown.classList.toggle("country-dropdown--open");
     }
 
-    toggleNavCategory() {
+    toggleNavCategory () {
         const navCategoryBtn = elements.container.querySelector(".category-btn");
+
         navCategoryBtn.classList.toggle("category-btn--open");
 
         const navCategoryDropdown = elements.container.querySelector(".category-dropdown");
+
         navCategoryDropdown.classList.toggle("category-dropdown--open");
     }
 }

@@ -4,12 +4,12 @@ import NavComponent from "../components/nav/index";
 import FooterComponent from "../components/footer/index";
 
 export default class LoginPage {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         try {
 
             this.navbar = new NavComponent();
@@ -18,5 +18,5 @@ export default class LoginPage {
         } catch (err) { handleError(err); }
     }
 
-    setupEventListeners() {}
+    setupEventListeners () {}
 }

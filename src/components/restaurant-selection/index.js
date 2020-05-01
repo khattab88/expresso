@@ -6,12 +6,12 @@ import { elements, RestaurantSelectionView } from "./view";
 import BranchService from "../../core/services/branch-service";
 
 export default class RestaurantSelectionComponent {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         try {
             const area = getQueryString("area");
 
@@ -26,13 +26,14 @@ export default class RestaurantSelectionComponent {
         } catch (err) { handleError(err); }
     }
 
-    changeArea(area) {
+    changeArea (area) {
         this.model.area = area;
         const areaBranches = this.model.getAreaBranches(area);
+
         this.view.render(areaBranches);
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
 
             elements.wrapper.addEventListener("click", e => {

@@ -2,7 +2,7 @@ import BranchService from "../core/services/branch-service";
 import TagService from "../core/services/tag-service";
 
 export default class RestaurantListPageModel {
-    constructor(area) {
+    constructor (area) {
         // Dependencies
         this.branchService = new BranchService();
         this.tagService = new TagService();
@@ -14,11 +14,11 @@ export default class RestaurantListPageModel {
         this.selecedTags = (() => [])();
     }
 
-    getRestaurants() {
+    getRestaurants () {
         return this.branchService.getByArea(this.area);
     }
 
-    getTags() {
+    getTags () {
         return this.tagService.get();
     }
 }

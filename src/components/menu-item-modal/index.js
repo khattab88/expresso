@@ -1,18 +1,20 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import { handleError } from "../../base";
 
 import { elements, ItemModalView } from "./view";
 
 export default class ItemModalComponent {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         this.view = new ItemModalView();
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
 
             // open modal
@@ -42,8 +44,8 @@ export default class ItemModalComponent {
             });
 
             // increment/decrement menu item count
-            document.querySelectorAll(".cart-controls")
-                .forEach(el => el.addEventListener("click", e => this.view.changeItemCount(e)));
+            document.querySelectorAll(".cart-controls").
+                forEach(el => el.addEventListener("click", e => this.view.changeItemCount(e)));
 
         } catch (err) { handleError(err); }
     }

@@ -8,12 +8,12 @@ import FooterComponent from "../components/footer/index";
 import LocationSelectionComponent from "../components/location-selection/index";
 
 export default class HomePage {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         try {
             // initialize model/view instances
             this.model = new HomePageModel();
@@ -31,11 +31,12 @@ export default class HomePage {
         } catch (err) { handleError(err); }
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
             // navigate to restaurant menu page
             elements.showcase.addEventListener("click", e => {
                 const card = e.target.closest(".restaurant-card");
+
                 this.view.navigate(`../restaurant-menu/index.html?id=${card.id}`);
             });
 

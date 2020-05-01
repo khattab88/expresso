@@ -4,25 +4,27 @@ import CartModel from "./model";
 import { elements, CartView } from "./view";
 
 export default class CartComponent {
-    constructor() {
+    constructor () {
         try {
             this.init();
             this.setupEventListeners();
         } catch (err) { handleError(err); }
     }
 
-    init() {
+    init () {
         this.model = new CartModel();
         this.view = new CartView();
 
         this.model.items = this.view.getItems();
 
-        this.view.displayInfo(this.model.getSubTotal(),
+        this.view.displayInfo(
+            this.model.getSubTotal(),
             this.model.getDeliveryFee(),
-            this.model.getTotal());
+            this.model.getTotal()
+        );
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
 
             elements.cartItems.addEventListener("click", e => {

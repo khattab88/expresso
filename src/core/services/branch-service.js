@@ -4,21 +4,21 @@ import RestaurantService from "./restaurant-service";
 import AreaService from "./area-service";
 
 export default class BranchService {
-    constructor() {
+    constructor () {
         // Dependency
         this.restaurantService = new RestaurantService();
         this.areaService = new AreaService();
     }
 
-    getByArea(areaId) {
+    getByArea (areaId) {
         return this.get().filter(b => b.area.id === areaId);
-    } 
-
-    getById(id) {
-        return this.get().find(b => b.id == id);
     }
 
-    get() {
+    getById (id) {
+        return this.get().find(b => b.id === id);
+    }
+
+    get () {
         return [
             new Branch("1", "Heliopolis Branch", this.restaurantService.getById("1"), this.areaService.getById("1")),
             new Branch("2", "Zamalek Branch", this.restaurantService.getById("1"), this.areaService.getById("2")),

@@ -1,17 +1,19 @@
+/* eslint-disable no-undef */
 export const elements = {
     menuItemsWrapper: document.querySelector(".menu-items-wrapper"),
     itemsList: document.querySelector(".menu-items-by-category__menu-items-list"),
     modal: document.querySelector(".menu-item-modal"),
     modalBody: document.querySelector(".menu-item-modal__body"),
     itemCount: document.querySelector(".cart-controls__count"),
-    toastMessage: document.querySelector(".toast-message"),
+    toastMessage: document.querySelector(".toast-message")
 };
 
 export class ItemModalView {
-    constructor() { }
+    constructor () { }
 
-    open(e) {
+    open (e) {
         const item = e.target.closest(".menu-item");
+
         if (item) {
             elements.modal.classList.remove("menu-item-modal--close");
             elements.modal.classList.add("menu-item-modal--open");
@@ -20,26 +22,27 @@ export class ItemModalView {
         }
     }
 
-    close() {
+    close () {
         elements.modal.classList.remove("menu-item-modal--open");
         elements.modal.classList.add("menu-item-modal--close");
 
         document.body.style.overflow = "initial";
     }
 
-    toggleItemOption(e) {
+    toggleItemOption (e) {
         const option = e.target.closest(".dish-options");
+
         option.classList.toggle("dish-options--closed");
     }
 
-    changeItemCount(e) {
+    changeItemCount (e) {
         const op = e.target.closest(".cart-controls__btn").textContent;
         const countLabel = elements.itemCount;
         let count = parseInt(countLabel.textContent);
 
         if (op === "+") { count++; }
         else {
-            if (count > 1) count--;
+            if (count > 1) { count--; }
         }
 
         countLabel.textContent = count;

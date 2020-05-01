@@ -1,25 +1,25 @@
- import { elements, FooterView } from "./view";
+import { elements, FooterView } from "./view";
 
- export default class FooterComponent {
-    constructor() {
+export default class FooterComponent {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         this.view = new FooterView();
         this.view.render();
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
     
         elements.container.addEventListener("click", e => {
 
-            if(e.target.matches(".change-country__btn, .change-country__btn *")) {
+            if (e.target.matches(".change-country__btn, .change-country__btn *")) {
                 this.view.toggleCountryDropdown();
             }
         });
 
     }
- }
+}
  

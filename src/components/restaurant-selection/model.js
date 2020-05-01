@@ -2,7 +2,7 @@ import BranchService from "../../core/services/branch-service";
 
 
 export default class RestaurantSelectionModel {
-    constructor(area) {
+    constructor (area) {
         // dependency
         this.branchService = new BranchService();
 
@@ -11,7 +11,7 @@ export default class RestaurantSelectionModel {
         this.selectedRestaurant = null;
     }
 
-    getAreaBranches(area) {
+    getAreaBranches (area) {
         return this.branchService.getByArea(area);
     }
 }

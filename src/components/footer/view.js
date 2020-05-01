@@ -1,13 +1,14 @@
+/* eslint-disable no-undef */
 export const elements = {
     container: document.querySelector(".container"),
     footerCountryBtn: document.querySelector(".change-country__btn"),
-    footerCountryDropdown: document.querySelector(".change-country__btn > .country-dropdown"),
+    footerCountryDropdown: document.querySelector(".change-country__btn > .country-dropdown")
 };
 
 export class FooterView {
-    constructor() { }
+    constructor () { }
 
-    render() {
+    render () {
         const markup = `
         <footer class="footer">
             <h2 class="footer__logo">Expresso</h2>
@@ -105,11 +106,13 @@ export class FooterView {
         elements.container.insertAdjacentHTML("beforeend", markup);
     }
 
-    toggleCountryDropdown() {
+    toggleCountryDropdown () {
         const footerCountryBtn = elements.container.querySelector(".change-country__btn");
+
         footerCountryBtn.classList.toggle("change-country__btn--open");
 
         const footerCountryDropdown = elements.container.querySelector(".change-country__btn > .country-dropdown");
+
         footerCountryDropdown.classList.toggle("country-dropdown--open");
     }
 

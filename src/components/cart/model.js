@@ -1,22 +1,25 @@
 export default class CartModel {
-    constructor(items) {
+    constructor (items) {
         this.items = items;
     }
 
-    getSubTotal() {
+    getSubTotal () {
         let subTotal = 0;
-            this.items.forEach(item => {
-                const itemValue = parseInt(item.count * item.price);
-                subTotal += itemValue;
-            });
+
+        this.items.forEach(item => {
+            const itemValue = parseInt(item.count * item.price);
+
+            subTotal += itemValue;
+        });
+        
         return subTotal;
     }
 
-    getDeliveryFee() {
+    getDeliveryFee () {
         return 5;
     }
 
-    getTotal() {
+    getTotal () {
         return this.getSubTotal() + this.getDeliveryFee();
     }
 }

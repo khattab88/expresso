@@ -1,19 +1,20 @@
+/* eslint-disable no-undef */
 export const elements = {
     wrapper: document.querySelector(".restaurant-selection-wrapper"),
     restaurantSelectionBtn: document.querySelector(".restaurant-selection__btn"),
     restaurantSelectionBox: document.querySelector(".restaurant-selection__box"),
     restaurantList: document.querySelector(".restaurant-selection__restaurant-list"),
-    restaurantValue: document.querySelector(".restaurant-selection__value"),
+    restaurantValue: document.querySelector(".restaurant-selection__value")
 };
 
 export class RestaurantSelectionView {
-    constructor() { }
+    constructor () { }
 
-    createBranch(branch) {
+    createBranch (branch) {
         return `<li class="restaurant-selection__restaurant" id="${branch.restaurant.id}" data-area="${branch.area.id}">${branch.restaurant.name}</li>`;
     }
 
-    render(branches) {
+    render (branches) {
         const markup = `
             <div class="restaurant-selection">
                 <button class="restaurant-selection__btn">
@@ -34,7 +35,7 @@ export class RestaurantSelectionView {
         elements.wrapper.insertAdjacentHTML("afterbegin", markup);
     }
 
-    toggle(e) {
+    toggle (e) {
         const restaurantSelection = e.target.closest(".restaurant-selection");
         const btn = restaurantSelection.querySelector(".restaurant-selection__btn");
         const box = restaurantSelection.querySelector(".restaurant-selection__box");
@@ -43,11 +44,12 @@ export class RestaurantSelectionView {
         box.classList.toggle("restaurant-selection__box--open");
     }
 
-    select(e) {
+    select (e) {
         const restaurantSelection = e.target.closest(".restaurant-selection");
         const value = restaurantSelection.querySelector(".restaurant-selection__value");
 
         const restaurant = e.target.textContent;
+
         value.textContent = restaurant;
 
         this.toggle(e);

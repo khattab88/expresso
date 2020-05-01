@@ -1,9 +1,11 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable space-before-function-paren */
 import Area from "../entities/area";
 
 export default class AreaService {
-    constructor() { }
+    constructor () { }
 
-    getById(id) {
+    getById (id) {
         return this.get().find(a => a.id === id);
     }
 

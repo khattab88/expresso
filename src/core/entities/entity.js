@@ -1,5 +1,5 @@
 export default class Entity {
-    constructor(id) {
+    constructor (id) {
         this.id = id;
     }
 }

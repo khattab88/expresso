@@ -1,9 +1,10 @@
+/* eslint-disable class-methods-use-this */
 import Tag from "../entities/tag";
 
 export default class TagService {
-    constructor() {}
+    constructor () {}
 
-    get() {
+    get () {
         return [
             new Tag("1", "Offers"),
             new Tag("2", "American"),
@@ -26,7 +27,7 @@ export default class TagService {
             new Tag("19", "Sandwiches"),
             new Tag("20", "Sea Food"),
             new Tag("21", "Turkish"),
-            new Tag("22", "Vegan"),
+            new Tag("22", "Vegan")
         ];
     }
 }

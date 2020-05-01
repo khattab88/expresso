@@ -1,7 +1,8 @@
+/* eslint-disable max-params */
 import Entity from "./entity";
 
 export default class Branch extends Entity {
-    constructor(id, name, restaurant, area) {
+    constructor (id, name, restaurant, area) {
         super(id);
         this.name = name;
         this.restaurant = restaurant;

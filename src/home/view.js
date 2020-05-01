@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable quote-props */
 export const elements = {
     showcase: document.querySelector(".showcase"),
     showcaseHead: document.querySelector(".showcase__head"),
@@ -5,9 +7,9 @@ export const elements = {
 };
 
 export class HomePageView {
-    constructor() {}
+    constructor () {}
 
-    createRestaurantCard(restaurant, position) {
+    createRestaurantCard (restaurant, position) {
         return `
             <article class="restaurant-card restaurant-card--${position}" id="${restaurant.id}">
                 <a class="restaurant-card__link" href="../restaurant-menu/index.html?id=${restaurant.id}">
@@ -19,7 +21,7 @@ export class HomePageView {
         `;
     }
 
-    renderRestaurantBigCard(restaurant) {
+    renderRestaurantBigCard (restaurant) {
         const markup = 
             `<article class="restaurant-card restaurant-card--big" id="${restaurant.id}">
                 <a class="restaurant-card__link" href="../restaurant-menu/index.html?id=${restaurant.id}">
@@ -32,17 +34,17 @@ export class HomePageView {
         elements.showcaseHead.insertAdjacentHTML("afterend", markup);
     }
 
-    renderRestaurantCards(restaurants) {
+    renderRestaurantCards (restaurants) {
         let markup = "";
         
-        for(let i=0; i < 6; i++) {
+        for (let i = 0; i < 6; i++) {
             markup += this.createRestaurantCard(restaurants[i], i+1);
         }
 
         elements.showcase.insertAdjacentHTML("beforeend", markup);
     }
 
-    navigate(location) {
+    navigate (location) {
         window.location.assign(location);
     }
 }

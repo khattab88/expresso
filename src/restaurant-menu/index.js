@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { handleError, getQueryString } from "../base";
 
 import RestaurantMenuPageModel from "./model";
@@ -9,12 +10,12 @@ import ItemModalComponent from "../components/menu-item-modal/index";
 import CartComponent from "../components/cart/index";
 
 export default class RestaurantMenuPage {
-    constructor() {
+    constructor () {
         this.init();
         this.setupEventListeners();
     }
 
-    init() {
+    init () {
         try {
             const id = getQueryString("id");
 
@@ -30,10 +31,10 @@ export default class RestaurantMenuPage {
             this.model.menu.menuSections.forEach(mc => this.view.renderMenuCategory(mc));
             this.model.menu.menuSections.forEach(mc => this.view.renderMenuCategoryItems(mc));
 
-        } catch(err) { handleError(err); }
+        } catch (err) { handleError(err); }
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
 
             // toggle menu sections
@@ -42,8 +43,8 @@ export default class RestaurantMenuPage {
             });
 
             // toggle location modal
-            Array.from(document.querySelectorAll(".change-location__btn, .location-modal__close, .location-modal__update"))
-                .forEach((elm) => {
+            Array.from(document.querySelectorAll(".change-location__btn, .location-modal__close, .location-modal__update")).
+                forEach((elm) => {
                     elm.addEventListener("click", this.view.toggleLocationModal);
                 });
 
