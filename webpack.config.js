@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable array-element-newline */
 /* eslint-disable indent-legacy */
 /* eslint-disable require-unicode-regexp */
@@ -10,11 +11,12 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
-        publicPath: "dist/assets/"
+        // publicPath: "dist/" 
     },
     devServer: {
         contentBase: "./dist"
     },
+    devtool: "eval-cheap-module-source-map",
     plugins: [
         new HtmlWebpackPlugin({
             filename: "home/index.html",
