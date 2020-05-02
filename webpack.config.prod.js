@@ -7,17 +7,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: ["babel-polyfill", "./src/index.js"],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
         // publicPath: "dist/" 
     },
-    devServer: {
-        contentBase: "./dist"
-    },
-    devtool: "eval-cheap-module-source-map",
+    devtool: "cheap-source-map",
     plugins: [
         new HtmlWebpackPlugin({
             filename: "home/index.html",

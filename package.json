@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "build:dev": "webpack",
+    "build:prod": "webpack --config webpack.config.prod.js",
     "devserver": "lite-server",
     "watch:sass": "node-sass src/sass/main.scss dist/assets/css/main.css -watch",
     "compile:sass": "node-sass src/sass/main.scss dist/assets/css/main.comp.css",
