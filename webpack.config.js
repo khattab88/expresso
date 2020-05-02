@@ -1,3 +1,4 @@
+/* eslint-disable array-element-newline */
 /* eslint-disable indent-legacy */
 /* eslint-disable require-unicode-regexp */
 /* eslint-disable no-undef */
@@ -41,7 +42,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "checkout/index.html",
             template: "./src/checkout/index.html"
-        }),
+        })
     ],
     module: {
         rules: [
