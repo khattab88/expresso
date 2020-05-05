@@ -1,1 +1,105 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Expresso</title><link rel="icon" type="image/png" href="../assets/img/favicon.ico"><link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="../assets/css/main.css"></head><body><div class="container restaurant-list-page"><header class="header restaurant-list-page__header"><div class="restaurant-search"><h2 class="restaurant-search__title">Restaurants delivering to your city.</h2><div class="restaurant-search__box"><div class="restaurant-search__form"><div class="restaurant-search__input location-selection-wrapper"></div><div class="restaurant-search__input restaurant-selection-wrapper"></div><button class="restaurant-search__submit" type="submit">Find Food</button></div></div></div></header><main class="main"><section class="restaurant-list-breadcrumb"><ul class="restaurant-list-breadcrumb__list"><li class="restaurant-list-breadcrumb__item">Restaurants</li><li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb__separator">/</li><li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb--current">Cairo</li></ul></section><section class="restaurant-list-filter"><div class="filter-dropdown"><div class="filter-dropdown__head"><i class="filter-dropdown__icon fa fa-filter"><span class="filter-dropdown__count">2</span></i><p class="filter-dropdown__title">Filter by types of food</p><i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i> <span class="filter-dropdown__clear">Clear all</span></div><ul class="filter-dropdown__cuisine-list"></ul></div><div class="filter-checkbox"><input class="filter-checkbox__input" type="checkbox" name="special-offers" id="special-offers"> <label for="special-offers" class="filter-checkbox__title">Special Offers</label></div></section><section class="restaurant-list"><div class="restaurant-list__empty-template"><h3>No results found</h3><img src="https://trycarriage.global.ssl.fastly.net/assets/v2/no_restaurants_icon@3x-a3f381c00ef23cae61fb6ee8d58c46a3.png" alt="no results"><p>Please select another area or choose a filter types.</p></div></section></main></div><script src="../b3f5181a90bd855f615b.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresso</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <div class="container restaurant-list-page">
+
+        <header class="header restaurant-list-page__header">
+            <div class="restaurant-search">
+                <h2 class="restaurant-search__title">Restaurants delivering to your city.</h2>
+                <div class="restaurant-search__box">
+                    <div class="restaurant-search__form">
+                        <div class="restaurant-search__input location-selection-wrapper"></div>
+                        <div class="restaurant-search__input restaurant-selection-wrapper"></div>
+                        <button class="restaurant-search__submit" type="submit">Find Food</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="restaurant-list-breadcrumb">
+                <ul class="restaurant-list-breadcrumb__list">
+                    <li class="restaurant-list-breadcrumb__item">Restaurants</li>
+                    <li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb__separator">/</li>
+                    <li class="restaurant-list-breadcrumb__item restaurant-list-breadcrumb--current">Cairo</li>
+                </ul>
+            </section>
+
+            <section class="restaurant-list-filter">
+                <div class="filter-dropdown">
+                    <div class="filter-dropdown__head">
+                        <i class="filter-dropdown__icon fa fa-filter">
+                            <span class="filter-dropdown__count">2</span>
+                        </i>
+                        <p class="filter-dropdown__title">Filter by types of food</p>
+                        <i class="filter-dropdown__icon filter-dropdown__icon--angle-down fa fa-angle-down"></i>
+                        <span class="filter-dropdown__clear">Clear all</span>
+                    </div>
+                    <ul class="filter-dropdown__cuisine-list">
+                        <!-- 
+                            <li class="filter-dropdown__cuisine-item">
+                            <input type="checkbox" class="filter-dropdown__cuisine-checkbox" id="offers">
+                            <label class="filter-dropdown__cuisine-name" for="offers">Offers</label>
+                            </li>
+                        -->
+                    </ul>
+                </div>
+                <div class="filter-checkbox">
+                    <input class="filter-checkbox__input" type="checkbox" name="special-offers" id="special-offers">
+                    <label for="special-offers" class="filter-checkbox__title">Special Offers</label>
+                </div>
+            </section>
+
+            <section class="restaurant-list">
+
+                <div class="restaurant-list__empty-template">
+                    <h3>No results found</h3>
+                    <img src="https://trycarriage.global.ssl.fastly.net/assets/v2/no_restaurants_icon@3x-a3f381c00ef23cae61fb6ee8d58c46a3.png" alt="no results">
+                    <p>Please select another area or choose a filter types.</p>
+                </div>
+
+                <!-- 
+                    <article class="restaurant-info-card">
+                        <div class="restaurant-info-card__head">
+                            <div class="delivery-detail">
+                                <p class="delivery-detail__title">Average delivery time</p>
+                                <span class="delivery-detail__time">30 - 40 mins</span>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__body">
+                            <div class="restaurant-detail">
+                                <h3 class="restaurant-detail__name">Tea Time</h3>
+                                <p class="restaurant-detail__desc">Any time, Tea time</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-info-card__footer">
+                            <ul class="restaurant-tags">
+                                <li class="restaurant-tags__tag-item restaurant-tags__tag-item--empty">No tags available
+                                </li>
+                            </ul>
+                        </div>
+                    </article> 
+                -->
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../bundle.js"></script></body>
+</html>

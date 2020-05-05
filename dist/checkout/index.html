@@ -1,4 +1,245 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Expresso - Checkout</title><link rel="icon" type="image/png" href="../assets/img/favicon.ico"><link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="../assets/css/main.css"></head><body><div class="container checkout-page"><header class="header checkout-page__header"><section class="breadcrumb"><ul class="breadcrumb__list"><li class="breadcrumb__item breadcrumb__item--back"><i class="material-icons">chevron_left</i></li><li class="breadcrumb__item"><span class="breadcrumb__separator">/</span></li><li class="breadcrumb__item breadcrumb__item--current"><a class="breadcrumb__link" href="#">Burger Shop</a></li></ul></section><section class="restaurant-info"><p class="restaurant-info__heading">You are ordering from</p><h2 class="restaurant-info__name">Burger Shop</h2></section></header><main class="main checkout-page__main"><div class="checkout"><div class="customer-info"><section class="checkout-info-box user-info"><h3 class="user-info__heading-primary">New to Expresso?</h3><p class="user-info__heading-secondary">Please provide your name, email and phone to continue</p><div class="user-info__form"><div class="form-group"><input class="form-group__input" name="customer-name" id="customer-name" size="30" required> <label class="form-group__label" for="customer-name">Name</label></div><div class="form-group"><input class="form-group__input" name="customer-email" id="customer-email" size="30" required> <label class="form-group__label" for="customer-email">Email</label></div></div></section><section class="checkout-info-box delivery-info"><h4 class="delivery-info__heading">Delivery Details</h4><div class="delivery-info__form"><h5 class="delivery-info__form-title">Add new - <span class="delivery-info__form-address">Heliopolis, Cairo</span></h5><div class="delivery-info__form-fields"><div class="form-group"><input class="form-group__input" name="address-name" id="address-name" size="30" required> <label class="form-group__label" for="address-name">Address</label></div><div class="form-group"><input class="form-group__input" name="address-street" id="address-street" size="30" required> <label class="form-group__label" for="address-street">Street</label></div><div class="form-group"><input class="form-group__input" name="address-area" id="address-area" size="30" required> <label class="form-group__label" for="address-area">Area</label></div><div class="form-group"><input class="form-group__input" name="address-city" id="address-city" size="30" required> <label class="form-group__label" for="address-city">City</label></div><div class="form-group"><input class="form-group__input" name="address-building" id="address-building" size="30" required> <label class="form-group__label" for="address-building">House/Building</label></div><div class="form-group"><input class="form-group__input" name="address-apartment" id="address-apartment" size="30" required> <label class="form-group__label" for="address-apartment">Apartment/Office</label></div><div class="form-group"><input class="form-group__input" name="address-floor" id="address-floor" size="30" required> <label class="form-group__label" for="address-floor">Floor</label></div><div class="form-group"><input class="form-group__input" name="address-instructions" id="address-instructions" size="30" required> <label class="form-group__label" for="address-instructions">INstructions</label></div><div class="form-group"><input class="form-group__input" type="tel" name="address-mobile" id="address-mobile" size="30" required pattern="[0-9]{6,20}"> <label class="form-group__label" for="address-mobile">Mobile</label></div></div></div><div class="delivery-info__address"><button class="delivery-info__add">Add New Address</button> <span class="delivery-info__locate"><i class="delivery-info__locate-icon material-icons">info</i> Locate your address on the map</span></div><div class="delivery-info__time"><h5 class="delivery-info__time-heading">Expected Delivery Time</h5><div class="expected-delivery-time"><select class="expected-delivery-time__select"><option value="Now" class="expected-delivery-time__select-option">Now</option><option value="Now" class="expected-delivery-time__select-option">Today Jan 01 - 01:00 PM</option><option value="Now" class="expected-delivery-time__select-option">Today Jan 01 - 01:15 PM</option><option value="Now" class="expected-delivery-time__select-option">Today Jan 01 - 01:30 PM</option></select></div></div></section><section class="checkout-info-box payment-info"><h4 class="payment-info__heading">Payment Methods</h4><ul class="payment-info__options"><li class="payment-info__option"><input class="payment-info__option-input" type="radio" checked="checked" name="payment" id="cash_pay"> <label class="payment-info__option-label" for="cash_pay"><span class="payment-info__option-icon payment-info__option-icon--cash"></span><h5 class="payment-info__option-name">Cash on Delivery</h5></label></li><li class="payment-info__option"><input class="payment-info__option-input" type="radio" name="payment" id="card_pay"> <label class="payment-info__option-label" for="card_pay"><span class="payment-info__option-icon payment-info__option-icon--credit"></span><h5 class="payment-info__option-name">Credit Card</h5></label></li></ul></section></div><section class="checkout-info-box order-info"><section class="cart"><div class="cart__header"><div class="cart__header-main"><i class="cart__header-main-icon material-icons">shopping_cart</i><h3 class="cart__header-main-title">Your Oredr</h3></div><p class="cart__header-close cart__header-close--hidden"><i class="cart__header-close-icon fa fa-times"></i></p></div><div class="cart__items"><article class="cart__item"><div class="cart__item-detail"><p class="cart__item-name">Double Cheese Burger</p><p class="cart__item-price">75.00 EGP</p></div><div class="cart__item-controls"><div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div><p class="cart__item-controls-count">1</p><div class="cart__item-controls-btn cart__item-controls-btn-add">+</div></div></article><article class="cart__item"><div class="cart__item-detail"><p class="cart__item-name">Large Coca Cola</p><p class="cart__item-price">20.00 EGP</p></div><div class="cart__item-controls"><div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div><p class="cart__item-controls-count">1</p><div class="cart__item-controls-btn cart__item-controls-btn-add">+</div></div></article></div><div class="cart__pricing"><div class="cart__pricing-box cart__pricing-box-subtotal"><p class="cart__pricing-box__title">subtotal</p><p class="cart__pricing-box__value">95.00 EGP</p></div><div class="cart__pricing-box cart__pricing-box-delivery"><p class="cart__pricing-box__title">delivery fee</p><p class="cart__pricing-box__value">10.00 EGP</p></div><div class="cart__pricing-box cart__pricing-box-total"><p class="cart__pricing-box__title">Total</p><p class="cart__pricing-box__value">105.00 EGP</p></div></div><div class="cart__submit"><button class="cart__submit-btn">Place Order</button></div></section></section></div><div class="map-modal"><div class="map-modal__content"><div class="map-modal__head"><h3 class="map-modal__title">Choose your location</h3><p class="map-modal__close"><i class="map-modal__close-icon fa fa-times"></i></p></div><div class="map-modal__body"><p class="map-modal__caption">Please drag and drop the pin to your most accurate location.</p><div class="map-modal__map-container" id="map">MAP</div><button class="map-modal__confirm">Confirm</button></div></div></div></main></div><script>// Initialize and add the map
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresso - Checkout</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <div class="container checkout-page">
+
+        <header class="header checkout-page__header">
+            <section class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item breadcrumb__item--back">
+                        <i class="material-icons">chevron_left</i>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__separator">/</span>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--current">
+                        <a class="breadcrumb__link" href="#">Burger Shop</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="restaurant-info">
+                <p class="restaurant-info__heading">You are ordering from</p>
+                <h2 class="restaurant-info__name">Burger Shop</h2>
+            </section>
+        </header>
+
+        <main class="main checkout-page__main">
+
+            <div class="checkout">
+
+                <div class="customer-info">
+                    <section class="checkout-info-box user-info">
+                        <h3 class="user-info__heading-primary">New to Expresso?</h3>
+                        <p class="user-info__heading-secondary">Please provide your name, email and phone to continue
+                        </p>
+                        <div class="user-info__form">
+                            <div class="form-group">
+                                <input class="form-group__input" type="text" name="customer-name" id="customer-name"
+                                    size="30" required>
+                                <label class="form-group__label" for="customer-name">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-group__input" type="text" name="customer-email" id="customer-email"
+                                    size="30" required>
+                                <label class="form-group__label" for="customer-email">Email</label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="checkout-info-box delivery-info">
+                        <h4 class="delivery-info__heading">Delivery Details</h4>
+                        <div class="delivery-info__form">
+                            <h5 class="delivery-info__form-title">
+                                Add new - <span class="delivery-info__form-address">Heliopolis, Cairo</span>
+                            </h5>
+                            <div class="delivery-info__form-fields">
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-name" id="address-name"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-name">Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-street" id="address-street"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-street">Street</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-area" id="address-area"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-area">Area</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-city" id="address-city"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-city">City</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-building" id="address-building"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-building">House/Building</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-apartment" id="address-apartment"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-apartment">Apartment/Office</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-floor" id="address-floor"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-floor">Floor</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="text" name="address-instructions" id="address-instructions"
+                                        size="30" required>
+                                    <label class="form-group__label" for="address-instructions">INstructions</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-group__input" type="tel" name="address-mobile" id="address-mobile"
+                                        size="30" required pattern="[0-9]{6,20}">
+                                    <label class="form-group__label" for="address-mobile">Mobile</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-info__address">
+                            <button class="delivery-info__add">Add New Address</button>
+                            <span class="delivery-info__locate">
+                                <i class="delivery-info__locate-icon material-icons">info</i>
+                                Locate your address on the map
+                            </span>
+                        </div>
+                        <div class="delivery-info__time">
+                            <h5 class="delivery-info__time-heading">Expected Delivery Time</h5>
+                            <div class="expected-delivery-time">
+                                <select class="expected-delivery-time__select">
+                                    <option value="Now" class="expected-delivery-time__select-option">Now</option>
+                                    <option value="Now" class="expected-delivery-time__select-option">Today Jan 01 - 01:00 PM</option>
+                                    <option value="Now" class="expected-delivery-time__select-option">Today Jan 01 - 01:15 PM</option>
+                                    <option value="Now" class="expected-delivery-time__select-option">Today Jan 01 - 01:30 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="checkout-info-box payment-info">
+                        <h4 class="payment-info__heading">Payment Methods</h4>
+                        <ul class="payment-info__options">
+                            <li class="payment-info__option">
+                                <input class="payment-info__option-input" type="radio" checked name="payment" id="cash_pay">
+                                <label class="payment-info__option-label" for="cash_pay">
+                                    <span class="payment-info__option-icon payment-info__option-icon--cash"></span>
+                                    <h5 class="payment-info__option-name">Cash on Delivery</h5>
+                                </label>
+                            </li>
+                            <li class="payment-info__option">
+                                <input class="payment-info__option-input" type="radio" name="payment" id="card_pay">
+                                <label class="payment-info__option-label" for="card_pay">
+                                    <span class="payment-info__option-icon payment-info__option-icon--credit"></span>
+                                    <h5 class="payment-info__option-name">Credit Card</h5>
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <section class="checkout-info-box order-info">
+                    <section class="cart">
+                        <div class="cart__header">
+                            <div class="cart__header-main">
+                                <i class="cart__header-main-icon material-icons">shopping_cart</i>
+                                <h3 class="cart__header-main-title">Your Oredr</h3>
+                            </div>
+                            <p class="cart__header-close cart__header-close--hidden">
+                                <i class="cart__header-close-icon fa fa-times"></i>
+                            </p>
+                        </div>
+
+                        <div class="cart__items">
+                            <article class="cart__item">
+                                <div class="cart__item-detail">
+                                    <p class="cart__item-name">Double Cheese Burger</p>
+                                    <p class="cart__item-price">75.00 EGP</p>
+                                </div>
+                                <div class="cart__item-controls">
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                                    <p class="cart__item-controls-count">1</p>
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                                </div>
+                            </article>
+                            <article class="cart__item">
+                                <div class="cart__item-detail">
+                                    <p class="cart__item-name">Large Coca Cola</p>
+                                    <p class="cart__item-price">20.00 EGP</p>
+                                </div>
+                                <div class="cart__item-controls">
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                                    <p class="cart__item-controls-count">1</p>
+                                    <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="cart__pricing">
+                            <div class="cart__pricing-box cart__pricing-box-subtotal">
+                                <p class="cart__pricing-box__title">subtotal</p>
+                                <p class="cart__pricing-box__value">95.00 EGP</p>
+                            </div>
+                            <div class="cart__pricing-box cart__pricing-box-delivery">
+                                <p class="cart__pricing-box__title">delivery fee</p>
+                                <p class="cart__pricing-box__value">10.00 EGP</p>
+                            </div>
+                            <div class="cart__pricing-box cart__pricing-box-total">
+                                <p class="cart__pricing-box__title">Total</p>
+                                <p class="cart__pricing-box__value">105.00 EGP</p>
+                            </div>
+                        </div>
+
+                        <div class="cart__submit">
+                            <button class="cart__submit-btn">Place Order</button>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+
+            <!-- map modal -->
+            <div class="map-modal">
+                <div class="map-modal__content">
+                    <div class="map-modal__head">
+                        <h3 class="map-modal__title">Choose your location</h3>
+                        <p class="map-modal__close">
+                            <i class="map-modal__close-icon fa fa-times"></i>
+                        </p>
+                    </div>
+                    <div class="map-modal__body">
+                        <p class="map-modal__caption">Please drag and drop the pin to your most accurate location.</p>
+                        <div class="map-modal__map-container" id="map">
+                            MAP
+                        </div>
+                        <button class="map-modal__confirm">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        // Initialize and add the map
         function initMap() {
             // The location of Uluru
             var cairo = { lat: 30.044420, lng: 31.235712 };
@@ -7,4 +248,9 @@
                 document.getElementById('map'), { zoom: 15, center: cairo });
             // The marker, positioned at cairo
             var marker = new google.maps.Marker({ position: cairo, map: map });
-        }</script><script async defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGWfGrQbUf-NIaYCNEowKfdb3FQWjPrw&callback=initMap"></script><script src="../b3f5181a90bd855f615b.js"></script></body></html>
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGWfGrQbUf-NIaYCNEowKfdb3FQWjPrw&callback=initMap"></script>
+
+<script src="../bundle.js"></script></body>
+</html>
