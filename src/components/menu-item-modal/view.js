@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-unused-labels */
+/* eslint-disable no-labels */
+/* eslint-disable array-callback-return */
 /* eslint-disable dot-location */
 /* eslint-disable multiline-ternary */
 /* eslint-disable newline-after-var */
@@ -59,7 +63,7 @@ export class ItemModalView {
                             <section class="dish-info">
                                 <div class="dish-info__row">
                                     <h3 class="dish-info__name">${item.name}</h3>
-                                    <p class="dish-info__price">${item.price}.00 EGP</p>
+                                    <p class="dish-info__price"><span>${item.price}</span>.00 EGP</p>
                                 </div>
                                 <p class="dish-info__desc">${item.desc}.</p>
                             </section>
@@ -124,7 +128,7 @@ export class ItemModalView {
                 <input class="dish-option__input-checkbox" type="${inputType}" name="opt-${opt.id}" id="optItem-${optItem.id}" data-id="${optItem.id}">
                 <label class="dish-option__name" for="optItem-${optItem.id}">${optItem.name}</label>
             </div>
-            <p class="dish-option__price">7.50 EGP</p>
+            <p class="dish-option__price"><span>${optItem.price}</span>.00 EGP</p>
         </li>`;
     }
 
@@ -173,19 +177,20 @@ export class ItemModalView {
         countLabel.textContent = count;
     }
 
-    getItemId () {
-        return elements.modal.querySelector(".add-order-btn").dataset.id;
-    }
+    getItemData () {
+        const id = elements.modal.querySelector(".add-order-btn").dataset.id,
+              name = elements.modal.querySelector(".dish-info__name").textContent,
+              price = parseFloat(elements.modal.querySelector(".dish-info__price > span").textContent);
 
-    getItemCount () {
-        return parseInt(elements.modal.querySelector(".cart-controls__count").textContent);
+        return { id, name, price }
     }
 
     getCartData () {
 
-         let data = {
-            itemId: this.getItemId(),
-            count: this.getItemCount(),
+        const itemData = this.getItemData();
+
+         let cartData = {
+            count: parseInt(elements.modal.querySelector(".cart-controls__count").textContent),
             notes: document.querySelector("#notes").value,
             options: []
          };
@@ -193,17 +198,23 @@ export class ItemModalView {
         const optionElements = document.querySelectorAll(".dish-options[data-id]");
         if (optionElements) {
             optionElements.forEach(el => {
-                const optionId = el.dataset.id;
+                
+                const optionId = el.dataset.id,
+                      optionName = el.querySelector(".dish-options__title").textContent;
 
                 const selected = Array.from(el.querySelectorAll("input"))
-                    .filter(i => i.checked === true)
-                    .map(i => i.dataset.id);
+                    .filter(input => input.checked === true)
+                    .map(input => ({
+                         id: input.dataset.id,
+                         name: input.parentElement.parentElement.querySelector(".dish-option__name").textContent,
+                         price: parseFloat(input.parentElement.parentElement.querySelector(".dish-option__price > span").textContent)
+                    }));
 
-                data.options.push({ optionId, selected });
+                    cartData.options.push({ optionId, optionName, selected });
             });
         }
 
-        return data;
+        return { item: itemData, cart: cartData }
     }
 
 }
