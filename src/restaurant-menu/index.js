@@ -34,6 +34,7 @@ export default class RestaurantMenuPage {
         } catch (err) { handleError(err); }
     }
 
+
     setupEventListeners () {
         try {
 

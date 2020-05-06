@@ -8,7 +8,7 @@ import OptionItem from "../entities/optionItem";
 import OptionType from "../enums/optionType";
 
 export default class MenuService {
-    constructor () { }
+    constructor () {}
 
     getById (id) {
         return this.get().find(a => a.id === id);

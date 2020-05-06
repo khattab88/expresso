@@ -1174,10 +1174,11 @@ body {
     left: 0; }
   /* line 58, src/sass/components/_menu-item-modal.scss */
   .menu-item-modal__head {
+    width: 100%;
     max-height: 22rem;
     position: absolute;
     top: -10rem; }
-  /* line 63, src/sass/components/_menu-item-modal.scss */
+  /* line 64, src/sass/components/_menu-item-modal.scss */
   .menu-item-modal__close {
     position: absolute;
     top: 1rem;
@@ -1192,138 +1193,139 @@ body {
     color: #fff;
     padding-top: .5rem;
     transition: all .2s; }
-    /* line 78, src/sass/components/_menu-item-modal.scss */
+    /* line 79, src/sass/components/_menu-item-modal.scss */
     .menu-item-modal__close:hover {
       cursor: pointer;
       box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
       background-color: #323232; }
-  /* line 84, src/sass/components/_menu-item-modal.scss */
+  /* line 85, src/sass/components/_menu-item-modal.scss */
   .menu-item-modal__item-img {
+    background-color: #fff;
     width: 100%;
     max-height: 22rem;
     max-width: 100%;
     border-radius: .8rem;
     box-shadow: 0px 0.4rem 1.2rem -1px rgba(0, 0, 0, 0.4); }
     @media only screen and (min-width: 48em) {
-      /* line 84, src/sass/components/_menu-item-modal.scss */
+      /* line 85, src/sass/components/_menu-item-modal.scss */
       .menu-item-modal__item-img {
         max-height: 35rem; } }
-  /* line 95, src/sass/components/_menu-item-modal.scss */
+  /* line 97, src/sass/components/_menu-item-modal.scss */
   .menu-item-modal__body {
     padding-top: 15rem;
     color: #323232; }
     @media only screen and (min-width: 48em) {
-      /* line 95, src/sass/components/_menu-item-modal.scss */
+      /* line 97, src/sass/components/_menu-item-modal.scss */
       .menu-item-modal__body {
         padding-top: 28rem; } }
-  /* line 103, src/sass/components/_menu-item-modal.scss */
+  /* line 105, src/sass/components/_menu-item-modal.scss */
   .menu-item-modal__footer {
     margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem; }
 
-/* line 111, src/sass/components/_menu-item-modal.scss */
+/* line 113, src/sass/components/_menu-item-modal.scss */
 .dish-info {
   padding-bottom: 3rem; }
-  /* line 114, src/sass/components/_menu-item-modal.scss */
+  /* line 116, src/sass/components/_menu-item-modal.scss */
   .dish-info__row {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  /* line 119, src/sass/components/_menu-item-modal.scss */
+  /* line 121, src/sass/components/_menu-item-modal.scss */
   .dish-info__name {
     width: 60%;
     display: inline-block;
     padding-bottom: .8rem;
     font-size: 2.4rem;
     font-weight: 400; }
-  /* line 126, src/sass/components/_menu-item-modal.scss */
+  /* line 128, src/sass/components/_menu-item-modal.scss */
   .dish-info__price {
     font-size: 2rem; }
-  /* line 129, src/sass/components/_menu-item-modal.scss */
+  /* line 131, src/sass/components/_menu-item-modal.scss */
   .dish-info__desc {
     font-size: 1.75rem;
     letter-spacing: .25px; }
 
 /* dish options */
-/* line 136, src/sass/components/_menu-item-modal.scss */
+/* line 138, src/sass/components/_menu-item-modal.scss */
 .dish-options {
   padding-bottom: 2rem; }
-  /* line 140, src/sass/components/_menu-item-modal.scss */
+  /* line 142, src/sass/components/_menu-item-modal.scss */
   .dish-options--closed .dish-options__icon--arrow-up {
     display: none; }
-  /* line 141, src/sass/components/_menu-item-modal.scss */
+  /* line 143, src/sass/components/_menu-item-modal.scss */
   .dish-options--closed .dish-options__icon--arrow-down {
     display: block; }
-  /* line 143, src/sass/components/_menu-item-modal.scss */
+  /* line 145, src/sass/components/_menu-item-modal.scss */
   .dish-options--closed .dish-options__body {
     opacity: 0;
     visibility: hidden;
     height: 0; }
-  /* line 150, src/sass/components/_menu-item-modal.scss */
+  /* line 152, src/sass/components/_menu-item-modal.scss */
   .dish-options__head {
     display: flex;
     align-items: center;
     cursor: pointer; }
-  /* line 156, src/sass/components/_menu-item-modal.scss */
+  /* line 158, src/sass/components/_menu-item-modal.scss */
   .dish-options__title {
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.8rem;
     margin-right: auto; }
-  /* line 165, src/sass/components/_menu-item-modal.scss */
+  /* line 167, src/sass/components/_menu-item-modal.scss */
   .dish-options__icon i {
     font-size: 1.75rem;
     font-weight: 100;
     color: #009a9a; }
-  /* line 171, src/sass/components/_menu-item-modal.scss */
+  /* line 173, src/sass/components/_menu-item-modal.scss */
   .dish-options__icon--arrow-up {
     display: block; }
-  /* line 172, src/sass/components/_menu-item-modal.scss */
+  /* line 174, src/sass/components/_menu-item-modal.scss */
   .dish-options__icon--arrow-down {
     display: none; }
-  /* line 175, src/sass/components/_menu-item-modal.scss */
+  /* line 177, src/sass/components/_menu-item-modal.scss */
   .dish-options__body {
     opacity: 1;
     visibility: visible;
     transition: all .2s; }
-  /* line 181, src/sass/components/_menu-item-modal.scss */
+  /* line 183, src/sass/components/_menu-item-modal.scss */
   .dish-options__sigle-selection {
     list-style: none; }
 
-/* line 186, src/sass/components/_menu-item-modal.scss */
+/* line 188, src/sass/components/_menu-item-modal.scss */
 .validation-info {
   font-size: 1.5rem;
   line-height: 2.2rem;
   padding-bottom: .8rem;
   border-bottom: 1px solid #f9f9f9;
   letter-spacing: .5px; }
-  /* line 193, src/sass/components/_menu-item-modal.scss */
+  /* line 195, src/sass/components/_menu-item-modal.scss */
   .validation-info--required {
     color: #f33; }
-  /* line 196, src/sass/components/_menu-item-modal.scss */
+  /* line 198, src/sass/components/_menu-item-modal.scss */
   .validation-info--optional {
     color: #009a9a; }
 
-/* line 201, src/sass/components/_menu-item-modal.scss */
+/* line 203, src/sass/components/_menu-item-modal.scss */
 .dish-option {
   font: 300 17px/38px "Source Sans Pro",sans-serif;
   display: flex;
   justify-content: space-between; }
-  /* line 206, src/sass/components/_menu-item-modal.scss */
+  /* line 208, src/sass/components/_menu-item-modal.scss */
   .dish-option__detail {
     position: relative; }
-  /* line 210, src/sass/components/_menu-item-modal.scss */
+  /* line 212, src/sass/components/_menu-item-modal.scss */
   .dish-option__input-radio, .dish-option__input-checkbox {
     position: absolute;
     opacity: 0;
     margin-left: -2rem; }
-  /* line 217, src/sass/components/_menu-item-modal.scss */
+  /* line 219, src/sass/components/_menu-item-modal.scss */
   .dish-option__name {
     padding-left: .3rem;
     position: relative; }
-    /* line 222, src/sass/components/_menu-item-modal.scss */
+    /* line 224, src/sass/components/_menu-item-modal.scss */
     .dish-option__name::before {
       content: "";
       background-color: #fff;
@@ -1338,34 +1340,34 @@ body {
       bottom: 2px;
       position: relative;
       border: 1px solid #009a9a; }
-  /* line 239, src/sass/components/_menu-item-modal.scss */
+  /* line 241, src/sass/components/_menu-item-modal.scss */
   .dish-option input[type=radio] + label::before {
     border-radius: 50%; }
-  /* line 243, src/sass/components/_menu-item-modal.scss */
+  /* line 245, src/sass/components/_menu-item-modal.scss */
   .dish-option input[type=checkbox] + label::before {
     border-radius: 3px; }
-  /* line 247, src/sass/components/_menu-item-modal.scss */
+  /* line 249, src/sass/components/_menu-item-modal.scss */
   .dish-option input[type=radio]:checked + label::before,
   .dish-option input[type=checkbox]:checked + label::before {
     position: relative;
     content: "";
     background: url(../img/radio-button-selected.svg) no-repeat center center #009a9a; }
-  /* line 254, src/sass/components/_menu-item-modal.scss */
+  /* line 256, src/sass/components/_menu-item-modal.scss */
   .dish-option__price {
     font-size: 1.4rem; }
-  /* line 258, src/sass/components/_menu-item-modal.scss */
+  /* line 260, src/sass/components/_menu-item-modal.scss */
   .dish-option__input-textarea {
     width: 100%;
     border-radius: .3rem;
     padding: .5rem;
     font-size: 1.5rem; }
 
-/* line 266, src/sass/components/_menu-item-modal.scss */
+/* line 268, src/sass/components/_menu-item-modal.scss */
 .cart-controls {
   display: flex;
   justify-content: space-evenly;
   font-size: 3.5rem; }
-  /* line 271, src/sass/components/_menu-item-modal.scss */
+  /* line 273, src/sass/components/_menu-item-modal.scss */
   .cart-controls__btn {
     width: 5.2rem;
     height: 5.2rem;
@@ -1375,11 +1377,11 @@ body {
     vertical-align: middle;
     padding-top: .5rem;
     transition: all .2s; }
-    /* line 281, src/sass/components/_menu-item-modal.scss */
+    /* line 283, src/sass/components/_menu-item-modal.scss */
     .cart-controls__btn:hover {
       cursor: pointer;
       box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-  /* line 286, src/sass/components/_menu-item-modal.scss */
+  /* line 288, src/sass/components/_menu-item-modal.scss */
   .cart-controls__count {
     min-width: 5rem;
     min-height: 5.2rem;
@@ -1390,7 +1392,7 @@ body {
     flex-direction: column;
     justify-content: center; }
 
-/* line 298, src/sass/components/_menu-item-modal.scss */
+/* line 300, src/sass/components/_menu-item-modal.scss */
 .add-order-btn {
   background-color: #009a9a;
   font: 400 16px/22px "Oswald",sans-serif;
@@ -1402,16 +1404,16 @@ body {
   border-radius: .4rem;
   color: #fff;
   transition: all .2s; }
-  /* line 310, src/sass/components/_menu-item-modal.scss */
+  /* line 312, src/sass/components/_menu-item-modal.scss */
   .add-order-btn:hover {
     background-color: #323232;
     transform: scale(1.01); }
   @media only screen and (min-width: 30em) {
-    /* line 298, src/sass/components/_menu-item-modal.scss */
+    /* line 300, src/sass/components/_menu-item-modal.scss */
     .add-order-btn {
       width: 30rem; } }
   @media only screen and (min-width: 75em) {
-    /* line 298, src/sass/components/_menu-item-modal.scss */
+    /* line 300, src/sass/components/_menu-item-modal.scss */
     .add-order-btn {
       cursor: pointer;
       transform: translateY(-2px);

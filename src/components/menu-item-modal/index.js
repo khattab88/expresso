@@ -1,7 +1,9 @@
+/* eslint-disable indent-legacy */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import { handleError } from "../../base";
 
+import ItemModalModel from "./model";
 import { elements, ItemModalView } from "./view";
 
 export default class ItemModalComponent {
@@ -11,6 +13,7 @@ export default class ItemModalComponent {
     }
 
     init () {
+        this.model = new ItemModalModel();
         this.view = new ItemModalView();
     }
 
@@ -18,25 +21,27 @@ export default class ItemModalComponent {
         try {
 
             // open modal
-            elements.menuItemsWrapper.addEventListener("click", e => this.view.open(e));
+            elements.menuItemsWrapper.addEventListener("click", e => { 
+                try {
+                    const id = e.target.closest(".menu-item").id;
+
+                    this.model.setItem(id);
+                    this.view.open(this.model.item); 
+                } catch (err) {
+                    // handleError(err);
+                }
+            });
 
             // close modal
-            document.querySelector(".menu-item-modal__close").addEventListener("click", this.view.close);
-
-            // add to order
-            document.querySelector(".add-order-btn").addEventListener("click", e => {
-                this.view.close();
-
-                // display toast message
-                elements.toastMessage.classList.toggle("toast-message--visible");
-
-                setTimeout(() => {
-                    elements.toastMessage.classList.toggle("toast-message--visible");
-                }, 5000);
+            elements.modal.addEventListener("click", e => {
+                if (e.target.matches(".menu-item-modal__close, .menu-item-modal__close *")) {
+                    e.stopPropagation();
+                    this.view.close();
+                }
             });
 
             // toggle item option
-            elements.modalBody.addEventListener("click", e => {
+            elements.modal.addEventListener("click", e => {
                 if (e.target.matches(".dish-options__head, .dish-options__head *")) {
                     e.stopPropagation();
                     this.view.toggleItemOption(e);
@@ -44,8 +49,26 @@ export default class ItemModalComponent {
             });
 
             // increment/decrement menu item count
-            document.querySelectorAll(".cart-controls").
-                forEach(el => el.addEventListener("click", e => this.view.changeItemCount(e)));
+            elements.modal.addEventListener("click", e => {
+                if (e.target.matches(".cart-controls, .cart-controls *")) {
+                    this.view.changeItemCount(e);
+                }
+            });
+
+            // add to order
+            elements.modal.addEventListener("click", e => {
+                if (e.target.matches(".add-order-btn, .add-order-btn *")) {
+                    
+                    this.view.close();
+
+                    // display toast message
+                    elements.toastMessage.classList.toggle("toast-message--visible");
+
+                    setTimeout(() => {
+                        elements.toastMessage.classList.toggle("toast-message--visible");
+                    }, 5000);
+                }
+            });
 
         } catch (err) { handleError(err); }
     }

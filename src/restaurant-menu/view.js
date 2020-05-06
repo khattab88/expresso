@@ -56,8 +56,10 @@ export class RestaurantMenuPageView {
     }
 
     createMenuItem (menuItem) {
+        // console.log(menuItem);
+
         return `
-            <article class="menu-item" id="item-${menuItem.id}">
+            <article class="menu-item" id="${menuItem.id}">
                 <div class="menu-item__img" style="background-image: url(../assets/img/items/${menuItem.image})"></div>
                 <div class="menu-item__detail">
                     <div class="menu-item__detail-box">

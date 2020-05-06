@@ -1,3 +1,13 @@
+/* eslint-disable multiline-ternary */
+/* eslint-disable newline-after-var */
+/* eslint-disable quotes */
+/* eslint-disable no-else-return */
+/* eslint-disable nonblock-statement-body-position */
+/* eslint-disable semi */
+/* eslint-disable sort-vars */
+/* eslint-disable indent-legacy */
+/* eslint-disable indent */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 export const elements = {
     menuItemsWrapper: document.querySelector(".menu-items-wrapper"),
@@ -11,22 +21,134 @@ export const elements = {
 export class ItemModalView {
     constructor () { }
 
-    open (e) {
-        const item = e.target.closest(".menu-item");
+    open (item) {
+        // render 
+        this.render(item);
 
-        if (item) {
-            elements.modal.classList.remove("menu-item-modal--close");
-            elements.modal.classList.add("menu-item-modal--open");
-
-            document.body.style.overflow = "hidden";
-        }
+        // display
+        elements.modal.classList.remove("menu-item-modal--close");
+        elements.modal.classList.add("menu-item-modal--open");
+        document.body.style.overflow = "hidden";
     }
 
     close () {
         elements.modal.classList.remove("menu-item-modal--open");
         elements.modal.classList.add("menu-item-modal--close");
 
+        elements.modal.innerHTML = "";
+
         document.body.style.overflow = "initial";
+    }
+
+    render (item) {
+        // console.log(item);
+
+        elements.modal.innerHTML = "";
+
+        const markup = `
+        <div class="menu-item-modal__content menu-item-modal__content--animated" data-id="${item.id}">
+                    <div class="menu-item-modal__container">
+                        <div class="menu-item-modal__head">
+                            <p class="menu-item-modal__close"><i class="fa fa-times"></i></p>
+                            <img class="menu-item-modal__item-img" src="../assets/img/items/${item.image}"
+                                alt="${item.name}">
+                        </div>
+                        <div class="menu-item-modal__body">
+
+                            <section class="dish-info">
+                                <div class="dish-info__row">
+                                    <h3 class="dish-info__name">${item.name}</h3>
+                                    <p class="dish-info__price">${item.price}.00 EGP</p>
+                                </div>
+                                <p class="dish-info__desc">${item.desc}.</p>
+                            </section>
+
+                            ${item.options.map(opt => this.createOptionElement(opt)).join("")}
+
+                            ${this.createNotesElement()}
+
+                        </div>
+
+                        <div class="menu-item-modal__footer">
+                            <div class="cart-controls">
+                                <span class="cart-controls__btn cart-controls__btn-remove">-</span>
+                                <p class="cart-controls__count">1</p>
+                                <span class="cart-controls__btn cart-controls__btn-add">+</span>
+                            </div>
+                            <button class="add-order-btn">Add to order</button>
+                        </div>
+                    </div>
+                </div>`;
+
+        elements.modal.innerHTML = markup;
+    }
+
+    createOptionElement (opt) {
+
+        return `
+            <article class="dish-options" data-id="${opt.id}">
+
+                <div class="dish-options__head">
+                    <h4 class="dish-options__title">${opt.name}</h4>
+                    <span class="dish-options__icon dish-options__icon--arrow-up"><i
+                            class="fa fa-chevron-up"></i></span>
+                    <span class="dish-options__icon dish-options__icon--arrow-down"><i
+                            class="fa fa-chevron-down"></i></span>
+                </div>
+
+                ${this.createValidationMsg(opt.type)}
+
+                ${this.createOptionItems(opt)}
+
+            </article>
+        `;
+    }
+
+    createOptionItems (opt) {
+        const selection = opt.type === "Required" ? "sigle-selection" : "multiple-selection";
+
+        return `
+            <ul class="dish-options__body dish-options__${selection}">
+                ${opt.optionItems.map(optItem => this.createOptionItem(optItem, opt)).join("")}
+            </ul>
+        `;
+    }
+
+    createOptionItem (optItem, opt) {
+        const inputType = opt.type === "Required" ? "radio" : "checkbox";
+
+        return `
+        <li class="dish-option">
+            <div class="dish-option__detail">
+                <input class="dish-option__input-checkbox" type="${inputType}" name="opt-${opt.id}" id="optItem-${optItem.id}">
+                <label class="dish-option__name" for="optItem-${optItem.id}">${optItem.name}</label>
+            </div>
+            <p class="dish-option__price">7.50 EGP</p>
+        </li>`;
+    }
+
+
+    createValidationMsg (type) {
+        return type === "Required" 
+                        ? `<p class="validation-info validation-info--required">Required, choose at least one.</p>` 
+                        : `<p class="validation-info validation-info--optional">Optional, choose multiple.</p>`;
+    }
+
+    createNotesElement () {
+        return `
+            <article class="dish-options">
+                <div class="dish-options__head">
+                    <h4 class="dish-options__title">Add Special Instructions</h4>
+                    <span class="dish-options__icon dish-options__icon--arrow-up"><i
+                            class="fa fa-chevron-up"></i></span>
+                    <span class="dish-options__icon dish-options__icon--arrow-down"><i
+                            class="fa fa-chevron-down"></i></span>
+                </div>
+                <p class="validation-info validation-info--optional"></p>
+                <textarea class="dish-options__body dish-option__input-textarea" name="notes" id="notes"
+                    cols="40" rows="6"
+                    placeholder="Add a note (food allergies, extra sauce, no onions, etc.). Please be clear and concise so we can get your order perfect."></textarea>
+            </article>`;
     }
 
     toggleItemOption (e) {
@@ -36,8 +158,10 @@ export class ItemModalView {
     }
 
     changeItemCount (e) {
-        const op = e.target.closest(".cart-controls__btn").textContent;
-        const countLabel = elements.itemCount;
+        const btn = e.target.closest(".cart-controls__btn"),
+              op = btn.textContent,
+              countLabel = btn.parentElement.querySelector(".cart-controls__count");
+
         let count = parseInt(countLabel.textContent);
 
         if (op === "+") { count++; }
