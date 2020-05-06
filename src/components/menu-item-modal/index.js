@@ -1,3 +1,4 @@
+/* eslint-disable no-warning-comments */
 /* eslint-disable indent-legacy */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
@@ -59,6 +60,10 @@ export default class ItemModalComponent {
             elements.modal.addEventListener("click", e => {
                 if (e.target.matches(".add-order-btn, .add-order-btn *")) {
                     
+                    const orderData = this.view.getOrderData();
+                    
+                    this.model.addToOrder(orderData);
+
                     this.view.close();
 
                     // display toast message

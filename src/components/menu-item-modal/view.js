@@ -1,3 +1,4 @@
+/* eslint-disable dot-location */
 /* eslint-disable multiline-ternary */
 /* eslint-disable newline-after-var */
 /* eslint-disable quotes */
@@ -75,7 +76,7 @@ export class ItemModalView {
                                 <p class="cart-controls__count">1</p>
                                 <span class="cart-controls__btn cart-controls__btn-add">+</span>
                             </div>
-                            <button class="add-order-btn">Add to order</button>
+                            <button class="add-order-btn" data-id="${item.id}">Add to order</button>
                         </div>
                     </div>
                 </div>`;
@@ -120,7 +121,7 @@ export class ItemModalView {
         return `
         <li class="dish-option">
             <div class="dish-option__detail">
-                <input class="dish-option__input-checkbox" type="${inputType}" name="opt-${opt.id}" id="optItem-${optItem.id}">
+                <input class="dish-option__input-checkbox" type="${inputType}" name="opt-${opt.id}" id="optItem-${optItem.id}" data-id="${optItem.id}">
                 <label class="dish-option__name" for="optItem-${optItem.id}">${optItem.name}</label>
             </div>
             <p class="dish-option__price">7.50 EGP</p>
@@ -171,4 +172,38 @@ export class ItemModalView {
 
         countLabel.textContent = count;
     }
+
+    getItemId () {
+        return elements.modal.querySelector(".add-order-btn").dataset.id;
+    }
+
+    getItemCount () {
+        return parseInt(elements.modal.querySelector(".cart-controls__count").textContent);
+    }
+
+    getOrderData () {
+
+         let data = {
+            itemId: this.getItemId(),
+            count: this.getItemCount(),
+            notes: document.querySelector("#notes").value,
+            options: []
+         };
+        
+        const optionElements = document.querySelectorAll(".dish-options[data-id]");
+        if (optionElements) {
+            optionElements.forEach(el => {
+                const optionId = el.dataset.id;
+
+                const selected = Array.from(el.querySelectorAll("input"))
+                    .filter(i => i.checked === true)
+                    .map(i => i.dataset.id);
+
+                data.options.push({ optionId, selected });
+            });
+        }
+
+        return data;
+    }
+
 }
