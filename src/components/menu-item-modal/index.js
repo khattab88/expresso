@@ -56,13 +56,13 @@ export default class ItemModalComponent {
                 }
             });
 
-            // add to order
+            // add to cart
             elements.modal.addEventListener("click", e => {
                 if (e.target.matches(".add-order-btn, .add-order-btn *")) {
                     
-                    const orderData = this.view.getOrderData();
-                    
-                    this.model.addToOrder(orderData);
+                    const cartData = this.view.getCartData();
+
+                    this.model.addToCart(cartData);
 
                     this.view.close();
 

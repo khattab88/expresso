@@ -181,7 +181,7 @@ export class ItemModalView {
         return parseInt(elements.modal.querySelector(".cart-controls__count").textContent);
     }
 
-    getOrderData () {
+    getCartData () {
 
          let data = {
             itemId: this.getItemId(),
