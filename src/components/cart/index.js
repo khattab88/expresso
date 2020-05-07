@@ -17,11 +17,20 @@ export default class CartComponent {
 
         this.model.items = this.view.getItems();
 
-        this.view.displayInfo(
-            this.model.getSubTotal(),
-            this.model.getDeliveryFee(),
-            this.model.getTotal()
-        );
+        this.display();
+    }
+
+    display () {
+        if (this.model.empty) {
+            this.view.displayEmptyTemplate();
+        } 
+        else {
+            this.view.displayInfo(
+                this.model.getSubTotal(),
+                this.model.getDeliveryFee(),
+                this.model.getTotal()
+            );
+        }
     }
 
     setupEventListeners () {

@@ -1,6 +1,8 @@
 export default class CartModel {
-    constructor (items) {
+    constructor (items = []) {
         this.items = items;
+
+        this.empty = this.items.length < 1;
     }
 
     getSubTotal () {

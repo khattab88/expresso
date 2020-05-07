@@ -60,4 +60,9 @@ export class CartView {
         elements.deliveryFee.textContent = formatCurrency(deliveryFee);
         elements.total.textContent = formatCurrency(total); 
     }
+
+    displayEmptyTemplate () {
+        // hide cart sections
+        document.querySelectorAll(".cart__items, .cart__pricing, .cart__submit").forEach(el => el.style.display = "none");
+    }
 }

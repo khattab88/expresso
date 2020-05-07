@@ -1422,12 +1422,13 @@ body {
 /* cart */
 /* line 3, src/sass/components/_cart.scss */
 .cart {
-  min-height: 20rem;
+  position: relative;
+  min-height: 40rem;
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
   color: #323232; }
-  /* line 10, src/sass/components/_cart.scss */
+  /* line 11, src/sass/components/_cart.scss */
   .cart__header {
     display: flex;
     justify-content: space-between;
@@ -1435,61 +1436,61 @@ body {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #d5d5d5;
     color: inherit; }
-    /* line 17, src/sass/components/_cart.scss */
+    /* line 18, src/sass/components/_cart.scss */
     .cart__header-main {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      /* line 20, src/sass/components/_cart.scss */
+      /* line 21, src/sass/components/_cart.scss */
       .cart__header-main-icon {
         font-size: 3rem; }
-      /* line 23, src/sass/components/_cart.scss */
+      /* line 24, src/sass/components/_cart.scss */
       .cart__header-main-title {
         margin-left: 1rem;
         font-size: 2.4rem;
         font-weight: 400; }
-    /* line 29, src/sass/components/_cart.scss */
+    /* line 30, src/sass/components/_cart.scss */
     .cart__header-close {
       color: #009a9a;
       transition: all .2s; }
-      /* line 33, src/sass/components/_cart.scss */
+      /* line 34, src/sass/components/_cart.scss */
       .cart__header-close:hover {
         cursor: pointer;
         color: #323232;
         box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-      /* line 39, src/sass/components/_cart.scss */
+      /* line 40, src/sass/components/_cart.scss */
       .cart__header-close--visible {
         display: inline-block; }
-      /* line 42, src/sass/components/_cart.scss */
+      /* line 43, src/sass/components/_cart.scss */
       .cart__header-close--hidden {
         display: none; }
-      /* line 45, src/sass/components/_cart.scss */
+      /* line 46, src/sass/components/_cart.scss */
       .cart__header-close-icon {
         font-size: 2.4rem; }
-  /* line 51, src/sass/components/_cart.scss */
+  /* line 52, src/sass/components/_cart.scss */
   .cart__items {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #d5d5d5; }
-    /* line 56, src/sass/components/_cart.scss */
+    /* line 57, src/sass/components/_cart.scss */
     .cart__items .cart__item {
       margin-bottom: 1.5rem; }
-      /* line 59, src/sass/components/_cart.scss */
+      /* line 60, src/sass/components/_cart.scss */
       .cart__items .cart__item-detail {
         display: flex;
         justify-content: space-between;
         margin-bottom: .5rem; }
-      /* line 64, src/sass/components/_cart.scss */
+      /* line 65, src/sass/components/_cart.scss */
       .cart__items .cart__item-name, .cart__items .cart__item-price {
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 2.2rem;
         letter-spacing: .25px; }
-      /* line 72, src/sass/components/_cart.scss */
+      /* line 73, src/sass/components/_cart.scss */
       .cart__items .cart__item-controls {
         position: relative;
         display: flex; }
-        /* line 76, src/sass/components/_cart.scss */
+        /* line 77, src/sass/components/_cart.scss */
         .cart__items .cart__item-controls-btn {
           padding: 1.25rem;
           border-radius: .4rem;
@@ -1504,15 +1505,15 @@ body {
           margin-right: .5rem;
           background-color: #f9f9f9;
           transition: 0.2s; }
-          /* line 91, src/sass/components/_cart.scss */
+          /* line 92, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-btn:hover {
             cursor: pointer;
             background-color: #323232;
             color: #f9f9f9; }
-          /* line 97, src/sass/components/_cart.scss */
+          /* line 98, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-btn-remove {
             padding: 1.5rem; }
-        /* line 101, src/sass/components/_cart.scss */
+        /* line 102, src/sass/components/_cart.scss */
         .cart__items .cart__item-controls-count {
           padding-bottom: .6rem;
           border-radius: .4rem;
@@ -1525,7 +1526,7 @@ body {
           align-items: center;
           background-color: #fff;
           margin-right: .5rem; }
-        /* line 115, src/sass/components/_cart.scss */
+        /* line 116, src/sass/components/_cart.scss */
         .cart__items .cart__item-controls-remove {
           position: absolute;
           top: .25rem;
@@ -1535,10 +1536,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center; }
-          /* line 124, src/sass/components/_cart.scss */
+          /* line 125, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-remove--hidden {
             display: none; }
-          /* line 126, src/sass/components/_cart.scss */
+          /* line 127, src/sass/components/_cart.scss */
           .cart__items .cart__item-controls-remove span {
             display: flex;
             display: flex;
@@ -1555,37 +1556,37 @@ body {
             text-align: center;
             border-radius: 25px;
             transition: all .2s ease-in-out; }
-            /* line 142, src/sass/components/_cart.scss */
+            /* line 143, src/sass/components/_cart.scss */
             .cart__items .cart__item-controls-remove span:hover {
               background-color: #009a9a;
               color: #fff; }
-  /* line 152, src/sass/components/_cart.scss */
+  /* line 153, src/sass/components/_cart.scss */
   .cart__pricing {
     margin-top: .5rem; }
-    /* line 155, src/sass/components/_cart.scss */
+    /* line 156, src/sass/components/_cart.scss */
     .cart__pricing-box {
       font-size: 1.6rem;
       font-weight: 300;
       padding-top: 1rem;
       display: flex;
       justify-content: space-between; }
-      /* line 162, src/sass/components/_cart.scss */
+      /* line 163, src/sass/components/_cart.scss */
       .cart__pricing-box__title, .cart__pricing-box__value {
         font-size: 1.8rem;
         letter-spacing: .25px; }
-      /* line 168, src/sass/components/_cart.scss */
+      /* line 169, src/sass/components/_cart.scss */
       .cart__pricing-box-total {
         font-size: 2rem;
         font-weight: 400;
         margin-top: 1.5rem;
         border-top: 1px solid #d5d5d5; }
-  /* line 177, src/sass/components/_cart.scss */
+  /* line 178, src/sass/components/_cart.scss */
   .cart__submit {
     margin: 4rem auto 2rem auto;
     margin-top: 4rem;
     width: 98%;
     text-align: center; }
-    /* line 183, src/sass/components/_cart.scss */
+    /* line 184, src/sass/components/_cart.scss */
     .cart__submit-btn {
       font: 400 20px/26px "Oswald",sans-serif;
       padding: 1.5rem 1rem;
@@ -1598,11 +1599,22 @@ body {
       color: #fff;
       line-height: 2.2rem;
       transition: all 0.3s; }
-      /* line 196, src/sass/components/_cart.scss */
+      /* line 197, src/sass/components/_cart.scss */
       .cart__submit-btn:hover {
         background-color: #323232;
         cursor: pointer;
         transform: scale(1.05); }
+  /* line 205, src/sass/components/_cart.scss */
+  .cart__empty-template {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    /* line 211, src/sass/components/_cart.scss */
+    .cart__empty-template p {
+      width: 30rem;
+      font-size: 2.3rem;
+      text-align: center; }
 
 /* Cart Modal */
 /* line 3, src/sass/components/_cart-modal.scss */
@@ -1650,6 +1662,7 @@ body {
     border-radius: .4rem;
     width: inherit;
     height: inherit;
+    min-height: 40rem;
     margin: 0 auto;
     pointer-events: all;
     border: 0;
@@ -1673,11 +1686,11 @@ body {
       .cart-modal__content {
         width: 45%;
         margin-top: 10rem; } }
-  /* line 77, src/sass/components/_cart-modal.scss */
+  /* line 78, src/sass/components/_cart-modal.scss */
   .cart-modal__content--animated {
     animation: moveInDown .65s ease-out; }
 
-/* line 82, src/sass/components/_cart-modal.scss */
+/* line 83, src/sass/components/_cart-modal.scss */
 .vertical-alignment-helper {
   display: table;
   height: 100%;
@@ -1685,7 +1698,7 @@ body {
   pointer-events: none;
   margin: 0 auto; }
 
-/* line 89, src/sass/components/_cart-modal.scss */
+/* line 90, src/sass/components/_cart-modal.scss */
 .modal-dialog {
   position: relative;
   width: auto;
