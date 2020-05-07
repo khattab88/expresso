@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { handleError } from "../../base";
 
 import CartModel from "./model";
@@ -15,16 +16,21 @@ export default class CartComponent {
         this.model = new CartModel();
         this.view = new CartView();
 
-        this.model.items = this.view.getItems();
+        this.model.items = this.model.getData();
+        console.log(this.model);
 
         this.display();
     }
 
     display () {
         if (this.model.empty) {
-            this.view.displayEmptyTemplate();
+            this.view.showEmptyTemplate();
         } 
         else {
+            this.view.hideEmptyTemplate();
+
+            this.view.renderItems(this.model.items);
+
             this.view.displayInfo(
                 this.model.getSubTotal(),
                 this.model.getDeliveryFee(),

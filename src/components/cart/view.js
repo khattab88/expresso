@@ -17,6 +17,31 @@ export const elements = {
 export class CartView {
     constructor () { }
 
+    renderItems (items) {
+        const markup = items.map(item => this.createItem(item)).join("");
+
+        elements.cartItems.innerHTML = markup;
+    }
+
+    createItem (cartItem) {
+        return `
+        <article class="cart__item">
+            <div class="cart__item-detail">
+                <p class="cart__item-name">${cartItem.item.name}</p>
+                <p class="cart__item-price">${cartItem.item.price}.00 EGP</p>
+            </div>
+            <div class="cart__item-controls">
+                <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
+                <p class="cart__item-controls-count">${cartItem.cart.count}</p>
+                <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
+                <a class="cart__item-controls-remove" rel="nofollow">
+                    <span>x</span>
+                </a>
+            </div>
+        </article>
+        `;
+    }
+
     removeItem (e) {
         const item = e.target.closest(".cart__item-controls-remove").closest(".cart__item");
 
@@ -39,6 +64,7 @@ export class CartView {
         countLabel.textContent = count;
     }
 
+    /* UNNECESSARY */
     getItems () {
         let id = 0;
         let items = [];
@@ -61,8 +87,15 @@ export class CartView {
         elements.total.textContent = formatCurrency(total); 
     }
 
-    displayEmptyTemplate () {
+    showEmptyTemplate () {
         // hide cart sections
         document.querySelectorAll(".cart__items, .cart__pricing, .cart__submit").forEach(el => el.style.display = "none");
     }
+
+    hideEmptyTemplate () {
+        document.querySelector(".cart__empty-template").style.display = "none";
+
+        document.querySelectorAll(".cart__items, .cart__pricing, .cart__submit").forEach(el => el.style.display = "block");
+    }
+
 }
