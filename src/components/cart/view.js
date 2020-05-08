@@ -1,3 +1,6 @@
+/* eslint-disable lines-around-comment */
+/* eslint-disable multiline-ternary */
+/* eslint-disable no-extra-parens */
 /* eslint-disable no-undef */
 import CartItem from "../../core/entities/cartItem";
 
@@ -24,12 +27,20 @@ export class CartView {
     }
 
     createItem (cartItem) {
+
         return `
-        <article class="cart__item">
+        <article class="cart__item" data-item-id="${cartItem.item.id}">
             <div class="cart__item-detail">
                 <p class="cart__item-name">${cartItem.item.name}</p>
                 <p class="cart__item-price">${cartItem.item.price}.00 EGP</p>
             </div>
+
+            <div class="cart__item-options">
+                ${cartItem.cart.options.map(opt => this.renderItemOption(opt)).join("")}
+            </div> 
+
+            ${this.renderNotes(cartItem.cart.notes)}
+
             <div class="cart__item-controls">
                 <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
                 <p class="cart__item-controls-count">${cartItem.cart.count}</p>
@@ -40,6 +51,32 @@ export class CartView {
             </div>
         </article>
         `;
+    }
+
+    renderItemOption (opt) {
+
+        const renderSelected = (s) => `<span data-selected-id="${s.id}" data-selected-price="${s.price}">${s.name}: ${s.price}.00 EGP</span>`;
+
+        return `
+            <li class="cart__item-option" data-option-id="${opt.optionId}">
+                <p>${opt.optionName}:</p>
+                ${opt.selected.map(s => renderSelected(s)).join("")}
+            </li>
+        `;
+    }
+
+    renderNotes (notes) {
+        let markup = "";
+
+        if (notes) {
+            markup = 
+            `<div class="cart__item-notes">
+                <p>Notes:</p>
+                <span>${notes}.</span>
+            </div>`;
+        }
+        
+        return markup;
     }
 
     removeItem (e) {
@@ -88,6 +125,8 @@ export class CartView {
     }
 
     showEmptyTemplate () {
+        document.querySelector(".cart__empty-template").style.display = "block";
+
         // hide cart sections
         document.querySelectorAll(".cart__items, .cart__pricing, .cart__submit").forEach(el => el.style.display = "none");
     }
