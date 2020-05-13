@@ -2353,6 +2353,19 @@ body {
     font-size: 1.65rem;
     letter-spacing: .25px; }
 
+/* line 1, src/sass/components/_loader.scss */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 5rem;
+  height: 5rem; }
+  /* line 12, src/sass/components/_loader.scss */
+  .loader--hidden {
+    display: none; }
+
 /* Home */
 /* header */
 /* line 4, src/sass/pages/_home.scss */
@@ -3118,7 +3131,7 @@ body {
 /* line 349, src/sass/pages/_restaurant-list.scss */
 .restaurant-list {
   position: relative;
-  min-height: 40rem;
+  min-height: 20rem;
   margin-bottom: 4rem;
   display: grid;
   grid-template-columns: auto;

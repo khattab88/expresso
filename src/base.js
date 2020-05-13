@@ -13,3 +13,11 @@ export const getQueryString = (name) => {
 
 // eslint-disable-next-line no-return-assign
 export const setQueryString = (name, value) => document.location = `?${name}=${value}`;
+
+export const setTimer = (duration) => {
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve(), duration);
+    });
+
+    return promise;
+};

@@ -1,6 +1,8 @@
+/* eslint-disable indent-legacy */
+/* eslint-disable indent */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { handleError, getQueryString } from "../base";
+import { handleError, getQueryString, setTimer } from "../base"; 
 
 import RestaurantListPageModel from "./model";
 import { elements, RestaurantListPageView } from "./view";
@@ -9,6 +11,8 @@ import NavComponent from "../components/nav/index";
 import FooterComponent from "../components/footer/index";
 import LocationSelectionComponent from "../components/location-selection/index";
 import RestaurantSelectionComponent from "../components/restaurant-selection/index";
+
+import Loader from "../components/UI/loader";
 
 export default class RestaurantListPage {
     constructor () {
@@ -47,15 +51,25 @@ export default class RestaurantListPage {
 
     displayList () {
 
-        // show/hide empty list template
-        if (this.model.filteredList.length === 0 || this.model.restaurants.length === 0) {
-            this.view.displayEmptyTemplate(true);
-        } else {
-            this.view.displayEmptyTemplate(false);
-        }
-
         this.view.clearList();
-        this.model.filteredList.forEach(r => this.view.renderBranchCard(r));
+
+        // display loader
+        const loader = new Loader(elements.restaurantList);
+
+        setTimer(2000).then(() => {
+
+            // hide loader
+            loader.hide();
+
+            // show/hide empty list template
+            if (this.model.filteredList.length === 0 || this.model.restaurants.length === 0) {
+                this.view.displayEmptyTemplate(true);
+            } else {
+                this.view.displayEmptyTemplate(false);
+            }
+
+            this.model.filteredList.forEach(r => this.view.renderBranchCard(r));
+        });
     }
 
     displayTags () {
