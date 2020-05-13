@@ -10,6 +10,7 @@ import { handleError } from "../../base";
 import ItemModalModel from "./model";
 import { elements, ItemModalView } from "./view";
 import OptionType from "../../core/enums/optionType";
+import ToastMessage from "../UI/toastMessage";
 
 export default class ItemModalComponent {
     constructor () {
@@ -92,13 +93,13 @@ export default class ItemModalComponent {
 
             this.view.close();
 
+            const toastMessage = new ToastMessage("Item added to cart");
+
             // display toast message
-            elements.toastMessage.classList.toggle("toast-message--visible");
+            toastMessage.toggle();
 
             // hide toast message
-            setTimeout(() => {
-                elements.toastMessage.classList.toggle("toast-message--visible");
-            }, 5000);
+            setTimeout(() => toastMessage.toggle(), 5000);
         } else {
             const requiredElements = this.view.getRequiredOptions();
 
