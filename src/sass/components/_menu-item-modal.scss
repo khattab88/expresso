@@ -136,6 +136,7 @@
 
 /* dish options */
 .dish-options {
+    position: relative;
     padding-bottom: 2rem;
 
     &--closed {
@@ -312,6 +313,12 @@
     &:hover {
         background-color: $color-font-dark;
         transform: scale(1.01);
+    }
+
+    &:disabled,
+    &[disabled] {
+        transform: scale(1);
+        cursor: not-allowed;
     }
 
     @include respond(phone-land) {

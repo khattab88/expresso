@@ -1,3 +1,5 @@
+import Tooltip from "../UI/tooltip";
+
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-unused-labels */
 /* eslint-disable no-labels */
@@ -20,7 +22,8 @@ export const elements = {
     modal: document.querySelector(".menu-item-modal"),
     modalBody: document.querySelector(".menu-item-modal__body"),
     itemCount: document.querySelector(".cart-controls__count"),
-    toastMessage: document.querySelector(".toast-message")
+    toastMessage: document.querySelector(".toast-message"),
+    addToCart: document.querySelector(".add-order-btn")
 };
 
 export class ItemModalView {
@@ -80,7 +83,7 @@ export class ItemModalView {
                                 <p class="cart-controls__count">1</p>
                                 <span class="cart-controls__btn cart-controls__btn-add">+</span>
                             </div>
-                            <button class="add-order-btn" data-id="${item.id}">Add to order</button>
+                            <button type="button" class="add-order-btn" data-id="${item.id}" >Add to order</button>
                         </div>
                     </div>
                 </div>`;
@@ -91,7 +94,7 @@ export class ItemModalView {
     createOptionElement (opt) {
 
         return `
-            <article class="dish-options" data-id="${opt.id}">
+            <article class="dish-options" data-id="${opt.id}" data-type="${opt.type}">
 
                 <div class="dish-options__head">
                     <h4 class="dish-options__title">${opt.name}</h4>
@@ -200,7 +203,8 @@ export class ItemModalView {
             optionElements.forEach(el => {
                 
                 const optionId = el.dataset.id,
-                      optionName = el.querySelector(".dish-options__title").textContent;
+                      optionName = el.querySelector(".dish-options__title").textContent,
+                      optionType = el.dataset.type;
 
                 const selected = Array.from(el.querySelectorAll("input"))
                     .filter(input => input.checked === true)
@@ -210,11 +214,22 @@ export class ItemModalView {
                          price: parseFloat(input.parentElement.parentElement.querySelector(".dish-option__price > span").textContent)
                     }));
 
-                    cartData.options.push({ optionId, optionName, selected });
+                    cartData.options.push({ optionId, optionName, optionType, selected });
             });
         }
 
         return { item: itemData, cart: cartData }
+    }
+
+    getRequiredOptions () {
+        return document.querySelectorAll(".dish-options[data-type='Required']");
+    }
+
+    displayTooltip (message, parent, top, left) {
+        const tooltip = new Tooltip(message, parent, top, left);
+        tooltip.render();
+
+        setTimeout(() => { tooltip.hide() }, 3000);
     }
 
 }

@@ -2,10 +2,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import ItemService from "../../core/services/item-service";
+import OptionType from "../../core/enums/optionType";
 
 export default class ItemModalModel {
     constructor () {
         this.itemService = new ItemService();
+
+        this.valid = false;
     }
 
     setItem (id) {
