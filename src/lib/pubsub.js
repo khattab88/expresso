@@ -9,11 +9,7 @@
 /* eslint-disable curly */
 class PubSub {
 
-    constructor () {
-        // this.subscribers = {};
-
-        // PubSub.subscribers = {};
-    }
+    // https://medium.com/@thebabscraig/javascript-design-patterns-part-2-the-publisher-subscriber-pattern-8fe07e157213
 
     static subscribers = {};
 
