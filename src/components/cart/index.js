@@ -16,10 +16,14 @@ export default class CartComponent {
         this.model = new CartModel();
         this.view = new CartView();
 
-        this.model.items = this.model.getData();
-        console.log(this.model);
+        this.setData();
 
         this.display();
+    }
+
+    setData () {
+        this.model.items = this.model.getData();
+        console.log(this.model);
     }
 
     display () {
