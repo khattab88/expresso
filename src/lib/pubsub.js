@@ -33,7 +33,7 @@ class PubSub {
         index = PubSub.subscribers[event].push(callback) - 1;
 
         return {
-            unsubscribe () {
+            unsubscribe (event) {
                 PubSub.subscribers[event].splice(index, 1);
             }
         };
