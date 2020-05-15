@@ -5,10 +5,9 @@
 /* eslint-disable array-element-newline */
 /* eslint-disable comma-spacing */
 
-import Utils from "../utils";
-
+/* State */
 export default {
     cart: {
-        items: []
+        items: JSON.parse(sessionStorage.getItem("expresso_cart") || "[]")   
     } 
 };
