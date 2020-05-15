@@ -9,5 +9,6 @@
 export default {
     cart: {
         items: JSON.parse(sessionStorage.getItem("expresso_cart") || "[]")   
-    } 
+    },
+    area: { id: "1" }
 };

@@ -14,5 +14,10 @@ export default {
         state.cart.items.splice(payload.index, 1);
         
         return state;
+    },
+    changeArea (state, payload) {
+        state.area.id = payload;
+
+        return state;
     }
 };

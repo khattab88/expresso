@@ -42,6 +42,8 @@ export default class Store {
         self.state = new Proxy((params.state || {}), {
             set: function (state, key, value) {
 
+                console.dir(state, key, value);
+
                 // Set the value as we would normally
                 state[key] = value;
 

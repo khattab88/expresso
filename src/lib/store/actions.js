@@ -5,5 +5,8 @@ export default {
     },
     clearCartItem (context, payload) {
         context.commit("clearCartItem", payload);
+    },
+    changeArea (context, payload) {
+        context.commit("changeArea", payload);
     }
 };

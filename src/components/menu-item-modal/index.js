@@ -110,8 +110,11 @@ export default class ItemModalComponent extends Component {
 
         if (valid) {
 
-            // publish addItemToCart event
+            // call store addCartItem action
             store.dispatch("addCartItem", cartData);
+
+            // TEST
+            // store.dispatch("changeArea", "2");
 
             this.close();
 
