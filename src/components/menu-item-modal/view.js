@@ -29,14 +29,10 @@ export const elements = {
 export class ItemModalView {
     constructor () { }
 
-    open (item) {
-        // render 
-        this.render(item);
-
-        // display
-        elements.modal.classList.remove("menu-item-modal--close");
-        elements.modal.classList.add("menu-item-modal--open");
-        document.body.style.overflow = "hidden";
+    open () {
+       elements.modal.classList.remove("menu-item-modal--close");
+       elements.modal.classList.add("menu-item-modal--open");
+       document.body.style.overflow = "hidden"; 
     }
 
     close () {
@@ -49,7 +45,6 @@ export class ItemModalView {
     }
 
     render (item) {
-        // console.log(item);
 
         elements.modal.innerHTML = "";
 

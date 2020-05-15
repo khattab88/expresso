@@ -4,8 +4,13 @@ import { handleError } from "../../base";
 import CartModel from "./model";
 import { elements, CartView } from "./view";
 
-export default class CartComponent {
+import Component from "../../lib/component";
+import store from "../../lib/store/index";
+
+export default class CartComponent extends Component {
     constructor () {
+        super({ store, element: document.querySelector(".cart") });
+
         try {
             this.init();
             this.setupEventListeners();
@@ -16,9 +21,9 @@ export default class CartComponent {
         this.model = new CartModel();
         this.view = new CartView();
 
-        this.setData();
+        // this.setData();
 
-        this.display();
+        this.render();
     }
 
     setData () {
@@ -26,14 +31,21 @@ export default class CartComponent {
         console.log(this.model);
     }
 
-    display () {
-        if (this.model.empty) {
+    render () {
+
+        console.log("cart: ", store.state.cart.items);
+
+        const items = store.state.cart.items;
+
+        // if (this.model.empty) {
+        if (items.length < 1) {
             this.view.showEmptyTemplate();
         } 
         else {
             this.view.hideEmptyTemplate();
 
-            this.view.renderItems(this.model.items);
+            // this.view.renderItems(this.model.items);
+            this.view.renderItems(items);
 
             this.view.displayInfo(
                 this.model.getSubTotal(),

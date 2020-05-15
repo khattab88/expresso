@@ -24,7 +24,5 @@ export default class ItemModalModel {
 
         cart.details.push(cartData);
         sessionStorage.setItem("expresso_cart", JSON.stringify(cart));
-
-        // TODO: publish addToCart event
     }
 }

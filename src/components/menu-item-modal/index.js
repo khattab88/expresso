@@ -12,8 +12,15 @@ import { elements, ItemModalView } from "./view";
 import OptionType from "../../core/enums/optionType";
 import ToastMessage from "../UI/toastMessage";
 
-export default class ItemModalComponent {
+import Component from "../../lib/component";
+import store from "../../lib/store/index";
+
+export default class ItemModalComponent extends Component {
+
+    // Pass our store instance and the HTML element up to the parent Component
     constructor () {
+        super({ store: null, element: document.querySelector(".menu-item-modal") });
+        
         this.init();
         this.setupEventListeners();
     }
@@ -21,6 +28,18 @@ export default class ItemModalComponent {
     init () {
         this.model = new ItemModalModel();
         this.view = new ItemModalView();
+    }
+
+    render (item) {
+        this.view.render(item); 
+    }
+
+    open () {
+        this.view.open();
+    }
+
+    close () {
+        this.view.close();
     }
 
     setupEventListeners () {
@@ -33,7 +52,8 @@ export default class ItemModalComponent {
 
                     this.model.setItem(id);
 
-                    this.view.open(this.model.item); 
+                    this.render(this.model.item); 
+                    this.open();
 
                 } catch (err) {
                     handleError(err);
@@ -44,7 +64,7 @@ export default class ItemModalComponent {
             elements.modal.addEventListener("click", e => {
                 if (e.target.matches(".menu-item-modal__close, .menu-item-modal__close *")) {
                     e.stopPropagation();
-                    this.view.close();
+                    this.close();
                 }
             });
 
@@ -89,9 +109,14 @@ export default class ItemModalComponent {
         const valid = this.validate();
 
         if (valid) {
+
             this.model.addToCart(cartData);
 
-            this.view.close();
+            // publish addItemToCart event
+            store.dispatch("addCartItem", cartData);
+
+
+            this.close();
 
             const toastMessage = new ToastMessage("Item added to cart");
 
