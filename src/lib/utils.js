@@ -25,4 +25,21 @@ export default class Utils {
     
         return promise;
     }
+
+    static saveToStorage (key, data) {
+        sessionStorage.setItem(key, JSON.stringify(data));
+    
+        console.log("save to storage: ", data);
+    }
+
+    static getFromStorage (key) {
+        let data = JSON.parse(sessionStorage.getItem(key));
+    
+        console.log("get from storage: ", data);
+    
+        if (data) { return data; }
+    
+        return null;
+    }    
+    
 }

@@ -33,18 +33,16 @@ export default class CartComponent extends Component {
 
     render () {
 
-        console.log("cart: ", store.state.cart.items);
+        // console.log("cart: ", store.state.cart.items);
 
         const items = store.state.cart.items;
 
-        // if (this.model.empty) {
         if (items.length < 1) {
             this.view.showEmptyTemplate();
         } 
         else {
             this.view.hideEmptyTemplate();
 
-            // this.view.renderItems(this.model.items);
             this.view.renderItems(items);
 
             this.view.displayInfo(

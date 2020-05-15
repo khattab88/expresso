@@ -15,14 +15,14 @@ export default class ItemModalModel {
         this.item = this.itemService.getById(id);
     }
 
-    addToCart (cartData) {
-        let cart = JSON.parse(sessionStorage.getItem("expresso_cart"));
+    // addToCart (cartData) {
+    //     let cart = JSON.parse(sessionStorage.getItem("expresso_cart"));
 
-        if (!cart) {
-            cart = { details: [] };
-        }
+    //     if (!cart) {
+    //         cart = { details: [] };
+    //     }
 
-        cart.details.push(cartData);
-        sessionStorage.setItem("expresso_cart", JSON.stringify(cart));
-    }
+    //     cart.details.push(cartData);
+    //     sessionStorage.setItem("expresso_cart", JSON.stringify(cart));
+    // }
 }
