@@ -29,21 +29,21 @@ export class CartView {
     createItem (cartItem) {
 
         return `
-        <article class="cart__item" data-item-id="${cartItem.item.id}">
+        <article class="cart__item" data-item-id="${cartItem.itemId}">
             <div class="cart__item-detail">
-                <p class="cart__item-name">${cartItem.item.name}</p>
-                <p class="cart__item-price">${cartItem.item.price}.00 EGP</p>
+                <p class="cart__item-name">${cartItem.itemName}</p>
+                <p class="cart__item-price">${cartItem.itemPrice}.00 EGP</p>
             </div>
 
             <div class="cart__item-options">
-                ${cartItem.cart.options.map(opt => this.renderItemOption(opt)).join("")}
+                ${cartItem.options.map(opt => this.renderItemOption(opt)).join("")}
             </div> 
 
-            ${this.renderNotes(cartItem.cart.notes)}
+            ${this.renderNotes(cartItem.notes)}
 
             <div class="cart__item-controls">
                 <div class="cart__item-controls-btn cart__item-controls-btn-remove">-</div>
-                <p class="cart__item-controls-count">${cartItem.cart.count}</p>
+                <p class="cart__item-controls-count">${cartItem.count}</p>
                 <div class="cart__item-controls-btn cart__item-controls-btn-add">+</div>
                 <a class="cart__item-controls-remove" rel="nofollow">
                     <span>x</span>

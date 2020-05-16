@@ -176,11 +176,11 @@ export class ItemModalView {
     }
 
     getItemData () {
-        const id = elements.modal.querySelector(".add-order-btn").dataset.id,
-              name = elements.modal.querySelector(".dish-info__name").textContent,
-              price = parseFloat(elements.modal.querySelector(".dish-info__price > span").textContent);
+        const itemId = elements.modal.querySelector(".add-order-btn").dataset.id,
+              itemName = elements.modal.querySelector(".dish-info__name").textContent,
+              itemPrice = parseFloat(elements.modal.querySelector(".dish-info__price > span").textContent);
 
-        return { id, name, price }
+        return { itemId, itemName, itemPrice }
     }
 
     getCartData () {
@@ -201,7 +201,7 @@ export class ItemModalView {
                       optionName = el.querySelector(".dish-options__title").textContent,
                       optionType = el.dataset.type;
 
-                const selected = Array.from(el.querySelectorAll("input"))
+                let selected = Array.from(el.querySelectorAll("input"))
                     .filter(input => input.checked === true)
                     .map(input => ({
                          id: input.dataset.id,
@@ -209,11 +209,15 @@ export class ItemModalView {
                          price: parseFloat(input.parentElement.parentElement.querySelector(".dish-option__price > span").textContent)
                     }));
 
-                    cartData.options.push({ optionId, optionName, optionType, selected });
+                    if (selected.length > 0) {
+                        cartData.options.push({ optionId, optionName, optionType, selected });
+                    }
             });
         }
 
-        return { item: itemData, cart: cartData }
+        let data = Object.assign(itemData, cartData);
+
+        return data;
     }
 
     getRequiredOptions () {

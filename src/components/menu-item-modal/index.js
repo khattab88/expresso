@@ -92,7 +92,7 @@ export default class ItemModalComponent extends Component {
     validate () {
         const cartData = this.view.getCartData();
 
-        const required = cartData.cart.options
+        const required = cartData.options
                             .filter(opt => opt.optionType === OptionType.Required)
                             .filter(opt => opt.selected.length === 0);
 
