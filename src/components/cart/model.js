@@ -26,15 +26,11 @@ export default class CartModel {
         }
     } 
 
-    setData () {
-        // TODO: save to storage
-    }
-
     getSubTotal () {
         let subTotal = 0;
 
         this.items.forEach(data => {
-            const itemValue = parseInt(data.cart.count * data.item.price);
+            const itemValue = parseInt(data.count * data.itemPrice);
 
             subTotal += itemValue;
         });

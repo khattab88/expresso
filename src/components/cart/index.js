@@ -22,8 +22,6 @@ export default class CartComponent extends Component {
         this.model = new CartModel();
         this.view = new CartView();
 
-        // this.setData();
-
         this.render();
     }
 
@@ -37,6 +35,7 @@ export default class CartComponent extends Component {
         // console.log("cart: ", store.state.cart.items);
         // console.log("area", store.state.area.id);
 
+        this.model.items = store.state.cart.items;
         const items = store.state.cart.items;
 
         if (items.length < 1) {
@@ -63,31 +62,34 @@ export default class CartComponent extends Component {
                 // remove item row from cart
                 if (e.target.matches(".cart__item-controls-remove, .cart__item-controls-remove *")) {
                     this.view.removeItem(e);
-
-                    this.updateCartData();
                 }
 
                 // change item count 
                 if (e.target.matches(".cart__item-controls-btn, .cart__item-controls-btn *")) {
                     this.view.updateItemCount(e);
-
-                    this.updateCartData();
                 }
+            });
 
-                // TODO: make order
-                this.updateCartData();
-                // this.makeOrder();
+            // make order
+            document.querySelector(".cart").addEventListener("click", e => {
+                e.stopPropagation();
+
+                if (e.target.matches(".cart__submit, .cart__submit *")) {
+                    this.makeOrder();
+                }
             });
 
         } catch (err) { handleError(err); }
     }
 
-    // TODO
-    /**
-     * update store with cart data
-     */
-    updateCartData () {
+    makeOrder () {
+        console.log("make order");
+
         // 1. get cart data (all items / selected options and its count)
+        const cart = this.view.getItems();
+
+        console.log(cart);
+
         // 2. save / dispatch to store (cart)
     }
 

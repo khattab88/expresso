@@ -101,7 +101,11 @@ export class CartView {
         countLabel.textContent = count;
     }
 
-    /* UNNECESSARY */
+    
+    getCartData () {
+        
+    }
+
     getItems () {
         let id = 0;
         let items = [];
