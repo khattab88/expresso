@@ -6,9 +6,17 @@
 /* eslint-disable comma-spacing */
 
 /* State */
+
+const cart = JSON.parse(sessionStorage.getItem("expresso_cart") || "{}");
+
 export default {
     cart: {
-        items: JSON.parse(sessionStorage.getItem("expresso_cart") || "[]")   
+        branchId: cart.branchId || 0,
+        // items: JSON.parse(sessionStorage.getItem("expresso_cart") || "[]"),
+        items: cart.items || [],
+        subTotal: cart.subTotal || 0,
+        deliveryFee: cart.deliveryFee || 0,
+        total: cart.total || 0
     },
     area: { id: "1" }
 };

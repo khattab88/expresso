@@ -18,9 +18,10 @@ import store from "../../lib/store/index";
 export default class ItemModalComponent extends Component {
 
     // Pass our store instance and the HTML element up to the parent Component
-    constructor () {
+    constructor (branchId) {
         super({ store: null, element: document.querySelector(".menu-item-modal") });
         
+        this.branchId = branchId;
         this.init();
         this.setupEventListeners();
     }
@@ -106,15 +107,14 @@ export default class ItemModalComponent extends Component {
     addToCart () {
         const cartData = this.view.getCartData();
 
+        console.log(cartData);
+
         const valid = this.validate();
 
         if (valid) {
 
             // call store addCartItem action
             store.dispatch("addCartItem", cartData);
-
-            // TEST
-            // store.dispatch("changeArea", "2");
 
             this.close();
 

@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable indent-legacy */
+/* eslint-disable indent */
 /* eslint-disable lines-around-comment */
 /* eslint-disable multiline-ternary */
 /* eslint-disable no-extra-parens */
@@ -99,22 +102,21 @@ export class CartView {
         }
 
         countLabel.textContent = count;
+        
+        return count;
     }
 
     getItems () {
-        let id = 0;
-        let items = [];
+        let itemsMap = new Map();
 
-        Array.from(document.querySelectorAll(".cart__item")).
-            forEach(item => {
-                const name = item.querySelector(".cart__item-name").textContent;
-                const price = parseInt(item.querySelector(".cart__item-price").textContent.split(".")[0]);
-                const count = parseInt(item.querySelector(".cart__item-controls-count").textContent);
+        Array.from(document.querySelectorAll(".cart__item")).forEach(item => {
+            const id = item.dataset.itemId,
+                  count = parseInt(item.querySelector(".cart__item-controls-count").textContent);
 
-                items.push(new CartItem(id++, name, price, count));
-            });
+            itemsMap.set(id, count);
+        });
 
-        return items;
+        return itemsMap;
     }
 
     displayInfo (subTotal, deliveryFee, total) {

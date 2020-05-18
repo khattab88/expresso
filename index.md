@@ -13,7 +13,7 @@ netlify: https://happy-varahamihira-4dcc20.netlify.com/
 Features:
 
 - cart modal
-    - cart functionality
+    - cart functionality (update count / make order)
 
 - login: 
     - enhance [UI]

@@ -24,7 +24,7 @@ export default class RestaurantMenuPage {
 
             this.navbar = new NavComponent();
             this.footer = new FooterComponent();
-            this.itemModal = new ItemModalComponent();
+            this.itemModal = new ItemModalComponent(branchId);
             this.cart = new CartComponent(branchId);
 
             this.view.renderBranchInfo(this.model.branchInfo);

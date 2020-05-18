@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable no-unused-vars */
 /* eslint-disable valid-jsdoc */
 /* eslint-disable no-undef */
@@ -65,7 +66,11 @@ export default class CartComponent extends Component {
 
                 // change item count 
                 if (e.target.matches(".cart__item-controls-btn, .cart__item-controls-btn *")) {
-                    this.view.updateItemCount(e);
+                    const count = this.view.updateItemCount(e);
+
+                    // TODO: recalculate cart
+                    // update subtotal
+                    // update total
                 }
             });
 
@@ -85,11 +90,30 @@ export default class CartComponent extends Component {
         console.log("make order");
 
         // 1. get cart data (all items / selected options and its count)
-        const cart = this.view.getItems();
+        const itemsMap = this.view.getItems();
+
+        let items = [];
+
+        for (const [id, count] of itemsMap) {
+            let item = store.state.cart.items.find(i => i.itemId === id);
+
+            item.count = count;
+
+            items.push(item);
+        }
+
+        const cart = {
+            branchId: this.branchId,
+            items: items,
+            subTotal: this.model.getSubTotal(items),
+            deliveryFee: this.model.getDeliveryFee(),
+            total: this.model.getTotal()
+        };
 
         console.log(cart);
 
         // 2. save / dispatch to store (cart)
+        store.dispatch("makeOrder", cart);
     }
 
 }
