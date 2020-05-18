@@ -32,8 +32,7 @@ export class CartView {
         <article class="cart__item" data-item-id="${cartItem.itemId}">
             <div class="cart__item-detail">
                 <p class="cart__item-name">${cartItem.itemName}</p>
-                <p class="cart__item-price">${cartItem.itemPrice}.00 EGP</p>
-                <!-- options sum: ${this.getItemOptionsSum(cartItem)} -->
+                <p class="cart__item-price">${cartItem.itemPrice + cartItem.optionsTotal}.00 EGP</p>
             </div>
 
             <div class="cart__item-options">
@@ -64,11 +63,6 @@ export class CartView {
                 ${opt.selected.map(s => renderSelected(s)).join("")}
             </li>
         `;
-    }
-
-    getItemOptionsSum (item) {
-        // sum of each option
-        // item.options.map(opt => opt.selected.reduce(0, ))
     }
 
     renderNotes (notes) {
@@ -105,11 +99,6 @@ export class CartView {
         }
 
         countLabel.textContent = count;
-    }
-
-    
-    getCartData () {
-
     }
 
     getItems () {

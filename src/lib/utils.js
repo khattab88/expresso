@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable one-var */
@@ -41,5 +42,9 @@ export default class Utils {
     
         return null;
     }    
+
+    static flatten (arr) {
+        return arr.reduce((flat, toFlatten) => flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten), []);
+    }
     
 }

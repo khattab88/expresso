@@ -1,5 +1,7 @@
 import Tooltip from "../UI/tooltip";
 
+import Utils from "../../lib/utils";
+
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-unused-labels */
 /* eslint-disable no-labels */
@@ -30,9 +32,9 @@ export class ItemModalView {
     constructor () { }
 
     open () {
-       elements.modal.classList.remove("menu-item-modal--close");
-       elements.modal.classList.add("menu-item-modal--open");
-       document.body.style.overflow = "hidden"; 
+        elements.modal.classList.remove("menu-item-modal--close");
+        elements.modal.classList.add("menu-item-modal--open");
+        document.body.style.overflow = "hidden";
     }
 
     close () {
@@ -132,9 +134,9 @@ export class ItemModalView {
 
 
     createValidationMsg (type) {
-        return type === "Required" 
-                        ? `<p class="validation-info validation-info--required">Required, choose at least one.</p>` 
-                        : `<p class="validation-info validation-info--optional">Optional, choose multiple.</p>`;
+        return type === "Required"
+            ? `<p class="validation-info validation-info--required">Required, choose at least one.</p>`
+            : `<p class="validation-info validation-info--optional">Optional, choose multiple.</p>`;
     }
 
     createNotesElement () {
@@ -162,8 +164,8 @@ export class ItemModalView {
 
     changeItemCount (e) {
         const btn = e.target.closest(".cart-controls__btn"),
-              op = btn.textContent,
-              countLabel = btn.parentElement.querySelector(".cart-controls__count");
+            op = btn.textContent,
+            countLabel = btn.parentElement.querySelector(".cart-controls__count");
 
         let count = parseInt(countLabel.textContent);
 
@@ -177,8 +179,8 @@ export class ItemModalView {
 
     getItemData () {
         const itemId = elements.modal.querySelector(".add-order-btn").dataset.id,
-              itemName = elements.modal.querySelector(".dish-info__name").textContent,
-              itemPrice = parseFloat(elements.modal.querySelector(".dish-info__price > span").textContent);
+            itemName = elements.modal.querySelector(".dish-info__name").textContent,
+            itemPrice = parseFloat(elements.modal.querySelector(".dish-info__price > span").textContent);
 
         return { itemId, itemName, itemPrice }
     }
@@ -187,37 +189,50 @@ export class ItemModalView {
 
         const itemData = this.getItemData();
 
-         let cartData = {
+        let cartData = {
             count: parseInt(elements.modal.querySelector(".cart-controls__count").textContent),
             notes: document.querySelector("#notes").value,
             options: []
-         };
-        
+        };
+
         const optionElements = document.querySelectorAll(".dish-options[data-id]");
+
         if (optionElements) {
             optionElements.forEach(el => {
-                
+
                 const optionId = el.dataset.id,
-                      optionName = el.querySelector(".dish-options__title").textContent,
-                      optionType = el.dataset.type;
+                    optionName = el.querySelector(".dish-options__title").textContent,
+                    optionType = el.dataset.type;
 
                 let selected = Array.from(el.querySelectorAll("input"))
                     .filter(input => input.checked === true)
                     .map(input => ({
-                         id: input.dataset.id,
-                         name: input.parentElement.parentElement.querySelector(".dish-option__name").textContent,
-                         price: parseFloat(input.parentElement.parentElement.querySelector(".dish-option__price > span").textContent)
+                        id: input.dataset.id,
+                        name: input.parentElement.parentElement.querySelector(".dish-option__name").textContent,
+                        price: parseFloat(input.parentElement.parentElement.querySelector(".dish-option__price > span").textContent)
                     }));
 
-                    if (selected.length > 0) {
-                        cartData.options.push({ optionId, optionName, optionType, selected });
-                    }
+                if (selected.length > 0) {
+                    cartData.options.push({ optionId, optionName, optionType, selected });
+                }
             });
         }
+
+        cartData.optionsTotal = this.getOptionsTotal(cartData.options);
 
         let data = Object.assign(itemData, cartData);
 
         return data;
+    }
+
+    getOptionsTotal (options) {
+
+        const flatten = (arr) => arr.reduce((flat, toFlatten) => flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten), []);
+
+        let total = 0;
+        total = flatten(options.map(opt => opt.selected)).reduce((acc, curr) => acc + curr.price, 0);
+
+        return total;
     }
 
     getRequiredOptions () {
