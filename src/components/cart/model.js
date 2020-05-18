@@ -32,7 +32,7 @@ export default class CartModel {
         let subTotal = 0;
 
         this.items.forEach(data => {
-            const itemValue = parseInt(data.count * data.itemPrice);
+            const itemValue = parseInt(data.count * (data.itemPrice + data.optionsTotal));
 
             subTotal += itemValue;
         });
