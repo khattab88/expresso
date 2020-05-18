@@ -33,6 +33,7 @@ export class CartView {
             <div class="cart__item-detail">
                 <p class="cart__item-name">${cartItem.itemName}</p>
                 <p class="cart__item-price">${cartItem.itemPrice}.00 EGP</p>
+                <!-- options sum: ${this.getItemOptionsSum(cartItem)} -->
             </div>
 
             <div class="cart__item-options">
@@ -63,6 +64,11 @@ export class CartView {
                 ${opt.selected.map(s => renderSelected(s)).join("")}
             </li>
         `;
+    }
+
+    getItemOptionsSum (item) {
+        // sum of each option
+        // item.options.map(opt => opt.selected.reduce(0, ))
     }
 
     renderNotes (notes) {
@@ -103,7 +109,7 @@ export class CartView {
 
     
     getCartData () {
-        
+
     }
 
     getItems () {

@@ -32,9 +32,6 @@ export default class CartComponent extends Component {
 
     render () {
 
-        // console.log("cart: ", store.state.cart.items);
-        // console.log("area", store.state.area.id);
-
         this.model.items = store.state.cart.items;
         const items = store.state.cart.items;
 

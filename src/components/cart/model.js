@@ -1,3 +1,4 @@
+/* eslint-disable valid-jsdoc */
 /* eslint-disable consistent-return */
 /* eslint-disable no-negated-condition */
 /* eslint-disable no-undef */
@@ -11,6 +12,7 @@ export default class CartModel {
         return this.items.length < 1;
     }
 
+    /** UNNECESSARY */
     getData () {
         // get from strorage
         let cart = JSON.parse(window.sessionStorage.getItem("expresso_cart"));
