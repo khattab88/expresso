@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable valid-jsdoc */
 /* eslint-disable no-undef */
 import { handleError } from "../../base";
@@ -9,17 +10,18 @@ import Component from "../../lib/component";
 import store from "../../lib/store/index";
 
 export default class CartComponent extends Component {
-    constructor () {
+    constructor (branchId) {
         super({ store, element: document.querySelector(".cart") });
 
         try {
+            this.branchId = branchId;
             this.init();
             this.setupEventListeners();
         } catch (err) { handleError(err); }
     }
 
     init () {
-        this.model = new CartModel();
+        this.model = new CartModel(this.branchId);
         this.view = new CartView();
 
         this.render();

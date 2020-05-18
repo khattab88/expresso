@@ -17,15 +17,15 @@ export default class RestaurantMenuPage {
 
     init () {
         try {
-            const id = getQueryString("id");
+            const branchId = getQueryString("id");
 
-            this.model = new RestaurantMenuPageModel(id);
+            this.model = new RestaurantMenuPageModel(branchId);
             this.view = new RestaurantMenuPageView();
 
             this.navbar = new NavComponent();
             this.footer = new FooterComponent();
             this.itemModal = new ItemModalComponent();
-            this.cart = new CartComponent();
+            this.cart = new CartComponent(branchId);
 
             this.view.renderBranchInfo(this.model.branchInfo);
             this.model.menu.menuSections.forEach(mc => this.view.renderMenuCategory(mc));

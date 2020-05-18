@@ -1,32 +1,23 @@
+import BranchService from "../../core/services/branch-service";
+
 /* eslint-disable valid-jsdoc */
 /* eslint-disable consistent-return */
 /* eslint-disable no-negated-condition */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 export default class CartModel {
-    constructor (items = []) {
+    constructor (branchId, items = []) {
+        this.branchId = branchId;
         this.items = items;
+
+        // Dependency
+        this.branchService = new BranchService();
+        this.branch = this.branchService.getById(this.branchId);
     }
 
     get empty () {
         return this.items.length < 1;
     }
-
-    /** UNNECESSARY */
-    getData () {
-        // get from strorage
-        let cart = JSON.parse(window.sessionStorage.getItem("expresso_cart"));
-
-        if (cart) {
-            if (cart.details.length > 0) {
-                const items = cart.details.map(d => d);
-
-                return items;
-            }
-        } else {
-            return [];
-        }
-    } 
 
     getSubTotal () {
         let subTotal = 0;
@@ -41,7 +32,7 @@ export default class CartModel {
     }
 
     getDeliveryFee () {
-        return 5;
+        return this.branch.restaurant.deliveryFee;
     }
 
     getTotal () {
