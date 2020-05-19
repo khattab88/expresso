@@ -35,7 +35,7 @@ export class CartView {
         <article class="cart__item" data-item-id="${cartItem.itemId}">
             <div class="cart__item-detail">
                 <p class="cart__item-name">${cartItem.itemName}</p>
-                <p class="cart__item-price">${cartItem.itemPrice + cartItem.optionsTotal}.00 EGP</p>
+                <p class="cart__item-price">${cartItem.count * (cartItem.itemPrice + cartItem.optionsTotal)}.00 EGP</p>
             </div>
 
             <div class="cart__item-options">
