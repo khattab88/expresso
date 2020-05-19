@@ -47,7 +47,7 @@ export default class CartComponent extends Component {
             this.view.renderItems(items);
 
             this.view.displayInfo(
-                this.model.getSubTotal(),
+                this.model.getSubTotal(items),
                 this.model.getDeliveryFee(),
                 this.model.getTotal()
             );
@@ -68,9 +68,15 @@ export default class CartComponent extends Component {
                 if (e.target.matches(".cart__item-controls-btn, .cart__item-controls-btn *")) {
                     const count = this.view.updateItemCount(e);
 
-                    // TODO: recalculate cart
-                    // update subtotal
-                    // update total
+                    // update cart
+                    const items = this.updateCartData().items;
+
+                    // display updated cart
+                    this.view.displayInfo(
+                        this.model.getSubTotal(items),
+                        this.model.getDeliveryFee(),
+                        this.model.getTotal()
+                    );
                 }
             });
 
@@ -86,10 +92,7 @@ export default class CartComponent extends Component {
         } catch (err) { handleError(err); }
     }
 
-    makeOrder () {
-        console.log("make order");
-
-        // 1. get cart data (all items / selected options and its count)
+    updateCartData () {
         const itemsMap = this.view.getItems();
 
         let items = [];
@@ -102,14 +105,21 @@ export default class CartComponent extends Component {
             items.push(item);
         }
 
-        const cart = {
+        return {
             branchId: this.branchId,
             items: items,
             subTotal: this.model.getSubTotal(items),
             deliveryFee: this.model.getDeliveryFee(),
             total: this.model.getTotal()
         };
+    }
 
+    makeOrder () {
+        console.log("make order");
+
+        // 1. get cart data (all items / selected options and its count)
+        const cart = this.updateCartData();
+        
         console.log(cart);
 
         // 2. save / dispatch to store (cart)
