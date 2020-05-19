@@ -38,6 +38,8 @@ export default class CartComponent extends Component {
         this.model.items = store.state.cart.items;
         const items = store.state.cart.items;
 
+        console.log("items:", items);
+
         if (items.length < 1) {
             this.view.showEmptyTemplate();
         } 
@@ -46,11 +48,14 @@ export default class CartComponent extends Component {
 
             this.view.renderItems(items);
 
-            this.view.displayInfo(
-                this.model.getSubTotal(items),
-                this.model.getDeliveryFee(),
-                this.model.getTotal()
-            );
+            const info = {
+                subTotal: this.model.getSubTotal(items),
+                deliveryFee: this.model.getDeliveryFee(),
+                // total: this.model.getTotal(items)
+                total: this.model.getSubTotal(items) + this.model.getDeliveryFee()
+            };
+
+            this.view.displayInfo(info.subTotal, info.deliveryFee, info.total);
         }
     }
 
@@ -62,6 +67,22 @@ export default class CartComponent extends Component {
                 // remove item row from cart
                 if (e.target.matches(".cart__item-controls-remove, .cart__item-controls-remove *")) {
                     this.view.removeItem(e);
+
+                    // update cart
+                    const items = this.updateCartData().items;
+
+                    const subTotal = this.model.getSubTotal(items);
+
+                    // display updated cart
+                    const info = {
+                        subTotal: subTotal,
+                        deliveryFee: this.model.getDeliveryFee(),
+                        total: subTotal + this.model.getDeliveryFee()
+                    };
+        
+                    this.view.displayInfo(info.subTotal, info.deliveryFee, info.total);
+
+                    return;
                 }
 
                 // change item count 
@@ -72,11 +93,13 @@ export default class CartComponent extends Component {
                     const items = this.updateCartData().items;
 
                     // display updated cart
-                    this.view.displayInfo(
-                        this.model.getSubTotal(items),
-                        this.model.getDeliveryFee(),
-                        this.model.getTotal()
-                    );
+                    const info = {
+                        subTotal: this.model.getSubTotal(items),
+                        deliveryFee: this.model.getDeliveryFee(),
+                        total: this.model.getSubTotal(items) + this.model.getDeliveryFee()
+                    };
+        
+                    this.view.displayInfo(info.subTotal, info.deliveryFee, info.total);
                 }
             });
 
@@ -110,7 +133,7 @@ export default class CartComponent extends Component {
             items: items,
             subTotal: this.model.getSubTotal(items),
             deliveryFee: this.model.getDeliveryFee(),
-            total: this.model.getTotal()
+            total: this.model.getTotal(items)
         };
     }
 

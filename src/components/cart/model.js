@@ -19,10 +19,10 @@ export default class CartModel {
         return this.items.length < 1;
     }
 
-    getSubTotal (items) {
+    getSubTotal (cartItems) {
         let subTotal = 0;
 
-        this.items.forEach(item => {
+        cartItems.forEach(item => {
             const itemValue = parseInt(item.count * (item.itemPrice + item.optionsTotal));
 
             subTotal += itemValue;
@@ -35,7 +35,7 @@ export default class CartModel {
         return this.branch.restaurant.deliveryFee;
     }
 
-    getTotal () {
-        return this.getSubTotal() + this.getDeliveryFee();
+    getTotal (items) {
+        return this.getSubTotal(items) + this.getDeliveryFee();
     }
 }
