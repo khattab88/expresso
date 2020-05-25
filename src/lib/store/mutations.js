@@ -5,8 +5,7 @@
 export default {
     addCartItem (state, payload) {
         state.cart.items.push(payload);
-
-        // sessionStorage.setItem("expresso_cart", JSON.stringify(state.cart.items));   
+        
         sessionStorage.setItem("expresso_cart", JSON.stringify({ 
             branchId: state.cart.branchId,
             items: state.cart.items,

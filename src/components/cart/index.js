@@ -53,7 +53,6 @@ export default class CartComponent extends Component {
             const info = {
                 subTotal: this.model.getSubTotal(items),
                 deliveryFee: this.model.getDeliveryFee(),
-                // total: this.model.getTotal(items)
                 total: this.model.getSubTotal(items) + this.model.getDeliveryFee()
             };
 

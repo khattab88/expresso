@@ -12,9 +12,6 @@ netlify: https://happy-varahamihira-4dcc20.netlify.com/
 
 Features:
 
-- cart modal
-    - cart functionality (update count / make order)
-
 - login: 
     - enhance [UI]
     - create controller

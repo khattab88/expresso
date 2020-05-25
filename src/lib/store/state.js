@@ -12,7 +12,6 @@ const cart = JSON.parse(sessionStorage.getItem("expresso_cart") || "{}");
 export default {
     cart: {
         branchId: cart.branchId || 0,
-        // items: JSON.parse(sessionStorage.getItem("expresso_cart") || "[]"),
         items: cart.items || [],
         subTotal: cart.subTotal || 0,
         deliveryFee: cart.deliveryFee || 0,
