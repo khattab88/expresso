@@ -6,6 +6,8 @@ export const handleError = (err) => console.log(err);
 
 export const formatCurrency = (val, currency = "EGP") => `${val}.00 ${currency}`;
 
+// exports const formatDate = (date) => date.toString();
+
 export const getQueryString = (name) => {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -22,3 +24,5 @@ export const setTimer = (duration) => {
 
     return promise;
 };
+
+// module.exports = formatCurrency;
