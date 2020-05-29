@@ -1,8 +1,14 @@
+/* eslint-disable no-undef */
+/* eslint-disable dot-location */
 /* eslint-disable function-paren-newline */
 /* eslint-disable class-methods-use-this */
 import Country from "../entities/country";
 import City from "../entities/city";
 import Area from "../entities/area";
+
+// import es6Promise from "es6-promise";
+// const Promise = es6Promise.polyfill();
+import fetch from "isomorphic-fetch";
 
 export default class CityService {
     constructor () {}
@@ -39,5 +45,15 @@ export default class CityService {
                     new Area("15", "El Raml")
                 ])
         ];
+    }
+
+    async getCities () {
+        const url = "https://expresso-app-api.herokuapp.com/api/cities";
+
+        let cities = null;
+
+        cities = await fetch(url).then(response => response.json());
+
+        return cities;
     }
 }
