@@ -5,8 +5,10 @@
                 "browsers": [
                     "last 5 versions",
                     "ie >= 8"
-                ]
+                ],
+                "node": "current"
             }
         }]
-    ]
+    ],
+    "plugins": ["@babel/plugin-transform-runtime"]
 }

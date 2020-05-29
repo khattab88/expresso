@@ -1,4 +1,4 @@
-import { formatCurrency, sum } from "../src/config";
+import { formatCurrency, sum } from "../../src/config";
 // const { formatCurrency, sum } = require("../src/config");
 
 test("should return formatted currency value", () => {
