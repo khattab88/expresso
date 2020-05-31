@@ -1,8 +1,26 @@
+/* eslint-disable prefer-template */
 /* eslint-disable class-methods-use-this */
 import Tag from "../entities/tag";
+import { config } from "../../config"; 
+
+import axios from "axios";
 
 export default class TagService {
     constructor () {}
+
+    async getAsync () {
+        const response = await axios.get(config.apiUrl + "tags");
+
+        const data = response.data;
+
+        const tags = [];
+
+        data.forEach(t => {
+            tags.push(new Tag(t.id, t.title));
+        });
+
+        return tags;
+    }
 
     get () {
         return [

@@ -1,3 +1,4 @@
+/* eslint-disable no-return-await */
 import BranchService from "../core/services/branch-service";
 import TagService from "../core/services/tag-service";
 
@@ -21,4 +22,5 @@ export default class RestaurantListPageModel {
     getTags () {
         return this.tagService.get();
     }
+
 }
