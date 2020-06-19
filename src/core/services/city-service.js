@@ -10,6 +10,8 @@ import Area from "../entities/area";
 // const Promise = es6Promise.polyfill();
 import fetch from "isomorphic-fetch";
 
+import config from "../../config";
+
 export default class CityService {
     constructor () {}
 
@@ -48,7 +50,7 @@ export default class CityService {
     }
 
     async getCities () {
-        const url = "https://expresso-app-api.herokuapp.com/api/cities";
+        const url = `${config[config.env].apiUrl}/cities`;
 
         let cities = null;
 

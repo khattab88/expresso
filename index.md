@@ -12,25 +12,6 @@ netlify: https://happy-varahamihira-4dcc20.netlify.com/
 
 Features:
 
-- login: 
-    - enhance [UI]
-    - create controller
-    - fix links
-    - validation
-
-- sign up
-    - enhance [UI]
-    - create controller
-    - fix links
-    - validation
-
-- checkout: 
-    - enhance [UI]
-    - add restaurant disclaimer [UI]
-    - add disclaimer to payment options [UI]
-    - header breadcrumb links
-    - create controller
-
 
 - navbar:
     - enhance mobile nav [UI]
@@ -53,4 +34,25 @@ Features:
 
 - contact us:
     - add subject dropdown
+    - create controller
+
+
+
+- login: 
+    - enhance [UI]
+    - create controller
+    - fix links
+    - validation
+
+- sign up
+    - enhance [UI]
+    - create controller
+    - fix links
+    - validation
+
+- checkout: 
+    - enhance [UI]
+    - add restaurant disclaimer [UI]
+    - add disclaimer to payment options [UI]
+    - header breadcrumb links
     - create controller
