@@ -283,7 +283,7 @@
         align-items: center;
 
         @include respond(tab-land) {
-            width: 60%;
+            width: 40%;
             display: flex;
             align-items: center;
         }
@@ -345,6 +345,34 @@
     }    
 
 
+    .filter-grid {
+        display: none;
+        width: 20%;
+        padding: 1.5rem 3rem;
+        background-color: $color-font-light;
+        
+        @include respond(tab-land) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    .grid-btn {
+        margin-left: 1rem;
+
+        &__icon {
+            width: 3rem;
+            height: 2rem;
+
+            opacity: .2;
+        }
+
+        &--active .grid-btn__icon {
+            opacity: 1;
+        }
+     }
+
 /* restaurant list */
 .restaurant-list {
     position: relative;
@@ -391,6 +419,15 @@
             letter-spacing: .5px;
         }
     }
+}
+
+.grid-cols-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .restaurant-info-card {

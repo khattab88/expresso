@@ -26,7 +26,6 @@ Features:
     - category list crousel
     
 - restaurant list
-    - change grid layout [UI]
     - implement lazy loading on scroll
     
 - restaurant menu

@@ -8,6 +8,7 @@ export const elements = {
     restaurantList: document.querySelector(".restaurant-list"),
     restaurantInfoCard: document.querySelectorAll(".restaurant-info-card"),
     specialOffersCheckbox: document.querySelector("#special-offers"),
+    gridButtons: document.querySelectorAll(".grid-btn")
 };
 
 export class RestaurantListPageView {

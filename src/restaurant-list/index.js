@@ -154,6 +154,28 @@ export default class RestaurantListPage {
                 this.filterBySpecialOffers(checked);
             });
 
+
+            // change grid layout
+            elements.gridButtons.forEach(btn => btn.addEventListener("click", e => {
+                const gridBtn = e.target.parentElement;
+                const gridCols = gridBtn.dataset.gridCols;
+
+                console.log(gridCols);     
+                
+                elements.gridButtons.forEach(btn => btn.classList.remove("grid-btn--active"));
+                gridBtn.classList.add("grid-btn--active");
+
+                elements.restaurantList.classList.remove("grid-cols-two");
+                elements.restaurantList.classList.remove("grid-cols-three");
+
+                if (gridCols === "two") {
+                    // elements.restaurantList.style.gridTemplateColumns = "repeat(2, 1fr);";
+                    elements.restaurantList.classList.add("grid-cols-two");
+                } else {
+                    // elements.restaurantList.style.gridTemplateColumns = "repeat(2, 1fr);";
+                    elements.restaurantList.classList.add("grid-cols-three");
+                }
+            }));
         }
         catch (err) { console.log(err); }
     }
