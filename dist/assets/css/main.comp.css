@@ -2807,8 +2807,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 64em) {
     .restaurant-menu-page__header {
+      padding: 0 3rem;
       justify-content: space-around; } }
 
 .restaurant-info-box {
@@ -2817,10 +2818,18 @@ body {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column; }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 64em) {
     .restaurant-info-box {
+      flex-direction: row;
+      justify-content: space-between;
       margin-top: 20rem;
       width: 66%; } }
+  @media only screen and (min-width: 75em) {
+    .restaurant-info-box {
+      padding: 0 5rem 0 12rem; } }
+  @media only screen and (min-width: 64em) {
+    .restaurant-info-box__head {
+      align-self: flex-end; } }
   .restaurant-info-box__head-title {
     font-size: 3rem;
     line-height: 3.6rem;
@@ -2872,7 +2881,7 @@ body {
       background-color: #323232; }
 
 /* main */
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 64em) {
   .restaurant-menu-page__main {
     padding: 0;
     display: flex;
@@ -2883,7 +2892,7 @@ body {
 .restaurant-sidebar {
   margin: 2rem 0 2rem 0;
   color: #323232; }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 64em) {
     .restaurant-sidebar {
       min-width: 30%;
       position: relative;
@@ -2932,7 +2941,7 @@ body {
     display: none; }
     .menu-categories__body--open {
       display: block; }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 64em) {
       .menu-categories__body {
         display: block; } }
   .menu-categories__list {
@@ -2954,7 +2963,7 @@ body {
 .menu-items-wrapper {
   padding: 1.5rem 0;
   margin-bottom: .5rem; }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 64em) {
     .menu-items-wrapper {
       min-width: 65%;
       margin-right: 1rem; } }
@@ -2965,7 +2974,7 @@ body {
     .menu-items-by-category:not(:first-child) {
       padding-top: 8rem; } }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 64em) {
   .menu-items-by-category {
     width: 94%; } }
 
@@ -3012,7 +3021,7 @@ body {
     @media only screen and (min-width: 48em) {
       .menu-item__img {
         height: auto; } }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 64em) {
       .menu-item__img {
         min-width: 24rem; } }
   .menu-item__detail {
@@ -3036,7 +3045,7 @@ body {
     padding: .5rem 1rem;
     border-radius: .5rem;
     font-size: 1.5rem; }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 64em) {
       .menu-item__price {
         padding: 1rem;
         padding-top: .75rem;

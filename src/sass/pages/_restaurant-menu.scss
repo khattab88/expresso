@@ -12,6 +12,7 @@
     justify-content: flex-end;
 
     @include respond(tab-land) {
+        padding: 0 3rem;
         justify-content: space-around;
     }
 }
@@ -24,11 +25,22 @@
     flex-direction: column;
 
     @include respond(tab-land) {
+        flex-direction: row;
+        justify-content: space-between;
         margin-top: 20rem;
         width: 66%;
     }
 
+    @include respond(desktop) {
+        padding: 0 5rem 0 12rem;
+    }
+
     &__head {
+
+        @include respond(tab-land) {
+            align-self: flex-end;
+        }
+
         &-title {
             font-size: 3rem;
             line-height: 3.6rem;

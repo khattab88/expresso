@@ -27,9 +27,6 @@ Features:
     
 - restaurant list
     - implement lazy loading on scroll
-    
-- restaurant menu
-    - enhance header delivery info [UI]
 
 - contact us:
     - add subject dropdown
