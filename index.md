@@ -33,6 +33,11 @@ Features:
     - create controller
 
 
+- sign up
+    - enhance [UI]
+    - create controller
+    - fix links
+    - validation
 
 - login: 
     - enhance [UI]
@@ -40,15 +45,8 @@ Features:
     - fix links
     - validation
 
-- sign up
-    - enhance [UI]
-    - create controller
-    - fix links
-    - validation
-
 - checkout: 
     - enhance [UI]
-    - add restaurant disclaimer [UI]
     - add disclaimer to payment options [UI]
     - header breadcrumb links
     - create controller

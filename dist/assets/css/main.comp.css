@@ -3950,8 +3950,24 @@ body {
   @media only screen and (min-width: 64em) {
     .order-info {
       width: 45%;
-      height: 52rem;
+      height: 62rem;
       transform: translateY(-11.5rem);
       background-color: #fff; } }
+
+.disclaimer {
+  text-align: center;
+  margin: 3rem 0; }
+  @media only screen and (min-width: 64em) {
+    .disclaimer {
+      margin: 8rem 0; } }
+  .disclaimer__text {
+    color: #555;
+    font-size: 1.8rem;
+    margin-bottom: .5rem; }
+  .disclaimer__link {
+    display: block;
+    text-decoration: none;
+    color: #f33;
+    margin-top: .5rem; }
 
 /* Primary Theme */

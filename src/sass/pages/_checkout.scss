@@ -431,8 +431,30 @@
 
     @include respond(tab-land) {
         width: 45%;
-        height: 52rem;
+        height: 62rem;
         transform: translateY(-11.5rem);
         background-color: $color-white;
+    }
+}
+
+.disclaimer {
+    text-align: center;
+    margin: 3rem 0;
+
+    @include respond(tab-land) {
+        margin: 8rem 0;
+    }
+
+    &__text {
+        color: $color-gray-dark;
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: $color-red;
+        margin-top: .5rem;
     }
 }
