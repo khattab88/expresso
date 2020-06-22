@@ -3225,6 +3225,12 @@ body {
     background-color: #323232;
     color: #f9f9f9;
     cursor: pointer; }
+    .sign-up__btn:hover a {
+      color: #fff; }
+
+.sign-up__link {
+  text-decoration: none;
+  color: #323232; }
 
 /*--- animation ---*/
 .login_heading,
@@ -3293,6 +3299,10 @@ body {
   -webkit-border-radius: .4rem;
   -moz-border-radius: .4rem;
   border-radius: .4rem; }
+
+.sign-in__link {
+  text-decoration: none;
+  color: #fff; }
 
 .register-page__sign-in {
   height: 20rem;

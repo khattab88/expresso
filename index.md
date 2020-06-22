@@ -28,17 +28,5 @@ Features:
 - restaurant list (1)
     - implement lazy loading on scroll
 
-
-- sign up (3)
-    - enhance [UI]
-    - fix links
-    - validation
-
-- login: (3)
-    - enhance [UI]
-    - fix links
-    - validation
-
-- checkout: (3)
-    - enhance [UI]
+- checkout: (1)
     - header breadcrumb links

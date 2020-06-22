@@ -50,6 +50,10 @@
     @include btn;
 }
 
+.sign-in__link {
+    text-decoration: none;
+    color: $color-white;
+}
 
 .register-page__sign-in {
     height: 20rem;

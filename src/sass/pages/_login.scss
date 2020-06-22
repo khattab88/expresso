@@ -195,7 +195,15 @@
             background-color: $color-font-dark;
             color: $color-font-light;
             cursor: pointer;
+
+            a {
+                color: $color-white;
+            }
         }
+    }
+    &__link {
+        text-decoration: none;
+        color: $color-font-dark;
     }
 }
 
