@@ -3593,7 +3593,10 @@ body {
   @media only screen and (min-width: 30em) {
     .form-control {
       width: 96%; } }
-  .form-control-textarea {
+  .form-control--select {
+    padding: 0 .5rem;
+    color: #555; }
+  .form-control--textarea {
     padding-top: 1rem;
     border-bottom: none; }
 

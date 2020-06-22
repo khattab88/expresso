@@ -261,7 +261,12 @@
         width: 96%;
     }
 
-    &-textarea {
+    &--select {
+        padding: 0 .5rem;
+        color: $color-gray-dark; 
+    }
+
+    &--textarea {
         padding-top: 1rem;
         border-bottom: none;
     }

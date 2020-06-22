@@ -44,14 +44,21 @@
                     <div class="contact-us__form-box">
                         <form class="contact-us__form" action="#">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+                                <input class="form-control" type="text" name="name" id="name" placeholder="*Name">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="email" id="email" placeholder="Email">
+                                <input class="form-control" type="text" name="email" id="email" placeholder="*Email">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control form-control-textarea" name="message" id="" cols="40"
-                                    rows="5" placeholder="Message"></textarea>
+                                <select class="form-control form-control--select" name="subject" id="subject">
+                                    <option value="Complaint">Complaint</option>
+                                    <option value="Suggesion">Suggesion</option>
+                                    <option value="Inquiry">Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control form-control--textarea" name="message" id="" cols="40"
+                                    rows="5" placeholder="*Message"></textarea>
                             </div>
 
                             <div class="g-recaptcha" data-sitekey="6Lc6auYUAAAAADG4ab_bEdsGGnKcm3mpBffuyZ45"></div>
