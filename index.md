@@ -29,20 +29,16 @@ Features:
     - implement lazy loading on scroll
 
 
-- sign up (4)
+- sign up (3)
     - enhance [UI]
-    - create controller
     - fix links
     - validation
 
-- login: (4)
+- login: (3)
     - enhance [UI]
-    - create controller
     - fix links
     - validation
 
-- checkout: (4)
+- checkout: (3)
     - enhance [UI]
-    - add disclaimer to payment options [UI]
     - header breadcrumb links
-    - create controller

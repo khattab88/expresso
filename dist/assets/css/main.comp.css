@@ -3968,9 +3968,13 @@ body {
     font-size: 1.8rem;
     margin-bottom: .5rem; }
   .disclaimer__link {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: #f33;
     margin-top: .5rem; }
+  .disclaimer--payment {
+    margin: 0; }
+    .disclaimer--payment .disclaimer__link {
+      color: #337ab7; }
 
 /* Primary Theme */

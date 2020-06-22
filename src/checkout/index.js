@@ -1,3 +1,6 @@
+/* eslint-disable indent-legacy */
+/* eslint-disable indent */
+/* eslint-disable dot-location */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { handleError } from "../base";
@@ -28,5 +31,6 @@ export default class CheckoutPage {
         // toggle map modal
         Array.from(document.querySelectorAll(".delivery-info__add, .map-modal__confirm, .map-modal__close")).
             forEach(el => el.addEventListener("click", this.view.toggleMapModal));
+        
     }
 }

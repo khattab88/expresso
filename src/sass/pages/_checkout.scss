@@ -452,9 +452,17 @@
     }
 
     &__link {
-        display: block;
+        display: inline-block;
         text-decoration: none;
         color: $color-red;
         margin-top: .5rem;
+    }
+
+    &--payment {
+        margin: 0;
+
+        .disclaimer__link {
+            color: $color-blue;
+        }
     }
 }
