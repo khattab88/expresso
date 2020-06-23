@@ -28,5 +28,5 @@ Features:
 - restaurant list (1)
     - implement lazy loading on scroll
 
-- checkout: (1)
+- checkout & restaurant menu: (1)
     - header breadcrumb links
