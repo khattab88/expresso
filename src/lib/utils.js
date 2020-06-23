@@ -1,8 +1,17 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable no-negated-condition */
+/* eslint-disable newline-before-return */
+/* eslint-disable indent-legacy */
+/* eslint-disable indent */
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable func-names */
 /* eslint-disable multiline-ternary */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable one-var */
 /* eslint-disable max-len */
+
+import lodash from "lodash";
 
 export default class Utils {
     
@@ -46,5 +55,18 @@ export default class Utils {
     static flatten (arr) {
         return arr.reduce((flat, toFlatten) => flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten), []);
     }
-    
+
+    static groupBy (list, key) {
+        return lodash.groupBy(list, key);
+    }
+
+    static objectToArray (obj) {
+        let arr = [];
+
+        for (let key in obj) {
+            arr.push(obj[key]);
+        }
+
+        return arr;
+    }
 }

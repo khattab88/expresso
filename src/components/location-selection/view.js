@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable no-undef */
 export const elements = {
     wrapper: document.querySelector(".location-selection-wrapper"),
@@ -23,6 +24,10 @@ export class LocationSelectionView {
                 </ul>
             </li>
         `;
+    }
+
+    createEmptyResult () {
+        return `<li class="location-selection__city">no results found</li>`;
     }
 
     render (cities) {
