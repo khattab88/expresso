@@ -35,6 +35,7 @@
         list-style: none;
         display: flex;
     }
+
     &__item {
         font-size: 1.7rem;
         padding: .3rem;
@@ -42,12 +43,14 @@
         &:hover {
             cursor: pointer;
         }
+
+        &--back {
+            border: 1px solid $color-font-light;
+            border-radius: .3rem;
+            padding: 0;
+        }
     }
-    &__item--back {
-        border: 1px solid $color-font-light;
-        border-radius: .3rem;
-        padding: 0;
-    }
+
     &__link {
         text-decoration: none;
         color: #fff;
