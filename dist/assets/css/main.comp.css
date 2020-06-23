@@ -1610,7 +1610,7 @@ body {
     height: 5rem;
     border-radius: 4px;
     display: flex;
-    padding: 0 1rem;
+    padding: 1rem;
     border: none;
     outline: none;
     cursor: pointer; }
@@ -1694,7 +1694,7 @@ body {
     height: 5rem;
     border-radius: 4px;
     display: flex;
-    padding: 0 1rem;
+    padding: 1rem;
     border: none;
     outline: none;
     cursor: pointer; }
