@@ -16,9 +16,6 @@ Features:
 - navbar: (1)
     - enhance mobile nav [UI]
 
-- header: (1)
-    - restaurant selection search
-
 - home: (3)
     - enhance category list [UI]
     - navbar transparent on scroll [UI]

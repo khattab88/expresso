@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable no-undef */
 export const elements = {
     wrapper: document.querySelector(".restaurant-selection-wrapper"),
@@ -12,6 +13,10 @@ export class RestaurantSelectionView {
 
     createBranch (branch) {
         return `<li class="restaurant-selection__restaurant" id="${branch.restaurant.id}" data-area="${branch.area.id}">${branch.restaurant.name}</li>`;
+    }
+
+    createEmptyResult () {
+        return `<li class="restaurant-selection__restaurant">no results found</li>`;
     }
 
     render (branches) {

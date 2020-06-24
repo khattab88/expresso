@@ -55,53 +55,57 @@ export default class LocationSelectionComponent {
             document.querySelector(".location-selection__input").addEventListener("input", e => {
                 const value = e.target.value;
 
-                const list = document.querySelector(".location-selection__city-list");
-                list.innerHTML = "";
-                
-                let filtered = [];
-
-                this.model.cities.forEach(city => {
-                    city.areas.forEach(area => {
-                        if (area.name.toLowerCase().includes(value.toLowerCase())) {
-                            area.cityId = city.id;
-                            area.cityName = city.name;
-                            filtered.push(area);
-                        }
-                    });
-                });
-
-               
-                filtered = Utils.groupBy(filtered, area => area.cityId);
-                
-                const final = [];
-                for (const group in filtered) {
-
-                    const areas = filtered[group].map(g => {
-                        const area = {};
-                        area.id = g.id;
-                        area.name = g.name;
-
-                        return area;
-                    });
-
-                    const city = {};
-                    city.id = filtered[group][0].cityId;
-                    city.name = filtered[group][0].cityName;
-
-                    city.areas = areas;
-
-                    final.push(city);
-                }
-
-                if (final.length === 0) {
-                    list.innerHTML = this.view.createEmptyResult();
-                } else {
-                    list.innerHTML = final.map(city => this.view.createCity(city)).join("");
-                }
-
+                this.search(value);
             });
 
         }
         catch (err) { handleError(err); }
+    }
+
+    search (value) {
+        const list = document.querySelector(".location-selection__city-list");
+        list.innerHTML = "";
+        
+        let filtered = [];
+
+        this.model.cities.forEach(city => {
+            city.areas.forEach(area => {
+                if (area.name.toLowerCase().includes(value.toLowerCase())) {
+                    area.cityId = city.id;
+                    area.cityName = city.name;
+                    filtered.push(area);
+                }
+            });
+        });
+
+       
+        filtered = Utils.groupBy(filtered, area => area.cityId);
+        
+        const final = [];
+        for (const group in filtered) {
+
+            const areas = filtered[group].map(g => {
+                const area = {};
+                area.id = g.id;
+                area.name = g.name;
+
+                return area;
+            });
+
+            const city = {};
+            city.id = filtered[group][0].cityId;
+            city.name = filtered[group][0].cityName;
+
+            city.areas = areas;
+
+            final.push(city);
+        }
+
+        if (final.length === 0) {
+            list.innerHTML = this.view.createEmptyResult();
+        } else {
+            list.innerHTML = final.map(city => this.view.createCity(city)).join("");
+        }
+
     }
 }
