@@ -91,6 +91,7 @@ export class NavView {
                         <ul class="category-dropdown">
                             <li class="category-dropdown__item">
                                 <a href="#" class="category-dropdown__link">
+                                    <!--<img src="../../assets/img/icons/categories/groceries_icon.svg" alt="" class="category-dropdown__icon">-->
                                     <i class="category-dropdown__icon material-icons">shopping_basket</i>
                                     Groceries
                                 </a>

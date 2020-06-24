@@ -16,8 +16,7 @@ Features:
 - navbar: (1)
     - enhance mobile nav [UI]
 
-- home: (3)
-    - enhance category list [UI]
+- home: (2)
     - navbar transparent on scroll [UI]
     - category list crousel
     

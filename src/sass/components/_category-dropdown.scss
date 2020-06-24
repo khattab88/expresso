@@ -79,6 +79,8 @@
         padding: .35rem;
         border-radius: 50%;
 
+        
+
         @include respond(tab) {
             margin-right: 1rem;
             color: $color-white;

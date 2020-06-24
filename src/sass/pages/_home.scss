@@ -241,12 +241,15 @@
         justify-content: center;
         align-items: center;
 
+        background-color: $color-main;
+
         &:hover {
             border-color: $color-white;
         }
     }
     &__icon {
         font-size: 4rem;
+        width: 6rem;
     }
     &__body {
         font-size: 200%;

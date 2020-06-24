@@ -2203,11 +2203,13 @@ body {
     border-color: #009a9a;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    background-color: #009a9a; }
     .category-card__head:hover {
       border-color: #fff; }
   .category-card__icon {
-    font-size: 4rem; }
+    font-size: 4rem;
+    width: 6rem; }
   .category-card__body {
     font-size: 200%;
     line-height: 2.2rem;
