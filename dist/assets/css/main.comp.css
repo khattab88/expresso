@@ -547,6 +547,7 @@ body {
         color: #009a9a;
         margin-top: .75rem; } }
     .navigation__items--mobile-open {
+      display: block;
       overflow: auto;
       position: absolute;
       top: 2.85rem;
