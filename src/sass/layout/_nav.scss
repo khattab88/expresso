@@ -78,7 +78,8 @@
         }
 
         &--mobile-open {
-            display: block;
+            // display: block;
+            // display: none;
             overflow: auto;
     
             position: absolute;
@@ -87,12 +88,14 @@
 
             width: 41.5rem;
             height: 40rem;
+
             background-color: $color-font-dark;
             padding: 2rem 1rem;
             border-bottom: .5rem solid $color-gray-light;
 
-            animation-name: open-mobile-nav;
-            animation-duration: .5s;
+            // animation-name: open-mobile-nav;
+            // animation-duration: .5s;
+
             //animation-delay: -.2s;
             //animation-timing-function: ease;
             //animation-fill-mode: both;

@@ -547,7 +547,6 @@ body {
         color: #009a9a;
         margin-top: .75rem; } }
     .navigation__items--mobile-open {
-      display: block;
       overflow: auto;
       position: absolute;
       top: 2.85rem;
@@ -556,9 +555,7 @@ body {
       height: 40rem;
       background-color: #323232;
       padding: 2rem 1rem;
-      border-bottom: 0.5rem solid #d5d5d5;
-      animation-name: open-mobile-nav;
-      animation-duration: .5s; }
+      border-bottom: 0.5rem solid #d5d5d5; }
       @media only screen and (min-width: 30em) {
         .navigation__items--mobile-open {
           left: -40rem;

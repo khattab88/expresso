@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+import $ from "jquery";
+
 export const elements = {
     container: document.querySelector(".container"),
     navToggle: document.querySelector(".navbar__toggle"),
@@ -21,7 +23,7 @@ export class NavView {
                 </a>
             </div>
             <div class="navigation">
-                <ul class="navigation__items">
+                <ul class="navigation__items navigation__items--mobile-open">
                     <li class="navigation__item"><a href="../login/index.html" class="navigation__link">Login</a></li>
                     <li class="navigation__item"><a href="../sign-up/index.html" class="navigation__link">Sign Up</a>
                     </li>
@@ -134,9 +136,10 @@ export class NavView {
     }
 
     toggleMobileNav () {
-        const navigationItems = elements.container.querySelector(".navigation__items");
+        // const navigationItems = elements.container.querySelector(".navigation__items");
+        // navigationItems.classList.toggle("navigation__items--mobile-open");
 
-        navigationItems.classList.toggle("navigation__items--mobile-open");
+        $(".navigation__items").slideToggle(500, "linear");
     }
 
     toggleNavCountry () {
