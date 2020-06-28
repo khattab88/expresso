@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { handleError } from "../base";
 
 import HomePageModel from "./model";
@@ -6,14 +7,15 @@ import { elements, HomePageView } from "./view";
 import NavComponent from "../components/nav/index";
 import FooterComponent from "../components/footer/index";
 import LocationSelectionComponent from "../components/location-selection/index";
+import _ from "lodash";
 
 export default class HomePage {
-    constructor () {
+    constructor() {
         this.init();
         this.setupEventListeners();
     }
 
-    init () {
+    init() {
         try {
             // initialize model/view instances
             this.model = new HomePageModel();
@@ -31,7 +33,7 @@ export default class HomePage {
         } catch (err) { handleError(err); }
     }
 
-    setupEventListeners () {
+    setupEventListeners() {
         try {
             // navigate to restaurant menu page
             elements.showcase.addEventListener("click", e => {
@@ -40,6 +42,24 @@ export default class HomePage {
                 this.view.navigate(`../restaurant-menu/index.html?id=${card.id}`);
             });
 
+            // transparent navbar on scroll
+            if (window.innerWidth >= 1024) {
+                window.addEventListener("scroll", _.throttle(this.scroll, 1000));
+            }
+
         } catch (err) { handleError(err); }
+    }
+
+    scroll () {
+        const navbar = document.querySelector(".navbar");
+        const scrollY = window.scrollY;
+
+        console.log("scrollY");
+
+        if (scrollY < 80) {
+            navbar.style.backgroundColor = "transparent";
+        } else {
+            navbar.style.backgroundColor = "#009a9a";
+        }
     }
 }

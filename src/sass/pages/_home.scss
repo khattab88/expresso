@@ -28,6 +28,10 @@
         width: 92%;
     }
 
+    @include respond(tab-land) {
+        padding: 20rem 0;
+    }
+
     @include respond(desktop) {
         width: 40%;
         margin-left: 19rem;

@@ -12,8 +12,7 @@ netlify: https://happy-varahamihira-4dcc20.netlify.com/
 
 Features:
 
-- home: (2)
-    - navbar transparent on scroll [UI]
+- home: (1)
     - category list crousel
     
 - restaurant list (1)

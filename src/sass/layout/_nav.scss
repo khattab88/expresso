@@ -19,6 +19,10 @@
         padding: 0 3%;
     }
 
+    @include respond(tab-land) {
+        background-color: transparent;
+    }
+
     @include respond(desktop) {
         padding: 0 12%;
     }
@@ -189,6 +193,10 @@
                 color: $color-main;
             }
         }
+    }
+
+    @include respond(tab-land) {
+        background-color: transparent; 
     }
 
     &__img {

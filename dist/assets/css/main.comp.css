@@ -502,6 +502,9 @@ body {
     .navbar {
       height: 7rem;
       padding: 0 3%; } }
+  @media only screen and (min-width: 64em) {
+    .navbar {
+      background-color: transparent; } }
   @media only screen and (min-width: 75em) {
     .navbar {
       padding: 0 12%; } }
@@ -621,6 +624,9 @@ body {
         background-color: #fff; }
         .country-btn--open .country-btn__caret--down {
           color: #009a9a; } }
+  @media only screen and (min-width: 64em) {
+    .country-btn {
+      background-color: transparent; } }
   .country-btn__img {
     width: 3rem;
     height: 3rem;
@@ -722,7 +728,11 @@ body {
       padding: 0 12%;
       height: 55rem;
       background-size: cover;
-      background-position: center; } }
+      background-position: center;
+      top: -4rem; } }
+  @media only screen and (min-width: 75em) {
+    .header {
+      top: -7rem; } }
 
 /* Main */
 .main {
@@ -2030,6 +2040,9 @@ body {
       margin: 0 auto;
       margin-top: 4rem;
       width: 92%; } }
+  @media only screen and (min-width: 64em) {
+    .search {
+      padding: 20rem 0; } }
   @media only screen and (min-width: 75em) {
     .search {
       width: 40%;

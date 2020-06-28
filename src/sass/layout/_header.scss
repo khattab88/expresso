@@ -25,5 +25,11 @@
 
         background-size: cover;
         background-position: center;
+
+        top: -4rem;
+    }
+
+    @include respond(desktop) {
+        top: -7rem;
     }
 }
