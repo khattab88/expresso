@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { elements, NavView } from "./view";
 
 export default class NavComponent {
@@ -27,5 +28,23 @@ export default class NavComponent {
             }
 
         });
+
+        // transparent navbar on scroll
+        if (window.innerWidth >= 1024) {
+            window.addEventListener("scroll", _.throttle(this.scroll, 1000));
+        }
+    }
+
+    scroll () {
+        const navbar = document.querySelector(".navbar");
+        const scrollY = window.scrollY;
+
+        // console.log("scrollY", scrollY);
+
+        if (scrollY < 80) {
+            navbar.style.backgroundColor = "transparent";
+        } else {
+            navbar.style.backgroundColor = "#009a9a";
+        }
     }
 }

@@ -42,24 +42,7 @@ export default class HomePage {
                 this.view.navigate(`../restaurant-menu/index.html?id=${card.id}`);
             });
 
-            // transparent navbar on scroll
-            if (window.innerWidth >= 1024) {
-                window.addEventListener("scroll", _.throttle(this.scroll, 1000));
-            }
-
         } catch (err) { handleError(err); }
     }
 
-    scroll () {
-        const navbar = document.querySelector(".navbar");
-        const scrollY = window.scrollY;
-
-        console.log("scrollY");
-
-        if (scrollY < 80) {
-            navbar.style.backgroundColor = "transparent";
-        } else {
-            navbar.style.backgroundColor = "#009a9a";
-        }
-    }
 }
