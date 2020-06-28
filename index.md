@@ -11,9 +11,3 @@ netlify: https://happy-varahamihira-4dcc20.netlify.com/
 ----------------------------------------------------
 
 Features:
-
-- home: (1)
-    - category list crousel
-    
-- restaurant list (1)
-    - implement lazy loading on scroll

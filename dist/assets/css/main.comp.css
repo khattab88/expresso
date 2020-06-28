@@ -2149,6 +2149,7 @@ body {
       .categories__title {
         padding-left: 20rem; } }
   .categories__wrapper {
+    position: relative;
     overflow-x: hidden;
     padding: 2rem 1rem;
     display: flex;
@@ -2156,7 +2157,8 @@ body {
   .categories__list {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    margin: 0 2rem; }
     @media only screen and (min-width: 48em) {
       .categories__list {
         width: 100%;
@@ -2169,7 +2171,11 @@ body {
     font-size: 1.8rem;
     font-weight: 300;
     margin-right: .5rem;
-    transition: all .2s; }
+    transition: all .2s;
+    height: 85%;
+    z-index: 1;
+    position: absolute;
+    top: 1.5rem; }
     .categories .arrow-btn:hover {
       cursor: pointer;
       transform: scale(1.05);
@@ -2178,6 +2184,10 @@ body {
     @media only screen and (min-width: 48em) {
       .categories .arrow-btn {
         min-width: 3rem; } }
+    .categories .arrow-btn--left {
+      left: 0; }
+    .categories .arrow-btn--right {
+      right: -.5rem; }
     .categories .arrow-btn__icon {
       margin-left: -.3rem; }
 

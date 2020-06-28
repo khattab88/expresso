@@ -33,7 +33,7 @@ export default class HomePage {
         } catch (err) { handleError(err); }
     }
 
-    setupEventListeners() {
+    setupEventListeners () {
         try {
             // navigate to restaurant menu page
             elements.showcase.addEventListener("click", e => {

@@ -163,8 +163,10 @@
         }
     }
     &__wrapper {
+        position: relative;
         overflow-x: hidden;
         padding: 2rem 1rem;
+
         display: flex;
         justify-content: space-between;
     }
@@ -172,6 +174,7 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+        margin: 0 2rem; 
 
         @include respond(tab) {
             width: 100%;
@@ -189,6 +192,11 @@
         margin-right: .5rem;
         transition: all .2s;
 
+        height: 85%;
+        z-index: 1;
+        position: absolute;
+        top: 1.5rem;
+
         &:hover {
             cursor: pointer;
             transform: scale(1.05);
@@ -199,6 +207,9 @@
         @include respond(tab) {
             min-width: 3rem;
         }
+
+        &--left { left: 0; }
+        &--right { right: -.5rem; }
 
         &__icon {
             margin-left: -.3rem;
