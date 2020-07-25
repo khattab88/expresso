@@ -1,12 +1,12 @@
 // config.js
 
 const config = {
-    env: "dev",
-    dev: {
-        apiUrl: "http://localhost:3000/api"
+    env: "development",
+    development: {
+        apiUrl: "http://localhost:3000/api/v1"
     },
     staging: {
-        apiUrl: "https://expresso-app-api.herokuapp.com/api"
+        apiUrl: "https://expresso-app-api.herokuapp.com/api/v1"
     }
 };
 
